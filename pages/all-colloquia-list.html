@@ -13,6 +13,13 @@
 <body>
   <h1>Omnia Colloquia.</h1>
   <p>Ecce, aliquot colloquia:
+  
+  <ul>
+  {% for colloqium in site.colloquia %}
+    <li><a href="{{ colloquium.url }}">{{ colloqium.title }}</a></li>
+  {% endfor %}
+</ul>
+
 </body>
 
 </html>
