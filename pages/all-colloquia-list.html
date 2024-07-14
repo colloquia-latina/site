@@ -18,7 +18,7 @@
   <p>Ecce, haec sunt colloquia:
 
 <ul>
-  {% assign pages_list = site.html_pages | where: "path", "_colloquia" %}
+  {% assign pages_list = site.html_pages | where: "path", "colloquia" %}
   {% for page in pages_list %}
     <li><a href="{{ page.url }}">{{ page.title }}</a></li>
   {% endfor %}
