@@ -15,7 +15,7 @@
   <p>Ecce, aliquot colloquia:
 
   <ul>
-  {% assign colloquia_list = site.colloquia | where: "path", "_colloquia" %}
+  {% assign colloquia_list = site.pages | where: "path", "_colloquia" %}
   {% for colloquium in colloquia_list %}
     <li><a href="{{ colloquium.url }}">{{ colloquium.title }}</a></li>
   {% endfor %}
