@@ -14,12 +14,13 @@
   <h1>Omnia Colloquia.</h1>
   <p>Ecce, aliquot colloquia:
 
-  <ul>
-  {% assign colloquia_list = site.pages | where: "path", "_colloquia" %}
-  {% for page in colloquia_list %}
+<ul>
+  {% assign pages_list = site.html_pages | where: "path", "_colloquia" %}
+  {% for page in pages_list %}
     <li><a href="{{ page.url }}">{{ page.title }}</a></li>
   {% endfor %}
-  </ul>
+</ul>
+
 
 </body>
 
