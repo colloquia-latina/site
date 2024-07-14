@@ -1,4 +1,5 @@
 ---
+title: Omnia Colloquia
 ---
 
 <!DOCTYPE html>
@@ -20,7 +21,7 @@
 <ul>
     {% assign pages_list = site.html_pages | where_exp: "page", "page.path contains 'colloquia'" %}
     {% for page in pages_list %}
-      <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+      <li><a href="/site/{{ page.url }}">{{ page.title }}</a></li>
     {% endfor %}
 </ul>
 
