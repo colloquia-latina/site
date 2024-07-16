@@ -19,9 +19,9 @@ title: Omnia Colloquia
   <p>Ecce, haec sunt colloquia:
 
 <ul>
-    {% assign pages_list = site.html_pages | where_exp: "page", "page.path contains 'colloquia'" %}
+    {% assign pages_list = site.html_pages | where: "path", "colloquia" %}
     {% for page in pages_list %}
-      <li><a href="/site/{{ page.url }}">{{page.author}}: {{ page.title }}</a></li>
+      <li><a href="/site{{ page.url }}">{{page.author}}: {{ page.title }}</a></li>
     {% endfor %}
 </ul>
 
