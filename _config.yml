@@ -3,5 +3,5 @@ theme: minima  # or specify another Jekyll theme
 plugins:
   - jekyll-feed
 include:
-- _pages
-- _colloquia
+- pages
+- colloquia
