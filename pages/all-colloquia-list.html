@@ -18,6 +18,8 @@ title: Omnia Colloquia
   <h1>Omnia Colloquia.</h1>
   <p>Ecce, haec sunt colloquia:
 
+<p>Pages List Size: {{ pages_list | size }}</p>
+    
 <ul>
     {% assign pages_list = site.html_pages | where_exp: "page", "page.path contains '/colloquia/'" %}
     {% for page in pages_list %}
