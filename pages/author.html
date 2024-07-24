@@ -1,11 +1,11 @@
 ---
-layout: default
 title: Author
+layout: default
 ---
 
 <h1>{{ page.author }}</h1>
 <ul>
-{% for colloquium in site.colloquia %}
+{% for colloquium in site.colloquia.docs %}
   {% if colloquium.author == page.author %}
     <li><a href="{{ colloquium.url }}">{{ colloquium.title }}</a></li>
   {% endif %}

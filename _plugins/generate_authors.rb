@@ -4,7 +4,7 @@ module Jekyll
       safe true
   
       def generate(site)
-        authors = site.collections["colloquia"].docs.map { |doc| doc.data["author"] }.uniq
+        authors = site.collections["colloquia"].docs.map { |doc| doc.data["author"] }.compact.uniq
         authors.each do |author|
           site.pages << AuthorPage.new(site, site.source, "author", author)
         end

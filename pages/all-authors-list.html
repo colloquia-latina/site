@@ -4,9 +4,23 @@ title: Authors
 ---
 
 <h1>Authors</h1>
+
+<!-- Debug output -->
+<h2>Debug Information</h2>
+<pre>
+{% for doc in site.colloquia.docs %}
+  Title: {{ doc.title }} - Author: {{ doc.author }}
+{% endfor %}
+</pre>
+
+<!-- Authors list -->
 <ul>
-{% assign authors = site.colloquia | map: 'author' | uniq | sort %}
+{% assign authors = site.colloquia.docs | map: 'author' | uniq | sort %}
 {% for author in authors %}
-  <li><a href="{{ site.baseurl }}/author/{{ author | slugify }}">{{ author }}</a></li>
+  {% if author %}
+    <li><a href="{{ site.baseurl }}/author/{{ author | slugify }}">{{ author }}</a></li>
+  {% endif %}
 {% endfor %}
 </ul>
+
+
