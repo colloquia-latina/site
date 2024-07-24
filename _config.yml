@@ -3,9 +3,10 @@ theme: minima  # or specify another Jekyll theme
 plugins:
   - jekyll-feed
 include:
-- pages
-- colloquia
+  - pages
+  - colloquia
 
 collections:
   colloquia:
     output: true
+    permalink: /:path/
