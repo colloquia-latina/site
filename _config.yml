@@ -5,6 +5,7 @@ plugins:
 include:
 - pages
 - colloquia
+
 collections:
   colloquia:
     output: true

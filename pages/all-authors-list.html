@@ -8,8 +8,10 @@ title: Authors
 <!-- Debug output -->
 <h2>Debug Information</h2>
 <pre>
-{% for doc in site.colloquia.docs %}
+{% for doc in site.colloquia %}
   Title: {{ doc.title }} - Author: {{ doc.author }}
+{% else %}
+  No documents found in colloquia collection.
 {% endfor %}
 </pre>
 
