@@ -1,0 +1,12 @@
+---
+layout: default
+title: Authors
+---
+
+<h1>Authors</h1>
+<ul>
+{% assign authors = site.colloquia | map: 'author' | uniq | sort %}
+{% for author in authors %}
+  <li><a href="{{ site.baseurl }}/author/{{ author | slugify }}">{{ author }}</a></li>
+{% endfor %}
+</ul>
