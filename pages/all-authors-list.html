@@ -3,9 +3,19 @@ layout: default
 title: Authors
 ---
 
-<h1>Authors</h1>
+<h1>Auctores</h1>
 
-<!-- Debug output -->
+<p>
+Ecce, elige auctorem:
+</p>
+
+{% assign authors = site.pages.authors %}
+{% for author in authors %}
+<li><a href="{{ site.baseurl }}/pages/authors/author">{{ page.title }}</a></li>
+{% endif %}
+
+
+<!-- Debug output
 <h2>Debug Information</h2>
 <pre>
 {% for doc in site.colloquia %}
@@ -15,14 +25,14 @@ title: Authors
 {% endfor %}
 </pre>
 
-<!-- Authors list -->
-<ul>
+Authors list -->
+<!-- <ul>
 {% assign authors = site.colloquia.docs | map: 'author' | uniq | sort %}
 {% for author in authors %}
   {% if author %}
     <li><a href="{{ site.baseurl }}/author/{{ author | slugify }}">{{ author }}</a></li>
   {% endif %}
 {% endfor %}
-</ul>
+</ul> -->
 
 
