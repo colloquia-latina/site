@@ -21,6 +21,17 @@ type: Author
     <a href="/">Colloquia Latina</a>
 </div>
 
+{% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+
+<a href="/">Home</a>
+{% for crumb in crumbs offset: 1 %}
+  {% if forloop.last %}
+    / {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}
+  {% else %}
+    / <a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a>
+  {% endif %}
+{% endfor %}
+
 <body>
     <h1>Articles by Erasmus</h1>
     <ul>
@@ -55,6 +66,16 @@ type: Author
         <li><a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a></li>
         {% endfor %}
     </ul>
+
+    <h1>erasmus articles 3</h1>
+    <ul>
+        {% assign pages_list = site.html_pages | where_exp: "page", "page.path contains 'colloquia/'" %}
+        {% assign erasmus_pages = pages_list | where_exp: "page", "page.author == 'Erasmus'" %}
+        {% for page in erasmus_pages %}
+            <li><a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a></li>
+        {% endfor %}
+    </ul>
+    
 
 
 </body>
