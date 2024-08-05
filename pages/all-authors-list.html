@@ -25,12 +25,28 @@ Ecce, elige auctorem:
 
 <h1>All Articles</h1>
 <ul>
-{% assign author_pages = site.pages | where: "path", "pages/authors/" %}
+{% assign author_pages = site.pages | where: "path", "site/pages/authors/" %}
 {% for page in author_pages %}
     <li><a href="{{ page.url }}">{{ page.title }}</a></li>
 {% endfor %}
 </ul>
 
+<h1>All Articles</h1>
+<ul>
+{% assign author_pages = site.pages | where: "path", "/site/pages/authors/" %}
+{% for page in author_pages %}
+    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+{% endfor %}
+</ul>
+
+<p>fourth try</p>
+
+<ul>
+  {% assign pages_list = site.html_pages | where_exp: "page", "page.path contains 'authors/'" %}
+  {% for page in pages_list %}
+    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+  {% endfor %}
+</ul>
 
 <!-- Debug output
 <h2>Debug Information</h2>
