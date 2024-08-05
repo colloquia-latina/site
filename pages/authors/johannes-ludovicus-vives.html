@@ -9,29 +9,27 @@ type: Author
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
-  <title>Johannes Ludovicus Vives</title>
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-  <link rel="stylesheet" href="style-list.css">
-  <link rel="stylesheet" href="style-common.css">
-  <link rel="stylesheet" href="w3.css">
-  <script src="/scripts/lazysizes.min.js" async=""></script>
+    <title>Omnia Colloquia</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="style-list.css">
+    <link rel="stylesheet" href="style-common.css">
+    <link rel="stylesheet" href="w3.css">
+    <script src="/scripts/lazysizes.min.js" async=""></script>
 </head>
 
 <div class="topnav">
-  <a href="/">Colloquia Latina</a>
+    <a href="/">Colloquia Latina</a>
 </div>
 
-<body>
-  <h1>.</h1>
-  <p>Ecce, haec sunt colloquia quae {{ page.title }} scripsit:
-
-  <ul>
-    {% assign pages_list = site.html_pages | where_exp: "page", "page.path contains 'colloquia/'" 
-    and {{ page.author }} == "Johannes Ludovicus Vives" %}
-    {% for page in pages_list %}
-      <li><a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a></li>
+<h1>{{ page.title }}</h1>
+<h2>Ecce, haec sunt colloquia quae {{ page.title }} scripsit:</h2>
+<ul>
+    {% assign pages_list = site.html_pages | where_exp: "page", "page.path contains 'colloquia/'" %}
+    {% assign author_pages = pages_list | where_exp: "page", "page.author == {{ page.title }}" %}
+    {% for page in author_pages %}
+    <li><a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a></li>
     {% endfor %}
-  </ul>
+</ul>
 
 </body>
 
