@@ -39,7 +39,7 @@ type: Author
     {% assign pages_list = site.html_pages | where_exp: "page", "page.path contains 'colloquia/'" %}
     {% assign erasmus_pages = pages_list | where_exp: "page", "page.author == 'Erasmus'" %}
     {% for page in erasmus_pages %}
-        <li><a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a></li>
+        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
     {% endfor %}
 </ul>
 
