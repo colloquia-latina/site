@@ -2,44 +2,28 @@
 title: Auctores
 ---
 
+<!DOCTYPE html>
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>Auctores</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="style-list.css">
+    <link rel="stylesheet" href="style-common.css">
+    <link rel="stylesheet" href="w3.css">
+    <script src="/scripts/lazysizes.min.js" async=""></script>
+</head>
+
+<div class="topnav">
+    <a href="/">Colloquia Latina</a>
+</div>
+
+<body>
+    
 <h1>Auctores</h1>
-
-<p>
-Ecce, elige auctorem:
-</p>
-
-<!-- {% assign authors = site.pages.authors %}
-{% for author in authors %}
-<li><a href="{{ site.baseurl }}/pages/authors/author">{{ page.title }}</a></li>
-{% endfor %}
-
-<p>
-  second try
-</p>
-<ul>
-{% assign authors = site.authors %}
-{% for author in authors %}
-  <li><a href="{{ author.url }}">{{ author.title }}</a></li>
-{% endfor %}
-</ul>
-
-<h1>All Articles</h1>
-<ul>
-{% assign author_pages = site.pages | where: "path", "site/pages/authors/" %}
-{% for page in author_pages %}
-    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-{% endfor %}
-</ul>
-
-<h1>All Articles</h1>
-<ul>
-{% assign author_pages = site.pages | where: "path", "/site/pages/authors/" %}
-{% for page in author_pages %}
-    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-{% endfor %}
-</ul>
-
-<p>fourth try</p> -->
+<h2>Ecce, haec sunt auctores colloquium:</h2>
 
 <ul>
   {% assign pages_list = site.html_pages | where_exp: "page", "page.path contains 'authors/'" %}
@@ -47,3 +31,6 @@ Ecce, elige auctorem:
     <li><a href="{{ page.url }}">{{ page.title }}</a></li>
   {% endfor %}
 </ul>
+
+</body>
+</html>
