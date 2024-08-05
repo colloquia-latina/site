@@ -23,6 +23,14 @@ Ecce, elige auctorem:
 {% endfor %}
 </ul>
 
+<h1>All Articles</h1>
+<ul>
+{% assign author_pages = site.pages | where: "path", "pages/authors/" %}
+{% for page in author_pages %}
+    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+{% endfor %}
+</ul>
+
 
 <!-- Debug output
 <h2>Debug Information</h2>

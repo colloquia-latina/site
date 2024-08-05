@@ -9,9 +9,7 @@ include:
 collections:
   colloquia:
     output: true
-    permalink: /:path/
+    permalink: /colloquia/:name/
   authors:
     output: true
-    permalink: /:collection/:name
-
-
+    permalink: /pages/authors/:name/
