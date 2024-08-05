@@ -22,12 +22,22 @@ type: Author
 </div>
 
 <body>
-    <h1>{{ page.title }}</h1>
+    <!-- <h1>{{ page.title }}</h1>
     <h2>Ecce, haec sunt colloquia quae {{ page.title }} scripsit:</h2>
     <ul>
         {% assign pages_list = site.html_pages | where_exp: "page", "page.path contains 'colloquia/'" %}
         {% assign author_pages = pages_list | where_exp: "page", "page.author == {{ page.title }}" %}
         {% for page in author_pages %}
+        <li><a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a></li>
+        {% endfor %}
+    </ul> -->
+
+    <h1>Erasmus</h1>
+    <h2>Ecce, haec sunt colloquia quae Erasmus scripsit:</h2>
+    <ul>
+        {% assign pages_list = site.html_pages | where_exp: "page", "page.path contains 'colloquia/'" %}
+        {% assign erasmus_pages = pages_list | where_exp: "page", "page.author == 'Erasmus'" %}
+        {% for page in erasmus_pages %}
         <li><a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a></li>
         {% endfor %}
     </ul>
