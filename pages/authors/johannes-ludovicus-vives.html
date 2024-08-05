@@ -21,17 +21,6 @@ type: Author
     <a href="/">Colloquia Latina</a>
 </div>
 
-<body>
-<h1>{{ page.title }}</h1>
-<h2>Ecce, haec sunt colloquia quae {{ page.title }} scripsit:</h2>
-<ul>
-    {% assign pages_list = site.html_pages | where_exp: "page", "page.path contains 'colloquia/'" %}
-    {% assign author_pages = pages_list | where_exp: "page", "page.author == {{ page.title }}" %}
-    {% for page in author_pages %}
-    <li><a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a></li>
-    {% endfor %}
-</ul>
 
-</body>
 
 </html>
