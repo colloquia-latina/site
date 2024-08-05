@@ -8,7 +8,7 @@ title: Auctores
 Ecce, elige auctorem:
 </p>
 
-{% assign authors = site.pages.authors %}
+<!-- {% assign authors = site.pages.authors %}
 {% for author in authors %}
 <li><a href="{{ site.baseurl }}/pages/authors/author">{{ page.title }}</a></li>
 {% endfor %}
@@ -39,7 +39,7 @@ Ecce, elige auctorem:
 {% endfor %}
 </ul>
 
-<p>fourth try</p>
+<p>fourth try</p> -->
 
 <ul>
   {% assign pages_list = site.html_pages | where_exp: "page", "page.path contains 'authors/'" %}
@@ -47,25 +47,3 @@ Ecce, elige auctorem:
     <li><a href="{{ page.url }}">{{ page.title }}</a></li>
   {% endfor %}
 </ul>
-
-<!-- Debug output
-<h2>Debug Information</h2>
-<pre>
-{% for doc in site.colloquia %}
-  Title: {{ doc.title }} - Author: {{ doc.author }}
-{% else %}
-  No documents found in colloquia collection.
-{% endfor %}
-</pre>
-
-Authors list -->
-<!-- <ul>
-{% assign authors = site.colloquia.docs | map: 'author' | uniq | sort %}
-{% for author in authors %}
-  {% if author %}
-    <li><a href="{{ site.baseurl }}/author/{{ author | slugify }}">{{ author }}</a></li>
-  {% endif %}
-{% endfor %}
-</ul> -->
-
-
