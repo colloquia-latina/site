@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Erasmus
 type: Author
 ---
@@ -32,6 +31,17 @@ type: Author
       <li><a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a></li>
     {% endfor %}
   </ul>
+
+  ---
+
+<h1>Articles by Erasmus</h1>
+<ul>
+{% assign erasmus_articles = site.authors | where: "author", "Erasmus" %}
+{% for article in erasmus_articles %}
+  <li><a href="{{ article.url }}">{{ article.title }}</a></li>
+{% endfor %}
+</ul>
+
 
 </body>
 

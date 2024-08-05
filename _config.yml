@@ -10,3 +10,8 @@ collections:
   colloquia:
     output: true
     permalink: /:path/
+  authors:
+    output: true
+    permalink: /:collection/:name
+
+

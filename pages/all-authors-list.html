@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Authors
+title: Auctores
 ---
 
 <h1>Auctores</h1>
@@ -13,6 +12,16 @@ Ecce, elige auctorem:
 {% for author in authors %}
 <li><a href="{{ site.baseurl }}/pages/authors/author">{{ page.title }}</a></li>
 {% endfor %}
+
+<p>
+  second try
+</p>
+<ul>
+{% assign authors = site.authors %}
+{% for author in authors %}
+  <li><a href="{{ author.url }}">{{ author.title }}</a></li>
+{% endfor %}
+</ul>
 
 
 <!-- Debug output
