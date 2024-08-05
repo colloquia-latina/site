@@ -5,9 +5,6 @@ type: Author
 
 <!DOCTYPE html>
 <html>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <head>
     <title>Johannes Ludovicus Vives</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
@@ -15,25 +12,24 @@ type: Author
     <link rel="stylesheet" href="style-common.css">
     <link rel="stylesheet" href="w3.css">
     <script src="/scripts/lazysizes.min.js" async=""></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
-<div class="topnav">
-    <a href="/">Colloquia Latina</a>
-</div>
-
 <body>
-    
+
+    <div class="topnav">
+        <a href="/">Colloquia Latina</a>
+    </div>
+
     <h1>Johannes Ludovicus Vives</h1>
     <h2>Ecce, haec sunt colloquia quae Johannes Ludovicus Vives scripsit:</h2>
-    
+
     <ul>
         {% assign pages_list = site.html_pages | where_exp: "page", "page.path contains 'colloquia/'" %}
         {% assign author_pages = pages_list | where_exp: "page", "page.author == 'Johannes Ludovicus Vives'" %}
         {% for page in author_pages %}
-            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
         {% endfor %}
     </ul>
-    
-    </body>
 
+</body>
 </html>
