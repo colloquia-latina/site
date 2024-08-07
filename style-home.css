@@ -60,7 +60,12 @@ body {
     /* this adds the "card" effect */
     padding: 16px;
     text-align: center;
-    background-color: #f1f1f1;
+    background-color: grey;
+    height: 6em; /* Fixed height for the cards */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Vertical alignment */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
 }
 
 .main-content {
