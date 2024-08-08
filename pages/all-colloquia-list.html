@@ -16,6 +16,7 @@ type: Index
   <link rel="stylesheet" href="/w3.css">
   <script src="/scripts/lazysizes.min.js" async=""></script>
 </head>
+
 <body>
 
   <div class="w3-bar w3-black">
@@ -28,7 +29,8 @@ type: Index
     <p>Ecce, haec sunt colloquia:
 
     <ul>
-      {% assign pages_list = site.html_pages | where_exp: "page", "page.path contains 'colloquia/'" | sort: "author" | sort: "title" %}
+      {% assign pages_list = site.html_pages | where_exp: "page", "page.path contains 'colloquia/'" and page.type ==
+      'Colloquium'" | sort: "author" | sort: "title" %}
       {% for page in pages_list %}
       <li><a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a></li>
       {% endfor %}

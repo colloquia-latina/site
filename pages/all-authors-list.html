@@ -27,7 +27,7 @@ type: Index
 <h2>Ecce, haec sunt auctores colloquium:</h2>
 
 <ul>
-  {% assign pages_list = site.html_pages | where_exp: "page", "page.path contains 'authors/'" %}
+  {% assign pages_list = site.html_pages | where_exp: "page", "page.path contains 'authors/' and page.type == 'Author'" %}
   {% for page in pages_list %}
     <li><a href="{{ page.url }}">{{ page.title }}</a></li>
   {% endfor %}
