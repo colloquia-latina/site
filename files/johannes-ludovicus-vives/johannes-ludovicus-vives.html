@@ -25,8 +25,8 @@ permalink: /johannes-ludovicus-vives/
     <h2>Ecce, haec sunt colloquia quae Johannes Ludovicus Vives scripsit:</h2>
 
     <ul>
-        {% assign pages_list = site.html_pages | where_exp: "page", "page.path contains 'authors/'" %}
-        {% assign author_pages = pages_list | where_exp: "page", "page.author == 'Johannes Ludovicus Vives'" | sort: "title"%}
+        {% assign files_list = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
+        {% assign author_pages = files_list | where_exp: "page", "page.author == 'Johannes Ludovicus Vives'" | sort: "title"%}
         {% for page in author_pages %}
         <li><a href="{{ page.url }}">{{ page.title }}</a></li>
         {% endfor %}

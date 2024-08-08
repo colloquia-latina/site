@@ -32,7 +32,7 @@ type: Index
       {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
       {% assign colloquium_pages = files | where: "type", "Colloquium" | sort: "author" | sort: "title" %}
       {% for page in colloquium_pages %}
-      <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+      <li><a href="{{ page.url }}">{{page.author}} : {{ page.title }}</a></li>
       {% endfor %}
     </ul>
   </div>
