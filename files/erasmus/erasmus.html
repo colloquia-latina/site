@@ -21,12 +21,12 @@ permalink: /erasmus/
         <a href="/">Colloquia Latina</a>
     </div>
 
-    <h1>{{page.title}} </h1>
-    <h2>Ecce, haec sunt colloquia quae {{page.title}} scripsit:</h2>
+    <h1>Erasmus</h1>
+    <h2>Ecce, haec sunt colloquia quae Erasmus scripsit:</h2>
 
     <ul>
         {% assign files_list = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-        {% assign author_pages = files_list | where_exp: "page", "page.author == {{page.title}}" | sort: "title"%}
+        {% assign author_pages = files_list | where_exp: "page", "page.author == 'Erasmus'" | sort: "title"%}
         {% for page in author_pages %}
         <li><a href="{{ page.url }}">{{ page.title }}</a></li>
         {% endfor %}
