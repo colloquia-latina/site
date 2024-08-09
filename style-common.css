@@ -1,0 +1,9 @@
+.main-content {
+    width: 80%;
+    margin: auto;
+
+    /* Responsive*/
+    @media screen and (max-width: 600px) {
+        width: 100%;
+    }
+}
