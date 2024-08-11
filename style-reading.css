@@ -7,14 +7,12 @@ body {
 }
 
 .line-container {
-    padding: 1em
+    background-color:gray;
 }
 
 .line-character {
-    font-size: 2em;
     font-weight: bold;
 }
 
 .line-text {
-    color: red;
 }
