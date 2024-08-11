@@ -7,11 +7,15 @@ body {
 }
 
 .line-container {
-    background-color:gray;
+    background-color:rgb(194, 191, 191);
+    padding-bottom: 0.5em;
+    border-radius: 10px;
+    box-shadow: 2px;
 }
 
 .line-character {
     font-weight: bold;
+    padding-left: 1em;
 }
 
 .line-text {
