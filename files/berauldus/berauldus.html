@@ -1,0 +1,46 @@
+---
+title: Berauldus
+type: Author
+permalink: /berauldus/
+---
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ page.title }} </title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/style-list.css">
+    <link rel="stylesheet" href="/style-common.css">
+    <link rel="stylesheet" href="/w3.css">
+    <script src="/scripts/lazysizes.min.js" async=""></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="w3-top">
+        <div class="w3-bar w3-black">
+            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
+            <a href="/all-authors-list/"
+                class="w3-bar-item w3-button w3-mobile">Auctores</a>
+            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+        </div>
+    </div>
+    <div style="height:7em"></div>
+
+    <div class="main-content">
+        <h1>{{ page.title }}</h1>
+        <h2>Ecce, haec sunt colloquia quae {{ page.title }} scripsit:</h2>
+
+        <ul>
+            {% assign files_list = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
+            {% assign author_pages = files_list | where_exp: "page", "page.author == 'Berauldus'" | sort:
+            "title"%}
+            {% for page in author_pages %}
+            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+
+</html>
