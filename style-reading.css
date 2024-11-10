@@ -18,3 +18,8 @@ body {
 .line-text {
     padding-left: 1em;
 }
+
+.line-poetry{
+    font-style: italic;
+    padding-left:2em;
+}
