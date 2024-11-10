@@ -6,6 +6,16 @@ body {
     color: #444;
 }
 
+.characters {
+    background-color:rgb(66, 44, 44);
+    margin-bottom: 1em;
+}
+
+.note {
+    background-color:rgb(38, 116, 85);
+    margin: 1em; 
+}
+
 .line-container {
     background-color:rgb(194, 191, 191);
     margin-bottom: 0.5em;
@@ -19,7 +29,7 @@ body {
     padding-left: 1em;
 }
 
-.line-poetry{
+.line-poetry {
     font-style: italic;
     padding-left:2em;
 }
