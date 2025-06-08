@@ -49,6 +49,24 @@ permalink: /all-topics-list/
             {% endfor %}
         </ul>
 
+        {% assign files = site.html_pages
+        | where_exp: "page", "page.path contains 'files/'"
+        | where: "type", "Colloquium" %}
+
+        {% assign sorted = files | sort: "topic" %}
+
+        {% assign groups = sorted | group_by: "topic" %}
+        {% for group in groups %}
+        <h3>{{ group.name }}</h3>
+        <ul>
+            {% assign pages = group.items | sort: "author" | sort: "title" %}
+            {% for page in pages %}
+            <li><a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a></li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+
+
     </div>
 
 </body>
