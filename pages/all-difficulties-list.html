@@ -41,6 +41,7 @@ permalink: /all-difficulties-list/
             {% assign colloquia_pages = files 
                 | where: "type", "Colloquium" 
                 | where: "difficulty", "Easy"
+                | sort: "author"
                 | sort: "title"
             %}
             {% for page in colloquia_pages %}
@@ -57,6 +58,7 @@ permalink: /all-difficulties-list/
             {% assign colloquia_pages = files 
                 | where: "type", "Colloquium" 
                 | where: "difficulty", "Moderate"
+                | sort: "author"
                 | sort:  "title" %}
             {% for page in colloquia_pages %}
             <li><a href="{{ page.url }}">{{ page.author }} - {{ page.title }}</a></li>
@@ -72,6 +74,7 @@ permalink: /all-difficulties-list/
             {% assign colloquia_pages = files 
                 | where: "type", "Colloquium" 
                 | where: "difficulty", "Hard"
+                | sort: "author"
                 | sort: "title"
             %}
             {% for page in colloquia_pages %}

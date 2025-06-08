@@ -38,6 +38,8 @@ permalink: /all-topics-list/
             {% assign colloquia_pages = files
             | where: "type", "Colloquium"
             | sort: "topic"
+            | sort: "author"
+            | sort: "title"
             %}
             {% for page in colloquia_pages %}
             <h3>
