@@ -1,0 +1,47 @@
+---
+title: Colloquia difficultate ordinata
+type: Index
+permalink: /all-difficulties-list/
+---
+
+<!DOCTYPE html>
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+  <title>Auctores</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/style-list.css">
+  <link rel="stylesheet" href="/style-common.css">
+  <link rel="stylesheet" href="/w3.css">
+  <script src="/scripts/lazysizes.min.js" async=""></script>
+</head>
+
+<body>
+
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height:7em"></div>
+
+  <div class="main-content">
+    <h1>Auctores</h1>
+    <h2>Ecce, divisimus colloquia in tres greges: faciles, in medio, difficiles</h2>
+
+    <ul>
+      {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
+      {% assign colloquia_pages = files | where: "type", "Colloqium" | sort: "difficulty" %}
+      {% for page in colloquia_pages %}
+      <li><a href="{{ page.url }}">{{ page.difficulty }} - {{ page.title }}</a></li>
+      {% endfor %}
+    </ul>
+
+  </div>
+
+</body>
+
+</html>
