@@ -10,37 +10,65 @@ permalink: /all-difficulties-list/
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
-  <title>Colloquia difficultate ordinata</title>
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-  <link rel="stylesheet" href="/style-list.css">
-  <link rel="stylesheet" href="/style-common.css">
-  <link rel="stylesheet" href="/w3.css">
-  <script src="/scripts/lazysizes.min.js" async=""></script>
+    <title>Colloquia difficultate ordinata</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/style-list.css">
+    <link rel="stylesheet" href="/style-common.css">
+    <link rel="stylesheet" href="/w3.css">
+    <script src="/scripts/lazysizes.min.js" async=""></script>
 </head>
 
 <body>
 
-  <div class="w3-top">
-    <div class="w3-bar w3-black">
-      <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    <div class="w3-top">
+        <div class="w3-bar w3-black">
+            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
+            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+        </div>
     </div>
-  </div>
-  <div style="height:7em"></div>
+    <div style="height:7em"></div>
 
-  <div class="main-content">
-    <h1>Colloquia difficultate ordinata</h1>
-    <h2>Ecce, divisimus colloquia in tres greges: faciles, in medio, difficiles</h2>
+    <div class="main-content">
+        <h1>Colloquia difficultate ordinata</h1>
+        <h2>Ecce, divisimus colloquia in tres greges: faciles, in medio, difficiles</h2>
 
-    <ul>
-      {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-      {% assign colloquia_pages = files | where: "type", "Colloquium" | sort: "difficulty" %}
-      {% for page in colloquia_pages %}
-      <li><a href="{{ page.url }}">{{ page.difficulty }} - {{ page.title }}</a></li>
-      {% endfor %}
-    </ul>
+        <h3>
+            Faciliora
+        </h3>
+        <ul>
+            {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
+            {% assign colloquia_pages = files | where: "type", "Colloquium" |where: "difficulty", "Easy"| sort: "title"
+            %}
+            {% for page in colloquia_pages %}
+            <li><a href="{{ page.url }}">{{ page.difficulty }} - {{ page.title }}</a></li>
+            {% endfor %}
+        </ul>
 
-  </div>
+        <h3>
+            In Medio
+        </h3>
+        <ul>
+            {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
+            {% assign colloquia_pages = files | where: "type", "Colloquium" |where: "difficulty", "Moderate"| sort:
+            "title" %}
+            {% for page in colloquia_pages %}
+            <li><a href="{{ page.url }}">{{ page.difficulty }} - {{ page.title }}</a></li>
+            {% endfor %}
+        </ul>
+
+        <h3>
+            Difficiliora
+        </h3>
+        <ul>
+            {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
+            {% assign colloquia_pages = files | where: "type", "Colloquium" |where: "difficulty", "Hard"|| sort: "title"
+            %}
+            {% for page in colloquia_pages %}
+            <li><a href="{{ page.url }}">{{ page.difficulty }} - {{ page.title }}</a></li>
+            {% endfor %}
+        </ul>
+
+    </div>
 
 </body>
 
