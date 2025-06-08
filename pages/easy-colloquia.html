@@ -1,7 +1,7 @@
 ---
-title: Colloquia difficultate ordinata
+title: Colloquia Faciliora
 type: Index
-permalink: /all-difficulties-list/
+permalink: /easy-colloquia/
 ---
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@ permalink: /all-difficulties-list/
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
-  <title>Colloquia difficultate ordinata</title>
+  <title>Colloquia Faciliora</title>
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/style-list.css">
   <link rel="stylesheet" href="/style-common.css">
@@ -29,14 +29,14 @@ permalink: /all-difficulties-list/
   <div style="height:7em"></div>
 
   <div class="main-content">
-    <h1>Colloquia difficultate ordinata</h1>
-    <h2>Ecce, divisimus colloquia in tres greges: faciles, in medio, difficiles</h2>
+    <h1>Faciliora</h1>
+    <h2>Ecce, colloquia faciliora</h2>
 
     <ul>
       {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-      {% assign colloquia_pages = files | where: "type", "Colloquium" | sort: "difficulty" %}
+      {% assign colloquia_pages = files | where: "type", "Colloquium" | where: "difficulty", "Easy"|sort: "page.title" %}
       {% for page in colloquia_pages %}
-      <li><a href="{{ page.url }}">{{ page.difficulty }} - {{ page.title }}</a></li>
+      <li><a href="{{ page.url }}">{{ page.title }} ({{ page.author }})</a></li>
       {% endfor %}
     </ul>
 
