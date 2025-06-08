@@ -32,23 +32,6 @@ permalink: /all-topics-list/
         <h1>Colloquia argumento ordinata</h1>
         <h2>Ecce, divisimus colloquia variis argumentis</h2>
 
-        <ul>
-            {% assign files = site.html_pages
-            | where_exp: "page", "page.path contains 'files/'" %}
-            {% assign colloquia_pages = files
-            | where: "type", "Colloquium"
-            | sort: "topic"
-            | sort: "author"
-            | sort: "title"
-            %}
-            {% for page in colloquia_pages %}
-            <h3>
-                {{page.topic}}
-            </h3>
-            <li><a href="{{ page.url }}">{{ page.author }} - {{ page.title }}</a></li>
-            {% endfor %}
-        </ul>
-
         {% assign files = site.html_pages
         | where_exp: "page", "page.path contains 'files/'"
         | where: "type", "Colloquium" %}
