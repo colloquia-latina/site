@@ -33,8 +33,11 @@ permalink: /all-authors-list/
     <h2>Ecce, haec sunt auctores colloquium:</h2>
 
     <ul>
-      {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-      {% assign author_pages = files | where: "type", "Author" | sort: "author" %}
+      {% assign files = site.html_pages 
+        | where_exp: "page", "page.path contains 'files/'" %}
+      {% assign author_pages = files 
+        | where: "type", "Author" 
+        | sort: "author" %}
       {% for page in author_pages %}
       <li><a href="{{ page.url }}">{{ page.title }}</a></li>
       {% endfor %}
