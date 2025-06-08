@@ -75,6 +75,7 @@ permalink: /all-difficulties-list/
                 | where: "type", "Colloquium" 
                 | where: "difficulty", "Hard"
                 | sort: "author"
+                | sort: "sequence"
                 | sort: "title"
             %}
             {% for page in colloquia_pages %}

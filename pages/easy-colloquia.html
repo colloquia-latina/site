@@ -39,6 +39,7 @@ permalink: /easy-colloquia/
             | where: "type", "Colloquium"
             | where: "difficulty", "Easy"
             | sort: "author"
+            | sort: "sequence"
             | sort: "title" %}
             {% for page in colloquia_pages %}
             <li><a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a></li>

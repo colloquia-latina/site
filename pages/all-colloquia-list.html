@@ -38,6 +38,7 @@ permalink: /all-colloquia-list/
       {% assign colloquium_pages = files 
         | where: "type", "Colloquium" 
         | sort: "author" 
+        | sort: "sequence"
         | sort: "title" %}
       {% for page in colloquium_pages %}
       <li><a href="{{ page.url }}">{{page.author}}: {{ page.title }}</a></li>
