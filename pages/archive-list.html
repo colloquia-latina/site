@@ -37,7 +37,7 @@ permalink: /archive-list/
     </p>
 
     <ul>
-      {% assign files = site.html_pages 
+      {% assign files = site.pages 
         | where_exp: "page", "page.path contains 'archive-files/'" %}
       {% assign archive_pages = files 
         | where: "type", "Archive" 
