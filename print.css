@@ -1,43 +1,63 @@
 /* print.css */
 @media print {
+  /* 1. Force a light color scheme */
+  :root {
+    color-scheme: light only;
+  }
 
-    /* hide things you don’t need in the PDF */
-    .no-print,
-    nav,
-    footer,
-    .sidebar,
-    input[type=button] {
-        display: none !important;
-    }
+  /* 2. Page sizing & margins */
+  @page {
+    size: letter;
+    margin: 1in;
+  }
 
-    /* force your colloquium into a nice single column */
-    body {
-        margin: 1in;
-        /* give the page some white-space */
-        font-size: 12pt;
-        /* slightly larger for readability */
-        line-height: 1.4;
-        color: #000;
-        background: none;
-    }
+  /* 3. Neutralize any dark UIs or shadows */
+  * {
+    background: none !important;
+    box-shadow: none !important;
+    border-color: #ccc !important;
+  }
 
-    /* headers and footers
-  header.chapter-title {
-    page-break-before: always;
-    margin-top: 0;
-  } */
+  /* 4. Hide any navigation, headers, buttons, etc. */
+  nav,
+  .no-print,
+  .w3-top,
+  .sidebar,
+  footer,
+  input,
+  button {
+    display: none !important;
+  }
 
-    /* avoid breaking in the middle of a speaker’s block */
-    .line-container {
-        page-break-inside: avoid;
-    }
+  /* 5. Base typography for a clean, single-column layout */
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-family: serif;
+    font-size: 12pt;
+    line-height: 1.4;
+    -webkit-print-color-adjust: exact;
+    /* ensures our colors stay forced */
+    margin: 0; /* @page controls the actual page margins */
+  }
 
-    .note {
-        page-break-inside: avoid;
-    }
+  /* 6. Prevent splitting these blocks across pages */
+  .line-container,
+  .note {
+    page-break-inside: avoid;
+  }
 
-    /* ensure each major section starts on its own page
-  h2.topic {
-    page-break-before: always;
-  } */
+  /* 7. Style each block so it stands out on the page */
+  .line-container {
+    background: #f9f9f9 !important;
+    border: 1px solid #ddd !important;
+    padding: 0.5em 0.75em;
+    margin-bottom: 1em;
+  }
+
+  /* 8. Show link targets in-line for printed PDFs */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
 }
