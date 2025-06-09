@@ -37,10 +37,10 @@ permalink: /character-count/
         | where: "type", "Colloquium" %}
 
         {% assign sorted = files 
-            | sort: "character-count" %}
+            | sort: "character_count" %}
 
         {% assign groups = sorted 
-            | group_by: "character-count" %}
+            | group_by: "character_count" %}
         {% for group in groups %}
         <h3>Characters: {{ group.name }}</h3>
         <ul>
