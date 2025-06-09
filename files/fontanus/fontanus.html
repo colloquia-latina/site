@@ -21,8 +21,7 @@ permalink: /fontanus/
     <div class="w3-top">
         <div class="w3-bar w3-black">
             <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="/all-authors-list/"
-                class="w3-bar-item w3-button w3-mobile">Auctores</a>
+            <a href="/all-authors-list/" class="w3-bar-item w3-button w3-mobile">Auctores</a>
             <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
         </div>
     </div>
@@ -37,7 +36,11 @@ permalink: /fontanus/
             {% assign author_pages = files_list | where_exp: "page", "page.author == 'Fontanus'" | sort:
             "title"%}
             {% for page in author_pages %}
-            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+            <li><a href="{{ page.url }}">{{ page.title }}</a>
+                <div class="subtitle">
+                    {{page.subtitle}}
+                </div>
+            </li>
             {% endfor %}
         </ul>
     </div>
