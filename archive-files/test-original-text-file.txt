@@ -1,6 +1,8 @@
 ---
 title: Hello World
+subtitle: Various notes about the file
 type: Archive
+source_link: external hyperlink to the original file (eg. google books)
 colloquium_link: /corvinus/latinum-ideoma-colloquium-primum/
 permalink: /archive/hello-world
 ---

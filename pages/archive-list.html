@@ -31,19 +31,24 @@ permalink: /archive-list/
   <div class="main-content">
     <h1>Archived Files</h1>
 
-    <p>For the best reading experience, navigate elsewhere on our site.  
-      But if you really want the original text version, we've saved them here.  
-      This also serves as a backup, which is important to us as one of our goals is to preserve these texts for many years.
+    <p>For the best reading experience, navigate elsewhere on our site.
+      But if you really want the original text version, we've saved them here.
+      This also serves as a backup, which is important to us as one of our goals is to preserve these texts for many
+      years.
     </p>
 
     <ul>
-      {% assign files = site.pages 
-        | where_exp: "page", "page.path contains 'archive-files/'" %}
-      {% assign archive_pages = files 
-        | where: "type", "Archive" 
-        | sort: "title" %}
+      {% assign files = site.pages
+      | where_exp: "page", "page.path contains 'archive-files/'" %}
+      {% assign archive_pages = files
+      | where: "type", "Archive"
+      | sort: "title" %}
       {% for page in archive_pages %}
-      <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+      <li><a href="{{ page.url }}">{{ page.title }}</a>
+        {{page.subtitle}}
+        {{page.source_link}}
+        {{page.colloquium_link}}
+      </li>
       {% endfor %}
     </ul>
 
