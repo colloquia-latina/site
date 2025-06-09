@@ -42,8 +42,9 @@ permalink: /all-colloquia-list/
       | sort: "title" %}
       {% for page in colloquium_pages %}
       <li><a href="{{ page.url }}">{{page.author}}: {{ page.title }}</a>
-        <br>
-        <i>{{page.subtitle}}</i>
+        <div class="subtitle">
+          {{page.subtitle}}
+        </div>
       </li>
       {% endfor %}
     </ul>
