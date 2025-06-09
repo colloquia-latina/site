@@ -50,10 +50,9 @@ permalink: /all-topics-list/
             | sort: "title" %}
             {% for page in pages %}
             <li><a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a>
-                <br>
-                <p margin-left: 2em;>
-                    <i>{{page.subtitle}}</i>
-                </p>
+                <div class="subtitle">
+                    {{page.subtitle}}
+                </div>
             </li>
             {% endfor %}
         </ul>

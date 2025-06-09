@@ -34,6 +34,13 @@ body {
     margin: 0.5em 0;
 }
 
+.subtitle {
+  margin-left: 2em;
+  margin-top: 0.2em;
+  margin-bottom: 0;
+  font-style: italic;
+}
+
 .main-content a {
     color: #0066cc;
     text-decoration: none;
