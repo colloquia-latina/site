@@ -1,15 +1,17 @@
-title: Your Site Title
+title: Colloquia Latina
 theme: minima  # or specify another Jekyll theme
 plugins:
   - jekyll-feed
 include:
   - pages
   - colloquia
+  - files
+  - archive-files
 
-collections:
-  colloquia:
-    output: true
-    permalink: /colloquia/:name/
-  authors:
-    output: true
-    permalink: /pages/authors/:name/
+# collections:
+#   colloquia:
+#     output: true
+#     permalink: /colloquia/:name/
+#   authors:
+#     output: true
+#     permalink: /pages/authors/:name/
