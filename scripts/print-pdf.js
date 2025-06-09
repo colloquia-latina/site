@@ -4,7 +4,24 @@ document.addEventListener('DOMContentLoaded', () => {
     .getElementById('download-pdf')
     .addEventListener('click', () => {
       const element = document.querySelector('.main-content');
-      const opts = { /* your html2pdf options */ };
-      html2pdf().set(opts).from(element).save();
+      html2pdf()
+        .set({
+          margin: 0.5,
+          filename: 'colloquium.pdf',
+          jsPDF: { unit: 'in', format: 'letter' },
+          html2canvas: {
+            scale: 2,
+            onclone: (clonedDoc) => {
+              // inject your print.css into the cloned document
+              const link = clonedDoc.createElement('link');
+              link.rel = 'stylesheet';
+              link.href = '/print.css';
+              link.media = 'all';
+              clonedDoc.head.appendChild(link);
+            }
+          }
+        })
+        .from(element)
+        .save();
     });
 });
