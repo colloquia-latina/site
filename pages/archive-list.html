@@ -37,20 +37,48 @@ permalink: /archive-list/
       years.
     </p>
 
-    <ul>
-      {% assign files = site.pages
-      | where_exp: "page", "page.path contains 'archive-files/'" %}
-      {% assign archive_pages = files
-      | where: "type", "Archive"
-      | sort: "title" %}
-      {% for page in archive_pages %}
-      <li><a href="{{ page.url }}">{{ page.title }}</a>
-        {{page.subtitle}}
-        {{page.source_link}}
-        {{page.colloquium_link}}
-      </li>
-      {% endfor %}
-    </ul>
+<table class="archive-table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Notes</th>
+      <th>Source</th>
+      <th>Colloquium Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% assign files = site.pages 
+       | where_exp: "page", "page.path contains 'archive-files/'" %}
+    {% assign archive_pages = files 
+       | where: "type", "Archive" 
+       | sort: "title" %}
+    {% for page in archive_pages %}
+      <tr>
+        <td>
+          <a href="{{ page.url }}">{{ page.title }}</a>
+        </td>
+        <td>
+          {{ page.subtitle }}
+        </td>
+        <td>
+          {% if page.source_link %}
+            <a href="{{ page.source_link }}" target="_blank" rel="noopener">
+              See External Source
+            </a>
+          {% endif %}
+        </td>
+        <td>
+          {% if page.colloquium_link %}
+            <a href="{{ page.colloquium_link }}">
+              View Colloquium
+            </a>
+          {% endif %}
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
 
   </div>
 
