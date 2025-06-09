@@ -1,0 +1,13 @@
+---
+title: Hello World
+type: Archive
+colloquium_link: /corvinus/latinum-ideoma-colloquium-primum/
+permalink: /archive/hello-world
+---
+
+
+Hello world
+
+{{page.colloquium_link}}
+
+Corresponds with: <a href="{{page.colloquium_link}}">Colloquium Page</a>
