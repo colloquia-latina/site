@@ -1,0 +1,33 @@
+/*loaded by print-pdf.js script in the context of html2pdf printing, 
+which doesn't trigger the normal @print media context */
+:root { color-scheme: light only; }
+@page { size: letter; margin: 1in; }
+* {
+  background: none !important;
+  box-shadow: none !important;
+  border-color: #ccc !important;
+}
+nav, .no-print, .w3-top, .sidebar, footer, input, button {
+  display: none !important;
+}
+body {
+  background: #fff !important;
+  color: #000 !important;
+  font-family: serif;
+  font-size: 12pt;
+  line-height: 1.4;
+  -webkit-print-color-adjust: exact;
+}
+.line-container, .note {
+  page-break-inside: avoid;
+}
+.line-container {
+  background: #f9f9f9 !important;
+  border: 1px solid #ddd !important;
+  padding: 0.5em 0.75em;
+  margin-bottom: 1em;
+}
+a[href]:after {
+  content: " (" attr(href) ")";
+  font-size: 0.85em;
+}

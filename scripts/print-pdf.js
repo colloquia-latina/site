@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
               // inject your print.css into the cloned document
               const link = clonedDoc.createElement('link');
               link.rel = 'stylesheet';
-              link.href = '/print.css';
+              link.href = '/pdf-download.css';
               link.media = 'all';
               clonedDoc.head.appendChild(link);
             }
