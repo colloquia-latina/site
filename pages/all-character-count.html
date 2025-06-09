@@ -50,7 +50,8 @@ permalink: /character-count/
             | sort: "title" %}
             {% for page in pages %}
             <li><a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a>
-                <br>{{page.subtitle}}
+                <br>
+                <i>{{page.subtitle}}</i>
             </li>
             {% endfor %}
         </ul>

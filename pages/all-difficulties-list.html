@@ -36,16 +36,19 @@ permalink: /all-difficulties-list/
             Faciliora
         </h3>
         <ul>
-            {% assign files = site.html_pages 
-                | where_exp: "page", "page.path contains 'files/'" %}
-            {% assign colloquia_pages = files 
-                | where: "type", "Colloquium" 
-                | where: "difficulty", "Easy"
-                | sort: "author"
-                | sort: "title"
+            {% assign files = site.html_pages
+            | where_exp: "page", "page.path contains 'files/'" %}
+            {% assign colloquia_pages = files
+            | where: "type", "Colloquium"
+            | where: "difficulty", "Easy"
+            | sort: "author"
+            | sort: "title"
             %}
             {% for page in colloquia_pages %}
-            <li><a href="{{ page.url }}">{{ page.author }} - {{ page.title }}</a></li>
+            <li><a href="{{ page.url }}">{{ page.author }} - {{ page.title }}</a>
+                <br>
+                <i>{{page.subtitle}}</i>
+            </li>
             {% endfor %}
         </ul>
 
@@ -53,15 +56,18 @@ permalink: /all-difficulties-list/
             In Medio
         </h3>
         <ul>
-            {% assign files = site.html_pages 
-                | where_exp: "page", "page.path contains 'files/'" %}
-            {% assign colloquia_pages = files 
-                | where: "type", "Colloquium" 
-                | where: "difficulty", "Moderate"
-                | sort: "author"
-                | sort:  "title" %}
+            {% assign files = site.html_pages
+            | where_exp: "page", "page.path contains 'files/'" %}
+            {% assign colloquia_pages = files
+            | where: "type", "Colloquium"
+            | where: "difficulty", "Moderate"
+            | sort: "author"
+            | sort: "title" %}
             {% for page in colloquia_pages %}
-            <li><a href="{{ page.url }}">{{ page.author }} - {{ page.title }}</a></li>
+            <li><a href="{{ page.url }}">{{ page.author }} - {{ page.title }}</a>
+                <br>
+                <i>{{page.subtitle}}</i>
+            </li>
             {% endfor %}
         </ul>
 
@@ -69,17 +75,20 @@ permalink: /all-difficulties-list/
             Difficiliora
         </h3>
         <ul>
-            {% assign files = site.html_pages 
-                | where_exp: "page", "page.path contains 'files/'" %}
-            {% assign colloquia_pages = files 
-                | where: "type", "Colloquium" 
-                | where: "difficulty", "Hard"
-                | sort: "title"
-                | sort_natural: "sequence"
-                | sort: "author"
+            {% assign files = site.html_pages
+            | where_exp: "page", "page.path contains 'files/'" %}
+            {% assign colloquia_pages = files
+            | where: "type", "Colloquium"
+            | where: "difficulty", "Hard"
+            | sort: "title"
+            | sort_natural: "sequence"
+            | sort: "author"
             %}
             {% for page in colloquia_pages %}
-            <li><a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a></li>
+            <li><a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a>
+                <br>
+                <i>{{page.subtitle}}</i>
+            </li>
             {% endfor %}
         </ul>
 

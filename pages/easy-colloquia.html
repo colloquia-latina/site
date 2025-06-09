@@ -42,11 +42,14 @@ permalink: /easy-colloquia/
             | sort: "sequence"
             | sort: "title" %}
             {% for page in colloquia_pages %}
-            <li><a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a></li>
+            <li><a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a>
+                <br>
+                <i>{{page.subtitle}}</i>
+            </li>
             {% endfor %}
         </ul>
 
-        For other difficulties of colloquia, see <a href="/all-difficulties-list/">All Colloquia by Difficulty</a> 
+        For other difficulties of colloquia, see <a href="/all-difficulties-list/">All Colloquia by Difficulty</a>
     </div>
 
 </body>
