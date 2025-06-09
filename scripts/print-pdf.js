@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const element = document.querySelector('.main-content');
       html2pdf()
         .set({
+          filename: 'Colloquium.{{ page.title }}.pdf',
           margin: 0.5,
           filename: 'colloquium.pdf',
           jsPDF: { unit: 'in', format: 'letter' },
