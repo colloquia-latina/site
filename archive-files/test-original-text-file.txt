@@ -8,6 +8,3 @@ permalink: /archive/hello-world
 
 Hello world
 
-{{page.colloquium_link}}
-
-Corresponds with: <a href="{{page.colloquium_link}}">Colloquium Page</a>
