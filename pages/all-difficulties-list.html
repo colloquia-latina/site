@@ -74,7 +74,9 @@ permalink: /all-difficulties-list/
             {% assign colloquia_pages = files 
                 | where: "type", "Colloquium" 
                 | where: "difficulty", "Hard"
+                | sort: "title"
                 | sort_natural: "sequence"
+                | sort: "author"
             %}
             {% for page in colloquia_pages %}
             <li><a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a></li>
