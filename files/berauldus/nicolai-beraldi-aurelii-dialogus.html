@@ -17,8 +17,10 @@ permalink: /berauldus/nicolai-beraldi-aurelii/
     <link rel="stylesheet" href="/style-reading.css">
     <link rel="stylesheet" href="/style-common.css">
     <link rel="stylesheet" href="/w3.css">
+    <link rel="stylesheet" href="/css/print.css" media="print">
     <script src="/scripts/lazysizes.min.js" async=""></script>
-    <script src="/scripts/print-page.js" async=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="/scripts/print-pdf.js"></script>
 </head>
 
 <body>
@@ -1154,6 +1156,6 @@ permalink: /berauldus/nicolai-beraldi-aurelii/
             Apuleii, uirum utriusque linguae peritissimum. Apud Sed. Gryphium. Lugduni. Sebastianus Gryphius. 1534.
         </div>
 
-        <input type="button" value="Print this page" onclick="printPage()" />
+        <button id="download-pdf">Download PDF</button>
     </div>
 </body>

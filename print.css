@@ -1,0 +1,43 @@
+/* print.css */
+@media print {
+
+    /* hide things you don’t need in the PDF */
+    .no-print,
+    nav,
+    footer,
+    .sidebar,
+    input[type=button] {
+        display: none !important;
+    }
+
+    /* force your colloquium into a nice single column */
+    body {
+        margin: 1in;
+        /* give the page some white-space */
+        font-size: 12pt;
+        /* slightly larger for readability */
+        line-height: 1.4;
+        color: #000;
+        background: none;
+    }
+
+    /* headers and footers
+  header.chapter-title {
+    page-break-before: always;
+    margin-top: 0;
+  } */
+
+    /* avoid breaking in the middle of a speaker’s block */
+    .line-container {
+        page-break-inside: avoid;
+    }
+
+    .note {
+        page-break-inside: avoid;
+    }
+
+    /* ensure each major section starts on its own page
+  h2.topic {
+    page-break-before: always;
+  } */
+}
