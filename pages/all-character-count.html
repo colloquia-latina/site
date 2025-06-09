@@ -36,20 +36,22 @@ permalink: /character-count/
         | where_exp: "page", "page.path contains 'files/'"
         | where: "type", "Colloquium" %}
 
-        {% assign sorted = files 
-            | sort: "character_count" %}
+        {% assign sorted = files
+        | sort: "character_count" %}
 
-        {% assign groups = sorted 
-            | group_by: "character_count" %}
+        {% assign groups = sorted
+        | group_by: "character_count" %}
         {% for group in groups %}
         <h3>Characters: {{ group.name }}</h3>
         <ul>
-            {% assign pages = group.items 
-                | sort: "author"
-                | sort: "sequence" 
-                | sort: "title" %}
+            {% assign pages = group.items
+            | sort: "author"
+            | sort: "sequence"
+            | sort: "title" %}
             {% for page in pages %}
-            <li><a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a></li>
+            <li><a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a>
+                <br>{{page.subtitle}}
+            </li>
             {% endfor %}
         </ul>
         {% endfor %}
