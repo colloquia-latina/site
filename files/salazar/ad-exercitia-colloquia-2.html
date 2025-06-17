@@ -438,20 +438,19 @@ permalink: /salazar/ad-exercitia-colloquia-dialogus-secundus/
             Dēsistō invītus, tū manē, nam ipse ā mātre vocor.
         </div>
 
-            {% assign files = site.html_pages
-            | where_exp: "page", "page.path contains 'files/'" %}
-            {% assign colloquia_pages = files
-            | where: "type", "Colloquium"
-            | where: "author", {{page.author}}
-            | where: "sequence", {{page.sequence}} - 1
-            %}
-            {% for page in colloquia_pages %}
-            <a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a>
-            {% endfor %}
+        {% assign prev_sequence = page.sequence | minus: 1 %}
+        {% assign next_sequence = page.sequence | plus: 1 %}
+
+        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
+        {% assign colloquia = files | where: "type", "Colloquium" | where: "author", page.author %}
+
+        {% assign prev_page = colloquia | where: "sequence", prev_sequence | first %}
+        {% assign next_page = colloquia | where: "sequence", next_sequence | first %}
+
 
         <div class="nav-buttons">
-            <a href="/salazar/ad-exercitia-colloquia-dialogus-primus/" class="nav-button nav-back">⟵ Previous</a>
-            <a href="/salazar/ad-exercitia-colloquia-dialogus-tertius/" class="nav-button nav-next">Next ⟶</a>
+            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
         </div>
 
     </div>
