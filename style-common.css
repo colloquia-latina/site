@@ -8,6 +8,12 @@
     }
 }
 
+.footer {
+    text-align: center;
+    background-color: #1e1e1e;
+    color: #ddd;
+}
+
 /* change styling for better printing from browser*/
 @media print {
 
