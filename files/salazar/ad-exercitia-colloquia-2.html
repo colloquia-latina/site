@@ -25,27 +25,16 @@ permalink: /salazar/ad-exercitia-colloquia-dialogus-secundus/
 </head>
 
 <body>
-
-    <!-- Top Navbar -->
+    
     <div class="w3-top">
-        <div class="w3-bar w3-black w3-large">
-            <a href="/" class="w3-bar-item w3-button"><b>Colloquia Latina</b></a>
-
-            <!-- Hamburger button for small screens -->
-            <a href="javascript:void(0);" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
-                onclick="toggleMenu()">☰</a>
-
-            <div id="navMenu" class="w3-hide-small w3-bar">
-                <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                    class="w3-bar-item w3-button">{{ page.author }}</a>
-                <span class="w3-bar-item w3-center" style="flex: 1; text-align: center;"><i>{{ page.title }}</i></span>
-            </div>
-
+        <div class="w3-bar w3-black">
+            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
+            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
+            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
         </div>
     </div>
-
     <div style="height:7em"></div>
-
 
     <div class="main-content">
         <h1>{{page.title}}</h1>

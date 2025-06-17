@@ -169,27 +169,3 @@ p {
   }
 }
 
-/* Responsive stacking on small screens */
-/* @media (max-width: 600px) {
-  .nav-buttons {
-    grid-template-columns: 1fr;
-  }
-
-  .nav-back,
-  .nav-next {
-    justify-self: center;
-  }
-} */
-
-/* Smooth dropdown animation for navbar hamburger*/
-#navMenu {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease, opacity 0.3s ease;
-  opacity: 0;
-}
-
-#navMenu.w3-show {
-  max-height: 500px;
-  opacity: 1;
-}
