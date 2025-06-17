@@ -170,7 +170,7 @@ p {
 }
 
 /* Responsive stacking on small screens */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .nav-buttons {
     grid-template-columns: 1fr;
   }
@@ -179,4 +179,4 @@ p {
   .nav-next {
     justify-self: center;
   }
-}
+} */
