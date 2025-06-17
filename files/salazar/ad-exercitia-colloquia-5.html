@@ -3,6 +3,7 @@ title: Ad Exercitia Linguae Latīnae Dialogī - Dialogus Quintus
 subtitle: Acadēmia Mexicāna
 type: Colloquium
 author: Salazar
+collection: Ad Exercitia Colloquia
 topic: Waking Up
 difficulty: Moderate
 sequence: 5
@@ -737,4 +738,25 @@ permalink: /salazar/ad-exercitia-colloquia-dialogus-quintus/
             Multa in quam paucissima contulistī, quae in hīs fuērunt lātius disserenda, rogābō aliās, cum ōtiī plūs
             nactī erimus. Nunc autem quoniam merīdiēs appetit, prānsum abeāmus.
         </div>
+
+        {% assign prev_sequence = page.sequence | minus: 1 %}
+        {% assign next_sequence = page.sequence | plus: 1 %}
+
+        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
+
+        {% assign neighbors = files
+        | where: "type", "Colloquium"
+        | where: "author", page.author
+        | where: "collection", page.collection
+        %}
+
+        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
+        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
+
+
+        <div class="nav-buttons">
+            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+        </div>
+    </div>
 </body>
