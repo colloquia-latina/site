@@ -21,18 +21,29 @@ permalink: /salazar/ad-exercitia-colloquia-dialogus-secundus/
     <link rel="stylesheet" href="/style-common.css">
     <link rel="stylesheet" href="/w3.css">
     <script src="/scripts/lazysizes.min.js" async=""></script>
+    <script src="/scripts/hamburger-menu.js" defer></script>
 </head>
 
 <body>
 
+    <!-- Top Navbar -->
     <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+        <div class="w3-bar w3-black w3-large">
+            <a href="/" class="w3-bar-item w3-button"><b>Colloquia Latina</b></a>
+
+            <!-- Hamburger button for small screens -->
+            <a href="javascript:void(0);" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+                onclick="toggleMenu()">☰</a>
+
+            <div id="navMenu" class="w3-hide-small w3-bar">
+                <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+                    class="w3-bar-item w3-button">{{ page.author }}</a>
+                <span class="w3-bar-item w3-center" style="flex: 1; text-align: center;"><i>{{ page.title }}</i></span>
+            </div>
+
         </div>
     </div>
+
     <div style="height:7em"></div>
 
 
@@ -443,7 +454,7 @@ permalink: /salazar/ad-exercitia-colloquia-dialogus-secundus/
         {% assign next_sequence = page.sequence | plus: 1 %}
 
         {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-        
+
         {% assign neighbors = files
         | where: "type", "Colloquium"
         | where: "author", page.author
