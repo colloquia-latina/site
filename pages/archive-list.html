@@ -37,49 +37,53 @@ permalink: /archive-list/
       years.
     </p>
 
-<table class="archive-table">
-  <thead>
-    <tr>
-      <th>File Name</th>
-      <th>Notes</th>
-      <th>Source</th>
-      <th>Colloquium Link</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% assign files = site.pages 
-       | where_exp: "page", "page.path contains 'archive-files/'" %}
-    {% assign archive_pages = files 
-       | where: "type", "Archive" 
-       | sort: "title" %}
-    {% for page in archive_pages %}
-      <tr>
-        <td>
-          <a href="{{ page.url }}">{{ page.title }}</a>
-        </td>
-        <td>
-          {{ page.subtitle }}
-        </td>
-        <td>
-          {% if page.source_link %}
+    <table class="archive-table">
+      <thead>
+        <tr>
+          <th>File Name</th>
+          <th>Notes</th>
+          <th>Source</th>
+          <th>Colloquium Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% assign files = site.pages
+        | where_exp: "page", "page.path contains 'archive-files/'" %}
+        {% assign archive_pages = files
+        | where: "type", "Archive"
+        | sort: "title" %}
+        {% for page in archive_pages %}
+        <tr>
+          <td>
+            <a href="{{ page.url }}">{{ page.title }}</a>
+          </td>
+          <td>
+            {{ page.subtitle }}
+          </td>
+          <td>
+            {% if page.source_link %}
             <a href="{{ page.source_link }}" target="_blank" rel="noopener">
               See External Source
             </a>
-          {% endif %}
-        </td>
-        <td>
-          {% if page.colloquium_link %}
+            {% endif %}
+          </td>
+          <td>
+            {% if page.colloquium_link %}
             <a href="{{ page.colloquium_link }}">
               View Colloquium
             </a>
-          {% endif %}
-        </td>
-      </tr>
-    {% endfor %}
-  </tbody>
-</table>
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
 
 
+  </div>
+
+  <div class="w3-container w3-black">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
   </div>
 
 </body>
