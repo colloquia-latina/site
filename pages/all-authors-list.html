@@ -32,24 +32,16 @@ permalink: /all-authors-list/
     <h1>Auctores</h1>
     <h2>Ecce, haec sunt auctores colloquium:</h2>
 
-    <div class="author-accordion">
-      {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-      {% assign author_pages = files | where: "type", "Author" | sort: "author" %}
-
+    <ul>
+      {% assign files = site.html_pages
+      | where_exp: "page", "page.path contains 'files/'" %}
+      {% assign author_pages = files
+      | where: "type", "Author"
+      | sort: "author" %}
       {% for page in author_pages %}
-      <div class="accordion-item">
-        <input type="checkbox" id="accordion-{{ forloop.index }}" class="accordion-toggle">
-        <label class="accordion-header w3-button w3-light-grey" for="accordion-{{ forloop.index }}">
-          {{ page.title }}
-        </label>
-        <div class="accordion-content w3-container">
-          <p><a href="{{ page.url }}">{{ page.title }}</a></p>
-        </div>
-      </div>
+      <li><a href="{{ page.url }}">{{ page.title }}</a></li>
       {% endfor %}
-    </div>
-
-
+    </ul>
   </div>
 
   <div class="footer">

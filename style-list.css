@@ -1,37 +1,37 @@
 /* ——— Base ——— */
 body {
-    margin-top: 4em;
-    background-color: #fdfdfd;
-    color: #222;
-    font-family: "Georgia", "Times New Roman", serif;
-    line-height: 1.75;
-    font-size: 1.5em;
-    padding: 0 1em;
+  margin-top: 4em;
+  background-color: #fdfdfd;
+  color: #222;
+  font-family: "Georgia", "Times New Roman", serif;
+  line-height: 1.75;
+  font-size: 1.5em;
+  padding: 0 1em;
 }
 
 /* ——— Main container ——— */
 .main-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1em 0;
-    text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em 0;
+  text-align: left;
 }
 
 .main-content h1,
 .main-content h2 {
-    color: #111;
-    margin-bottom: 0.5em;
+  color: #111;
+  margin-bottom: 0.5em;
 }
 
 /* ——— List styling ——— */
 .main-content ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 1em 0;
+  list-style: none;
+  padding-left: 0;
+  margin: 1em 0;
 }
 
 .main-content li {
-    margin: 0.5em 0;
+  margin: 0.5em 0;
 }
 
 .subtitle {
@@ -42,15 +42,15 @@ body {
 }
 
 .main-content a {
-    color: #0066cc;
-    text-decoration: none;
-    border-bottom: 1px dotted #0066cc;
-    transition: color 0.2s ease, border-color 0.2s ease;
+  color: #0066cc;
+  text-decoration: none;
+  border-bottom: 1px dotted #0066cc;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .main-content a:hover {
-    color: #004499;
-    border-bottom-color: #004499;
+  color: #004499;
+  border-bottom-color: #004499;
 }
 
 /* ——— Dark Mode ——— */
@@ -59,16 +59,78 @@ body {
     background-color: #1e1e1e;
     color: #ddd;
   }
+
   .main-content h1,
   .main-content h2 {
     color: #fff;
   }
+
   .main-content a {
     color: #66aaff;
     border-bottom-color: #66aaff;
   }
+
   .main-content a:hover {
     color: #aaccee;
     border-bottom-color: #aaccee;
+  }
+}
+
+/* Accordion container */
+.accordion-item {
+  margin-bottom: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Hide the checkbox */
+.accordion-toggle {
+  display: none;
+}
+
+/* Accordion header label */
+.accordion-header {
+  display: block;
+  cursor: pointer;
+  padding: 1em;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.1em;
+  border-bottom: 1px solid #ccc;
+  transition: background-color 0.3s ease;
+}
+
+/* Accordion content panel (collapsed by default) */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background-color: #fff;
+  padding: 0 1em;
+}
+
+/* Expanded state when checkbox is checked */
+.accordion-toggle:checked~.accordion-content {
+  max-height: 500px;
+  /* adjust based on expected content */
+  padding: 1em;
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  .accordion-item {
+    border-color: #555;
+  }
+
+  .accordion-header {
+    background-color: #2a2a2a;
+    color: #ddd;
+    border-bottom-color: #555;
+  }
+
+  .accordion-content {
+    background-color: #333;
+    color: #ddd;
   }
 }

@@ -36,26 +36,32 @@ permalink: /character-count/
         | where_exp: "page", "page.path contains 'files/'"
         | where: "type", "Colloquium" %}
 
-        {% assign sorted = files
-        | sort: "character_count" %}
+        {% assign sorted = files | sort: "character_count" %}
+        {% assign groups = sorted | group_by: "character_count" %}
 
-        {% assign groups = sorted
-        | group_by: "character_count" %}
         {% for group in groups %}
-        <h3>Characters: {{ group.name }}</h3>
-        <ul>
-            {% assign pages = group.items
-            | sort: "author"
-            | sort: "sequence"
-            | sort: "title" %}
-            {% for page in pages %}
-            <li><a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a>
-                <div class="subtitle">
-                    {{page.subtitle}}
-                </div>
-            </li>
-            {% endfor %}
-        </ul>
+        <div class="accordion-item">
+            <input type="checkbox" id="accordion-characters-{{ forloop.index }}" class="accordion-toggle">
+            <label class="accordion-header w3-button w3-light-grey" for="accordion-characters-{{ forloop.index }}">
+                Characters: {{ group.name }}
+            </label>
+
+            <div class="accordion-content w3-container">
+                <ul>
+                    {% assign pages = group.items
+                    | sort: "author"
+                    | sort: "sequence"
+                    | sort: "title" %}
+
+                    {% for page in pages %}
+                    <li>
+                        <a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a>
+                        <div class="subtitle">{{ page.subtitle }}</div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
         {% endfor %}
 
     </div>
