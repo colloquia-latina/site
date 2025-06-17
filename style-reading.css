@@ -169,3 +169,61 @@ p {
   }
 }
 
+/* Accordion container */
+.accordion-item {
+  margin-bottom: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Hide the checkbox */
+.accordion-toggle {
+  display: none;
+}
+
+/* Accordion header label */
+.accordion-header {
+  display: block;
+  cursor: pointer;
+  padding: 1em;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.1em;
+  border-bottom: 1px solid #ccc;
+  transition: background-color 0.3s ease;
+}
+
+/* Accordion content panel (collapsed by default) */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background-color: #fff;
+  padding: 0 1em;
+}
+
+/* Expanded state when checkbox is checked */
+.accordion-toggle:checked~.accordion-content {
+  max-height: 500px;
+  /* adjust based on expected content */
+  padding: 1em;
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  .accordion-item {
+    border-color: #555;
+  }
+
+  .accordion-header {
+    background-color: #2a2a2a;
+    color: #ddd;
+    border-bottom-color: #555;
+  }
+
+  .accordion-content {
+    background-color: #333;
+    color: #ddd;
+  }
+}
