@@ -46,20 +46,21 @@ permalink: /character-count/
                 Characters: {{ group.name }}
             </label>
 
-            <div class="accordion-content w3-container">
-                <ul>
-                    {% assign pages = group.items
-                    | sort: "author"
-                    | sort: "sequence"
-                    | sort: "title" %}
-
-                    {% for page in pages %}
-                    <li>
-                        <a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a>
-                        <div class="subtitle">{{ page.subtitle }}</div>
-                    </li>
-                    {% endfor %}
-                </ul>
+            <div class="accordion-content">
+                <div class="w3-container">
+                    <ul>
+                        {% assign pages = group.items
+                        | sort: "author"
+                        | sort: "sequence"
+                        | sort: "title" %}
+                        {% for page in pages %}
+                        <li>
+                            <a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a>
+                            <div class="subtitle">{{ page.subtitle }}</div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
         </div>
         {% endfor %}
