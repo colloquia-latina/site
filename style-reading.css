@@ -71,44 +71,6 @@ p {
   margin-bottom: 1.25em;
 }
 
-.nav-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 3em;
-  gap: 1em;
-  flex-wrap: wrap;
-}
-
-.nav-button {
-  padding: 0.75em 1.5em;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 1.05em;
-  font-family: "Georgia", "Times New Roman", serif;
-  transition: background-color 0.25s ease, transform 0.2s ease, border-color 0.25s ease;
-  border: 1px solid;
-  background-color: #f9f9f9;
-  color: #222;
-  border-color: #ccc;
-}
-
-.nav-button:hover {
-  background-color: #ececec;
-  border-color: #aaa;
-  transform: scale(1.04);
-}
-
-@media (max-width: 600px) {
-  .nav-buttons {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .nav-button {
-    text-align: center;
-  }
-}
-
 /* ——— Dark Mode ——— */
 @media (prefers-color-scheme: dark) {
   body {
@@ -154,7 +116,46 @@ p {
   p {
     color: #ddd;
   }
+}
 
+.nav-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 3em;
+  gap: 1em;
+}
+
+.nav-button {
+  padding: 0.75em 1.5em;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1.05em;
+  font-family: "Georgia", "Times New Roman", serif;
+  transition: background-color 0.25s ease, transform 0.2s ease, border-color 0.25s ease;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  color: #222;
+  width: fit-content;
+}
+
+.nav-button:hover {
+  background-color: #ececec;
+  border-color: #aaa;
+  transform: scale(1.04);
+}
+
+/* Left align back button */
+.nav-back {
+  justify-self: start;
+}
+
+/* Right align next button */
+.nav-next {
+  justify-self: end;
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
   .nav-button {
     background-color: #2a2a2a;
     color: #ddd;
@@ -165,5 +166,17 @@ p {
     background-color: #444;
     border-color: #666;
     transform: scale(1.04);
+  }
+}
+
+/* Responsive stacking on small screens */
+@media (max-width: 600px) {
+  .nav-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-back,
+  .nav-next {
+    justify-self: center;
   }
 }

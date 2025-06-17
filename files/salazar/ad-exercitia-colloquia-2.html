@@ -438,6 +438,17 @@ permalink: /salazar/ad-exercitia-colloquia-dialogus-secundus/
             Dēsistō invītus, tū manē, nam ipse ā mātre vocor.
         </div>
 
+            {% assign files = site.html_pages
+            | where_exp: "page", "page.path contains 'files/'" %}
+            {% assign colloquia_pages = files
+            | where: "type", "Colloquium"
+            | where: "author", {{page.author}}
+            | where: "sequence", {{page.sequence}} - 1
+            %}
+            {% for page in colloquia_pages %}
+            <a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a>
+            {% endfor %}
+
         <div class="nav-buttons">
             <a href="/salazar/ad-exercitia-colloquia-dialogus-primus/" class="nav-button nav-back">⟵ Previous</a>
             <a href="/salazar/ad-exercitia-colloquia-dialogus-tertius/" class="nav-button nav-next">Next ⟶</a>
