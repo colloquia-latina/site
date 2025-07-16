@@ -7,7 +7,7 @@ collection: Colloquia Scholastica
 topic: Waking Up
 difficulty: Moderate
 sequence: 150
-character_count: 2
+character_count: 3
 permalink: /corderius/colloquia-scholastica-liber-tertius-colloquium-tertium/
 ---
 
@@ -42,34 +42,111 @@ permalink: /corderius/colloquia-scholastica-liber-tertius-colloquium-tertium/
 
         <div class="characters">
             Persōnae:<br>
-            Malognodus, Gassīnus
+        Nathaniēl, famulus, Magister
+    </div>
+
+    <div class="line-container" id="Nathaniel.1">
+        <div class="line-character">
+            Nathaniēl
         </div>
+        Magister, nēmō est quī doceat in sextā classe.
+    </div>
 
-        <div class="line-container" id="Malognodus.1">
-            <div class="line-character">
-                Malognodus
-            </div>
-            Quid cōgitās Gassīne? cavē tibi obsecrō.
+    <div class="line-container" id="Magister.2">
+        <div class="line-character">
+            Magister
         </div>
+        Quid hoc reī est? ubi est Magister Philippus?
+    </div>
 
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    <div class="line-container" id="Nathaniel.3">
+        <div class="line-character">
+            Nathaniēl
         </div>
+        Morbō dētinētur in lectō.
+    </div>
+
+    <div class="line-container" id="Magister.4">
+        <div class="line-character">
+            Magister
+        </div>
+        Quī scīs?
+    </div>
+
+    <div class="line-container" id="Nathaniel.5">
+        <div class="line-character">
+            Nathaniēl
+        </div>
+        Nūntiāvit quīdam ex discipulīs eius domesticīs.
+    </div>
+
+    <div class="line-container" id="Magister.6">
+        <div class="line-character">
+            Magister
+        </div>
+        Dīc hypodidascalō meō.
+    </div>
+
+    <div class="line-container" id="Nathaniel.7">
+        <div class="line-character">
+            Nathaniēl
+        </div>
+        Nōn est in mūsaeolō suō.
+    </div>
+
+    <div class="line-container" id="Magister.8">
+        <div class="line-character">
+            Magister
+        </div>
+        Quī scīs?
+    </div>
+
+    <div class="line-container" id="Nathaniel.9">
+        <div class="line-character">
+            Nathaniēl
+        </div>
+        Nam ego ter aut quater pulsāvī ōstium.
+    </div>
+
+    <div class="line-container" id="Magister.10">
+        <div class="line-character">
+            Magister
+        </div>
+        Dīc prīmae classis doctōrī, ut mittat ē suīs aliquem.
+    </div>
+
+    <div class="line-container" id="Nathaniel.11">
+        <div class="line-character">
+            Nathaniēl
+        </div>
+        Quid sī nōlit mittere?
+    </div>
+
+    <div class="line-container" id="Magister.12">
+        <div class="line-character">
+            Magister
+        </div>
+        Abī ineptē, an putās eum esse tam imprūdentem ut recūset? Abī, properā.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %}
+    {% assign next_sequence = page.sequence | plus: 1 %}
+
+    {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
+
+    {% assign neighbors = files
+    | where: "type", "Colloquium"
+    | where: "author", page.author
+    | where: "collection", page.collection
+    %}
+
+    {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
+    {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
+
+
+    <div class="nav-buttons">
+        <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+        <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
     </div>
 </body>
