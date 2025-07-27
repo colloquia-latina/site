@@ -1,0 +1,9 @@
+# Jekyll build output
+_site/
+
+# Bundler config
+.bundle/
+vendor/
+
+# OS / editor cruft
+.DS_Store
