@@ -34,7 +34,7 @@ permalink: /corderius/
         <ul>
             {% assign files_list = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
             {% assign author_pages = files_list | where_exp: "page", "page.author == 'Corderius'" | sort:
-            "title"%}
+            "sequence"%}
             {% for page in author_pages %}
             <li><a href="{{ page.url }}">{{ page.title }}</a>
                 <div class="subtitle">

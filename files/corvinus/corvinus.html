@@ -34,7 +34,7 @@ permalink: /corvinus/
         <ul>
             {% assign files_list = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
             {% assign author_pages = files_list | where_exp: "page", "page.author == 'Corvinus'" | sort:
-            "title"%}
+            "sequence"%}
             {% for page in author_pages %}
             <li><a href="{{ page.url }}">{{ page.title }}</a>
                 <div class="subtitle">
@@ -43,7 +43,7 @@ permalink: /corvinus/
             </li>
             {% endfor %}
         </ul>
-        
+
         <p>
             Laurentius Corvinus was a Silesian poet and scholar at the University of Krakow, known for his
             friendship both with Nicholaus Copernicus and the early reformers in Breslau. He is most famous for his

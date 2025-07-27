@@ -45,9 +45,9 @@ permalink: /all-topics-list/
         <h3>{{ group.name }}</h3>
         <ul>
             {% assign pages = group.items
-            | sort: "author"
+            | sort: "title"
             | sort: "sequence"
-            | sort: "title" %}
+            | sort: "author" %}
             {% for page in pages %}
             <li><a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a>
                 <div class="subtitle">
