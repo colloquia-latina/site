@@ -39,8 +39,8 @@ permalink: /corderius/colloquia-scholastica-liber-primus/
             {% assign files_list = site.html_pages
               | where_exp: "page", "page.path contains 'files/'"
               | where_exp: "page", "page.author == 'Corderius'"
-              | where_exp: "page, "page.collection == 'Colloquia Scholastica Liber Primus'"
-              | where_exp: "page, "page.type == 'Colloquium'"
+              | where_exp: "page", "page.collection == 'Colloquia Scholastica Liber Primus'"
+              | where_exp: "page", "page.type == 'Colloquium'"
               | sort: "sequence"
             %}
             {% for page in files_list %}
