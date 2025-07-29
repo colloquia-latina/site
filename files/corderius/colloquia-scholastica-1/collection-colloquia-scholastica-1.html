@@ -41,7 +41,7 @@ permalink: /corderius/colloquia-scholastica-liber-primus/
               | where_exp: "page", "page.author == 'Corderius'"
               | where_exp: "page, "page.collection == 'Colloquia Scholastica Liber Primus'"
               | where_exp: "page, "page.type == 'Colloquium'"
-              | sort:"sequence"
+              | sort: "sequence"
             %}
             {% for page in files_list %}
             <li><a href="{{ page.url }}">{{ page.title }}</a>
