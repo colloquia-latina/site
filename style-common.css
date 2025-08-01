@@ -1,81 +1,146 @@
 .main-content {
-    width: 60%;
-    margin: auto;
+  width: 60%;
+  margin: auto;
 
-    /* Responsive*/
-    @media screen and (max-width: 600px) {
-        width: 100%;
-    }
+  /* Responsive*/
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
 }
 
 .footer {
-    text-align: center;
-    background-color: #1e1e1e;
-    color: #ddd;
+  text-align: center;
+  background-color: #1e1e1e;
+  color: #ddd;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #111;
+  z-index: 1000;
+}
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  padding: 0.5em 1em;
+}
+.navbar-item {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+}
+.navbar-item:hover {
+  background: #222;
+}
+
+.card {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.button {
+  display: inline-block;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5em 1.2em;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.button:hover,
+.button:focus {
+  background: #444;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.5em;
+}
+
+.column {
+  flex: 1 1 0;
+  padding: 0 0.5em;
+  min-width: 200px;
 }
 
 /* change styling for better printing from browser*/
 @media print {
+  /* 1. Force a light color scheme */
+  :root {
+    color-scheme: light only;
+  }
 
-    /* 1. Force a light color scheme */
-    :root {
-        color-scheme: light only;
-    }
+  /* 2. Page sizing & margins */
+  @page {
+    size: letter;
+    margin: 1in;
+  }
 
-    /* 2. Page sizing & margins */
-    @page {
-        size: letter;
-        margin: 1in;
-    }
+  /* 3. Neutralize any dark UIs or shadows */
+  * {
+    background: none !important;
+    box-shadow: none !important;
+    border-color: #ccc !important;
+  }
 
-    /* 3. Neutralize any dark UIs or shadows */
-    * {
-        background: none !important;
-        box-shadow: none !important;
-        border-color: #ccc !important;
-    }
+  /* 4. Hide any navigation, headers, buttons, etc. */
+  nav,
+  .no-print,
+  .w3-top,
+  .sidebar,
+  footer,
+  input,
+  button {
+    display: none !important;
+  }
 
-    /* 4. Hide any navigation, headers, buttons, etc. */
-    nav,
-    .no-print,
-    .w3-top,
-    .sidebar,
-    footer,
-    input,
-    button {
-        display: none !important;
-    }
+  /* 5. Base typography for a clean, single-column layout */
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-family: serif;
+    font-size: 12pt;
+    line-height: 1.4;
+    -webkit-print-color-adjust: exact;
+    /* ensures our colors stay forced */
+    margin: 0;
+    /* @page controls the actual page margins */
+  }
 
-    /* 5. Base typography for a clean, single-column layout */
-    body {
-        background: #fff !important;
-        color: #000 !important;
-        font-family: serif;
-        font-size: 12pt;
-        line-height: 1.4;
-        -webkit-print-color-adjust: exact;
-        /* ensures our colors stay forced */
-        margin: 0;
-        /* @page controls the actual page margins */
-    }
+  /* 6. Prevent splitting these blocks across pages */
+  .line-container,
+  .note {
+    page-break-inside: avoid;
+  }
 
-    /* 6. Prevent splitting these blocks across pages */
-    .line-container,
-    .note {
-        page-break-inside: avoid;
-    }
+  /* 7. Style each block so it stands out on the page */
+  .line-container {
+    background: #f9f9f9 !important;
+    border: 1px solid #ddd !important;
+    padding: 0.5em 0.75em;
+    margin-bottom: 1em;
+  }
 
-    /* 7. Style each block so it stands out on the page */
-    .line-container {
-        background: #f9f9f9 !important;
-        border: 1px solid #ddd !important;
-        padding: 0.5em 0.75em;
-        margin-bottom: 1em;
-    }
-
-    /* 8. Show link targets in-line for printed PDFs */
-    a[href]:after {
-        content: " (" attr(href) ")";
-        font-size: 0.85em;
-    }
+  /* 8. Show link targets in-line for printed PDFs */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
 }
