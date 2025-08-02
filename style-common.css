@@ -8,6 +8,11 @@
   }
 }
 
+html {
+  scroll-padding-top: 60px; /* reserve space under the fixed header */
+  scroll-behavior: smooth; /* optional */
+}
+
 .footer {
   text-align: center;
   background-color: #1e1e1e;
