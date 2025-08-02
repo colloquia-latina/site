@@ -35,7 +35,7 @@
 .navbar-item:hover {
   background: #222;
 }
-
+/*
 .card {
   background: #fff;
   border-radius: 6px;
@@ -79,6 +79,7 @@
   padding: 0 0.5em;
   min-width: 200px;
 }
+*/
 
 /* change styling for better printing from browser*/
 @media print {
