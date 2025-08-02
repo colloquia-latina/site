@@ -31,7 +31,6 @@ permalink: /character-count/
 
     <div class="main-content">
       <h1>Colloquia numero personarum ordinata</h1>
-      <h2>Ecce, divisimus colloquia numero personarum</h2>
 
       {% assign files = site.html_pages | where_exp: "page", "page.path contains
       'files/'" | where: "type", "Colloquium" %} {% assign sorted = files |
@@ -43,7 +42,7 @@ permalink: /character-count/
           id="accordion-characters-{{ forloop.index }}"
           class="accordion-toggle" />
         <label
-          class="accordion-header w3-button w3-light-grey"
+          class="accordion-header"
           for="accordion-characters-{{ forloop.index }}">
           Characters: {{ group.name }}
         </label>

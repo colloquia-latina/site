@@ -76,58 +76,65 @@ body {
   }
 }
 
-/* Accordion item container */
+/* Accordion container */
 .accordion-item {
   margin-bottom: 0.75em;
   border: 1px solid #ccc;
   border-radius: 6px;
   overflow: hidden;
-  position: relative;
 }
 
-/* Hide checkbox toggle */
+/* Invisible checkbox toggle */
 .accordion-toggle {
   position: absolute;
   opacity: 0;
   pointer-events: none;
 }
 
-/* Header styling */
+/* Full-width header as button */
 .accordion-header {
   display: block;
+  width: 100%;
+  padding: 1em 2em 1em 1em; /* extra right padding for arrow */
+  background-color: #222; /* dark bar in light mode */
+  color: #fff; /* light text on dark */
   cursor: pointer;
-  padding: 1em;
-  font-family: "Georgia", "Times New Roman", serif;
-  font-size: 1.1em;
-  background-color: #f9f9f9;
-  color: #222;
-  border-bottom: 1px solid #ccc;
+  position: relative; /* for arrow positioning */
+  border-bottom: 1px solid #444;
+  border-radius: 6px 6px 0 0; /* round top corners */
 }
 
-/* Default: collapsed */
+/* Arrow on the right */
+.accordion-header::after {
+  content: "▼";
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  transform: translateY(-50%);
+  transition: transform 0.2s;
+}
+
+/* Toggle arrow on open */
+.accordion-toggle:checked + .accordion-header::after {
+  content: "▲";
+}
+
+/* Content panel (hidden by default) */
 .accordion-content {
   display: none;
+  padding: 1em;
 }
 
-/* Expand when checked */
-.accordion-toggle:checked~.accordion-content {
+/* Show content when checked */
+.accordion-toggle:checked + .accordion-header + .accordion-content {
   display: block;
 }
 
-/* Dark mode */
+/* Dark-mode override: white bar with dark text */
 @media (prefers-color-scheme: dark) {
-  .accordion-item {
-    border-color: #555;
-  }
-
   .accordion-header {
-    background-color: #2a2a2a;
-    color: #ddd;
-    border-bottom-color: #555;
-  }
-
-  .accordion-content {
-    background-color: #333;
-    color: #ddd;
+    background-color: #fff; /* white bar in dark mode */
+    color: #222; /* dark text on white */
+    border-bottom-color: #ccc;
   }
 }
