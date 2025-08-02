@@ -14,167 +14,130 @@ permalink: /corderius/colloquia-scholastica-liber-primus-colloquium-quadragesimu
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae:<br>
-            Bergērius, Nepōs
-        </div>
-
-        <div class="line-container" id="Bergerius.1">
-            <div class="line-character">
-                Bergērius
-            </div>
-            Commodā mihi parumper cultellum tuum.
-        </div>
-
-        <div class="line-container" id="Nepos.2">
-            <div class="line-character">
-                Nepōs
-            </div>
-            Semper aliquid commodātō petis: accipe, quīn tū emerēs potius.
-        </div>
-
-        <div class="line-container" id="Bergerius.3">
-            <div class="line-character">
-                Bergērius
-            </div>
-            Nōn habeō pecūniam.
-        </div>
-
-        <div class="line-container" id="Nepos.4">
-            <div class="line-character">
-                Nepōs
-            </div>
-            Cūr nōn petis?
-        </div>
-
-        <div class="line-container" id="Bergerius.5">
-            <div class="line-character">
-                Bergērius
-            </div>
-            Unde peterem?
-        </div>
-
-        <div class="line-container" id="Nepos.6">
-            <div class="line-character">
-                Nepōs
-            </div>
-            Ā patre.
-        </div>
-
-        <div class="line-container" id="Bergerius.7">
-            <div class="line-character">
-                Bergērius
-            </div>
-            Nōn est in hāc urbe.
-        </div>
-
-        <div class="line-container" id="Nepos.8">
-            <div class="line-character">
-                Nepōs
-            </div>
-            Ubī igitur?
-        </div>
-
-        <div class="line-container" id="Bergerius.9">
-            <div class="line-character">
-                Bergērius
-            </div>
-            Peregrē profectus est.
-        </div>
-
-        <div class="line-container" id="Nepos.10">
-            <div class="line-character">
-                Nepōs
-            </div>
-            Quō?
-        </div>
-
-        <div class="line-container" id="Bergerius.11">
-            <div class="line-character">
-                Bergērius
-            </div>
-            Bernam.
-        </div>
-
-        <div class="line-container" id="Nepos.12">
-            <div class="line-character">
-                Nepōs
-            </div>
-            Quō diē?
-        </div>
-
-        <div class="line-container" id="Bergerius.13">
-            <div class="line-character">
-                Bergērius
-            </div>
-            Nudiustertius.
-        </div>
-
-        <div class="line-container" id="Nepos.14">
-            <div class="line-character">
-                Nepōs
-            </div>
-            Quandō est reversūrus?
-        </div>
-
-        <div class="line-container" id="Bergerius.15">
-            <div class="line-character">
-                Bergērius
-            </div>
-            Crās, ut spērāmus: sīc enim dīxit proficīscēns.
-        </div>
-
-        <div class="line-container" id="Nepos.16">
-            <div class="line-character">
-                Nepōs
-            </div>
-            Bene vertat Deus.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae:<br />
+      Bergērius, Nepōs
     </div>
+
+    <div class="line-container" id="Bergerius.1">
+      <div class="line-character">Bergērius</div>
+      Commodā mihi parumper cultellum tuum.
+    </div>
+
+    <div class="line-container" id="Nepos.2">
+      <div class="line-character">Nepōs</div>
+      Semper aliquid commodātō petis: accipe, quīn tū emerēs potius.
+    </div>
+
+    <div class="line-container" id="Bergerius.3">
+      <div class="line-character">Bergērius</div>
+      Nōn habeō pecūniam.
+    </div>
+
+    <div class="line-container" id="Nepos.4">
+      <div class="line-character">Nepōs</div>
+      Cūr nōn petis?
+    </div>
+
+    <div class="line-container" id="Bergerius.5">
+      <div class="line-character">Bergērius</div>
+      Unde peterem?
+    </div>
+
+    <div class="line-container" id="Nepos.6">
+      <div class="line-character">Nepōs</div>
+      Ā patre.
+    </div>
+
+    <div class="line-container" id="Bergerius.7">
+      <div class="line-character">Bergērius</div>
+      Nōn est in hāc urbe.
+    </div>
+
+    <div class="line-container" id="Nepos.8">
+      <div class="line-character">Nepōs</div>
+      Ubī igitur?
+    </div>
+
+    <div class="line-container" id="Bergerius.9">
+      <div class="line-character">Bergērius</div>
+      Peregrē profectus est.
+    </div>
+
+    <div class="line-container" id="Nepos.10">
+      <div class="line-character">Nepōs</div>
+      Quō?
+    </div>
+
+    <div class="line-container" id="Bergerius.11">
+      <div class="line-character">Bergērius</div>
+      Bernam.
+    </div>
+
+    <div class="line-container" id="Nepos.12">
+      <div class="line-character">Nepōs</div>
+      Quō diē?
+    </div>
+
+    <div class="line-container" id="Bergerius.13">
+      <div class="line-character">Bergērius</div>
+      Nudiustertius.
+    </div>
+
+    <div class="line-container" id="Nepos.14">
+      <div class="line-character">Nepōs</div>
+      Quandō est reversūrus?
+    </div>
+
+    <div class="line-container" id="Bergerius.15">
+      <div class="line-character">Bergērius</div>
+      Crās, ut spērāmus: sīc enim dīxit proficīscēns.
+    </div>
+
+    <div class="line-container" id="Nepos.16">
+      <div class="line-character">Nepōs</div>
+      Bene vertat Deus.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

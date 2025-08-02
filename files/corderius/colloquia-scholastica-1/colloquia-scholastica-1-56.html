@@ -14,167 +14,130 @@ permalink: /corderius/colloquia-scholastica-liber-primus-colloquium-quinquagesim
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae:<br>
-            M., R.
-        </div>
-
-        <div class="line-container" id="M.1">
-            <div class="line-character">
-                M.
-            </div>
-            Vīsne īre mēcum?
-        </div>
-
-        <div class="line-container" id="R.2">
-            <div class="line-character">
-                R.
-            </div>
-            Quō properās?
-        </div>
-
-        <div class="line-container" id="M.3">
-            <div class="line-character">
-                M.
-            </div>
-            Ad lacum.
-        </div>
-
-        <div class="line-container" id="R.4">
-            <div class="line-character">
-                R.
-            </div>
-            Quid eō?
-        </div>
-
-        <div class="line-container" id="M.5">
-            <div class="line-character">
-                M.
-            </div>
-            Lōtum pedēs.
-        </div>
-
-        <div class="line-container" id="R.6">
-            <div class="line-character">
-                R.
-            </div>
-            Ī sānē; nunc lōtiōne mihi opus nōn est.
-        </div>
-
-        <div class="line-container" id="M.7">
-            <div class="line-character">
-                M.
-            </div>
-            Sed interim parum fābulābimur.
-        </div>
-
-        <div class="line-container" id="R.8">
-            <div class="line-character">
-                R.
-            </div>
-            Nē fābulārī quidem nunc velim.
-        </div>
-
-        <div class="line-container" id="M.9">
-            <div class="line-character">
-                M.
-            </div>
-            Atquī ūtilis est cōnfābulātiō, duntaxat dē honestīs rēbus.
-        </div>
-
-        <div class="line-container" id="R.10">
-            <div class="line-character">
-                R.
-            </div>
-            At mihi ūtilior est ad valētūdinem exercitātiō corporis.
-        </div>
-
-        <div class="line-container" id="M.11">
-            <div class="line-character">
-                M.
-            </div>
-            Quid sī mānserō tēcum?
-        </div>
-
-        <div class="line-container" id="R.12">
-            <div class="line-character">
-                R.
-            </div>
-            Prūdenter faciēs, et nōs pīlā palmāriā collūdēmus.
-        </div>
-
-        <div class="line-container" id="M.13">
-            <div class="line-character">
-                M.
-            </div>
-            Bene vertat Deus: maneō.
-        </div>
-
-        <div class="line-container" id="R.14">
-            <div class="line-character">
-                R.
-            </div>
-            Aliās lōtum ūnā tēcum ībō: cum scīlicet longius erit temporis spatium.
-        </div>
-
-        <div class="line-container" id="M.15">
-            <div class="line-character">
-                M.
-            </div>
-            Ad lūdum igitur nōs accingāmus.
-        </div>
-
-        <div class="line-container" id="R.16">
-            <div class="line-character">
-                R.
-            </div>
-            Nūlla est in mē mora.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae:<br />
+      M., R.
     </div>
+
+    <div class="line-container" id="M.1">
+      <div class="line-character">M.</div>
+      Vīsne īre mēcum?
+    </div>
+
+    <div class="line-container" id="R.2">
+      <div class="line-character">R.</div>
+      Quō properās?
+    </div>
+
+    <div class="line-container" id="M.3">
+      <div class="line-character">M.</div>
+      Ad lacum.
+    </div>
+
+    <div class="line-container" id="R.4">
+      <div class="line-character">R.</div>
+      Quid eō?
+    </div>
+
+    <div class="line-container" id="M.5">
+      <div class="line-character">M.</div>
+      Lōtum pedēs.
+    </div>
+
+    <div class="line-container" id="R.6">
+      <div class="line-character">R.</div>
+      Ī sānē; nunc lōtiōne mihi opus nōn est.
+    </div>
+
+    <div class="line-container" id="M.7">
+      <div class="line-character">M.</div>
+      Sed interim parum fābulābimur.
+    </div>
+
+    <div class="line-container" id="R.8">
+      <div class="line-character">R.</div>
+      Nē fābulārī quidem nunc velim.
+    </div>
+
+    <div class="line-container" id="M.9">
+      <div class="line-character">M.</div>
+      Atquī ūtilis est cōnfābulātiō, duntaxat dē honestīs rēbus.
+    </div>
+
+    <div class="line-container" id="R.10">
+      <div class="line-character">R.</div>
+      At mihi ūtilior est ad valētūdinem exercitātiō corporis.
+    </div>
+
+    <div class="line-container" id="M.11">
+      <div class="line-character">M.</div>
+      Quid sī mānserō tēcum?
+    </div>
+
+    <div class="line-container" id="R.12">
+      <div class="line-character">R.</div>
+      Prūdenter faciēs, et nōs pīlā palmāriā collūdēmus.
+    </div>
+
+    <div class="line-container" id="M.13">
+      <div class="line-character">M.</div>
+      Bene vertat Deus: maneō.
+    </div>
+
+    <div class="line-container" id="R.14">
+      <div class="line-character">R.</div>
+      Aliās lōtum ūnā tēcum ībō: cum scīlicet longius erit temporis spatium.
+    </div>
+
+    <div class="line-container" id="M.15">
+      <div class="line-character">M.</div>
+      Ad lūdum igitur nōs accingāmus.
+    </div>
+
+    <div class="line-container" id="R.16">
+      <div class="line-character">R.</div>
+      Nūlla est in mē mora.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

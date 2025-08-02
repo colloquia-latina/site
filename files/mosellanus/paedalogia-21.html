@@ -13,135 +13,110 @@ permalink: /mosellanus/paedalogia-dialogus-unus-et-vicesimus/
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae<br>
-            Lūcānus, Stātius
-        </div>
-
-        <div class="line-container" id="Statius.1">
-            <div class="line-character">
-                Stātius
-            </div>
-            Quid tū nōbīs adfers nōvī, mī Lūcāne?
-        </div>
-
-        <div class="line-container" id="Lucanus.2">
-            <div class="line-character">
-                Lūcānus
-            </div>
-            Nihil, sed in hōc tē conveniō, ut dē commūnibus studiīs fābulēmur.
-        </div>
-
-        <div class="line-container" id="Statius.3">
-            <div class="line-character">
-                Statius
-            </div>
-            Grātus ergō mihi tuus est adventus; adsidē hūc nōbīs.
-        </div>
-
-        <div class="line-container" id="Lucanus.4">
-            <div class="line-character">
-                Lūcānus
-            </div>
-            Ēn adsideō. Scīs, quid in dīvī Nīcolāī fēriīs apud nostrātēs fierī soleat?
-        </div>
-
-        <div class="line-container" id="Statius.5">
-            <div class="line-character">
-                Statius
-            </div>
-            Quī ipse possem scīre, cum illīc fuerim nunquam?
-        </div>
-
-        <div class="line-container" id="Lucanus.6">
-            <div class="line-character">
-                Lūcānus
-            </div>
-            Dīcam ergō paucīs: quī lūdum illīc litterārium frequentant, ex lūdīmagistrī praescrīptō quempiam ē suō grege
-            epīscopum creant eumque magnā pompā domum, dēdūcunt et statō tempore in templum redūcunt.
-        </div>
-
-        <div class="line-container" id="Statius.7">
-            <div class="line-character">
-                Statius
-            </div>
-            Quid commodī inde capit novus ille et factīcius epīscopus?
-        </div>
-
-        <div class="line-container" id="Lucanus.8">
-            <div class="line-character">
-                Lūcānus
-            </div>
-            Nesciō, nisi quod convīviō tandem nesciō cuius sūmptū īnstrūctō excipitur et tum lautissimē tractātur.
-        </div>
-
-        <div class="line-container" id="Statius.9">
-            <div class="line-character">
-                Statius
-            </div>
-            Nōn et interim, dum est in magistrātū, vacātiōnem ā discendī mūnere habet aut aequē ac cēterī manum ferulae
-            subdit?
-        </div>
-
-        <div class="line-container" id="Lucanus.10">
-            <div class="line-character">
-                Lūcānus
-            </div>
-            Aequē omnīnō adeō, ut nōn magis sit epīscopus, quam sunt hī rēgēs, quī in tragoediīs Agamemnonis aut Priamī
-            persōnam gerunt.
-        </div>
-
-        <div class="line-container" id="Statius.11">
-            <div class="line-character">
-                Statius
-            </div>
-            Eiusmodī honōrem mihi nē optārem quidem.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae<br />
+      Lūcānus, Stātius
     </div>
+
+    <div class="line-container" id="Statius.1">
+      <div class="line-character">Stātius</div>
+      Quid tū nōbīs adfers nōvī, mī Lūcāne?
+    </div>
+
+    <div class="line-container" id="Lucanus.2">
+      <div class="line-character">Lūcānus</div>
+      Nihil, sed in hōc tē conveniō, ut dē commūnibus studiīs fābulēmur.
+    </div>
+
+    <div class="line-container" id="Statius.3">
+      <div class="line-character">Statius</div>
+      Grātus ergō mihi tuus est adventus; adsidē hūc nōbīs.
+    </div>
+
+    <div class="line-container" id="Lucanus.4">
+      <div class="line-character">Lūcānus</div>
+      Ēn adsideō. Scīs, quid in dīvī Nīcolāī fēriīs apud nostrātēs fierī soleat?
+    </div>
+
+    <div class="line-container" id="Statius.5">
+      <div class="line-character">Statius</div>
+      Quī ipse possem scīre, cum illīc fuerim nunquam?
+    </div>
+
+    <div class="line-container" id="Lucanus.6">
+      <div class="line-character">Lūcānus</div>
+      Dīcam ergō paucīs: quī lūdum illīc litterārium frequentant, ex
+      lūdīmagistrī praescrīptō quempiam ē suō grege epīscopum creant eumque
+      magnā pompā domum, dēdūcunt et statō tempore in templum redūcunt.
+    </div>
+
+    <div class="line-container" id="Statius.7">
+      <div class="line-character">Statius</div>
+      Quid commodī inde capit novus ille et factīcius epīscopus?
+    </div>
+
+    <div class="line-container" id="Lucanus.8">
+      <div class="line-character">Lūcānus</div>
+      Nesciō, nisi quod convīviō tandem nesciō cuius sūmptū īnstrūctō excipitur
+      et tum lautissimē tractātur.
+    </div>
+
+    <div class="line-container" id="Statius.9">
+      <div class="line-character">Statius</div>
+      Nōn et interim, dum est in magistrātū, vacātiōnem ā discendī mūnere habet
+      aut aequē ac cēterī manum ferulae subdit?
+    </div>
+
+    <div class="line-container" id="Lucanus.10">
+      <div class="line-character">Lūcānus</div>
+      Aequē omnīnō adeō, ut nōn magis sit epīscopus, quam sunt hī rēgēs, quī in
+      tragoediīs Agamemnonis aut Priamī persōnam gerunt.
+    </div>
+
+    <div class="line-container" id="Statius.11">
+      <div class="line-character">Statius</div>
+      Eiusmodī honōrem mihi nē optārem quidem.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

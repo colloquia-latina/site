@@ -6,50 +6,54 @@ permalink: /salazar/
 
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>{{ page.title }}</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/style-list.css" />
+    <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/w3.css" />
 
-<head>
-    <title>{{ page.title }} </title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-list.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-<body>
+  <body>
     <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="/all-authors-list/" class="w3-bar-item w3-button w3-mobile">Auctores</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+      <div class="w3-bar w3-black">
+        <a href="/" class="w3-bar-item w3-button w3-mobile"
+          ><b>Colloquia Latina</b></a
+        >
+        <a href="/all-authors-list/" class="w3-bar-item w3-button w3-mobile"
+          >Auctores</a
+        >
+        <div class="w3-bar-item w3-mobile w3-center">
+          <i>{{ page.title }}</i>
         </div>
+      </div>
     </div>
-    <div style="height:3em"></div>
+    <div style="height: 3em"></div>
 
     <div class="main-content">
-        <h1>{{ page.title }}</h1>
-        <h2>Ecce, haec sunt colloquia quae {{ page.title }} scripsit:</h2>
+      <h1>{{ page.title }}</h1>
+      <h2>Ecce, haec sunt colloquia quae {{ page.title }} scripsit:</h2>
 
-        <ul>
-            {% assign files_list = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-            {% assign author_pages = files_list | where_exp: "page", "page.author == 'Salazar'" | sort:
-            "sequence"%}
-            {% for page in author_pages %}
-            <li><a href="{{ page.url }}">{{ page.title }}</a>
-                <div class="subtitle">
-                    {{page.subtitle}}
-                </div>
-            </li>
-            {% endfor %}
-        </ul>
+      <ul>
+        {% assign files_list = site.html_pages | where_exp: "page", "page.path
+        contains 'files/'" %} {% assign author_pages = files_list | where_exp:
+        "page", "page.author == 'Salazar'" | sort: "sequence"%} {% for page in
+        author_pages %}
+        <li>
+          <a href="{{ page.url }}">{{ page.title }}</a>
+          <div class="subtitle">{{page.subtitle}}</div>
+        </li>
+        {% endfor %}
+      </ul>
 
-        <p>
-            Franciscus Cervantes de Salazar (1514-1575) was a Spaniard scholar and friend of Iohannes Vives
-            noted for his works in both Latin and Spanish. From 1550 to his death, he was a leading academic figure in
-            Mexico, serving as rector of the Pontifical University twice.
-        </p>
+      <p>
+        Franciscus Cervantes de Salazar (1514-1575) was a Spaniard scholar and
+        friend of Iohannes Vives noted for his works in both Latin and Spanish.
+        From 1550 to his death, he was a leading academic figure in Mexico,
+        serving as rector of the Pontifical University twice.
+      </p>
     </div>
-</body>
-
+  </body>
 </html>

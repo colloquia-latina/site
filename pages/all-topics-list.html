@@ -6,64 +6,52 @@ permalink: /all-topics-list/
 
 <!DOCTYPE html>
 <html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<head>
+  <head>
     <title>Colloquia argumento ordinata</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-list.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
-</head>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/style-list.css" />
+    <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/w3.css" />
+  </head>
 
-<body>
-
+  <body>
     <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+      <div class="w3-bar w3-black">
+        <a href="/" class="w3-bar-item w3-button w3-mobile"
+          ><b>Colloquia Latina</b></a
+        >
+        <div class="w3-bar-item w3-mobile w3-center">
+          <i>{{ page.title }}</i>
         </div>
+      </div>
     </div>
-    <div style="height:3em"></div>
+    <div style="height: 3em"></div>
 
     <div class="main-content">
-        <h1>Colloquia argumento ordinata</h1>
-        <h2>Ecce, divisimus colloquia variis argumentis</h2>
+      <h1>Colloquia argumento ordinata</h1>
+      <h2>Ecce, divisimus colloquia variis argumentis</h2>
 
-        {% assign files = site.html_pages
-        | where_exp: "page", "page.path contains 'files/'"
-        | where: "type", "Colloquium" %}
-
-        {% assign sorted = files
-        | sort: "topic" %}
-
-        {% assign groups = sorted
-        | group_by: "topic" %}
-        {% for group in groups %}
-        <h3>{{ group.name }}</h3>
-        <ul>
-            {% assign pages = group.items
-            | sort: "title"
-            | sort: "sequence"
-            | sort: "author" %}
-            {% for page in pages %}
-            <li><a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a>
-                <div class="subtitle">
-                    {{page.subtitle}}
-                </div>
-            </li>
-            {% endfor %}
-        </ul>
+      {% assign files = site.html_pages | where_exp: "page", "page.path contains
+      'files/'" | where: "type", "Colloquium" %} {% assign sorted = files |
+      sort: "topic" %} {% assign groups = sorted | group_by: "topic" %} {% for
+      group in groups %}
+      <h3>{{ group.name }}</h3>
+      <ul>
+        {% assign pages = group.items | sort: "title" | sort: "sequence" | sort:
+        "author" %} {% for page in pages %}
+        <li>
+          <a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a>
+          <div class="subtitle">{{page.subtitle}}</div>
+        </li>
         {% endfor %}
-
-
+      </ul>
+      {% endfor %}
     </div>
 
     <div class="w3-container w3-black">
-        <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+      <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
     </div>
-</body>
-
+  </body>
 </html>

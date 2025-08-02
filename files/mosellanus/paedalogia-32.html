@@ -13,122 +13,102 @@ permalink: /mosellanus/paedalogia-dialogus-alter-et-tricesimus/
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae<br>
-            Leopoldus, Sevērus
-        </div>
-
-        <div class="line-container" id="Leopoldus.1">
-            <div class="line-character">
-                Leopoldus
-            </div>
-            Scīs, Sevēre, quae spectācula diē crāstinō, quī est ā fēriīs sacrātissimī corporis Chrīstī octāvus, ēdī
-            cōnsuēverint?
-        </div>
-
-        <div class="line-container" id="Severus.2">
-            <div class="line-character">
-                Sevērus
-            </div>
-            Quī ipse scīre possem, cum superiōrī annō nōn adfuerim?
-        </div>
-
-        <div class="line-container" id="Leopoldus.3">
-            <div class="line-character">
-                Leopoldus
-            </div>
-            At audīsse ex aliīs poterās.
-        </div>
-
-        <div class="line-container" id="Severus.4">
-            <div class="line-character">
-                Sevērus
-            </div>
-            Quae ad mē parum attinent, ea nōn magnopere soleō exquīrere. Sed dīc, ōrō: quid tandem est, quod iactās?
-        </div>
-
-        <div class="line-container" id="Leopoldus.5">
-            <div class="line-character">
-                Leopoldus
-            </div>
-            Tragoediam eōrum cruciātuum, quōs prō nōbīs tulit servātor Chrīstus, histriōnēs agent; sunt enim ad hoc
-            dēlēctī aliquot.
-        </div>
-
-        <div class="line-container" id="Severus.6">
-            <div class="line-character">
-                Sevērus
-            </div>
-            Quaesō tē: omnibus etiam adhibitīs persōnīs?
-        </div>
-
-        <div class="line-container" id="Leopoldus.7">
-            <div class="line-character">
-                Leopoldus
-            </div>
-            Omnibus omnīnō.
-        </div>
-
-        <div class="line-container" id="Severus.8">
-            <div class="line-character">
-                Sevērus
-            </div>
-            Ipse in hāc fābulā māllem dūrissimī mīlitis aut carnificis persōnam gerere quam ipsīus Chrīstī; nam tametsī,
-            ut conicere possum, rēs fictē repraesentābitur, sīc tamen abīre nōn potest, quīn is, quī Chrīstum refert,
-            multās interim molestiās in sē recipere cōgātur.
-        </div>
-
-        <div class="line-container" id="Leopoldus.9">
-            <div class="line-character">
-                Leopoldus
-            </div>
-            Et ipse in hāc fābulā spectātor esse mālō quam āctor, utcumque rēs interim agātur sēria.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae<br />
+      Leopoldus, Sevērus
     </div>
+
+    <div class="line-container" id="Leopoldus.1">
+      <div class="line-character">Leopoldus</div>
+      Scīs, Sevēre, quae spectācula diē crāstinō, quī est ā fēriīs sacrātissimī
+      corporis Chrīstī octāvus, ēdī cōnsuēverint?
+    </div>
+
+    <div class="line-container" id="Severus.2">
+      <div class="line-character">Sevērus</div>
+      Quī ipse scīre possem, cum superiōrī annō nōn adfuerim?
+    </div>
+
+    <div class="line-container" id="Leopoldus.3">
+      <div class="line-character">Leopoldus</div>
+      At audīsse ex aliīs poterās.
+    </div>
+
+    <div class="line-container" id="Severus.4">
+      <div class="line-character">Sevērus</div>
+      Quae ad mē parum attinent, ea nōn magnopere soleō exquīrere. Sed dīc, ōrō:
+      quid tandem est, quod iactās?
+    </div>
+
+    <div class="line-container" id="Leopoldus.5">
+      <div class="line-character">Leopoldus</div>
+      Tragoediam eōrum cruciātuum, quōs prō nōbīs tulit servātor Chrīstus,
+      histriōnēs agent; sunt enim ad hoc dēlēctī aliquot.
+    </div>
+
+    <div class="line-container" id="Severus.6">
+      <div class="line-character">Sevērus</div>
+      Quaesō tē: omnibus etiam adhibitīs persōnīs?
+    </div>
+
+    <div class="line-container" id="Leopoldus.7">
+      <div class="line-character">Leopoldus</div>
+      Omnibus omnīnō.
+    </div>
+
+    <div class="line-container" id="Severus.8">
+      <div class="line-character">Sevērus</div>
+      Ipse in hāc fābulā māllem dūrissimī mīlitis aut carnificis persōnam gerere
+      quam ipsīus Chrīstī; nam tametsī, ut conicere possum, rēs fictē
+      repraesentābitur, sīc tamen abīre nōn potest, quīn is, quī Chrīstum
+      refert, multās interim molestiās in sē recipere cōgātur.
+    </div>
+
+    <div class="line-container" id="Leopoldus.9">
+      <div class="line-character">Leopoldus</div>
+      Et ipse in hāc fābulā spectātor esse mālō quam āctor, utcumque rēs interim
+      agātur sēria.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

@@ -14,162 +14,128 @@ permalink: /corderius/colloquia-scholastica-liber-quartus-colloquium-duodevicesi
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae:<br>
-            Grandīnus, Thōmās
-        </div>
-
-        <div class="line-container" id="Grandinus.1">
-            <div class="line-character">
-                Grandīnus
-            </div>
-            Cūr nōn interfuistī hodiernae conciōnī?
-        </div>
-
-        <div class="line-container" id="Thomas.2">
-            <div class="line-character">
-                Thōmās
-            </div>
-            Occupātus eram in scrībendīs līterīs.
-        </div>
-
-        <div class="line-container" id="Grandinus.3">
-            <div class="line-character">
-                Grandīnus
-            </div>
-            Nōn poterās differre negōtium?
-        </div>
-
-        <div class="line-container" id="Thomas.4">
-            <div class="line-character">
-                Thōmās
-            </div>
-            Urgēbat tabellāriī festīnātiō.
-        </div>
-
-        <div class="line-container" id="Grandinus.5">
-            <div class="line-character">
-                Grandīnus
-            </div>
-            Atquī praeceptor docet nōs, omnia postpōnenda esse Deī negōtiīs.
-        </div>
-
-        <div class="line-container" id="Thomas.6">
-            <div class="line-character">
-                Thōmās
-            </div>
-            Docet quidem, neque id mihi dubium est; sed nunquam sumus adeō perfectī quīn saepe Deum terrēnīs istīs
-            postpōnāmus.
-        </div>
-
-        <div class="line-container" id="Grandinus.7">
-            <div class="line-character">
-                Grandīnus
-            </div>
-            Istud malum est.
-        </div>
-
-        <div class="line-container" id="Thomas.8">
-            <div class="line-character">
-                Thōmās
-            </div>
-            Pessimum vērō; semper hominēs sumus, nisi Deus nōs Spīritū suō immūtāverit. Sed dīc, quaesō, fuitne frequēns
-            audītōrium?
-        </div>
-
-        <div class="line-container" id="Grandinus.9">
-            <div class="line-character">
-                Grandīnus
-            </div>
-            Nōn admodum; prō mōre solitō.
-        </div>
-
-        <div class="line-container" id="Thomas.10">
-            <div class="line-character">
-                Thōmās
-            </div>
-            Unde fit istud?
-        </div>
-
-        <div class="line-container" id="Grandinus.11">
-            <div class="line-character">
-                Grandīnus
-            </div>
-            Ignōrās populum nunc esse occupātum in vendēmiīs?
-        </div>
-
-        <div class="line-container" id="Thomas.12">
-            <div class="line-character">
-                Thōmās
-            </div>
-            Nōn ignōrō; sed nōn possunt hominēs dīvīnīs rēbus ūnicam hōram impendēre?
-        </div>
-
-        <div class="line-container" id="Grandinus.13">
-            <div class="line-character">
-                Grandīnus
-            </div>
-            Dē hōc nōn est meum tibi reddere ratiōnem; hoc tantum dīcō, ‘Turpe est doctōrī, cum culpa redarguit ipsum’.
-        </div>
-
-        <div class="line-container" id="Thomas.14">
-            <div class="line-character">
-                Thōmās
-            </div>
-            Pāpae! quantum colaphum impēgistī mihi! Valē: verbum nōn amplius addam.
-        </div>
-
-        <div class="line-container" id="Grandinus.15">
-            <div class="line-character">
-                Grandīnus
-            </div>
-            Estō igitur aliās prūdentior.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae:<br />
+      Grandīnus, Thōmās
     </div>
+
+    <div class="line-container" id="Grandinus.1">
+      <div class="line-character">Grandīnus</div>
+      Cūr nōn interfuistī hodiernae conciōnī?
+    </div>
+
+    <div class="line-container" id="Thomas.2">
+      <div class="line-character">Thōmās</div>
+      Occupātus eram in scrībendīs līterīs.
+    </div>
+
+    <div class="line-container" id="Grandinus.3">
+      <div class="line-character">Grandīnus</div>
+      Nōn poterās differre negōtium?
+    </div>
+
+    <div class="line-container" id="Thomas.4">
+      <div class="line-character">Thōmās</div>
+      Urgēbat tabellāriī festīnātiō.
+    </div>
+
+    <div class="line-container" id="Grandinus.5">
+      <div class="line-character">Grandīnus</div>
+      Atquī praeceptor docet nōs, omnia postpōnenda esse Deī negōtiīs.
+    </div>
+
+    <div class="line-container" id="Thomas.6">
+      <div class="line-character">Thōmās</div>
+      Docet quidem, neque id mihi dubium est; sed nunquam sumus adeō perfectī
+      quīn saepe Deum terrēnīs istīs postpōnāmus.
+    </div>
+
+    <div class="line-container" id="Grandinus.7">
+      <div class="line-character">Grandīnus</div>
+      Istud malum est.
+    </div>
+
+    <div class="line-container" id="Thomas.8">
+      <div class="line-character">Thōmās</div>
+      Pessimum vērō; semper hominēs sumus, nisi Deus nōs Spīritū suō
+      immūtāverit. Sed dīc, quaesō, fuitne frequēns audītōrium?
+    </div>
+
+    <div class="line-container" id="Grandinus.9">
+      <div class="line-character">Grandīnus</div>
+      Nōn admodum; prō mōre solitō.
+    </div>
+
+    <div class="line-container" id="Thomas.10">
+      <div class="line-character">Thōmās</div>
+      Unde fit istud?
+    </div>
+
+    <div class="line-container" id="Grandinus.11">
+      <div class="line-character">Grandīnus</div>
+      Ignōrās populum nunc esse occupātum in vendēmiīs?
+    </div>
+
+    <div class="line-container" id="Thomas.12">
+      <div class="line-character">Thōmās</div>
+      Nōn ignōrō; sed nōn possunt hominēs dīvīnīs rēbus ūnicam hōram impendēre?
+    </div>
+
+    <div class="line-container" id="Grandinus.13">
+      <div class="line-character">Grandīnus</div>
+      Dē hōc nōn est meum tibi reddere ratiōnem; hoc tantum dīcō, ‘Turpe est
+      doctōrī, cum culpa redarguit ipsum’.
+    </div>
+
+    <div class="line-container" id="Thomas.14">
+      <div class="line-character">Thōmās</div>
+      Pāpae! quantum colaphum impēgistī mihi! Valē: verbum nōn amplius addam.
+    </div>
+
+    <div class="line-container" id="Grandinus.15">
+      <div class="line-character">Grandīnus</div>
+      Estō igitur aliās prūdentior.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

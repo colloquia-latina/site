@@ -14,167 +14,130 @@ permalink: /corderius/colloquia-scholastica-liber-primus-colloquium-alterum-et-q
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae:<br>
-            Giraldus, Eliēl
-        </div>
-
-        <div class="line-container" id="Giraldus.1">
-            <div class="line-character">
-                Giraldus
-            </div>
-            Quī sunt victōrēs hāc hebdomadā?
-        </div>
-
-        <div class="line-container" id="Eliel.2">
-            <div class="line-character">
-                Eliēl
-            </div>
-            Ubī erās cum ratiōnēs redderentur?
-        </div>
-
-        <div class="line-container" id="Giraldus.3">
-            <div class="line-character">
-                Giraldus
-            </div>
-            Accersītus ā patre fueram: sed quī sunt victōrēs? dīc sōdēs.
-        </div>
-
-        <div class="line-container" id="Eliel.4">
-            <div class="line-character">
-                Eliēl
-            </div>
-            Ego et Puteānus.
-        </div>
-
-        <div class="line-container" id="Giraldus.5">
-            <div class="line-character">
-                Giraldus
-            </div>
-            Iamne habuistis praemium?
-        </div>
-
-        <div class="line-container" id="Eliel.6">
-            <div class="line-character">
-                Eliēl
-            </div>
-            Habuimus.
-        </div>
-
-        <div class="line-container" id="Giraldus.7">
-            <div class="line-character">
-                Giraldus
-            </div>
-            Quodnam?
-        </div>
-
-        <div class="line-container" id="Eliel.8">
-            <div class="line-character">
-                Eliēl
-            </div>
-            Duodēnās iūglandēs.
-        </div>
-
-        <div class="line-container" id="Giraldus.9">
-            <div class="line-character">
-                Giraldus
-            </div>
-            Hui! quāle praemium!
-        </div>
-
-        <div class="line-container" id="Eliel.10">
-            <div class="line-character">
-                Eliēl
-            </div>
-            Eho, inepte, aestimās ergō praemium ex reī pretiō?
-        </div>
-
-        <div class="line-container" id="Giraldus.11">
-            <div class="line-character">
-                Giraldus
-            </div>
-            Hīc nihil aliud videō aestimandum.
-        </div>
-
-        <div class="line-container" id="Eliel.12">
-            <div class="line-character">
-                Eliēl
-            </div>
-            Sordius es, quī lucrō sīc inhiās. Nōn meministī verbum praeceptōris?
-        </div>
-
-        <div class="line-container" id="Giraldus.13">
-            <div class="line-character">
-                Giraldus
-            </div>
-            Quod verbum?
-        </div>
-
-        <div class="line-container" id="Eliel.14">
-            <div class="line-character">
-                Eliēl
-            </div>
-            ‘Nōn lucrī, sed honōris causā datur praemium.’
-        </div>
-
-        <div class="line-container" id="Giraldus.15">
-            <div class="line-character">
-                Giraldus
-            </div>
-            Nunc reminīscor, quasi per nebulam. Posthāc erō dīligentior.
-        </div>
-
-        <div class="line-container" id="Eliel.16">
-            <div class="line-character">
-                Eliēl
-            </div>
-            Sīc tandem sapiēs.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae:<br />
+      Giraldus, Eliēl
     </div>
+
+    <div class="line-container" id="Giraldus.1">
+      <div class="line-character">Giraldus</div>
+      Quī sunt victōrēs hāc hebdomadā?
+    </div>
+
+    <div class="line-container" id="Eliel.2">
+      <div class="line-character">Eliēl</div>
+      Ubī erās cum ratiōnēs redderentur?
+    </div>
+
+    <div class="line-container" id="Giraldus.3">
+      <div class="line-character">Giraldus</div>
+      Accersītus ā patre fueram: sed quī sunt victōrēs? dīc sōdēs.
+    </div>
+
+    <div class="line-container" id="Eliel.4">
+      <div class="line-character">Eliēl</div>
+      Ego et Puteānus.
+    </div>
+
+    <div class="line-container" id="Giraldus.5">
+      <div class="line-character">Giraldus</div>
+      Iamne habuistis praemium?
+    </div>
+
+    <div class="line-container" id="Eliel.6">
+      <div class="line-character">Eliēl</div>
+      Habuimus.
+    </div>
+
+    <div class="line-container" id="Giraldus.7">
+      <div class="line-character">Giraldus</div>
+      Quodnam?
+    </div>
+
+    <div class="line-container" id="Eliel.8">
+      <div class="line-character">Eliēl</div>
+      Duodēnās iūglandēs.
+    </div>
+
+    <div class="line-container" id="Giraldus.9">
+      <div class="line-character">Giraldus</div>
+      Hui! quāle praemium!
+    </div>
+
+    <div class="line-container" id="Eliel.10">
+      <div class="line-character">Eliēl</div>
+      Eho, inepte, aestimās ergō praemium ex reī pretiō?
+    </div>
+
+    <div class="line-container" id="Giraldus.11">
+      <div class="line-character">Giraldus</div>
+      Hīc nihil aliud videō aestimandum.
+    </div>
+
+    <div class="line-container" id="Eliel.12">
+      <div class="line-character">Eliēl</div>
+      Sordius es, quī lucrō sīc inhiās. Nōn meministī verbum praeceptōris?
+    </div>
+
+    <div class="line-container" id="Giraldus.13">
+      <div class="line-character">Giraldus</div>
+      Quod verbum?
+    </div>
+
+    <div class="line-container" id="Eliel.14">
+      <div class="line-character">Eliēl</div>
+      ‘Nōn lucrī, sed honōris causā datur praemium.’
+    </div>
+
+    <div class="line-container" id="Giraldus.15">
+      <div class="line-character">Giraldus</div>
+      Nunc reminīscor, quasi per nebulam. Posthāc erō dīligentior.
+    </div>
+
+    <div class="line-container" id="Eliel.16">
+      <div class="line-character">Eliēl</div>
+      Sīc tandem sapiēs.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

@@ -14,154 +14,122 @@ permalink: /corderius/colloquia-scholastica-liber-secundus-colloquium-unum-et-qu
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae:<br>
-            Nathanaēl, Mercurius
-        </div>
-
-        <div class="line-container" id="Nathanael.1">
-            <div class="line-character">
-                Nathanaēl
-            </div>
-            Unde venīs?
-        </div>
-
-        <div class="line-container" id="Mercurius.2">
-            <div class="line-character">
-                Mercurius
-            </div>
-            Domō.
-        </div>
-
-        <div class="line-container" id="Nathanael.3">
-            <div class="line-character">
-                Nathanaēl
-            </div>
-            Quid agitur domī vestrae?
-        </div>
-
-        <div class="line-container" id="Mercurius.4">
-            <div class="line-character">
-                Mercurius
-            </div>
-            Nihil tua refert.
-        </div>
-
-        <div class="line-container" id="Nathanael.5">
-            <div class="line-character">
-                Nathanaēl
-            </div>
-            Fateor; sed familiārēs sīc rogāre ferē solēmus, perinde quasi rogēmus, ‘Ut valētis? Quōmodo sē vestrae
-            rēs habent?’
-        </div>
-
-        <div class="line-container" id="Mercurius.6">
-            <div class="line-character">
-                Mercurius
-            </div>
-            Dē rē aliēnā nimium percontārī nōn decet.
-        </div>
-
-        <div class="line-container" id="Nathanael.7">
-            <div class="line-character">
-                Nathanaēl
-            </div>
-            Taceō: sed vidēris mihi prō aetāte nimis sapere.
-        </div>
-
-        <div class="line-container" id="Mercurius.8">
-            <div class="line-character">
-                Mercurius
-            </div>
-            Nihil meum dīcō; id audīvī saepe.
-        </div>
-
-        <div class="line-container" id="Nathanael.9">
-            <div class="line-character">
-                Nathanaēl
-            </div>
-            Ego quoque nōn semel audīvī.
-        </div>
-
-        <div class="line-container" id="Mercurius.10">
-            <div class="line-character">
-                Mercurius
-            </div>
-            Cūr ergō nōn ūteris?
-        </div>
-
-        <div class="line-container" id="Nathanael.11">
-            <div class="line-character">
-                Nathanaēl
-            </div>
-            Quia nōn semper in mentem venit.
-        </div>
-
-        <div class="line-container" id="Mercurius.12">
-            <div class="line-character">
-                Mercurius
-            </div>
-            Īmō quia tū es percontātor; quae rēs nōn sine causā datur vitiō.
-        </div>
-
-        <div class="line-container" id="Nathanael.13">
-            <div class="line-character">
-                Nathanaēl
-            </div>
-            Habeō grātiam, quod mē adeō amīcē moneās: posthāc, adiuvante Deō, cavēbō ineptus esse.
-        </div>
-
-        <div class="line-container" id="Mercurius.14">
-            <div class="line-character">
-                Mercurius
-            </div>
-            Ita paulātim sapiēs.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae:<br />
+      Nathanaēl, Mercurius
     </div>
+
+    <div class="line-container" id="Nathanael.1">
+      <div class="line-character">Nathanaēl</div>
+      Unde venīs?
+    </div>
+
+    <div class="line-container" id="Mercurius.2">
+      <div class="line-character">Mercurius</div>
+      Domō.
+    </div>
+
+    <div class="line-container" id="Nathanael.3">
+      <div class="line-character">Nathanaēl</div>
+      Quid agitur domī vestrae?
+    </div>
+
+    <div class="line-container" id="Mercurius.4">
+      <div class="line-character">Mercurius</div>
+      Nihil tua refert.
+    </div>
+
+    <div class="line-container" id="Nathanael.5">
+      <div class="line-character">Nathanaēl</div>
+      Fateor; sed familiārēs sīc rogāre ferē solēmus, perinde quasi rogēmus, ‘Ut
+      valētis? Quōmodo sē vestrae rēs habent?’
+    </div>
+
+    <div class="line-container" id="Mercurius.6">
+      <div class="line-character">Mercurius</div>
+      Dē rē aliēnā nimium percontārī nōn decet.
+    </div>
+
+    <div class="line-container" id="Nathanael.7">
+      <div class="line-character">Nathanaēl</div>
+      Taceō: sed vidēris mihi prō aetāte nimis sapere.
+    </div>
+
+    <div class="line-container" id="Mercurius.8">
+      <div class="line-character">Mercurius</div>
+      Nihil meum dīcō; id audīvī saepe.
+    </div>
+
+    <div class="line-container" id="Nathanael.9">
+      <div class="line-character">Nathanaēl</div>
+      Ego quoque nōn semel audīvī.
+    </div>
+
+    <div class="line-container" id="Mercurius.10">
+      <div class="line-character">Mercurius</div>
+      Cūr ergō nōn ūteris?
+    </div>
+
+    <div class="line-container" id="Nathanael.11">
+      <div class="line-character">Nathanaēl</div>
+      Quia nōn semper in mentem venit.
+    </div>
+
+    <div class="line-container" id="Mercurius.12">
+      <div class="line-character">Mercurius</div>
+      Īmō quia tū es percontātor; quae rēs nōn sine causā datur vitiō.
+    </div>
+
+    <div class="line-container" id="Nathanael.13">
+      <div class="line-character">Nathanaēl</div>
+      Habeō grātiam, quod mē adeō amīcē moneās: posthāc, adiuvante Deō, cavēbō
+      ineptus esse.
+    </div>
+
+    <div class="line-container" id="Mercurius.14">
+      <div class="line-character">Mercurius</div>
+      Ita paulātim sapiēs.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

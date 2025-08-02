@@ -13,135 +13,111 @@ permalink: /mosellanus/paedalogia-dialogus-tricesimus-tertius/
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae<br>
-            Basilius, Gregōrius
-        </div>
-
-        <div class="line-container" id="Basilius.1">
-            <div class="line-character">
-                Basilius
-            </div>
-            Unde tū tē prōripis, Gregorī? Aut ubi hanc corōnam rosāceam es nactus?
-        </div>
-
-        <div class="line-container" id="Gregorius.2">
-            <div class="line-character">
-                Gregōrius
-            </div>
-            Ē forō vēnī, mī Basilī, ubi sertum hōc nummō mihi coemī.
-        </div>
-
-        <div class="line-container" id="Basilius.3">
-            <div class="line-character">
-                Basilius
-            </div>
-            At in quem ūsum?
-        </div>
-
-        <div class="line-container" id="Gregorius.4">
-            <div class="line-character">
-                Gregōrius
-            </div>
-            Animus est eam corōnam capitī impositam gestāre. Nōnne vīle tibi vidētur tot rosās ūnicō nummulō parārī?
-        </div>
-
-        <div class="line-container" id="Basilius.5">
-            <div class="line-character">
-                Basilius
-            </div>
-            Et tē tantum asinum nōn pudet puerōrum rītū corōnātum incēdere?
-        </div>
-
-        <div class="line-container" id="Gregorius.6">
-            <div class="line-character">
-                Gregōrius
-            </div>
-            Pudēret? Grandēs nātū et cānī etiam hīc gerunt.
-        </div>
-
-        <div class="line-container" id="Basilius.7">
-            <div class="line-character">
-                Basilius
-            </div>
-            Nihilō ergō sunt graviōrēs; forsan hunc mōrem ā Graecōrum mollitiē sūmpsērunt, quōs apud Homērum subinde
-            καρηκομόωϝτας audiō dīcī.
-        </div>
-
-        <div class="line-container" id="Gregorius.8">
-            <div class="line-character">
-                Gregōrius
-            </div>
-            Unde sūmpserint, equidem nesciō; hoc sciō, quod gestant.
-        </div>
-
-        <div class="line-container" id="Basilius.9">
-            <div class="line-character">
-                Basilius
-            </div>
-            Num sōlās rosāceās gerunt an et violāceās pariter et līliāceās aut etiam rosmarīnō vel amāracō intertextās?
-        </div>
-
-        <div class="line-container" id="Gregorius.10">
-            <div class="line-character">
-                Gregōrius
-            </div>
-            Omnīs generis flōrēs atque adorāmenta concinnant.
-        </div>
-
-        <div class="line-container" id="Basilius.11">
-            <div class="line-character">
-                Basilius
-            </div>
-            Faciant, ut lubet; ego nihilī pendō istās nūgās: tantum abest, ut pretiō emere velim. Quodsī pecūnia
-            superesset, vernum būtȳrum emere mālim; hoc enim in alimentum cēderet, cum sertōrum, sī odōrem excipiās,
-            nūllus plānē sit ūsus.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae<br />
+      Basilius, Gregōrius
     </div>
+
+    <div class="line-container" id="Basilius.1">
+      <div class="line-character">Basilius</div>
+      Unde tū tē prōripis, Gregorī? Aut ubi hanc corōnam rosāceam es nactus?
+    </div>
+
+    <div class="line-container" id="Gregorius.2">
+      <div class="line-character">Gregōrius</div>
+      Ē forō vēnī, mī Basilī, ubi sertum hōc nummō mihi coemī.
+    </div>
+
+    <div class="line-container" id="Basilius.3">
+      <div class="line-character">Basilius</div>
+      At in quem ūsum?
+    </div>
+
+    <div class="line-container" id="Gregorius.4">
+      <div class="line-character">Gregōrius</div>
+      Animus est eam corōnam capitī impositam gestāre. Nōnne vīle tibi vidētur
+      tot rosās ūnicō nummulō parārī?
+    </div>
+
+    <div class="line-container" id="Basilius.5">
+      <div class="line-character">Basilius</div>
+      Et tē tantum asinum nōn pudet puerōrum rītū corōnātum incēdere?
+    </div>
+
+    <div class="line-container" id="Gregorius.6">
+      <div class="line-character">Gregōrius</div>
+      Pudēret? Grandēs nātū et cānī etiam hīc gerunt.
+    </div>
+
+    <div class="line-container" id="Basilius.7">
+      <div class="line-character">Basilius</div>
+      Nihilō ergō sunt graviōrēs; forsan hunc mōrem ā Graecōrum mollitiē
+      sūmpsērunt, quōs apud Homērum subinde καρηκομόωϝτας audiō dīcī.
+    </div>
+
+    <div class="line-container" id="Gregorius.8">
+      <div class="line-character">Gregōrius</div>
+      Unde sūmpserint, equidem nesciō; hoc sciō, quod gestant.
+    </div>
+
+    <div class="line-container" id="Basilius.9">
+      <div class="line-character">Basilius</div>
+      Num sōlās rosāceās gerunt an et violāceās pariter et līliāceās aut etiam
+      rosmarīnō vel amāracō intertextās?
+    </div>
+
+    <div class="line-container" id="Gregorius.10">
+      <div class="line-character">Gregōrius</div>
+      Omnīs generis flōrēs atque adorāmenta concinnant.
+    </div>
+
+    <div class="line-container" id="Basilius.11">
+      <div class="line-character">Basilius</div>
+      Faciant, ut lubet; ego nihilī pendō istās nūgās: tantum abest, ut pretiō
+      emere velim. Quodsī pecūnia superesset, vernum būtȳrum emere mālim; hoc
+      enim in alimentum cēderet, cum sertōrum, sī odōrem excipiās, nūllus plānē
+      sit ūsus.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

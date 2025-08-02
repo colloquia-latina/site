@@ -14,141 +14,116 @@ permalink: /corderius/colloquia-scholastica-liber-tertius-colloquium-decimum-sex
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae:<br>
-            Vernētus, Lūdīmagister, Spatula
-        </div>
-
-        <div class="line-container" id="Vernetus.1">
-            <div class="line-character">
-                Vernētus
-            </div>
-            Praeceptor, licetne pauca?
-        </div>
-
-        <div class="line-container" id="Ludimagister.2">
-            <div class="line-character">
-                Lūdīmagister
-            </div>
-            Loquere.
-        </div>
-
-        <div class="line-container" id="Vernetus.3">
-            <div class="line-character">
-                Vernētus
-            </div>
-            Nōs duo prōpōnēbāmus, sī tibi ita vidērētur, īre, dum caeterī lūdunt, forās ambulātum.
-        </div>
-
-        <div class="line-container" id="Ludimagister.4">
-            <div class="line-character">
-                Lūdīmagister
-            </div>
-            Quō vultis exīre?
-        </div>
-
-        <div class="line-container" id="Vernetus.5">
-            <div class="line-character">
-                Vernētus
-            </div>
-            In proximā Suburbānā.
-        </div>
-
-        <div class="line-container" id="Ludimagister.6">
-            <div class="line-character">
-                Lūdīmagister
-            </div>
-            Quid autem agētis ambulantēs?
-        </div>
-
-        <div class="line-container" id="Spatula.7">
-            <div class="line-character">
-                Spatula
-            </div>
-            Tractābimus Colloquium aliquod.
-        </div>
-
-        <div class="line-container" id="Ludimagister.8">
-            <div class="line-character">
-                Lūdīmagister
-            </div>
-            Sed dē bonīs et honestīs rēbus.
-        </div>
-
-        <div class="line-container" id="Spatula.9">
-            <div class="line-character">
-                Spatula
-            </div>
-            Haec temporis serēnitās et tam pulchra terrae faciēs praebēbunt nōbīs honestum aliquod argūmentum.
-        </div>
-
-        <div class="line-container" id="Ludimagister.10">
-            <div class="line-character">
-                Lūdīmagister
-            </div>
-            Nunquam deest Deī laudanda māteria, duntaxat vērīs eius cultōribus.
-        </div>
-
-        <div class="line-container" id="Vernetus.11">
-            <div class="line-character">
-                Vernētus
-            </div>
-            Nunquam profectō; sed ut ad prōpositum revertāmur, permittis nōbīs praeceptor, extrā urbem prōdīre?
-        </div>
-
-        <div class="line-container" id="Ludimagister.12">
-            <div class="line-character">
-                Lūdīmagister
-            </div>
-            Nīsī mihi perspecta esset vestra perpetua fidēlitās, et vērus amor līterārum, nunquam permitterem;
-            praesertim cum prāvī adolēscentēs mē saepe in hōc genere fefellerint. Vōs igitur prōdite, et mātūrē ad
-            coenam revertiminī.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae:<br />
+      Vernētus, Lūdīmagister, Spatula
     </div>
+
+    <div class="line-container" id="Vernetus.1">
+      <div class="line-character">Vernētus</div>
+      Praeceptor, licetne pauca?
+    </div>
+
+    <div class="line-container" id="Ludimagister.2">
+      <div class="line-character">Lūdīmagister</div>
+      Loquere.
+    </div>
+
+    <div class="line-container" id="Vernetus.3">
+      <div class="line-character">Vernētus</div>
+      Nōs duo prōpōnēbāmus, sī tibi ita vidērētur, īre, dum caeterī lūdunt,
+      forās ambulātum.
+    </div>
+
+    <div class="line-container" id="Ludimagister.4">
+      <div class="line-character">Lūdīmagister</div>
+      Quō vultis exīre?
+    </div>
+
+    <div class="line-container" id="Vernetus.5">
+      <div class="line-character">Vernētus</div>
+      In proximā Suburbānā.
+    </div>
+
+    <div class="line-container" id="Ludimagister.6">
+      <div class="line-character">Lūdīmagister</div>
+      Quid autem agētis ambulantēs?
+    </div>
+
+    <div class="line-container" id="Spatula.7">
+      <div class="line-character">Spatula</div>
+      Tractābimus Colloquium aliquod.
+    </div>
+
+    <div class="line-container" id="Ludimagister.8">
+      <div class="line-character">Lūdīmagister</div>
+      Sed dē bonīs et honestīs rēbus.
+    </div>
+
+    <div class="line-container" id="Spatula.9">
+      <div class="line-character">Spatula</div>
+      Haec temporis serēnitās et tam pulchra terrae faciēs praebēbunt nōbīs
+      honestum aliquod argūmentum.
+    </div>
+
+    <div class="line-container" id="Ludimagister.10">
+      <div class="line-character">Lūdīmagister</div>
+      Nunquam deest Deī laudanda māteria, duntaxat vērīs eius cultōribus.
+    </div>
+
+    <div class="line-container" id="Vernetus.11">
+      <div class="line-character">Vernētus</div>
+      Nunquam profectō; sed ut ad prōpositum revertāmur, permittis nōbīs
+      praeceptor, extrā urbem prōdīre?
+    </div>
+
+    <div class="line-container" id="Ludimagister.12">
+      <div class="line-character">Lūdīmagister</div>
+      Nīsī mihi perspecta esset vestra perpetua fidēlitās, et vērus amor
+      līterārum, nunquam permitterem; praesertim cum prāvī adolēscentēs mē saepe
+      in hōc genere fefellerint. Vōs igitur prōdite, et mātūrē ad coenam
+      revertiminī.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

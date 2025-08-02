@@ -13,117 +13,102 @@ permalink: /mosellanus/paedalogia-dialogus-decimus-tertius/
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae<br>
-            Sixtus, Alexander
-        </div>
-
-        <div class="line-container" id="Sixtus.1">
-            <div class="line-character">
-                Sixtus
-            </div>
-            Fēlīx tū quidem es, mī Alexander, cui ingenium tam fēcundum tamque perspicāx contigit
-        </div>
-
-        <div class="line-container" id="Alexander.2">
-            <div class="line-character">
-                Alexander
-            </div>
-            Est nōbīs, Chrīstō Deō grātiā, nōn omnīnō īnfēlīx, sed tamen nōn tantum, quam forsan tibi vidētur. Fit enim,
-            nesciō quō modō, ut nostrī nōsmet paeniteat, aliēna ferē suspiciāmus.
-        </div>
-
-        <div class="line-container" id="Sixtus.3">
-            <div class="line-character">
-                Sixtus
-            </div>
-            Et tū, quantum audiō, aliquid īnsuper dēsīderās.
-        </div>
-
-        <div class="line-container" id="Alexander.4">
-            <div class="line-character">
-                Alexander
-            </div>
-            Quidnī? Quandō memoriam mihi sentiō omnīnō flūxam et parum tenācem; nam ut facile quae trāduntur percipiō,
-            ita nōn sine maximō negōtiō percepta retineō.
-        </div>
-
-        <div class="line-container" id="Sixtus.5">
-            <div class="line-character">
-                Sixtus
-            </div>
-            At ego difficulter intellegō, vērum semel intellēcta diūtissimē reservō; et, ut videō, tibi cēreum est
-            ingenium, mihi vērō saxeum. Cērae quidvīs facile impresserīs, at impressum vestīgium statim ēvānēscit; saxō
-            tametsī quid nōn sine labōre īnsculpitur, semel tamen īnsculptum multīs saeculīs dūrat.
-        </div>
-
-        <div class="line-container" id="Alexander.6">
-            <div class="line-character">
-                Alexander
-            </div>
-            Rēctē plānē cōnfers, sed hoc mē male habet, quod videās plērōsque ingeniō numerīs omnibus fēlīcissimō
-            praeditōs, at vicissim mōribus adeō turpibus, ut nōn ineptē dīxerīs eōrum ingenia male habitāre.
-        </div>
-
-        <div class="line-container" id="Sixtus.7">
-            <div class="line-character">
-                Sixtus
-            </div>
-            Crēdō dictērium hoc vetus esse et ōlim dē Galbā, homine ad prōdigium usque dēfōrmī, dictum ; sīc enim audīre
-            commeminī.
-        </div>
-
-        <div class="line-container" id="Alexander.8">
-            <div class="line-character">
-                Alexander
-            </div>
-            Probe, sed nec ipse, opīnor, ineptē hūc dētorsī.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae<br />
+      Sixtus, Alexander
     </div>
+
+    <div class="line-container" id="Sixtus.1">
+      <div class="line-character">Sixtus</div>
+      Fēlīx tū quidem es, mī Alexander, cui ingenium tam fēcundum tamque
+      perspicāx contigit
+    </div>
+
+    <div class="line-container" id="Alexander.2">
+      <div class="line-character">Alexander</div>
+      Est nōbīs, Chrīstō Deō grātiā, nōn omnīnō īnfēlīx, sed tamen nōn tantum,
+      quam forsan tibi vidētur. Fit enim, nesciō quō modō, ut nostrī nōsmet
+      paeniteat, aliēna ferē suspiciāmus.
+    </div>
+
+    <div class="line-container" id="Sixtus.3">
+      <div class="line-character">Sixtus</div>
+      Et tū, quantum audiō, aliquid īnsuper dēsīderās.
+    </div>
+
+    <div class="line-container" id="Alexander.4">
+      <div class="line-character">Alexander</div>
+      Quidnī? Quandō memoriam mihi sentiō omnīnō flūxam et parum tenācem; nam ut
+      facile quae trāduntur percipiō, ita nōn sine maximō negōtiō percepta
+      retineō.
+    </div>
+
+    <div class="line-container" id="Sixtus.5">
+      <div class="line-character">Sixtus</div>
+      At ego difficulter intellegō, vērum semel intellēcta diūtissimē reservō;
+      et, ut videō, tibi cēreum est ingenium, mihi vērō saxeum. Cērae quidvīs
+      facile impresserīs, at impressum vestīgium statim ēvānēscit; saxō tametsī
+      quid nōn sine labōre īnsculpitur, semel tamen īnsculptum multīs saeculīs
+      dūrat.
+    </div>
+
+    <div class="line-container" id="Alexander.6">
+      <div class="line-character">Alexander</div>
+      Rēctē plānē cōnfers, sed hoc mē male habet, quod videās plērōsque ingeniō
+      numerīs omnibus fēlīcissimō praeditōs, at vicissim mōribus adeō turpibus,
+      ut nōn ineptē dīxerīs eōrum ingenia male habitāre.
+    </div>
+
+    <div class="line-container" id="Sixtus.7">
+      <div class="line-character">Sixtus</div>
+      Crēdō dictērium hoc vetus esse et ōlim dē Galbā, homine ad prōdigium usque
+      dēfōrmī, dictum ; sīc enim audīre commeminī.
+    </div>
+
+    <div class="line-container" id="Alexander.8">
+      <div class="line-character">Alexander</div>
+      Probe, sed nec ipse, opīnor, ineptē hūc dētorsī.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

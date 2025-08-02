@@ -13,117 +13,99 @@ permalink: /mosellanus/paedalogia-dialogus-decimus-septimus/
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae<br>
-            Petrus, Paulus
-        </div>
-
-        <div class="line-container" id="Petrus.1">
-            <div class="line-character">
-                Petrus
-            </div>
-            Quam vellem hunc diem abiisse, ut ā tot tōtīus septimānae labōribus atque etiam bīduī famē ad fēriās dēmum
-            et carnēs liceat redīre!
-        </div>
-
-        <div class="line-container" id="Paulus.2">
-            <div class="line-character">
-                Paulus
-            </div>
-            Impatiēns es morae, mī Petre, quī, cum tōtam paene septimānam exspectārīs, diem dīmidiātum dūrāre nōn potes.
-            Quid autem faciēs, ubi tōtīs quadrāgintā diēbus ā carnibus est abstinendum?
-        </div>
-
-        <div class="line-container" id="Petrus.3">
-            <div class="line-character">
-                Petrus
-            </div>
-            Rēctē quidem obiūrgās, sed nesciō quōmodo quantō vīcīniōrēs sunt fēriae, tantō magis eārum mē premit
-            dēsīderium. Sed numquid aliud dīcere vīs? Nam ego hinc mē in tōnstrīnam cōnferam caput lōtiōne cūrātūrus.
-        </div>
-
-        <div class="line-container" id="Paulus.4">
-            <div class="line-character">
-                Paulus
-            </div>
-            Et ipse lavandum caput exhibērem, sī lōtiōnis mercēdem tōnsōrī persolvere possem; nunc autem tantum habeō
-            nummum.
-        </div>
-
-        <div class="line-container" id="Petrus.5">
-            <div class="line-character">
-                Petrus
-            </div>
-            Sat est, nec ipse plūrīs lavō, tametsī rārō hōs faciō sūmptus: nam per annī curriculum vix sexiēs lavō.
-        </div>
-
-        <div class="line-container" id="Paulus.6">
-            <div class="line-character">
-                Paulus
-            </div>
-            At saepe caput ā sordibus repūrgārēs; aiunt enim corporis ēmundātiōne et ingenium nitidius quasique
-            pūrgātius reddī.
-        </div>
-
-        <div class="line-container" id="Petrus.7">
-            <div class="line-character">
-                Petrus
-            </div>
-            Sīc quidem fertur idque proptereā, quod scientiārum sēdem in capite, utpote ratiōnis domiciliō, collocant.
-            Quārē ōcius eāmus.
-        </div>
-
-        <div class="line-container" id="Paulus.8">
-            <div class="line-character">
-                Paulus
-            </div>
-            Quandō lubet.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae<br />
+      Petrus, Paulus
     </div>
+
+    <div class="line-container" id="Petrus.1">
+      <div class="line-character">Petrus</div>
+      Quam vellem hunc diem abiisse, ut ā tot tōtīus septimānae labōribus atque
+      etiam bīduī famē ad fēriās dēmum et carnēs liceat redīre!
+    </div>
+
+    <div class="line-container" id="Paulus.2">
+      <div class="line-character">Paulus</div>
+      Impatiēns es morae, mī Petre, quī, cum tōtam paene septimānam exspectārīs,
+      diem dīmidiātum dūrāre nōn potes. Quid autem faciēs, ubi tōtīs quadrāgintā
+      diēbus ā carnibus est abstinendum?
+    </div>
+
+    <div class="line-container" id="Petrus.3">
+      <div class="line-character">Petrus</div>
+      Rēctē quidem obiūrgās, sed nesciō quōmodo quantō vīcīniōrēs sunt fēriae,
+      tantō magis eārum mē premit dēsīderium. Sed numquid aliud dīcere vīs? Nam
+      ego hinc mē in tōnstrīnam cōnferam caput lōtiōne cūrātūrus.
+    </div>
+
+    <div class="line-container" id="Paulus.4">
+      <div class="line-character">Paulus</div>
+      Et ipse lavandum caput exhibērem, sī lōtiōnis mercēdem tōnsōrī persolvere
+      possem; nunc autem tantum habeō nummum.
+    </div>
+
+    <div class="line-container" id="Petrus.5">
+      <div class="line-character">Petrus</div>
+      Sat est, nec ipse plūrīs lavō, tametsī rārō hōs faciō sūmptus: nam per
+      annī curriculum vix sexiēs lavō.
+    </div>
+
+    <div class="line-container" id="Paulus.6">
+      <div class="line-character">Paulus</div>
+      At saepe caput ā sordibus repūrgārēs; aiunt enim corporis ēmundātiōne et
+      ingenium nitidius quasique pūrgātius reddī.
+    </div>
+
+    <div class="line-container" id="Petrus.7">
+      <div class="line-character">Petrus</div>
+      Sīc quidem fertur idque proptereā, quod scientiārum sēdem in capite,
+      utpote ratiōnis domiciliō, collocant. Quārē ōcius eāmus.
+    </div>
+
+    <div class="line-container" id="Paulus.8">
+      <div class="line-character">Paulus</div>
+      Quandō lubet.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

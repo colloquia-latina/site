@@ -14,146 +14,115 @@ permalink: /corderius/colloquia-scholastica-liber-primus-colloquium-sexagesimum-
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae:<br>
-            Rīpārius, Amadaeus
-        </div>
-
-        <div class="line-container" id="Riparius.1">
-            <div class="line-character">
-                Rīpārius
-            </div>
-            Audīvistīne hōrologium?
-        </div>
-
-        <div class="line-container" id="Amadeus.2">
-            <div class="line-character">
-                Amadaeus
-            </div>
-            Dūdum sonuit.
-        </div>
-
-        <div class="line-container" id="Riparius.3">
-            <div class="line-character">
-                Rīpārius
-            </div>
-            Dīnumerāstī hōrās?
-        </div>
-
-        <div class="line-container" id="Amadeus.4">
-            <div class="line-character">
-                Amadaeus
-            </div>
-            Dīnumerāvī.
-        </div>
-
-        <div class="line-container" id="Riparius.5">
-            <div class="line-character">
-                Rīpārius
-            </div>
-            Quotā est?
-        </div>
-
-        <div class="line-container" id="Amadeus.6">
-            <div class="line-character">
-                Amadaeus
-            </div>
-            Fere sēsquiprīmā.
-        </div>
-
-        <div class="line-container" id="Riparius.7">
-            <div class="line-character">
-                Rīpārius
-            </div>
-            Īnstat igitur praelēctiōnis tempus: fac ut parātus sīs.
-        </div>
-
-        <div class="line-container" id="Amadeus.8">
-            <div class="line-character">
-                Amadaeus
-            </div>
-            Ubī merendam perēderō, ecce mē parātum.
-        </div>
-
-        <div class="line-container" id="Riparius.9">
-            <div class="line-character">
-                Rīpārius
-            </div>
-            Cūr merīdiē nōn adfuistī nōbīscum?
-        </div>
-
-        <div class="line-container" id="Amadeus.10">
-            <div class="line-character">
-                Amadaeus
-            </div>
-            Prōdieram cum bona venia praeceptōris.
-        </div>
-
-        <div class="line-container" id="Riparius.11">
-            <div class="line-character">
-                Rīpārius
-            </div>
-            Sed interim sum tibi impedīmentō.
-        </div>
-
-        <div class="line-container" id="Amadeus.12">
-            <div class="line-character">
-                Amadaeus
-            </div>
-            Nihil impedīs; nē bolum quidem perdidī interpellātiōne tuā.
-        </div>
-
-        <div class="line-container" id="Riparius.13">
-            <div class="line-character">
-                Rīpārius
-            </div>
-            Bene habet; perge, sed mātūrā.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae:<br />
+      Rīpārius, Amadaeus
     </div>
+
+    <div class="line-container" id="Riparius.1">
+      <div class="line-character">Rīpārius</div>
+      Audīvistīne hōrologium?
+    </div>
+
+    <div class="line-container" id="Amadeus.2">
+      <div class="line-character">Amadaeus</div>
+      Dūdum sonuit.
+    </div>
+
+    <div class="line-container" id="Riparius.3">
+      <div class="line-character">Rīpārius</div>
+      Dīnumerāstī hōrās?
+    </div>
+
+    <div class="line-container" id="Amadeus.4">
+      <div class="line-character">Amadaeus</div>
+      Dīnumerāvī.
+    </div>
+
+    <div class="line-container" id="Riparius.5">
+      <div class="line-character">Rīpārius</div>
+      Quotā est?
+    </div>
+
+    <div class="line-container" id="Amadeus.6">
+      <div class="line-character">Amadaeus</div>
+      Fere sēsquiprīmā.
+    </div>
+
+    <div class="line-container" id="Riparius.7">
+      <div class="line-character">Rīpārius</div>
+      Īnstat igitur praelēctiōnis tempus: fac ut parātus sīs.
+    </div>
+
+    <div class="line-container" id="Amadeus.8">
+      <div class="line-character">Amadaeus</div>
+      Ubī merendam perēderō, ecce mē parātum.
+    </div>
+
+    <div class="line-container" id="Riparius.9">
+      <div class="line-character">Rīpārius</div>
+      Cūr merīdiē nōn adfuistī nōbīscum?
+    </div>
+
+    <div class="line-container" id="Amadeus.10">
+      <div class="line-character">Amadaeus</div>
+      Prōdieram cum bona venia praeceptōris.
+    </div>
+
+    <div class="line-container" id="Riparius.11">
+      <div class="line-character">Rīpārius</div>
+      Sed interim sum tibi impedīmentō.
+    </div>
+
+    <div class="line-container" id="Amadeus.12">
+      <div class="line-character">Amadaeus</div>
+      Nihil impedīs; nē bolum quidem perdidī interpellātiōne tuā.
+    </div>
+
+    <div class="line-container" id="Riparius.13">
+      <div class="line-character">Rīpārius</div>
+      Bene habet; perge, sed mātūrā.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

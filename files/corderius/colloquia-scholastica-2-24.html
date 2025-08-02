@@ -14,181 +14,140 @@ permalink: /corderius/colloquia-scholastica-liber-secundus-colloquium-vicesimum-
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae:<br>
-            Franciscus, Dionȳsius
-        </div>
-
-        <div class="line-container" id="Franciscus.1">
-            <div class="line-character">
-                Franciscus
-            </div>
-            Ubī fuistī hīs diēbus?
-        </div>
-
-        <div class="line-container" id="Dionysius.2">
-            <div class="line-character">
-                Dionȳsius
-            </div>
-            Rūre.
-        </div>
-
-        <div class="line-container" id="Franciscus.3">
-            <div class="line-character">
-                Franciscus
-            </div>
-            Quō in locō?
-        </div>
-
-        <div class="line-container" id="Dionysius.4">
-            <div class="line-character">
-                Dionȳsius
-            </div>
-            In vīllā nostrā.
-        </div>
-
-        <div class="line-container" id="Franciscus.5">
-            <div class="line-character">
-                Franciscus
-            </div>
-            Quid agēbās illīc?
-        </div>
-
-        <div class="line-container" id="Dionysius.6">
-            <div class="line-character">
-                Dionȳsius
-            </div>
-            Ministrābam patrī.
-        </div>
-
-        <div class="line-container" id="Franciscus.7">
-            <div class="line-character">
-                Franciscus
-            </div>
-            Quid vērō ille?
-        </div>
-
-        <div class="line-container" id="Dionysius.8">
-            <div class="line-character">
-                Dionȳsius
-            </div>
-            Pastinābat vītēs nostrās.
-        </div>
-
-        <div class="line-container" id="Franciscus.9">
-            <div class="line-character">
-                Franciscus
-            </div>
-            Quandō illinc rediistī?
-        </div>
-
-        <div class="line-container" id="Dionysius.10">
-            <div class="line-character">
-                Dionȳsius
-            </div>
-            Heri tantum.
-        </div>
-
-        <div class="line-container" id="Franciscus.11">
-            <div class="line-character">
-                Franciscus
-            </div>
-            Quid pater?
-        </div>
-
-        <div class="line-container" id="Dionysius.12">
-            <div class="line-character">
-                Dionȳsius
-            </div>
-            Ūnā mēcum reversus est.
-        </div>
-
-        <div class="line-container" id="Franciscus.13">
-            <div class="line-character">
-                Franciscus
-            </div>
-            Bene factum: sed quō nunc īs?
-        </div>
-
-        <div class="line-container" id="Dionysius.14">
-            <div class="line-character">
-                Dionȳsius
-            </div>
-            Rēcta domum.
-        </div>
-
-        <div class="line-container" id="Franciscus.15">
-            <div class="line-character">
-                Franciscus
-            </div>
-            Sed quandō repetēs lūdum līterārium?
-        </div>
-
-        <div class="line-container" id="Dionysius.16">
-            <div class="line-character">
-                Dionȳsius
-            </div>
-            Crās, iuvante Deō, aut summum perendiē.
-        </div>
-
-        <div class="line-container" id="Franciscus.17">
-            <div class="line-character">
-                Franciscus
-            </div>
-            Ergō interim valē.
-        </div>
-
-        <div class="line-container" id="Dionysius.18">
-            <div class="line-character">
-                Dionȳsius
-            </div>
-            Et tū valē, mī Francisce.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae:<br />
+      Franciscus, Dionȳsius
     </div>
+
+    <div class="line-container" id="Franciscus.1">
+      <div class="line-character">Franciscus</div>
+      Ubī fuistī hīs diēbus?
+    </div>
+
+    <div class="line-container" id="Dionysius.2">
+      <div class="line-character">Dionȳsius</div>
+      Rūre.
+    </div>
+
+    <div class="line-container" id="Franciscus.3">
+      <div class="line-character">Franciscus</div>
+      Quō in locō?
+    </div>
+
+    <div class="line-container" id="Dionysius.4">
+      <div class="line-character">Dionȳsius</div>
+      In vīllā nostrā.
+    </div>
+
+    <div class="line-container" id="Franciscus.5">
+      <div class="line-character">Franciscus</div>
+      Quid agēbās illīc?
+    </div>
+
+    <div class="line-container" id="Dionysius.6">
+      <div class="line-character">Dionȳsius</div>
+      Ministrābam patrī.
+    </div>
+
+    <div class="line-container" id="Franciscus.7">
+      <div class="line-character">Franciscus</div>
+      Quid vērō ille?
+    </div>
+
+    <div class="line-container" id="Dionysius.8">
+      <div class="line-character">Dionȳsius</div>
+      Pastinābat vītēs nostrās.
+    </div>
+
+    <div class="line-container" id="Franciscus.9">
+      <div class="line-character">Franciscus</div>
+      Quandō illinc rediistī?
+    </div>
+
+    <div class="line-container" id="Dionysius.10">
+      <div class="line-character">Dionȳsius</div>
+      Heri tantum.
+    </div>
+
+    <div class="line-container" id="Franciscus.11">
+      <div class="line-character">Franciscus</div>
+      Quid pater?
+    </div>
+
+    <div class="line-container" id="Dionysius.12">
+      <div class="line-character">Dionȳsius</div>
+      Ūnā mēcum reversus est.
+    </div>
+
+    <div class="line-container" id="Franciscus.13">
+      <div class="line-character">Franciscus</div>
+      Bene factum: sed quō nunc īs?
+    </div>
+
+    <div class="line-container" id="Dionysius.14">
+      <div class="line-character">Dionȳsius</div>
+      Rēcta domum.
+    </div>
+
+    <div class="line-container" id="Franciscus.15">
+      <div class="line-character">Franciscus</div>
+      Sed quandō repetēs lūdum līterārium?
+    </div>
+
+    <div class="line-container" id="Dionysius.16">
+      <div class="line-character">Dionȳsius</div>
+      Crās, iuvante Deō, aut summum perendiē.
+    </div>
+
+    <div class="line-container" id="Franciscus.17">
+      <div class="line-character">Franciscus</div>
+      Ergō interim valē.
+    </div>
+
+    <div class="line-container" id="Dionysius.18">
+      <div class="line-character">Dionȳsius</div>
+      Et tū valē, mī Francisce.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

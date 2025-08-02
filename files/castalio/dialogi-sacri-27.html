@@ -13,144 +13,119 @@ permalink: /castalio/dialogi-sacri-dialogus-vicesimus-septimus/
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
+    <div class="note">Genius Gedeōnem mittit ad dēbellandōs Madiānītās.</div>
 
-        <div class="note">
-            Genius Gedeōnem mittit ad dēbellandōs Madiānītās.
-        </div>
-
-        <div class="characters">
-            Persōnae:<br>
-            Genius, Gedeōn
-        </div>
-
-        <div class="line-container" id="Genius.1">
-            <div class="line-character">
-                Genius
-            </div>
-            Adsit tibi Iōva, vir fortissimē.
-        </div>
-
-        <div class="line-container" id="Gedeon.2">
-            <div class="line-character">
-                Gedeōn
-            </div>
-            Quaesō tē, domine, sī adest nōbīs Iōva, cūr tam dīra patimur? Ubinam sunt tot eius mīra facinora quae nōbīs
-            nārrāvēre maiōrēs nostrī, nōs ab eō esse ēductōs ex Aegyptiīs, cum nōs nunc dēseruit et addīxit Madiānītīs?
-        </div>
-
-        <div class="line-container" id="Genius.3">
-            <div class="line-character">
-                Genius
-            </div>
-            Vade cum tuā istā virtūte, et dēfende Isrāēlītās ā Madiānītīs. Ego sum tibi autor vādendī.
-        </div>
-
-        <div class="line-container" id="Gedeon.4">
-            <div class="line-character">
-                Gedeōn
-            </div>
-            Amābō tē, domine, quā tandem rē dēfendam Isrāēlītās, quī sim tenuissimus omnium Manassēnsium et minimus
-            tōtīus paternae familiae?
-        </div>
-
-        <div class="line-container" id="Genius.5">
-            <div class="line-character">
-                Genius
-            </div>
-            Adiuvante mē concīdēs Madiānītās ad ūnum.
-        </div>
-
-        <div class="line-container" id="Gedeon.6">
-            <div class="line-character">
-                Gedeōn
-            </div>
-            Quaesō tē, nisi molestum est, ut signō aliquō mihi cōnfirmēs tē eum esse quī mēcum loquāre. Nōlī discēdere
-            hinc, dōnec redeam ad tē et exprōmam dapem quam faciam apud tē.
-        </div>
-
-        <div class="line-container" id="Genius.7">
-            <div class="line-character">
-                Genius
-            </div>
-            Praestōlābor tibi.
-        </div>
-
-        <div class="line-container" id="Gedeon.8">
-            <div class="line-character">
-                Gedeōn
-            </div>
-            Parāvī omnia.
-        </div>
-
-        <div class="line-container" id="Genius.9">
-            <div class="line-character">
-                Genius
-            </div>
-            Pōne carnem et pānēs nōn fermentātōs super hōc saxō, et effunde iūs.
-        </div>
-
-        <div class="line-container" id="Gedeon.10">
-            <div class="line-character">
-                Gedeōn
-            </div>
-            Hēī mihi, ignis cōnsūmpsit omnia: Iōvae genius est. Mē miserum, quī vīderim genium Iōvae!
-        </div>
-
-        <div class="line-container" id="Genius.11">
-            <div class="line-character">
-                Genius
-            </div>
-            Salvus es, pōne metum, nōn ideō moriēre.
-        </div>
-
-        <div class="note">
-            Sententia<br>
-            Deī ope quīvīs quidvīs potest.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae:<br />
+      Genius, Gedeōn
     </div>
+
+    <div class="line-container" id="Genius.1">
+      <div class="line-character">Genius</div>
+      Adsit tibi Iōva, vir fortissimē.
+    </div>
+
+    <div class="line-container" id="Gedeon.2">
+      <div class="line-character">Gedeōn</div>
+      Quaesō tē, domine, sī adest nōbīs Iōva, cūr tam dīra patimur? Ubinam sunt
+      tot eius mīra facinora quae nōbīs nārrāvēre maiōrēs nostrī, nōs ab eō esse
+      ēductōs ex Aegyptiīs, cum nōs nunc dēseruit et addīxit Madiānītīs?
+    </div>
+
+    <div class="line-container" id="Genius.3">
+      <div class="line-character">Genius</div>
+      Vade cum tuā istā virtūte, et dēfende Isrāēlītās ā Madiānītīs. Ego sum
+      tibi autor vādendī.
+    </div>
+
+    <div class="line-container" id="Gedeon.4">
+      <div class="line-character">Gedeōn</div>
+      Amābō tē, domine, quā tandem rē dēfendam Isrāēlītās, quī sim tenuissimus
+      omnium Manassēnsium et minimus tōtīus paternae familiae?
+    </div>
+
+    <div class="line-container" id="Genius.5">
+      <div class="line-character">Genius</div>
+      Adiuvante mē concīdēs Madiānītās ad ūnum.
+    </div>
+
+    <div class="line-container" id="Gedeon.6">
+      <div class="line-character">Gedeōn</div>
+      Quaesō tē, nisi molestum est, ut signō aliquō mihi cōnfirmēs tē eum esse
+      quī mēcum loquāre. Nōlī discēdere hinc, dōnec redeam ad tē et exprōmam
+      dapem quam faciam apud tē.
+    </div>
+
+    <div class="line-container" id="Genius.7">
+      <div class="line-character">Genius</div>
+      Praestōlābor tibi.
+    </div>
+
+    <div class="line-container" id="Gedeon.8">
+      <div class="line-character">Gedeōn</div>
+      Parāvī omnia.
+    </div>
+
+    <div class="line-container" id="Genius.9">
+      <div class="line-character">Genius</div>
+      Pōne carnem et pānēs nōn fermentātōs super hōc saxō, et effunde iūs.
+    </div>
+
+    <div class="line-container" id="Gedeon.10">
+      <div class="line-character">Gedeōn</div>
+      Hēī mihi, ignis cōnsūmpsit omnia: Iōvae genius est. Mē miserum, quī
+      vīderim genium Iōvae!
+    </div>
+
+    <div class="line-container" id="Genius.11">
+      <div class="line-character">Genius</div>
+      Salvus es, pōne metum, nōn ideō moriēre.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Deī ope quīvīs quidvīs potest.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

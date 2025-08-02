@@ -14,150 +14,118 @@ permalink: /corderius/colloquia-scholastica-liber-secundus-colloquium-quinquages
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae:<br>
-            Stratānus, Theobaldus
-        </div>
-
-        <div class="line-container" id="Stratanus.1">
-            <div class="line-character">
-                Stratānus
-            </div>
-            Quae sunt arborēs in hortō vestrō?
-        </div>
-
-        <div class="line-container" id="Theobaldus.2">
-            <div class="line-character">
-                Theobaldus
-            </div>
-            Hortum habēmus suburbānum, in quō sunt olera, quibus vēscimur quotīdiē; praetereā sunt in fundō nostrō bīnī
-            hortī
-            variīs arboribus cōnsitī.
-        </div>
-
-        <div class="line-container" id="Stratanus.3">
-            <div class="line-character">
-                Stratānus
-            </div>
-            In hortō quae sunt olera?
-        </div>
-
-        <div class="line-container" id="Theobaldus.4">
-            <div class="line-character">
-                Theobaldus
-            </div>
-            Dē hōc māter melius respondēre posset. Nam illīc saepe versātur aut serendī causā, aut sarriendī, aut
-            aliquid
-            colligendī.
-        </div>
-
-        <div class="line-container" id="Stratanus.5">
-            <div class="line-character">
-                Stratānus
-            </div>
-            Sed tamen dīc mihi aliquot olerum nōmina.
-        </div>
-
-        <div class="line-container" id="Theobaldus.6">
-            <div class="line-character">
-                Theobaldus
-            </div>
-            Parum prōdesset nōmina tibi recēnsēre, nisi rēs ipsās vidērēs: quīn eāmus in rem praesentem.
-        </div>
-
-        <div class="line-container" id="Stratanus.7">
-            <div class="line-character">
-                Stratānus
-            </div>
-            Potes īre quandō libet?
-        </div>
-
-        <div class="line-container" id="Theobaldus.8">
-            <div class="line-character">
-                Theobaldus
-            </div>
-            Possum quidem, mātre permittente.
-        </div>
-
-        <div class="line-container" id="Stratanus.9">
-            <div class="line-character">
-                Stratānus
-            </div>
-            Fac amābō permittat; sed eā lēge ut mē tibi comitem assūmās.
-        </div>
-
-        <div class="line-container" id="Theobaldus.10">
-            <div class="line-character">
-                Theobaldus
-            </div>
-            Id facillimē fīet; tantum hīc mē exspectēs: mox redierō.
-        </div>
-
-        <div class="line-container" id="Stratanus.11">
-            <div class="line-character">
-                Stratānus
-            </div>
-            Quid sī ea domī nōn est?
-        </div>
-
-        <div class="line-container" id="Theobaldus.12">
-            <div class="line-character">
-                Theobaldus
-            </div>
-            Tamen hoc tibi renūnciābō.
-        </div>
-
-        <div class="line-container" id="Stratanus.13">
-            <div class="line-character">
-                Stratānus
-            </div>
-            Bene vertat Deus.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae:<br />
+      Stratānus, Theobaldus
     </div>
+
+    <div class="line-container" id="Stratanus.1">
+      <div class="line-character">Stratānus</div>
+      Quae sunt arborēs in hortō vestrō?
+    </div>
+
+    <div class="line-container" id="Theobaldus.2">
+      <div class="line-character">Theobaldus</div>
+      Hortum habēmus suburbānum, in quō sunt olera, quibus vēscimur quotīdiē;
+      praetereā sunt in fundō nostrō bīnī hortī variīs arboribus cōnsitī.
+    </div>
+
+    <div class="line-container" id="Stratanus.3">
+      <div class="line-character">Stratānus</div>
+      In hortō quae sunt olera?
+    </div>
+
+    <div class="line-container" id="Theobaldus.4">
+      <div class="line-character">Theobaldus</div>
+      Dē hōc māter melius respondēre posset. Nam illīc saepe versātur aut
+      serendī causā, aut sarriendī, aut aliquid colligendī.
+    </div>
+
+    <div class="line-container" id="Stratanus.5">
+      <div class="line-character">Stratānus</div>
+      Sed tamen dīc mihi aliquot olerum nōmina.
+    </div>
+
+    <div class="line-container" id="Theobaldus.6">
+      <div class="line-character">Theobaldus</div>
+      Parum prōdesset nōmina tibi recēnsēre, nisi rēs ipsās vidērēs: quīn eāmus
+      in rem praesentem.
+    </div>
+
+    <div class="line-container" id="Stratanus.7">
+      <div class="line-character">Stratānus</div>
+      Potes īre quandō libet?
+    </div>
+
+    <div class="line-container" id="Theobaldus.8">
+      <div class="line-character">Theobaldus</div>
+      Possum quidem, mātre permittente.
+    </div>
+
+    <div class="line-container" id="Stratanus.9">
+      <div class="line-character">Stratānus</div>
+      Fac amābō permittat; sed eā lēge ut mē tibi comitem assūmās.
+    </div>
+
+    <div class="line-container" id="Theobaldus.10">
+      <div class="line-character">Theobaldus</div>
+      Id facillimē fīet; tantum hīc mē exspectēs: mox redierō.
+    </div>
+
+    <div class="line-container" id="Stratanus.11">
+      <div class="line-character">Stratānus</div>
+      Quid sī ea domī nōn est?
+    </div>
+
+    <div class="line-container" id="Theobaldus.12">
+      <div class="line-character">Theobaldus</div>
+      Tamen hoc tibi renūnciābō.
+    </div>
+
+    <div class="line-container" id="Stratanus.13">
+      <div class="line-character">Stratānus</div>
+      Bene vertat Deus.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

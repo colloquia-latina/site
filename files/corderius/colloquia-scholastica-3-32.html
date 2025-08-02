@@ -14,147 +14,118 @@ permalink: /corderius/colloquia-scholastica-liber-tertius-colloquium-alterum-et-
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae:<br>
-            Castronovānus, Praeceptor
-        </div>
-
-        <div class="line-container" id="Castronovanus.1">
-            <div class="line-character">
-                Castronovānus
-            </div>
-            Salvus sīs, praeceptor.
-        </div>
-
-        <div class="line-container" id="Praeceptor.2">
-            <div class="line-character">
-                Praeceptor
-            </div>
-            Auspicātō advenīs: quid nūntiās?
-        </div>
-
-        <div class="line-container" id="Castronovanus.3">
-            <div class="line-character">
-                Castronovānus
-            </div>
-            Ōrat tē pater meus ut animī causā eāmus ūnā in hortōs suōs suburbānōs.
-        </div>
-
-        <div class="line-container" id="Praeceptor.4">
-            <div class="line-character">
-                Praeceptor
-            </div>
-            Ad eam rem nōs invītat serēnitās, et nunc sumus fēriātī. Sed quid illīc aspectū iūcundum vidēbimus?
-        </div>
-
-        <div class="line-container" id="Castronovanus.5">
-            <div class="line-character">
-                Castronovānus
-            </div>
-            Variās et pulchrās arborēs cum suīs frūctibus, item herbārum et flōrum mīram varietātem.
-        </div>
-
-        <div class="line-container" id="Praeceptor.6">
-            <div class="line-character">
-                Praeceptor
-            </div>
-            Nihil est illīs rēbus hōc tempore iūcundius.
-        </div>
-
-        <div class="line-container" id="Castronovanus.7">
-            <div class="line-character">
-                Castronovānus
-            </div>
-            Ea est Deī ergā nōs beneficentia.
-        </div>
-
-        <div class="line-container" id="Praeceptor.8">
-            <div class="line-character">
-                Praeceptor
-            </div>
-            Quam quidem assiduīs laudibus prōsequī dēbēmus.
-        </div>
-
-        <div class="line-container" id="Castronovanus.9">
-            <div class="line-character">
-                Castronovānus
-            </div>
-            Sed vereor nē patrī in morā sīmus.
-        </div>
-
-        <div class="line-container" id="Praeceptor.10">
-            <div class="line-character">
-                Praeceptor
-            </div>
-            Tantisper expectā dum togam mūtō ut sim ad ambulandum expedītior. Iam parātus sum, nunc eāmus. Sed estne
-            domī pater?
-        </div>
-
-        <div class="line-container" id="Castronovanus.11">
-            <div class="line-character">
-                Castronovānus
-            </div>
-            Prae foribus nōs expectat.
-        </div>
-
-        <div class="line-container" id="Praeceptor.12">
-            <div class="line-character">
-                Praeceptor
-            </div>
-            Bene rēs habet, vidē ut eum decenter salūtēs.
-        </div>
-
-        <div class="line-container" id="Castronovanus.13">
-            <div class="line-character">
-                Castronovānus
-            </div>
-            Dē hōc, tē docente, saepe admonitī fuimus.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae:<br />
+      Castronovānus, Praeceptor
     </div>
+
+    <div class="line-container" id="Castronovanus.1">
+      <div class="line-character">Castronovānus</div>
+      Salvus sīs, praeceptor.
+    </div>
+
+    <div class="line-container" id="Praeceptor.2">
+      <div class="line-character">Praeceptor</div>
+      Auspicātō advenīs: quid nūntiās?
+    </div>
+
+    <div class="line-container" id="Castronovanus.3">
+      <div class="line-character">Castronovānus</div>
+      Ōrat tē pater meus ut animī causā eāmus ūnā in hortōs suōs suburbānōs.
+    </div>
+
+    <div class="line-container" id="Praeceptor.4">
+      <div class="line-character">Praeceptor</div>
+      Ad eam rem nōs invītat serēnitās, et nunc sumus fēriātī. Sed quid illīc
+      aspectū iūcundum vidēbimus?
+    </div>
+
+    <div class="line-container" id="Castronovanus.5">
+      <div class="line-character">Castronovānus</div>
+      Variās et pulchrās arborēs cum suīs frūctibus, item herbārum et flōrum
+      mīram varietātem.
+    </div>
+
+    <div class="line-container" id="Praeceptor.6">
+      <div class="line-character">Praeceptor</div>
+      Nihil est illīs rēbus hōc tempore iūcundius.
+    </div>
+
+    <div class="line-container" id="Castronovanus.7">
+      <div class="line-character">Castronovānus</div>
+      Ea est Deī ergā nōs beneficentia.
+    </div>
+
+    <div class="line-container" id="Praeceptor.8">
+      <div class="line-character">Praeceptor</div>
+      Quam quidem assiduīs laudibus prōsequī dēbēmus.
+    </div>
+
+    <div class="line-container" id="Castronovanus.9">
+      <div class="line-character">Castronovānus</div>
+      Sed vereor nē patrī in morā sīmus.
+    </div>
+
+    <div class="line-container" id="Praeceptor.10">
+      <div class="line-character">Praeceptor</div>
+      Tantisper expectā dum togam mūtō ut sim ad ambulandum expedītior. Iam
+      parātus sum, nunc eāmus. Sed estne domī pater?
+    </div>
+
+    <div class="line-container" id="Castronovanus.11">
+      <div class="line-character">Castronovānus</div>
+      Prae foribus nōs expectat.
+    </div>
+
+    <div class="line-container" id="Praeceptor.12">
+      <div class="line-character">Praeceptor</div>
+      Bene rēs habet, vidē ut eum decenter salūtēs.
+    </div>
+
+    <div class="line-container" id="Castronovanus.13">
+      <div class="line-character">Castronovānus</div>
+      Dē hōc, tē docente, saepe admonitī fuimus.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

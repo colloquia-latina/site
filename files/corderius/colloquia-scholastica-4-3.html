@@ -14,127 +14,105 @@ permalink: /corderius/colloquia-scholastica-liber-quartus-colloquium-tertium/
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae:<br>
-            Claudius, Quīntīnus
-        </div>
-
-        <div class="line-container" id="Claudius.1">
-            <div class="line-character">
-                Claudius
-            </div>
-            Cūr dīligenter audīre dēbēmus Ēvangelium?
-        </div>
-
-        <div class="line-container" id="Quintinus.2">
-            <div class="line-character">
-                Quīntīnus
-            </div>
-            Ut discāmus Deum colere ex voluntāte eius.
-        </div>
-
-        <div class="line-container" id="Claudius.3">
-            <div class="line-character">
-                Claudius
-            </div>
-            Nihil aliud respondēs?
-        </div>
-
-        <div class="line-container" id="Quintinus.4">
-            <div class="line-character">
-                Quīntīnus
-            </div>
-            Quid respondērem? Nihil enim sciō praetereā.
-        </div>
-
-        <div class="line-container" id="Claudius.5">
-            <div class="line-character">
-                Claudius
-            </div>
-            Nōnne etiam ut sōbriē et iūstē vīvāmus?
-        </div>
-
-        <div class="line-container" id="Quintinus.6">
-            <div class="line-character">
-                Quīntīnus
-            </div>
-            Dēclārā mihi illa duo adverbia, quaesō.
-        </div>
-
-        <div class="line-container" id="Claudius.7">
-            <div class="line-character">
-                Claudius
-            </div>
-            Sōbriē, id est, continentēs; iūstē, id est, in iūstitiā; nempe, ut suum cuique tribuāmus. Ita fit, ut sōbriē
-            ad vītam cuiusque prīvātam pertineat; iūstē autem ad chāritātem, quam proximō dēbēmus.
-        </div>
-
-        <div class="line-container" id="Quintinus.8">
-            <div class="line-character">
-                Quīntīnus
-            </div>
-            Sed audī, mī Claudī; nōnne cultus Deī omnia illa complectitur?
-        </div>
-
-        <div class="line-container" id="Claudius.9">
-            <div class="line-character">
-                Claudius
-            </div>
-            Probe sentīs, Quīntīne: sed voluī experīrī, an respōnsiōnem tuam rēctē intelligerēs.
-        </div>
-
-        <div class="line-container" id="Quintinus.10">
-            <div class="line-character">
-                Quīntīnus
-            </div>
-            Bene fēcistī. Nam dē sincērō verbī dīvīnī intellēctū nihil nimis dīcī potest. Et dē hāc rē quidem tēcum
-            plūribus verbīs libenter agerem: sed nōs hōra ipsa admonet, ut discēdāmus.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae:<br />
+      Claudius, Quīntīnus
     </div>
+
+    <div class="line-container" id="Claudius.1">
+      <div class="line-character">Claudius</div>
+      Cūr dīligenter audīre dēbēmus Ēvangelium?
+    </div>
+
+    <div class="line-container" id="Quintinus.2">
+      <div class="line-character">Quīntīnus</div>
+      Ut discāmus Deum colere ex voluntāte eius.
+    </div>
+
+    <div class="line-container" id="Claudius.3">
+      <div class="line-character">Claudius</div>
+      Nihil aliud respondēs?
+    </div>
+
+    <div class="line-container" id="Quintinus.4">
+      <div class="line-character">Quīntīnus</div>
+      Quid respondērem? Nihil enim sciō praetereā.
+    </div>
+
+    <div class="line-container" id="Claudius.5">
+      <div class="line-character">Claudius</div>
+      Nōnne etiam ut sōbriē et iūstē vīvāmus?
+    </div>
+
+    <div class="line-container" id="Quintinus.6">
+      <div class="line-character">Quīntīnus</div>
+      Dēclārā mihi illa duo adverbia, quaesō.
+    </div>
+
+    <div class="line-container" id="Claudius.7">
+      <div class="line-character">Claudius</div>
+      Sōbriē, id est, continentēs; iūstē, id est, in iūstitiā; nempe, ut suum
+      cuique tribuāmus. Ita fit, ut sōbriē ad vītam cuiusque prīvātam pertineat;
+      iūstē autem ad chāritātem, quam proximō dēbēmus.
+    </div>
+
+    <div class="line-container" id="Quintinus.8">
+      <div class="line-character">Quīntīnus</div>
+      Sed audī, mī Claudī; nōnne cultus Deī omnia illa complectitur?
+    </div>
+
+    <div class="line-container" id="Claudius.9">
+      <div class="line-character">Claudius</div>
+      Probe sentīs, Quīntīne: sed voluī experīrī, an respōnsiōnem tuam rēctē
+      intelligerēs.
+    </div>
+
+    <div class="line-container" id="Quintinus.10">
+      <div class="line-character">Quīntīnus</div>
+      Bene fēcistī. Nam dē sincērō verbī dīvīnī intellēctū nihil nimis dīcī
+      potest. Et dē hāc rē quidem tēcum plūribus verbīs libenter agerem: sed nōs
+      hōra ipsa admonet, ut discēdāmus.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

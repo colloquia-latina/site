@@ -13,145 +13,121 @@ permalink: /mosellanus/paedalogia-dialogus-alter-et-vicesimus/
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae<br>
-            Iacobus, Thomās
-        </div>
-
-        <div class="line-container" id="Iacobus.1">
-            <div class="line-character">
-                Iacobus
-            </div>
-            Quid crās sit futūrum audīstīn'?
-        </div>
-
-        <div class="line-container" id="Thomas.2">
-            <div class="line-character">
-                Thomās
-            </div>
-            Nihil equidem, nisi quae aliās fierī cōnsuēvērunt.
-        </div>
-
-        <div class="line-container" id="Iacobus.3">
-            <div class="line-character">
-                Iacobus
-            </div>
-            Dē spectāculīs nihil?
-        </div>
-
-        <div class="line-container" id="Thomas.4">
-            <div class="line-character">
-                Thomās
-            </div>
-            Nihil plānē; num edentur aliqua?
-        </div>
-
-        <div class="line-container" id="Iacobus.5">
-            <div class="line-character">
-                Iacobus
-            </div>
-            Edentur et quidem varia. Nam fūnambulōs duōs adesse audiō, quī crās suī artificiī mīrāculum ostentābunt. Tum
-            Sarmatās aliquot vīdī ipse, quī immānēs ursōs ad exiguam stipem iuxtā lituōrum cantūs saltitantēs
-            exhibēbunt.
-        </div>
-
-        <div class="line-container" id="Thomas.6">
-            <div class="line-character">
-                Thomās
-            </div>
-            Cūrābō quōquō modō, ut et ipse intersim, etiamsī mē ipse intrūdere dēbeam.
-        </div>
-
-        <div class="line-container" id="Iacobus.7">
-            <div class="line-character">
-                Iacobus
-            </div>
-            Vix poteris, quandōquidem quī nōn numerant forās quatiuntur.
-        </div>
-
-        <div class="line-container" id="Thomas.8">
-            <div class="line-character">
-                Thomās
-            </div>
-            Fallam ipsōs iānitōrēs.
-        </div>
-
-        <div class="line-container" id="Iacobus.9">
-            <div class="line-character">
-                Iacobus
-            </div>
-            Ad haec prīnceps ipse in forō pariā aliquot equitum exhibēbit, quī inter sēsē īnfēstīs hastīs concurrent.
-            Post quōs circum ingredientur item equitēs ā calce ad verticem usque armātī, quōs cataphractōs vocant. Hī
-            catervātim sine ūllō aut ōrdine aut arte alius in alium irruent et sē mūtuīs ictibus ab equīs dēicient. Nam
-            in hōc circus undique est circumsaeptus et, nē quī ceciderint gravius laedantur, fimō īnstrātus.
-        </div>
-
-        <div class="line-container" id="Thomas.10">
-            <div class="line-character">
-                Thomās
-            </div>
-            Quam quaesō tē voluptātem ex tam furiōsō et minimē iūcundō certāmine capiunt istī?
-        </div>
-
-        <div class="line-container" id="Iacobus.11">
-            <div class="line-character">
-                Iacobus
-            </div>
-            Quid? Nūllās nōn lautitiās prae hāc voluptāte contemnunt, praeterquam quod hōc tīrōciniō ad sēriōs hostium
-            congressūs praeparantur et quasi animantur.
-        </div>
-
-        <div class="line-container" id="Thomas.12">
-            <div class="line-character">
-                Thomās
-            </div>
-            Utcumque sit, spectābō et ipse, quōmodo rēs agātur.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae<br />
+      Iacobus, Thomās
     </div>
+
+    <div class="line-container" id="Iacobus.1">
+      <div class="line-character">Iacobus</div>
+      Quid crās sit futūrum audīstīn'?
+    </div>
+
+    <div class="line-container" id="Thomas.2">
+      <div class="line-character">Thomās</div>
+      Nihil equidem, nisi quae aliās fierī cōnsuēvērunt.
+    </div>
+
+    <div class="line-container" id="Iacobus.3">
+      <div class="line-character">Iacobus</div>
+      Dē spectāculīs nihil?
+    </div>
+
+    <div class="line-container" id="Thomas.4">
+      <div class="line-character">Thomās</div>
+      Nihil plānē; num edentur aliqua?
+    </div>
+
+    <div class="line-container" id="Iacobus.5">
+      <div class="line-character">Iacobus</div>
+      Edentur et quidem varia. Nam fūnambulōs duōs adesse audiō, quī crās suī
+      artificiī mīrāculum ostentābunt. Tum Sarmatās aliquot vīdī ipse, quī
+      immānēs ursōs ad exiguam stipem iuxtā lituōrum cantūs saltitantēs
+      exhibēbunt.
+    </div>
+
+    <div class="line-container" id="Thomas.6">
+      <div class="line-character">Thomās</div>
+      Cūrābō quōquō modō, ut et ipse intersim, etiamsī mē ipse intrūdere dēbeam.
+    </div>
+
+    <div class="line-container" id="Iacobus.7">
+      <div class="line-character">Iacobus</div>
+      Vix poteris, quandōquidem quī nōn numerant forās quatiuntur.
+    </div>
+
+    <div class="line-container" id="Thomas.8">
+      <div class="line-character">Thomās</div>
+      Fallam ipsōs iānitōrēs.
+    </div>
+
+    <div class="line-container" id="Iacobus.9">
+      <div class="line-character">Iacobus</div>
+      Ad haec prīnceps ipse in forō pariā aliquot equitum exhibēbit, quī inter
+      sēsē īnfēstīs hastīs concurrent. Post quōs circum ingredientur item
+      equitēs ā calce ad verticem usque armātī, quōs cataphractōs vocant. Hī
+      catervātim sine ūllō aut ōrdine aut arte alius in alium irruent et sē
+      mūtuīs ictibus ab equīs dēicient. Nam in hōc circus undique est
+      circumsaeptus et, nē quī ceciderint gravius laedantur, fimō īnstrātus.
+    </div>
+
+    <div class="line-container" id="Thomas.10">
+      <div class="line-character">Thomās</div>
+      Quam quaesō tē voluptātem ex tam furiōsō et minimē iūcundō certāmine
+      capiunt istī?
+    </div>
+
+    <div class="line-container" id="Iacobus.11">
+      <div class="line-character">Iacobus</div>
+      Quid? Nūllās nōn lautitiās prae hāc voluptāte contemnunt, praeterquam quod
+      hōc tīrōciniō ad sēriōs hostium congressūs praeparantur et quasi
+      animantur.
+    </div>
+
+    <div class="line-container" id="Thomas.12">
+      <div class="line-character">Thomās</div>
+      Utcumque sit, spectābō et ipse, quōmodo rēs agātur.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

@@ -13,126 +13,106 @@ permalink: /mosellanus/paedalogia-dialogus-primus/
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae<br>
-            Clēmēns, Rēmigius
-        </div>
-
-        <div class="line-container" id="Clemens.1">
-            <div class="line-character">
-                Clēmēns
-            </div>
-            Vae nōbīs, mī Rēmigī: ultrā praescrīptum dormīvimus! Iam enim sōl undique plēnā lūce resplendet, ut septimae
-            hōrae signum datum liceat conicere.
-        </div>
-
-        <div class="line-container" id="Remigius.2">
-            <div class="line-character">
-                Rēmigius
-            </div>
-            Nōn, opīnor, caelum aliōquī praeter mōrem est serēnum, etiamsī aliās hōc diē somnulentiae meae poenās nōn
-            rārō dedī.
-        </div>
-
-        <div class="line-container" id="Clemens.3">
-            <div class="line-character">
-                Clēmēns
-            </div>
-            Utcumque sit, male metuō mihi ā ferulā; quārē occāsiōnem aliquam, quā hodiē ē scholīs ēmanēre liceat,
-            quaeram.
-        </div>
-
-        <div class="line-container" id="Remigius.4">
-            <div class="line-character">
-                Rēmigius
-            </div>
-            Quam eam?
-        </div>
-
-        <div class="line-container" id="Clemens.5">
-            <div class="line-character">
-                Clēmēns
-            </div>
-            Scīs, quid ā nōbīs heri contenderit hera nostra?
-        </div>
-
-        <div class="line-container" id="Remigius.6">
-            <div class="line-character">
-                Rēmigius
-            </div>
-            Sciō, nempe ut familiam hauriendīs aquīs iuvēmus. Sed quid tum?
-        </div>
-
-        <div class="line-container" id="Clemens.7">
-            <div class="line-character">
-                Clēmēns
-            </div>
-            Haec erit rīma satis idōnea, per quam ēlabāmur; quamobrem tuum erit, ubi octāvae signum audītum fuerit,
-            quasi ē mediīs labōribus in lūdum ingredī atque ā praeceptōribus ēmanendī cōpiam poscere hāc ipsā, quam
-            dīxī, causā assignātā.
-        </div>
-
-        <div class="line-container" id="Remigius.8">
-            <div class="line-character">
-                Rēmigius
-            </div>
-            Vereor, ut prōcēdat commentum, quandōquidem hōc diē, quō fūnus magnificum est dēdūcendum et dēfūnctī manibus
-            parentandum, vix facultātem hanc dabit et aliōquī paucī iam adsunt, quī pompam īnstruant.
-        </div>
-
-        <div class="line-container" id="Clemens.9">
-            <div class="line-character">
-                Clēmēns
-            </div>
-            Tentandum est, utcumque rēs exeat; ac nesciō quōmodo hāc diē mihi semper invīsum est scholās adīre nōn minus
-            quam sī in pistrīnum aliquod mihi sit redeundum. Crēdō, quod prīdiānī ōtiī sēnsus adhūc reliquus sīc
-            reluctantem faciat.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae<br />
+      Clēmēns, Rēmigius
     </div>
+
+    <div class="line-container" id="Clemens.1">
+      <div class="line-character">Clēmēns</div>
+      Vae nōbīs, mī Rēmigī: ultrā praescrīptum dormīvimus! Iam enim sōl undique
+      plēnā lūce resplendet, ut septimae hōrae signum datum liceat conicere.
+    </div>
+
+    <div class="line-container" id="Remigius.2">
+      <div class="line-character">Rēmigius</div>
+      Nōn, opīnor, caelum aliōquī praeter mōrem est serēnum, etiamsī aliās hōc
+      diē somnulentiae meae poenās nōn rārō dedī.
+    </div>
+
+    <div class="line-container" id="Clemens.3">
+      <div class="line-character">Clēmēns</div>
+      Utcumque sit, male metuō mihi ā ferulā; quārē occāsiōnem aliquam, quā
+      hodiē ē scholīs ēmanēre liceat, quaeram.
+    </div>
+
+    <div class="line-container" id="Remigius.4">
+      <div class="line-character">Rēmigius</div>
+      Quam eam?
+    </div>
+
+    <div class="line-container" id="Clemens.5">
+      <div class="line-character">Clēmēns</div>
+      Scīs, quid ā nōbīs heri contenderit hera nostra?
+    </div>
+
+    <div class="line-container" id="Remigius.6">
+      <div class="line-character">Rēmigius</div>
+      Sciō, nempe ut familiam hauriendīs aquīs iuvēmus. Sed quid tum?
+    </div>
+
+    <div class="line-container" id="Clemens.7">
+      <div class="line-character">Clēmēns</div>
+      Haec erit rīma satis idōnea, per quam ēlabāmur; quamobrem tuum erit, ubi
+      octāvae signum audītum fuerit, quasi ē mediīs labōribus in lūdum ingredī
+      atque ā praeceptōribus ēmanendī cōpiam poscere hāc ipsā, quam dīxī, causā
+      assignātā.
+    </div>
+
+    <div class="line-container" id="Remigius.8">
+      <div class="line-character">Rēmigius</div>
+      Vereor, ut prōcēdat commentum, quandōquidem hōc diē, quō fūnus magnificum
+      est dēdūcendum et dēfūnctī manibus parentandum, vix facultātem hanc dabit
+      et aliōquī paucī iam adsunt, quī pompam īnstruant.
+    </div>
+
+    <div class="line-container" id="Clemens.9">
+      <div class="line-character">Clēmēns</div>
+      Tentandum est, utcumque rēs exeat; ac nesciō quōmodo hāc diē mihi semper
+      invīsum est scholās adīre nōn minus quam sī in pistrīnum aliquod mihi sit
+      redeundum. Crēdō, quod prīdiānī ōtiī sēnsus adhūc reliquus sīc reluctantem
+      faciat.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

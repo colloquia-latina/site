@@ -14,97 +14,80 @@ permalink: /corderius/colloquia-scholastica-liber-primus-colloquium-undevicesimu
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae:<br>
-            E., F.
-        </div>
-
-        <div class="line-container" id="E.1">
-            <div class="line-character">
-                E.
-            </div>
-            Cūr nōn scrībis?
-        </div>
-
-        <div class="line-container" id="F.2">
-            <div class="line-character">
-                F.
-            </div>
-            Iam scrīpsī meam pāginam: tū vērō?
-        </div>
-
-        <div class="line-container" id="E.3">
-            <div class="line-character">
-                E.
-            </div>
-            Ēō scrīptum in āreā.
-        </div>
-
-        <div class="line-container" id="F.4">
-            <div class="line-character">
-                F.
-            </div>
-            Quid ita?
-        </div>
-
-        <div class="line-container" id="E.5">
-            <div class="line-character">
-                E.
-            </div>
-            Quia serēnum est coelum.
-        </div>
-
-        <div class="line-container" id="F.6">
-            <div class="line-character">
-                F.
-            </div>
-            Festīnā, tempus abit; et mox exigētur ratiō.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae:<br />
+      E., F.
     </div>
+
+    <div class="line-container" id="E.1">
+      <div class="line-character">E.</div>
+      Cūr nōn scrībis?
+    </div>
+
+    <div class="line-container" id="F.2">
+      <div class="line-character">F.</div>
+      Iam scrīpsī meam pāginam: tū vērō?
+    </div>
+
+    <div class="line-container" id="E.3">
+      <div class="line-character">E.</div>
+      Ēō scrīptum in āreā.
+    </div>
+
+    <div class="line-container" id="F.4">
+      <div class="line-character">F.</div>
+      Quid ita?
+    </div>
+
+    <div class="line-container" id="E.5">
+      <div class="line-character">E.</div>
+      Quia serēnum est coelum.
+    </div>
+
+    <div class="line-container" id="F.6">
+      <div class="line-character">F.</div>
+      Festīnā, tempus abit; et mox exigētur ratiō.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

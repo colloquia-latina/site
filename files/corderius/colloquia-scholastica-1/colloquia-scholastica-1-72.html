@@ -14,131 +14,106 @@ permalink: /corderius/colloquia-scholastica-liber-primus-colloquium-alterum-et-s
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae:<br>
-            H., I.
-        </div>
-
-        <div class="line-container" id="H.1">
-            <div class="line-character">
-                H.
-            </div>
-            Vīsne repetere mēcum?
-        </div>
-
-        <div class="line-container" id="I.2">
-            <div class="line-character">
-                I.
-            </div>
-            Cūr tam cito?
-        </div>
-
-        <div class="line-container" id="H.3">
-            <div class="line-character">
-                H.
-            </div>
-            Nē observātor nōs dēprehendat garrientēs, aut ōtiōsōs.
-        </div>
-
-        <div class="line-container" id="I.4">
-            <div class="line-character">
-                I.
-            </div>
-            Age, repetāmus; sed uter incipiet?
-        </div>
-
-        <div class="line-container" id="H.5">
-            <div class="line-character">
-                H.
-            </div>
-            Ego, quia victor sum.
-        </div>
-
-        <div class="line-container" id="I.6">
-            <div class="line-character">
-                I.
-            </div>
-            Dīc igitur.
-        </div>
-
-        <div class="line-container" id="H.7">
-            <div class="line-character">
-                H.
-            </div>
-            Prūdēns, nōmen adiectīvum, sīc dēclīnātur in genera:
-            <br>
-            Hic Prūdēns, g. m. haec prūdēns, gen. f. hoc prūdēns, gen. n.
-            <br>
-            Īdēm nōmen sīc dēclīnātur in cāsūs:
-            <br>
-            Nōm. Sing. Hīc haec et hoc Prūdēns.
-        </div>
-
-        <div class="line-container" id="I.8">
-            <div class="line-character">
-                I.
-            </div>
-            Gen. Prūdentīs.
-        </div>
-
-        <div class="line-container" id="H.9">
-            <div class="line-character">
-                H.
-            </div>
-            Dat. Prūdentī.
-        </div>
-
-        <div class="line-container" id="I.10">
-            <div class="line-character">
-                I.
-            </div>
-            Acc. Prūdentem, et prūdēns, etc. ad fīnem usque.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae:<br />
+      H., I.
     </div>
+
+    <div class="line-container" id="H.1">
+      <div class="line-character">H.</div>
+      Vīsne repetere mēcum?
+    </div>
+
+    <div class="line-container" id="I.2">
+      <div class="line-character">I.</div>
+      Cūr tam cito?
+    </div>
+
+    <div class="line-container" id="H.3">
+      <div class="line-character">H.</div>
+      Nē observātor nōs dēprehendat garrientēs, aut ōtiōsōs.
+    </div>
+
+    <div class="line-container" id="I.4">
+      <div class="line-character">I.</div>
+      Age, repetāmus; sed uter incipiet?
+    </div>
+
+    <div class="line-container" id="H.5">
+      <div class="line-character">H.</div>
+      Ego, quia victor sum.
+    </div>
+
+    <div class="line-container" id="I.6">
+      <div class="line-character">I.</div>
+      Dīc igitur.
+    </div>
+
+    <div class="line-container" id="H.7">
+      <div class="line-character">H.</div>
+      Prūdēns, nōmen adiectīvum, sīc dēclīnātur in genera:
+      <br />
+      Hic Prūdēns, g. m. haec prūdēns, gen. f. hoc prūdēns, gen. n.
+      <br />
+      Īdēm nōmen sīc dēclīnātur in cāsūs:
+      <br />
+      Nōm. Sing. Hīc haec et hoc Prūdēns.
+    </div>
+
+    <div class="line-container" id="I.8">
+      <div class="line-character">I.</div>
+      Gen. Prūdentīs.
+    </div>
+
+    <div class="line-container" id="H.9">
+      <div class="line-character">H.</div>
+      Dat. Prūdentī.
+    </div>
+
+    <div class="line-container" id="I.10">
+      <div class="line-character">I.</div>
+      Acc. Prūdentem, et prūdēns, etc. ad fīnem usque.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

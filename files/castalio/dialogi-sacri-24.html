@@ -13,116 +13,105 @@ permalink: /castalio/dialogi-sacri-dialogus-vicesimus-quartus/
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="note">
-            Iosua dēceptus ā Gabaonītīs, foedus pacīscitur cum eīs.
-        </div>
-
-        <div class="characters">
-            Persōnae:<br>
-            Gabaonītārum lēgātī, Iosua
-        </div>
-
-        <div class="line-container" id="Legati.1">
-            <div class="line-character">
-                Gabaonītārum lēgātī
-            </div>
-            Adsumus hūc ē fīnibus remōtīs, Iosua et Isrāēlītae, missī ad faciendum foedus vōbīscum, sī vōbīs ita
-            vidētur.
-        </div>
-
-        <div class="line-container" id="Iosua.2">
-            <div class="line-character">
-                Iosua
-            </div>
-            Fortassis habitātis in fīnibus hīs; quod sī est, nōn est nōbīs fās inīre foedus vōbīscum.
-        </div>
-
-        <div class="line-container" id="Legati.3">
-            <div class="line-character">
-                Lēgātī
-            </div>
-            Nōs quidem parātī sumus dēdere nōs in tuam potestātem.
-        </div>
-
-        <div class="line-container" id="Iosua.4">
-            <div class="line-character">
-                Iosuā
-            </div>
-            Cuiātēs estis et unde adestis?
-        </div>
-
-        <div class="line-container" id="Legati.5">
-            <div class="line-character">
-                Lēgātī
-            </div>
-            Adsumus ex terrā admodum remōtā hinc, mōtī nōmine Iōvae Deī vestrī. Audīvimus enim fāmam eius et quanta
-            facinora ēdiderit in Aegyptō, utque accēperit duōs Amorraeōs rēgēs transiordanīnōs, Sehōnem Heseboniōrum et
-            Oggum Bassānae, apud Astarōta. Hāc dē causā mandāvērunt nōbīs nostrī senātōrēs et ūniversī nostrātēs, ut
-            sūmptō viāticō venīrēmus obviam vōbīs, oblātūrī vōbīs servitium nostrum et pactūrī foedus vōbīscum. Atque
-            ecce pānēs quōs domī sūmpsimus in commeātum, cum sumus profectī ad vōs, quī iam marcuērunt mūcuēruntque, ut
-            vidētis. Hae quoque lagēnae, quās replēvimus novās, vidētis ut sint lacerae. Vestīmenta etiam et calceī
-            nostrī iam dētrīta sunt longitūdine itineris. Quārē nōlīte putāre nōs meditārī dolum ūllum: bonā fide
-            agimus, et ut rēs est sīc loquimur.
-        </div>
-
-        <div class="line-container" id="Iosua.6">
-            <div class="line-character">
-                Iosua
-            </div>
-            Ergō compōnēmus pācem vōbīscum vōsque cōnservābimus, et id iūreiūrandō cōnfirmābimus.
-        </div>
-
-        <div class="note">
-            Sententia<br>
-            Et piī interdum falluntur. Nam quō minus sunt ipsī malitiōsī eō facilius crēdunt aliīs eōs aestimantēs ex
-            suō ingeniō. Itaque cavenda piīs est crēdulitās et cum columbīnā simplicitāte coniungenda est serpentīna
-            āstūtia.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="note">
+      Iosua dēceptus ā Gabaonītīs, foedus pacīscitur cum eīs.
     </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Gabaonītārum lēgātī, Iosua
+    </div>
+
+    <div class="line-container" id="Legati.1">
+      <div class="line-character">Gabaonītārum lēgātī</div>
+      Adsumus hūc ē fīnibus remōtīs, Iosua et Isrāēlītae, missī ad faciendum
+      foedus vōbīscum, sī vōbīs ita vidētur.
+    </div>
+
+    <div class="line-container" id="Iosua.2">
+      <div class="line-character">Iosua</div>
+      Fortassis habitātis in fīnibus hīs; quod sī est, nōn est nōbīs fās inīre
+      foedus vōbīscum.
+    </div>
+
+    <div class="line-container" id="Legati.3">
+      <div class="line-character">Lēgātī</div>
+      Nōs quidem parātī sumus dēdere nōs in tuam potestātem.
+    </div>
+
+    <div class="line-container" id="Iosua.4">
+      <div class="line-character">Iosuā</div>
+      Cuiātēs estis et unde adestis?
+    </div>
+
+    <div class="line-container" id="Legati.5">
+      <div class="line-character">Lēgātī</div>
+      Adsumus ex terrā admodum remōtā hinc, mōtī nōmine Iōvae Deī vestrī.
+      Audīvimus enim fāmam eius et quanta facinora ēdiderit in Aegyptō, utque
+      accēperit duōs Amorraeōs rēgēs transiordanīnōs, Sehōnem Heseboniōrum et
+      Oggum Bassānae, apud Astarōta. Hāc dē causā mandāvērunt nōbīs nostrī
+      senātōrēs et ūniversī nostrātēs, ut sūmptō viāticō venīrēmus obviam vōbīs,
+      oblātūrī vōbīs servitium nostrum et pactūrī foedus vōbīscum. Atque ecce
+      pānēs quōs domī sūmpsimus in commeātum, cum sumus profectī ad vōs, quī iam
+      marcuērunt mūcuēruntque, ut vidētis. Hae quoque lagēnae, quās replēvimus
+      novās, vidētis ut sint lacerae. Vestīmenta etiam et calceī nostrī iam
+      dētrīta sunt longitūdine itineris. Quārē nōlīte putāre nōs meditārī dolum
+      ūllum: bonā fide agimus, et ut rēs est sīc loquimur.
+    </div>
+
+    <div class="line-container" id="Iosua.6">
+      <div class="line-character">Iosua</div>
+      Ergō compōnēmus pācem vōbīscum vōsque cōnservābimus, et id iūreiūrandō
+      cōnfirmābimus.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Et piī interdum falluntur. Nam quō minus sunt ipsī malitiōsī eō facilius
+      crēdunt aliīs eōs aestimantēs ex suō ingeniō. Itaque cavenda piīs est
+      crēdulitās et cum columbīnā simplicitāte coniungenda est serpentīna
+      āstūtia.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

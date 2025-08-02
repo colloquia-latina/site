@@ -14,160 +14,126 @@ permalink: /corderius/colloquia-scholastica-liber-primus-colloquium-vicesimum-te
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae:<br>
-            Paedagōgus, Puer
-        </div>
-
-        <div class="line-container" id="Paedagogus.1">
-            <div class="line-character">
-                Paedagōgus
-            </div>
-            Unde venīs?
-        </div>
-
-        <div class="line-container" id="Puer.2">
-            <div class="line-character">
-                Puer
-            </div>
-            Veniō īnfernē.
-        </div>
-
-        <div class="line-container" id="Paedagogus.3">
-            <div class="line-character">
-                Paedagōgus
-            </div>
-            Quod erat tibi negōtium īnfrā?
-        </div>
-
-        <div class="line-container" id="Puer.4">
-            <div class="line-character">
-                Puer
-            </div>
-            Īveram redditum ūrīnam.
-        </div>
-
-        <div class="line-container" id="Paedagogus.5">
-            <div class="line-character">
-                Paedagōgus
-            </div>
-            Sēde nunc ad mēnsam, et māne in cubiculō dōnec redierō.
-        </div>
-
-        <div class="line-container" id="Puer.6">
-            <div class="line-character">
-                Puer
-            </div>
-            Quid agam intereā?
-        </div>
-
-        <div class="line-container" id="Paedagogus.7">
-            <div class="line-character">
-                Paedagōgus
-            </div>
-            Ēdisce praelēctiōnem in diem crāstinum, ut eam mihi reddās ante coenam.
-        </div>
-
-        <div class="line-container" id="Puer.8">
-            <div class="line-character">
-                Puer
-            </div>
-            Iam ēdidicī, praeceptor.
-        </div>
-
-        <div class="line-container" id="Paedagogus.9">
-            <div class="line-character">
-                Paedagōgus
-            </div>
-            Lūde igitur.
-        </div>
-
-        <div class="line-container" id="Puer.10">
-            <div class="line-character">
-                Puer
-            </div>
-            Sed nūllōs habeō collūsōrēs.
-        </div>
-
-        <div class="line-container" id="Paedagogus.11">
-            <div class="line-character">
-                Paedagōgus
-            </div>
-            Satis multōs inveniēs in hāc vīcīniā, ex tuīs etiam condiscipulīs.
-        </div>
-
-        <div class="line-container" id="Puer.12">
-            <div class="line-character">
-                Puer
-            </div>
-            Nihil id cūrō nunc: mālim (sī tibi placet) ēdiscere dē Catēchismō, in diem Dominicum,
-        </div>
-
-        <div class="line-container" id="Paedagogus.13">
-            <div class="line-character">
-                Paedagōgus
-            </div>
-            Ut libet.
-        </div>
-
-        <div class="line-container" id="Puer.14">
-            <div class="line-character">
-                Puer
-            </div>
-            Sī quis tē quaeret, quid illī dīcam?
-        </div>
-
-        <div class="line-container" id="Paedagogus.15">
-            <div class="line-character">
-                Paedagōgus
-            </div>
-            Dīc mē prōdiisse, sed mox reversūrum.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae:<br />
+      Paedagōgus, Puer
     </div>
+
+    <div class="line-container" id="Paedagogus.1">
+      <div class="line-character">Paedagōgus</div>
+      Unde venīs?
+    </div>
+
+    <div class="line-container" id="Puer.2">
+      <div class="line-character">Puer</div>
+      Veniō īnfernē.
+    </div>
+
+    <div class="line-container" id="Paedagogus.3">
+      <div class="line-character">Paedagōgus</div>
+      Quod erat tibi negōtium īnfrā?
+    </div>
+
+    <div class="line-container" id="Puer.4">
+      <div class="line-character">Puer</div>
+      Īveram redditum ūrīnam.
+    </div>
+
+    <div class="line-container" id="Paedagogus.5">
+      <div class="line-character">Paedagōgus</div>
+      Sēde nunc ad mēnsam, et māne in cubiculō dōnec redierō.
+    </div>
+
+    <div class="line-container" id="Puer.6">
+      <div class="line-character">Puer</div>
+      Quid agam intereā?
+    </div>
+
+    <div class="line-container" id="Paedagogus.7">
+      <div class="line-character">Paedagōgus</div>
+      Ēdisce praelēctiōnem in diem crāstinum, ut eam mihi reddās ante coenam.
+    </div>
+
+    <div class="line-container" id="Puer.8">
+      <div class="line-character">Puer</div>
+      Iam ēdidicī, praeceptor.
+    </div>
+
+    <div class="line-container" id="Paedagogus.9">
+      <div class="line-character">Paedagōgus</div>
+      Lūde igitur.
+    </div>
+
+    <div class="line-container" id="Puer.10">
+      <div class="line-character">Puer</div>
+      Sed nūllōs habeō collūsōrēs.
+    </div>
+
+    <div class="line-container" id="Paedagogus.11">
+      <div class="line-character">Paedagōgus</div>
+      Satis multōs inveniēs in hāc vīcīniā, ex tuīs etiam condiscipulīs.
+    </div>
+
+    <div class="line-container" id="Puer.12">
+      <div class="line-character">Puer</div>
+      Nihil id cūrō nunc: mālim (sī tibi placet) ēdiscere dē Catēchismō, in diem
+      Dominicum,
+    </div>
+
+    <div class="line-container" id="Paedagogus.13">
+      <div class="line-character">Paedagōgus</div>
+      Ut libet.
+    </div>
+
+    <div class="line-container" id="Puer.14">
+      <div class="line-character">Puer</div>
+      Sī quis tē quaeret, quid illī dīcam?
+    </div>
+
+    <div class="line-container" id="Paedagogus.15">
+      <div class="line-character">Paedagōgus</div>
+      Dīc mē prōdiisse, sed mox reversūrum.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

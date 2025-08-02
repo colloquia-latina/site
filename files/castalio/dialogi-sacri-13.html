@@ -13,121 +13,109 @@ permalink: /castalio/dialogi-sacri-dialogus-decimus-tertius/
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="note">
-            Iōsēphus captīvus interpretātur somnia praegustātōris et pistōris Pharaōnis.
-        </div>
-
-        <div class="characters">
-            Persōnae:<br>
-            Iōsēphus, Praegustātor Pharaōnis, Pistor
-        </div>
-
-        <div class="line-container" id="Iosephus.1">
-            <div class="line-character">
-                Iōsēphus
-            </div>
-            Quid accidit ut hodiē vultū sītis adeō maestō?
-        </div>
-
-        <div class="line-container" id="Praegustator.2">
-            <div class="line-character">
-                Praegustātor
-            </div>
-            Somniāvimus uterque et carēmus coniectōre.
-        </div>
-
-        <div class="line-container" id="Iosephus.3">
-            <div class="line-character">
-                Iōsēphus
-            </div>
-            At habet Deus coniectōrēs. Agite, nārrāte mihi.
-        </div>
-
-        <div class="line-container" id="Praegustator.4">
-            <div class="line-character">
-                Praegustātor
-            </div>
-            Vidēbar mihi in somnīs vidēre ob oculōs vītem, ex quā trēs palmitēs orīrentur, quae deinde quasi germināret,
-            prōdūxit flōrem, unde ūvae plēnae racēmīs mātūrēscēbant. Erat autem mihi in manū pōculum Pharaōnis: itaque
-            cēpī ūvās eāsque in id expressī, deinde trādidī eī in manum.
-        </div>
-
-        <div class="line-container" id="Iosephus.5">
-            <div class="line-character">
-                Iōsēphus
-            </div>
-            Haec est interpretātiō. Trēs palmitēs trēs diēs sunt. Hinc ad trīduum Pharaō iubēbit tē prōducī ē carcere
-            restituetque in locum mūneris prīstinum: stābisque eī ad cyathōs, ut ante. Quamobrem ubi adeptus fuerīs hoc
-            tantum bonum, facitō, quaesō, ut meminerīs meī, praestēsque mihi hoc beneficium ut faciās mentiōnem meī apud
-            Pharaōnem, mēque extrahās ex hāc domō. Nam surrēptus sum clam ex terrā Hebraeōrum, neque quicquam fēcī
-            quamobrem compingerer in carcerem.
-        </div>
-
-        <div class="line-container" id="Pistor.6">
-            <div class="line-character">
-                Pistor
-            </div>
-            Rēctē sānē interpretātus es. Sed audī meum quoque somnium. Tria alba canistra erant super capite meō, in
-            quōrum summō inerant Pharaōnis omnis generis cibī pistōriī, quōs inde avēs comedēbant.
-        </div>
-
-        <div class="line-container" id="Iosephus.7">
-            <div class="line-character">
-                Iōsēphus
-            </div>
-            Accipe coniectūram. Tria canistra trēs diēs sunt. Abhinc trēs diēs, iussū Pharaōnis, sēcūrī feriēris atque
-            in crucem tollēris, ubi ālitēs vorābunt tuum cadāver.
-        </div>
-
-        <div class="note">
-            Sententia<br>
-            Deus piīs arcāna retegit, īdemque viam ad eōrum salūtem saepe longē ante praeparat.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="note">
+      Iōsēphus captīvus interpretātur somnia praegustātōris et pistōris
+      Pharaōnis.
     </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Iōsēphus, Praegustātor Pharaōnis, Pistor
+    </div>
+
+    <div class="line-container" id="Iosephus.1">
+      <div class="line-character">Iōsēphus</div>
+      Quid accidit ut hodiē vultū sītis adeō maestō?
+    </div>
+
+    <div class="line-container" id="Praegustator.2">
+      <div class="line-character">Praegustātor</div>
+      Somniāvimus uterque et carēmus coniectōre.
+    </div>
+
+    <div class="line-container" id="Iosephus.3">
+      <div class="line-character">Iōsēphus</div>
+      At habet Deus coniectōrēs. Agite, nārrāte mihi.
+    </div>
+
+    <div class="line-container" id="Praegustator.4">
+      <div class="line-character">Praegustātor</div>
+      Vidēbar mihi in somnīs vidēre ob oculōs vītem, ex quā trēs palmitēs
+      orīrentur, quae deinde quasi germināret, prōdūxit flōrem, unde ūvae plēnae
+      racēmīs mātūrēscēbant. Erat autem mihi in manū pōculum Pharaōnis: itaque
+      cēpī ūvās eāsque in id expressī, deinde trādidī eī in manum.
+    </div>
+
+    <div class="line-container" id="Iosephus.5">
+      <div class="line-character">Iōsēphus</div>
+      Haec est interpretātiō. Trēs palmitēs trēs diēs sunt. Hinc ad trīduum
+      Pharaō iubēbit tē prōducī ē carcere restituetque in locum mūneris
+      prīstinum: stābisque eī ad cyathōs, ut ante. Quamobrem ubi adeptus fuerīs
+      hoc tantum bonum, facitō, quaesō, ut meminerīs meī, praestēsque mihi hoc
+      beneficium ut faciās mentiōnem meī apud Pharaōnem, mēque extrahās ex hāc
+      domō. Nam surrēptus sum clam ex terrā Hebraeōrum, neque quicquam fēcī
+      quamobrem compingerer in carcerem.
+    </div>
+
+    <div class="line-container" id="Pistor.6">
+      <div class="line-character">Pistor</div>
+      Rēctē sānē interpretātus es. Sed audī meum quoque somnium. Tria alba
+      canistra erant super capite meō, in quōrum summō inerant Pharaōnis omnis
+      generis cibī pistōriī, quōs inde avēs comedēbant.
+    </div>
+
+    <div class="line-container" id="Iosephus.7">
+      <div class="line-character">Iōsēphus</div>
+      Accipe coniectūram. Tria canistra trēs diēs sunt. Abhinc trēs diēs, iussū
+      Pharaōnis, sēcūrī feriēris atque in crucem tollēris, ubi ālitēs vorābunt
+      tuum cadāver.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Deus piīs arcāna retegit, īdemque viam ad eōrum salūtem saepe longē ante
+      praeparat.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

@@ -13,65 +13,77 @@ permalink: /berauldus/nicolai-beraldi-aurelii-dialogus/
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
+    <!-- edit below this line -->
 
-        <!-- edit below this line -->
-
-        <div class="note"> <!--put preface type info in this div-->
-            Béraud, Nicolas. 1473-1550. Beraldus, Nicolaus. Nicolai Beraldi Aurelii dialogus quo rationes quaedam
-            explicantur quibus dicendi ex tempore facultas parari potest deque ipsa dicendi ex tempore facultate: ad
-            reuerendissimum Cardinalem Oddonem Castellionensem, tituli Diuorum Sergii, Bacchi, Apuleii, uirum utriusque
-            linguae peritissimum. Apud Sed. Gryphium. Lugduni. Sebastianus Gryphius. 1534. 45 p.
-            <br>
-            Beraldus Nicolaus. Dialogus quo rationes quaedam explicantur quibus dicendi ex tempore facultas parari
-            possit.
-        </div>
-
-        <div class="characters">
-            Personae: <br> <!--put character names below, with a <br> after each-->
-            Character A Name <br>
-            Character B Name
-        </div>
-
-        <div class="line-container" id="Ber.1.01"> <!--add the text of the colloqium here, repeating the model of this div-->
-            <div class="line-character">
-                <!--put character name here-->
-            </div>
-            <div class="line-text">
-                <!--put the character line (what the speaker says) here-->
-            </div>
-        </div>
-
-        <div class="note"> <!--put reference type notes in this div-->
-            Source: <a
-                href="https://web.archive.org/web/20160220011512/http:/www.stoa.org/hopper/text.jsp?doc=Stoa:text:2003.02.0001">Stoa.org</a>
-            <br>
-            This version created by Meagan Ayer for Dickinson College Commentaries, 2024.
-        </div>
-
-        <!-- don't edit below this line -->
+    <div class="note">
+      <!--put preface type info in this div-->
+      Béraud, Nicolas. 1473-1550. Beraldus, Nicolaus. Nicolai Beraldi Aurelii
+      dialogus quo rationes quaedam explicantur quibus dicendi ex tempore
+      facultas parari potest deque ipsa dicendi ex tempore facultate: ad
+      reuerendissimum Cardinalem Oddonem Castellionensem, tituli Diuorum Sergii,
+      Bacchi, Apuleii, uirum utriusque linguae peritissimum. Apud Sed. Gryphium.
+      Lugduni. Sebastianus Gryphius. 1534. 45 p.
+      <br />
+      Beraldus Nicolaus. Dialogus quo rationes quaedam explicantur quibus
+      dicendi ex tempore facultas parari possit.
     </div>
+
+    <div class="characters">
+      Personae: <br />
+      <!--put character names below, with a <br> after each-->
+      Character A Name <br />
+      Character B Name
+    </div>
+
+    <div class="line-container" id="Ber.1.01">
+      <!--add the text of the colloqium here, repeating the model of this div-->
+      <div class="line-character">
+        <!--put character name here-->
+      </div>
+      <div class="line-text">
+        <!--put the character line (what the speaker says) here-->
+      </div>
+    </div>
+
+    <div class="note">
+      <!--put reference type notes in this div-->
+      Source:
+      <a
+        href="https://web.archive.org/web/20160220011512/http:/www.stoa.org/hopper/text.jsp?doc=Stoa:text:2003.02.0001"
+        >Stoa.org</a
+      >
+      <br />
+      This version created by Meagan Ayer for Dickinson College Commentaries,
+      2024.
+    </div>
+
+    <!-- don't edit below this line -->
+  </div>
 </body>

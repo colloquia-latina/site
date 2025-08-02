@@ -14,161 +14,126 @@ permalink: /corderius/colloquia-scholastica-liber-primus-colloquium-duodequinqua
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae:<br>
-            I., T.
-        </div>
-
-        <div class="line-container" id="I.1">
-            <div class="line-character">
-                I.
-            </div>
-            Ōrō tē, dā mihi ex pāne tuō.
-        </div>
-
-        <div class="line-container" id="T.2">
-            <div class="line-character">
-                T.
-            </div>
-            Mihi nōn habeō nimis; tamen volō tibi impertīre: accipe.
-        </div>
-
-        <div class="line-container" id="I.3">
-            <div class="line-character">
-                I.
-            </div>
-            Grātiās agō tibi.
-        </div>
-
-        <div class="line-container" id="T.4">
-            <div class="line-character">
-                T.
-            </div>
-            Nōn est quod agās ob rem tantulam. Sed dīc, quaesō, cūr nōn attulistī?
-        </div>
-
-        <div class="line-container" id="I.5">
-            <div class="line-character">
-                I.
-            </div>
-            Quia nēmō erat domī nostrae quī mihi daret.
-        </div>
-
-        <div class="line-container" id="T.6">
-            <div class="line-character">
-                T.
-            </div>
-            Tū vērō cūr nōn accipis?
-        </div>
-
-        <div class="line-container" id="I.7">
-            <div class="line-character">
-                I.
-            </div>
-            Nōn audeō, nisi det māter.
-        </div>
-
-        <div class="line-container" id="T.8">
-            <div class="line-character">
-                T.
-            </div>
-            Bene facis: sed audī bonum cōnsilium.
-        </div>
-
-        <div class="line-container" id="I.9">
-            <div class="line-character">
-                I.
-            </div>
-            Auscultō, ut audiam: dīc, quaesō.
-        </div>
-
-        <div class="line-container" id="T.10">
-            <div class="line-character">
-                T.
-            </div>
-            Cum, prandiō fīnītō, tollantur mēnsae reliquiae, petītō merendam tuam, eamque in pēram statim reconditō: ita
-            fīet, ut nunquam inānis veniās.
-        </div>
-
-        <div class="line-container" id="I.11">
-            <div class="line-character">
-                I.
-            </div>
-            Dē ientāculō autem quid suādēs?
-        </div>
-
-        <div class="line-container" id="T.12">
-            <div class="line-character">
-                T.
-            </div>
-            Ut petās in exitū coenae; et idem faciās quod dīxī tibi dē merendā.
-        </div>
-
-        <div class="line-container" id="I.13">
-            <div class="line-character">
-                I.
-            </div>
-            Nunquam vīdī melius cōnsilium darī.
-        </div>
-
-        <div class="line-container" id="T.14">
-            <div class="line-character">
-                T.
-            </div>
-            Fac igitur ut meminerīs: cum volēs, ūtere.
-        </div>
-
-        <div class="line-container" id="I.15">
-            <div class="line-character">
-                I.
-            </div>
-            Ego vērō ūtar quotiēs opus erit.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae:<br />
+      I., T.
     </div>
+
+    <div class="line-container" id="I.1">
+      <div class="line-character">I.</div>
+      Ōrō tē, dā mihi ex pāne tuō.
+    </div>
+
+    <div class="line-container" id="T.2">
+      <div class="line-character">T.</div>
+      Mihi nōn habeō nimis; tamen volō tibi impertīre: accipe.
+    </div>
+
+    <div class="line-container" id="I.3">
+      <div class="line-character">I.</div>
+      Grātiās agō tibi.
+    </div>
+
+    <div class="line-container" id="T.4">
+      <div class="line-character">T.</div>
+      Nōn est quod agās ob rem tantulam. Sed dīc, quaesō, cūr nōn attulistī?
+    </div>
+
+    <div class="line-container" id="I.5">
+      <div class="line-character">I.</div>
+      Quia nēmō erat domī nostrae quī mihi daret.
+    </div>
+
+    <div class="line-container" id="T.6">
+      <div class="line-character">T.</div>
+      Tū vērō cūr nōn accipis?
+    </div>
+
+    <div class="line-container" id="I.7">
+      <div class="line-character">I.</div>
+      Nōn audeō, nisi det māter.
+    </div>
+
+    <div class="line-container" id="T.8">
+      <div class="line-character">T.</div>
+      Bene facis: sed audī bonum cōnsilium.
+    </div>
+
+    <div class="line-container" id="I.9">
+      <div class="line-character">I.</div>
+      Auscultō, ut audiam: dīc, quaesō.
+    </div>
+
+    <div class="line-container" id="T.10">
+      <div class="line-character">T.</div>
+      Cum, prandiō fīnītō, tollantur mēnsae reliquiae, petītō merendam tuam,
+      eamque in pēram statim reconditō: ita fīet, ut nunquam inānis veniās.
+    </div>
+
+    <div class="line-container" id="I.11">
+      <div class="line-character">I.</div>
+      Dē ientāculō autem quid suādēs?
+    </div>
+
+    <div class="line-container" id="T.12">
+      <div class="line-character">T.</div>
+      Ut petās in exitū coenae; et idem faciās quod dīxī tibi dē merendā.
+    </div>
+
+    <div class="line-container" id="I.13">
+      <div class="line-character">I.</div>
+      Nunquam vīdī melius cōnsilium darī.
+    </div>
+
+    <div class="line-container" id="T.14">
+      <div class="line-character">T.</div>
+      Fac igitur ut meminerīs: cum volēs, ūtere.
+    </div>
+
+    <div class="line-container" id="I.15">
+      <div class="line-character">I.</div>
+      Ego vērō ūtar quotiēs opus erit.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

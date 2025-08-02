@@ -14,229 +14,179 @@ permalink: /corderius/colloquia-scholastica-liber-quartus-colloquium-duodequadra
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae:<br>
-            Honōrātus, Viviānus, Prātēnsis, Paedagōgus
-        </div>
-
-        <div class="line-container" id="Honoratus.1">
-            <div class="line-character">
-                Honōrātus
-            </div>
-            <div class="line-poetry">
-                Quod caret alternā requie, dūrābile nōn est:<br>
-                Haec reparat vīrēs, fessaque membra levat.
-            </div>
-            Ovid.
-        </div>
-
-        <div class="line-container" id="Vivianus.2">
-            <div class="line-character">
-                Viviānus
-            </div>
-            ‘Nec mē offenderit lūsus in puerīs; est et hoc alacritātis signum.’ <br>
-            Quīntiliānus.
-        </div>
-
-        <div class="line-container" id="Pratensis.3">
-            <div class="line-character">
-                Prātēnsis
-            </div>
-            ‘Nūlla rēs est, quae perferre possit continuum labōrem.’ <br>
-            Quīntiliānus.
-        </div>
-
-        <div class="line-container" id="Paedagogus.4">
-            <div class="line-character">
-                Paedagōgus
-            </div>
-            Videō quōrsum spectant ista; nīmīrum ut vōs ambulātum dūcam: sed eandem cantilēnam semper ferē recantātis,
-            ut solent nostrae aviculae.
-        </div>
-
-        <div class="line-container" id="Honoratus.5">
-            <div class="line-character">
-                Honōrātus
-            </div>
-            Quid ergō vīs dicāmus, praeceptor?
-        </div>
-
-        <div class="line-container" id="Paedagogus.6">
-            <div class="line-character">
-                Paedagōgus
-            </div>
-            Dīcite posthāc suam quisque sententiam ex Novō Testāmentō.
-        </div>
-
-        <div class="line-container" id="Vivianus.7">
-            <div class="line-character">
-                Vivianus
-            </div>
-            Eugē! nihil erit nōbīs facilius: Habēmus enim in prōmptū multam eārum cōpiam. Vīs ergō praeceptor, ut iam
-            nunc incipiāmus?
-        </div>
-
-        <div class="line-container" id="Paedagogus.8">
-            <div class="line-character">
-                Paedagōgus
-            </div>
-            Sānē velim; quandō (ut ais) tanta est vōbīs cōpia.
-        </div>
-
-        <div class="line-container" id="Vivianus.9">
-            <div class="line-character">
-                Viviānus
-            </div>
-            Quis incipiet.
-        </div>
-
-        <div class="line-container" id="Pratensis.10">
-            <div class="line-character">
-                Prātēnsis
-            </div>
-            Tūne, Honōrāte, vīs honōris tuī causā huius reī speciem edere?
-        </div>
-
-        <div class="line-container" id="Honoratus.11">
-            <div class="line-character">
-                Honōrātus
-            </div>
-            Id ego libenter faciam; sed Deī honōris causā.
-        </div>
-
-        <div class="line-container" id="Paedagogus.12">
-            <div class="line-character">
-                Paedagōgus
-            </div>
-            Laudō istud verbum. Dīvīnus enim honor et glōria omnibus in rēbus est praeferenda -- Ēia! incipe sī quid
-            habēs.
-        </div>
-
-        <div class="line-container" id="Honoratus.13">
-            <div class="line-character">
-                Honōrātus
-            </div>
-            ‘Nīsī abundāverit iūstitia vestra plūs quam Scrībārum et Pharīsaeōrum, nōn potestis ingredī in Rēgnum
-            Coelōrum.’ <br>
-            Matth. quīntō capite.
-        </div>
-
-        <div class="line-container" id="Vivianus.14">
-            <div class="line-character">
-                Viviānus
-            </div>
-            ‘Dēpositō mendāciō, loquiminī vēritātem quisque proximō suō.’ <br>
-            Ad Ephēs. capite quārtō.
-        </div>
-
-        <div class="line-container" id="Pratensis.15">
-            <div class="line-character">
-                Prātēnsis
-            </div>
-            ‘Fīliī, obēdīte parentibus in omnibus, hoc enim placet Dominō.’ <br>
-            Ad Colossēnsēs tertiō.
-        </div>
-
-        <div class="line-container" id="Paedagogus.16">
-            <div class="line-character">
-                Paedagōgus
-            </div>
-            Eugē! bonam speciem: vidēte ut prōgressus respondeat; hoc est, ut pergātis in posterum dīligenter.
-        </div>
-
-        <div class="line-container" id="Honoratus.17">
-            <div class="line-character">
-                Honōrātus
-            </div>
-            Quī nōbīs prīncipium dedit, dabit īdem successūs prōsperōs.
-        </div>
-
-        <div class="line-container" id="Paedagogus.18">
-            <div class="line-character">
-                Paedagōgus
-            </div>
-            Ita spērandum est. Parāte vōs, ut prōdīre mātūrēmus.
-        </div>
-
-        <div class="line-container" id="Honoratus.19">
-            <div class="line-character">
-                Honōrātus
-            </div>
-            Mox aderimus parātissimī.
-        </div>
-
-        <div class="line-container" id="Paedagogus.20">
-            <div class="line-character">
-                Paedagōgus
-            </div>
-            Sūmite suum quisque pallium, ut prōdeātis honestius. Sed heus puerī!
-        </div>
-
-        <div class="line-container" id="Pratensis.21">
-            <div class="line-character">
-                Prātēnsis
-            </div>
-            Quid vīs, praeceptor?
-        </div>
-
-        <div class="line-container" id="Paedagogus.22">
-            <div class="line-character">
-                Paedagōgus
-            </div>
-            Vidēte ut Psalmōs etiam adferātis: alicubi in umbrā cantābimus.
-        </div>
-
-        <div class="line-container" id="Pratensis.23">
-            <div class="line-character">
-                Prātēnsis
-            </div>
-            Ita fīet ambulātiō nostra iūcundior.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae:<br />
+      Honōrātus, Viviānus, Prātēnsis, Paedagōgus
     </div>
+
+    <div class="line-container" id="Honoratus.1">
+      <div class="line-character">Honōrātus</div>
+      <div class="line-poetry">
+        Quod caret alternā requie, dūrābile nōn est:<br />
+        Haec reparat vīrēs, fessaque membra levat.
+      </div>
+      Ovid.
+    </div>
+
+    <div class="line-container" id="Vivianus.2">
+      <div class="line-character">Viviānus</div>
+      ‘Nec mē offenderit lūsus in puerīs; est et hoc alacritātis signum.’ <br />
+      Quīntiliānus.
+    </div>
+
+    <div class="line-container" id="Pratensis.3">
+      <div class="line-character">Prātēnsis</div>
+      ‘Nūlla rēs est, quae perferre possit continuum labōrem.’ <br />
+      Quīntiliānus.
+    </div>
+
+    <div class="line-container" id="Paedagogus.4">
+      <div class="line-character">Paedagōgus</div>
+      Videō quōrsum spectant ista; nīmīrum ut vōs ambulātum dūcam: sed eandem
+      cantilēnam semper ferē recantātis, ut solent nostrae aviculae.
+    </div>
+
+    <div class="line-container" id="Honoratus.5">
+      <div class="line-character">Honōrātus</div>
+      Quid ergō vīs dicāmus, praeceptor?
+    </div>
+
+    <div class="line-container" id="Paedagogus.6">
+      <div class="line-character">Paedagōgus</div>
+      Dīcite posthāc suam quisque sententiam ex Novō Testāmentō.
+    </div>
+
+    <div class="line-container" id="Vivianus.7">
+      <div class="line-character">Vivianus</div>
+      Eugē! nihil erit nōbīs facilius: Habēmus enim in prōmptū multam eārum
+      cōpiam. Vīs ergō praeceptor, ut iam nunc incipiāmus?
+    </div>
+
+    <div class="line-container" id="Paedagogus.8">
+      <div class="line-character">Paedagōgus</div>
+      Sānē velim; quandō (ut ais) tanta est vōbīs cōpia.
+    </div>
+
+    <div class="line-container" id="Vivianus.9">
+      <div class="line-character">Viviānus</div>
+      Quis incipiet.
+    </div>
+
+    <div class="line-container" id="Pratensis.10">
+      <div class="line-character">Prātēnsis</div>
+      Tūne, Honōrāte, vīs honōris tuī causā huius reī speciem edere?
+    </div>
+
+    <div class="line-container" id="Honoratus.11">
+      <div class="line-character">Honōrātus</div>
+      Id ego libenter faciam; sed Deī honōris causā.
+    </div>
+
+    <div class="line-container" id="Paedagogus.12">
+      <div class="line-character">Paedagōgus</div>
+      Laudō istud verbum. Dīvīnus enim honor et glōria omnibus in rēbus est
+      praeferenda -- Ēia! incipe sī quid habēs.
+    </div>
+
+    <div class="line-container" id="Honoratus.13">
+      <div class="line-character">Honōrātus</div>
+      ‘Nīsī abundāverit iūstitia vestra plūs quam Scrībārum et Pharīsaeōrum, nōn
+      potestis ingredī in Rēgnum Coelōrum.’ <br />
+      Matth. quīntō capite.
+    </div>
+
+    <div class="line-container" id="Vivianus.14">
+      <div class="line-character">Viviānus</div>
+      ‘Dēpositō mendāciō, loquiminī vēritātem quisque proximō suō.’ <br />
+      Ad Ephēs. capite quārtō.
+    </div>
+
+    <div class="line-container" id="Pratensis.15">
+      <div class="line-character">Prātēnsis</div>
+      ‘Fīliī, obēdīte parentibus in omnibus, hoc enim placet Dominō.’ <br />
+      Ad Colossēnsēs tertiō.
+    </div>
+
+    <div class="line-container" id="Paedagogus.16">
+      <div class="line-character">Paedagōgus</div>
+      Eugē! bonam speciem: vidēte ut prōgressus respondeat; hoc est, ut pergātis
+      in posterum dīligenter.
+    </div>
+
+    <div class="line-container" id="Honoratus.17">
+      <div class="line-character">Honōrātus</div>
+      Quī nōbīs prīncipium dedit, dabit īdem successūs prōsperōs.
+    </div>
+
+    <div class="line-container" id="Paedagogus.18">
+      <div class="line-character">Paedagōgus</div>
+      Ita spērandum est. Parāte vōs, ut prōdīre mātūrēmus.
+    </div>
+
+    <div class="line-container" id="Honoratus.19">
+      <div class="line-character">Honōrātus</div>
+      Mox aderimus parātissimī.
+    </div>
+
+    <div class="line-container" id="Paedagogus.20">
+      <div class="line-character">Paedagōgus</div>
+      Sūmite suum quisque pallium, ut prōdeātis honestius. Sed heus puerī!
+    </div>
+
+    <div class="line-container" id="Pratensis.21">
+      <div class="line-character">Prātēnsis</div>
+      Quid vīs, praeceptor?
+    </div>
+
+    <div class="line-container" id="Paedagogus.22">
+      <div class="line-character">Paedagōgus</div>
+      Vidēte ut Psalmōs etiam adferātis: alicubi in umbrā cantābimus.
+    </div>
+
+    <div class="line-container" id="Pratensis.23">
+      <div class="line-character">Prātēnsis</div>
+      Ita fīet ambulātiō nostra iūcundior.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

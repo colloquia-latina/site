@@ -14,135 +14,118 @@ permalink: /corderius/colloquia-scholastica-liber-secundus-colloquium-tertium/
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae:<br>
-            Observātor, Briscuntellus
-        </div>
-
-        <div class="line-container" id="Observator.1">
-            <div class="line-character">
-                Observātor
-            </div>
-            <div class="line-poetry">
-                Dēsinite, ō puerī, garrīre, absente magistrō,<br>
-                Verba quibus summus laeditur ille Pater.<br>
-                Dē studiīs potius tractāte et rēbus honestīs:<br>
-                Discite sermōnēs aptaque verba loquī.<br>
-                Discite et inter vōs reddenda revolvere saepe:<br>
-                Doctor enim puerīs semper adesse nequit.<br>
-                Discite sectārī vestīgia certa bonōrum:<br>
-                Ōtia vōs fallant blanda, cavēte, precor.<br>
-                Ēn, ego praemoneō, vōs nē dēlectet abūtī<br>
-                Tempore, nē tergum verbera dūra premant.<br>
-                Ecce iterum vōbīs mōrum praedicō magister:<br>
-                Sī quis erit caesus, nē mihi det vitiō.
-            </div>
-        </div>
-
-        <div class="line-container" id="Briscuntellus.2">
-            <div class="line-character">
-                Briscuntellus
-            </div>
-            <div class="line-poetry">
-                Dēsine plūra loquī, nēmō pārēre recūsat:<br>
-                Est monitor nōbīs optimus ille Pater,<br>
-                Illīusque Patrīs nātus, cui nōmen Iēsus,<br>
-                Et quī nōs renovāns Spīritus intus alit.
-            </div>
-        </div>
-
-        <div class="line-container" id="Observator.3">
-            <div class="line-character">
-                Observātor
-            </div>
-            <div class="line-poetry">
-                Quem mihi spērāssem tam respondēre parātum?<br>
-                Quī; puer Angelicōs mittit ab ōre sonōs?<br>
-                Ō quam tē memorem, nostrae doctissimē classis!<br>
-                Nam tibi dīvīnum carmen ab ōre fluit.<br>
-                Nōn sum tam fēlīx, ut fundam ex tempore versūs:<br>
-                Sed modo quae dīxī praemeditātus eram.
-            </div>
-        </div>
-
-        <div class="line-container" id="Briscuntellus.4">
-            <div class="line-character">
-                Briscuntellus
-            </div>
-            <div class="line-poetry">
-                Sī meditātus erās, quī nunc tam fundis apertē<br>
-                Castaliōs laticēs? quī furor iste novus?
-            </div>
-        </div>
-
-        <div class="line-container" id="Observator.5">
-            <div class="line-character">
-                Observātor
-            </div>
-            <div class="line-poetry">
-                Nam tua mē tantīs mōvērunt carmina flammīs,<br>
-                Ut mihi nunc videar posse movēre ferās.
-            </div>
-        </div>
-
-        <div class="line-container" id="Briscuntellus.6">
-            <div class="line-character">
-                Briscuntellus
-            </div>
-            <div class="line-poetry">
-                Sed cūr immeritum tantīs mē laudibus effers?<br>
-                Est tribuenda ūnī glōria summa Deō.<br>
-                Atque utinam ēloquium nōbīs spatiumque darētur,<br>
-                Et nostra in laudēs solveret ōra suās.<br>
-                Sed quia tempus adest ut vōce et mente precēmur,<br>
-                Idque iubet doctor, dēsinō plūra loquī.
-            </div>
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae:<br />
+      Observātor, Briscuntellus
     </div>
+
+    <div class="line-container" id="Observator.1">
+      <div class="line-character">Observātor</div>
+      <div class="line-poetry">
+        Dēsinite, ō puerī, garrīre, absente magistrō,<br />
+        Verba quibus summus laeditur ille Pater.<br />
+        Dē studiīs potius tractāte et rēbus honestīs:<br />
+        Discite sermōnēs aptaque verba loquī.<br />
+        Discite et inter vōs reddenda revolvere saepe:<br />
+        Doctor enim puerīs semper adesse nequit.<br />
+        Discite sectārī vestīgia certa bonōrum:<br />
+        Ōtia vōs fallant blanda, cavēte, precor.<br />
+        Ēn, ego praemoneō, vōs nē dēlectet abūtī<br />
+        Tempore, nē tergum verbera dūra premant.<br />
+        Ecce iterum vōbīs mōrum praedicō magister:<br />
+        Sī quis erit caesus, nē mihi det vitiō.
+      </div>
+    </div>
+
+    <div class="line-container" id="Briscuntellus.2">
+      <div class="line-character">Briscuntellus</div>
+      <div class="line-poetry">
+        Dēsine plūra loquī, nēmō pārēre recūsat:<br />
+        Est monitor nōbīs optimus ille Pater,<br />
+        Illīusque Patrīs nātus, cui nōmen Iēsus,<br />
+        Et quī nōs renovāns Spīritus intus alit.
+      </div>
+    </div>
+
+    <div class="line-container" id="Observator.3">
+      <div class="line-character">Observātor</div>
+      <div class="line-poetry">
+        Quem mihi spērāssem tam respondēre parātum?<br />
+        Quī; puer Angelicōs mittit ab ōre sonōs?<br />
+        Ō quam tē memorem, nostrae doctissimē classis!<br />
+        Nam tibi dīvīnum carmen ab ōre fluit.<br />
+        Nōn sum tam fēlīx, ut fundam ex tempore versūs:<br />
+        Sed modo quae dīxī praemeditātus eram.
+      </div>
+    </div>
+
+    <div class="line-container" id="Briscuntellus.4">
+      <div class="line-character">Briscuntellus</div>
+      <div class="line-poetry">
+        Sī meditātus erās, quī nunc tam fundis apertē<br />
+        Castaliōs laticēs? quī furor iste novus?
+      </div>
+    </div>
+
+    <div class="line-container" id="Observator.5">
+      <div class="line-character">Observātor</div>
+      <div class="line-poetry">
+        Nam tua mē tantīs mōvērunt carmina flammīs,<br />
+        Ut mihi nunc videar posse movēre ferās.
+      </div>
+    </div>
+
+    <div class="line-container" id="Briscuntellus.6">
+      <div class="line-character">Briscuntellus</div>
+      <div class="line-poetry">
+        Sed cūr immeritum tantīs mē laudibus effers?<br />
+        Est tribuenda ūnī glōria summa Deō.<br />
+        Atque utinam ēloquium nōbīs spatiumque darētur,<br />
+        Et nostra in laudēs solveret ōra suās.<br />
+        Sed quia tempus adest ut vōce et mente precēmur,<br />
+        Idque iubet doctor, dēsinō plūra loquī.
+      </div>
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

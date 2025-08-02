@@ -14,153 +14,122 @@ permalink: /corderius/colloquia-scholastica-liber-primus-colloquium-unum-et-quad
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae:<br>
-            Ezekiēl, Beātus
-        </div>
-
-        <div class="line-container" id="Ezekiel.1">
-            <div class="line-character">
-                Ezekiēl
-            </div>
-            Vīs ā mē magnam inīre grātiam?
-        </div>
-
-        <div class="line-container" id="Beatus.2">
-            <div class="line-character">
-                Beātus
-            </div>
-            Nihil libentius fēcerim, sī quidem penes mē rēs ipsa est. Sed quid est in quō tibi commodāre possim?
-        </div>
-
-        <div class="line-container" id="Ezekiel.3">
-            <div class="line-character">
-                Ezekiēl
-            </div>
-            Dā mihi mūtuō assēs decem.
-        </div>
-
-        <div class="line-container" id="Beatus.4">
-            <div class="line-character">
-                Beātus
-            </div>
-            Nōn tantum nunc habeō, sed maiōrem partem.
-        </div>
-
-        <div class="line-container" id="Ezekiel.5">
-            <div class="line-character">
-                Ezekiēl
-            </div>
-            Quantum? quaesō.
-        </div>
-
-        <div class="line-container" id="Beatus.6">
-            <div class="line-character">
-                Beātus
-            </div>
-            Nesciō, nisi crumēnam īnspexerō: ecce tibi octo assēs cum sēmisse.
-        </div>
-
-        <div class="line-container" id="Ezekiel.7">
-            <div class="line-character">
-                Ezekiēl
-            </div>
-            Solōs septem accipiō, nōn enim tē vacuāre prōrsus volō.
-        </div>
-
-        <div class="line-container" id="Beatus.8">
-            <div class="line-character">
-                Beātus
-            </div>
-            Parum refert; tōtum, sī vīs, accipe.
-        </div>
-
-        <div class="line-container" id="Ezekiel.9">
-            <div class="line-character">
-                Ezekiēl
-            </div>
-            Agō tibi grātiās: crēdō hoc pecūniae satis fore negōtiō meō, cum aliquantulā, quam ipse habeō.
-        </div>
-
-        <div class="line-container" id="Beatus.10">
-            <div class="line-character">
-                Beātus
-            </div>
-            Ut libet.
-        </div>
-
-        <div class="line-container" id="Ezekiel.11">
-            <div class="line-character">
-                Ezekiēl
-            </div>
-            Amō tē dē istā tam exprōmptā benignitāte.
-        </div>
-
-        <div class="line-container" id="Beatus.12">
-            <div class="line-character">
-                Beātus
-            </div>
-            Sī quid aliud possim, nē parcās.
-        </div>
-
-        <div class="line-container" id="Ezekiel.13">
-            <div class="line-character">
-                Ezekiēl
-            </div>
-            Reddam tōtum, Deō volente, cum prīmum pater ad mē mīserit.
-        </div>
-
-        <div class="line-container" id="Beatus.14">
-            <div class="line-character">
-                Beātus
-            </div>
-            Nē sīs magnopere solicitus; nōndum est opus mihi.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae:<br />
+      Ezekiēl, Beātus
     </div>
+
+    <div class="line-container" id="Ezekiel.1">
+      <div class="line-character">Ezekiēl</div>
+      Vīs ā mē magnam inīre grātiam?
+    </div>
+
+    <div class="line-container" id="Beatus.2">
+      <div class="line-character">Beātus</div>
+      Nihil libentius fēcerim, sī quidem penes mē rēs ipsa est. Sed quid est in
+      quō tibi commodāre possim?
+    </div>
+
+    <div class="line-container" id="Ezekiel.3">
+      <div class="line-character">Ezekiēl</div>
+      Dā mihi mūtuō assēs decem.
+    </div>
+
+    <div class="line-container" id="Beatus.4">
+      <div class="line-character">Beātus</div>
+      Nōn tantum nunc habeō, sed maiōrem partem.
+    </div>
+
+    <div class="line-container" id="Ezekiel.5">
+      <div class="line-character">Ezekiēl</div>
+      Quantum? quaesō.
+    </div>
+
+    <div class="line-container" id="Beatus.6">
+      <div class="line-character">Beātus</div>
+      Nesciō, nisi crumēnam īnspexerō: ecce tibi octo assēs cum sēmisse.
+    </div>
+
+    <div class="line-container" id="Ezekiel.7">
+      <div class="line-character">Ezekiēl</div>
+      Solōs septem accipiō, nōn enim tē vacuāre prōrsus volō.
+    </div>
+
+    <div class="line-container" id="Beatus.8">
+      <div class="line-character">Beātus</div>
+      Parum refert; tōtum, sī vīs, accipe.
+    </div>
+
+    <div class="line-container" id="Ezekiel.9">
+      <div class="line-character">Ezekiēl</div>
+      Agō tibi grātiās: crēdō hoc pecūniae satis fore negōtiō meō, cum
+      aliquantulā, quam ipse habeō.
+    </div>
+
+    <div class="line-container" id="Beatus.10">
+      <div class="line-character">Beātus</div>
+      Ut libet.
+    </div>
+
+    <div class="line-container" id="Ezekiel.11">
+      <div class="line-character">Ezekiēl</div>
+      Amō tē dē istā tam exprōmptā benignitāte.
+    </div>
+
+    <div class="line-container" id="Beatus.12">
+      <div class="line-character">Beātus</div>
+      Sī quid aliud possim, nē parcās.
+    </div>
+
+    <div class="line-container" id="Ezekiel.13">
+      <div class="line-character">Ezekiēl</div>
+      Reddam tōtum, Deō volente, cum prīmum pater ad mē mīserit.
+    </div>
+
+    <div class="line-container" id="Beatus.14">
+      <div class="line-character">Beātus</div>
+      Nē sīs magnopere solicitus; nōndum est opus mihi.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

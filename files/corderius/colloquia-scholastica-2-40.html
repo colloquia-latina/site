@@ -14,122 +14,100 @@ permalink: /corderius/colloquia-scholastica-liber-secundus-colloquium-quadragesi
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae:<br>
-            Emericus, Baldus
-        </div>
-
-        <div class="line-container" id="Emericus.1">
-            <div class="line-character">
-                Emericus
-            </div>
-            Cūr sōlus rīdēs?
-        </div>
-
-        <div class="line-container" id="Baldus.2">
-            <div class="line-character">
-                Baldus
-            </div>
-            Quid tua?
-        </div>
-
-        <div class="line-container" id="Emericus.3">
-            <div class="line-character">
-                Emericus
-            </div>
-            Quia fortasse rīdēs mē.
-        </div>
-
-        <div class="line-container" id="Baldus.4">
-            <div class="line-character">
-                Baldus
-            </div>
-            Unde tibi orta est ista suspīciō?
-        </div>
-
-        <div class="line-container" id="Emericus.5">
-            <div class="line-character">
-                Emericus
-            </div>
-            Quia malus es.
-        </div>
-
-        <div class="line-container" id="Baldus.6">
-            <div class="line-character">
-                Baldus
-            </div>
-            Omnēs quidem malī sumus; at ego tē peior nōn sum. Nēmō igitur rīdet, nisi aliquem irrīdeat?
-        </div>
-
-        <div class="line-container" id="Emericus.7">
-            <div class="line-character">
-                Emericus
-            </div>
-            Nōn sīc intelligō; sed quī sōlus rīdet (ut saepe audīvī) aut stultus est, aut aliquid malī cōgitat.
-        </div>
-
-        <div class="line-container" id="Baldus.8">
-            <div class="line-character">
-                Baldus
-            </div>
-            Ista sententia cuius sit nesciō; sed cuiuscunque sit, nōn est perpetuō vēra: tamen admonitiōnem tuam in
-            bonam partem
-            accipiō, tēque moneō vicissim, ut caveās suspīciōsus esse; ‘Nam timidīs et suspectīs aptissima mors
-            est’, ut est in
-            mōrālī nostrō carmine.
-        </div>
-
-        <div class="line-container" id="Emericus.9">
-            <div class="line-character">
-                Emericus
-            </div>
-            Meminī: bonī tamen cōnsulō admonitiōnem tuam.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae:<br />
+      Emericus, Baldus
     </div>
+
+    <div class="line-container" id="Emericus.1">
+      <div class="line-character">Emericus</div>
+      Cūr sōlus rīdēs?
+    </div>
+
+    <div class="line-container" id="Baldus.2">
+      <div class="line-character">Baldus</div>
+      Quid tua?
+    </div>
+
+    <div class="line-container" id="Emericus.3">
+      <div class="line-character">Emericus</div>
+      Quia fortasse rīdēs mē.
+    </div>
+
+    <div class="line-container" id="Baldus.4">
+      <div class="line-character">Baldus</div>
+      Unde tibi orta est ista suspīciō?
+    </div>
+
+    <div class="line-container" id="Emericus.5">
+      <div class="line-character">Emericus</div>
+      Quia malus es.
+    </div>
+
+    <div class="line-container" id="Baldus.6">
+      <div class="line-character">Baldus</div>
+      Omnēs quidem malī sumus; at ego tē peior nōn sum. Nēmō igitur rīdet, nisi
+      aliquem irrīdeat?
+    </div>
+
+    <div class="line-container" id="Emericus.7">
+      <div class="line-character">Emericus</div>
+      Nōn sīc intelligō; sed quī sōlus rīdet (ut saepe audīvī) aut stultus est,
+      aut aliquid malī cōgitat.
+    </div>
+
+    <div class="line-container" id="Baldus.8">
+      <div class="line-character">Baldus</div>
+      Ista sententia cuius sit nesciō; sed cuiuscunque sit, nōn est perpetuō
+      vēra: tamen admonitiōnem tuam in bonam partem accipiō, tēque moneō
+      vicissim, ut caveās suspīciōsus esse; ‘Nam timidīs et suspectīs aptissima
+      mors est’, ut est in mōrālī nostrō carmine.
+    </div>
+
+    <div class="line-container" id="Emericus.9">
+      <div class="line-character">Emericus</div>
+      Meminī: bonī tamen cōnsulō admonitiōnem tuam.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

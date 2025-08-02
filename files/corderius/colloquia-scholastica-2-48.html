@@ -14,153 +14,122 @@ permalink: /corderius/colloquia-scholastica-liber-secundus-colloquium-duodequinq
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae:<br>
-            Puteānus, Capusius
-        </div>
-
-        <div class="line-container" id="Puteanus.1">
-            <div class="line-character">
-                Puteānus
-            </div>
-            Quid tēcum cōgitās, Capusī?
-        </div>
-
-        <div class="line-container" id="Capusius.2">
-            <div class="line-character">
-                Capusius
-            </div>
-            Libenter īrem domum.
-        </div>
-
-        <div class="line-container" id="Puteanus.3">
-            <div class="line-character">
-                Puteānus
-            </div>
-            Quid eō?
-        </div>
-
-        <div class="line-container" id="Capusius.4">
-            <div class="line-character">
-                Capusius
-            </div>
-            Ut mē hīs diēbus parumper recreārem cum mātre.
-        </div>
-
-        <div class="line-container" id="Puteanus.5">
-            <div class="line-character">
-                Puteānus
-            </div>
-            Quid obstat quō minus eās?
-        </div>
-
-        <div class="line-container" id="Capusius.6">
-            <div class="line-character">
-                Capusius
-            </div>
-            Praeceptor nōn vult permittere.
-        </div>
-
-        <div class="line-container" id="Puteanus.7">
-            <div class="line-character">
-                Puteānus
-            </div>
-            Mēlius tibi cōnsulit quam ipse putās.
-        </div>
-
-        <div class="line-container" id="Capusius.8">
-            <div class="line-character">
-                Capusius
-            </div>
-            Quōmodo?
-        </div>
-
-        <div class="line-container" id="Puteanus.9">
-            <div class="line-character">
-                Puteānus
-            </div>
-            Nam intereā perderēs multum temporis, et cum rediissēs tibi dolēret. Nōnne vērum dīcō?
-        </div>
-
-        <div class="line-container" id="Capusius.10">
-            <div class="line-character">
-                Capusius
-            </div>
-            Profectō sīc est.
-        </div>
-
-        <div class="line-container" id="Puteanus.11">
-            <div class="line-character">
-                Puteānus
-            </div>
-            Manē igitur, sī sapis.
-        </div>
-
-        <div class="line-container" id="Capusius.12">
-            <div class="line-character">
-                Capusius
-            </div>
-            Pārēbō tuō cōnsiliō, quia mihi rēctum vidētur.
-        </div>
-
-        <div class="line-container" id="Puteanus.13">
-            <div class="line-character">
-                Puteānus
-            </div>
-            Nōllem sciēns malum tibi cōnsilium dare. Atque utinam quod suādeō succēdat tibi prōsperē.
-        </div>
-
-        <div class="line-container" id="Capusius.14">
-            <div class="line-character">
-                Capusius
-            </div>
-            Spērō ita fore, Deō volente.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae:<br />
+      Puteānus, Capusius
     </div>
+
+    <div class="line-container" id="Puteanus.1">
+      <div class="line-character">Puteānus</div>
+      Quid tēcum cōgitās, Capusī?
+    </div>
+
+    <div class="line-container" id="Capusius.2">
+      <div class="line-character">Capusius</div>
+      Libenter īrem domum.
+    </div>
+
+    <div class="line-container" id="Puteanus.3">
+      <div class="line-character">Puteānus</div>
+      Quid eō?
+    </div>
+
+    <div class="line-container" id="Capusius.4">
+      <div class="line-character">Capusius</div>
+      Ut mē hīs diēbus parumper recreārem cum mātre.
+    </div>
+
+    <div class="line-container" id="Puteanus.5">
+      <div class="line-character">Puteānus</div>
+      Quid obstat quō minus eās?
+    </div>
+
+    <div class="line-container" id="Capusius.6">
+      <div class="line-character">Capusius</div>
+      Praeceptor nōn vult permittere.
+    </div>
+
+    <div class="line-container" id="Puteanus.7">
+      <div class="line-character">Puteānus</div>
+      Mēlius tibi cōnsulit quam ipse putās.
+    </div>
+
+    <div class="line-container" id="Capusius.8">
+      <div class="line-character">Capusius</div>
+      Quōmodo?
+    </div>
+
+    <div class="line-container" id="Puteanus.9">
+      <div class="line-character">Puteānus</div>
+      Nam intereā perderēs multum temporis, et cum rediissēs tibi dolēret. Nōnne
+      vērum dīcō?
+    </div>
+
+    <div class="line-container" id="Capusius.10">
+      <div class="line-character">Capusius</div>
+      Profectō sīc est.
+    </div>
+
+    <div class="line-container" id="Puteanus.11">
+      <div class="line-character">Puteānus</div>
+      Manē igitur, sī sapis.
+    </div>
+
+    <div class="line-container" id="Capusius.12">
+      <div class="line-character">Capusius</div>
+      Pārēbō tuō cōnsiliō, quia mihi rēctum vidētur.
+    </div>
+
+    <div class="line-container" id="Puteanus.13">
+      <div class="line-character">Puteānus</div>
+      Nōllem sciēns malum tibi cōnsilium dare. Atque utinam quod suādeō succēdat
+      tibi prōsperē.
+    </div>
+
+    <div class="line-container" id="Capusius.14">
+      <div class="line-character">Capusius</div>
+      Spērō ita fore, Deō volente.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

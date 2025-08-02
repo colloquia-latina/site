@@ -13,109 +13,92 @@ permalink: /mosellanus/paedalogia-dialogus-vīcēsimus-sextus/
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae<br>
-            Valerius, Nīcolāus
-        </div>
-
-        <div class="line-container" id="Valerius.1">
-            <div class="line-character">
-                Valerius
-            </div>
-            Quid tū cēreum nōn habēs, mī Nīcolāe?
-        </div>
-
-        <div class="line-container" id="Nicolaus.2">
-            <div class="line-character">
-                Nīcolāus
-            </div>
-            Unde habērem, quī nec pecūniam, quā vīctum emere possim, habeō? Sed sī domī apud meōs agerem, nūgās eiusmodī
-            mihi parāret māter.
-        </div>
-
-        <div class="line-container" id="Valerius.3">
-            <div class="line-character">
-                Valerius
-            </div>
-            Et tū nūgās vocāre audēs rēs sacrās?
-        </div>
-
-        <div class="line-container" id="Nicolaus.4">
-            <div class="line-character">
-                Nīcolāus
-            </div>
-            Quidnī? Neque enim statim fuerō haereticus, etiamsī nūllum gestem cēreum, maximē cum nōn sit, unde emam; tum
-            et Chrīstō putārem longē fore grātius, sī sūmptūs, quōs cereīs emendīs facimus, in pauperum ūsūs
-            converterentur.
-        </div>
-
-        <div class="line-container" id="Valerius.5">
-            <div class="line-character">
-                Valerius
-            </div>
-            Atquī est haec laudābilis cōnsuētūdō.
-        </div>
-
-        <div class="line-container" id="Nicolaus.6">
-            <div class="line-character">
-                Nīcolāus
-            </div>
-            Est omnīnō, sed nōn adeō, ut prae eā meliōra et magis Chrīstiāna officia neglegī dēbeant.
-        </div>
-
-        <div class="line-container" id="Valerius.7">
-            <div class="line-character">
-                Valerius
-            </div>
-            Rēctē putās, nam et ipse saepe stultam mulierculārum pietātem rīsī, quae suffīgendīs etiam cotīdiē cereīs
-            trīgintā sex adeō sibi placent, ut per hoc caelum sē dēmerērī crēdant, quantumvīs fortiter in platēīs
-            pauperēs ēsuriant.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae<br />
+      Valerius, Nīcolāus
     </div>
+
+    <div class="line-container" id="Valerius.1">
+      <div class="line-character">Valerius</div>
+      Quid tū cēreum nōn habēs, mī Nīcolāe?
+    </div>
+
+    <div class="line-container" id="Nicolaus.2">
+      <div class="line-character">Nīcolāus</div>
+      Unde habērem, quī nec pecūniam, quā vīctum emere possim, habeō? Sed sī
+      domī apud meōs agerem, nūgās eiusmodī mihi parāret māter.
+    </div>
+
+    <div class="line-container" id="Valerius.3">
+      <div class="line-character">Valerius</div>
+      Et tū nūgās vocāre audēs rēs sacrās?
+    </div>
+
+    <div class="line-container" id="Nicolaus.4">
+      <div class="line-character">Nīcolāus</div>
+      Quidnī? Neque enim statim fuerō haereticus, etiamsī nūllum gestem cēreum,
+      maximē cum nōn sit, unde emam; tum et Chrīstō putārem longē fore grātius,
+      sī sūmptūs, quōs cereīs emendīs facimus, in pauperum ūsūs converterentur.
+    </div>
+
+    <div class="line-container" id="Valerius.5">
+      <div class="line-character">Valerius</div>
+      Atquī est haec laudābilis cōnsuētūdō.
+    </div>
+
+    <div class="line-container" id="Nicolaus.6">
+      <div class="line-character">Nīcolāus</div>
+      Est omnīnō, sed nōn adeō, ut prae eā meliōra et magis Chrīstiāna officia
+      neglegī dēbeant.
+    </div>
+
+    <div class="line-container" id="Valerius.7">
+      <div class="line-character">Valerius</div>
+      Rēctē putās, nam et ipse saepe stultam mulierculārum pietātem rīsī, quae
+      suffīgendīs etiam cotīdiē cereīs trīgintā sex adeō sibi placent, ut per
+      hoc caelum sē dēmerērī crēdant, quantumvīs fortiter in platēīs pauperēs
+      ēsuriant.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>

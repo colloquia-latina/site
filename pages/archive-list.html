@@ -6,86 +6,77 @@ permalink: /archive-list/
 
 <!DOCTYPE html>
 <html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <title>Archived Files</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/style-list.css" />
+    <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/w3.css" />
+  </head>
 
-<head>
-  <title>Archived Files</title>
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-  <link rel="stylesheet" href="/style-list.css">
-  <link rel="stylesheet" href="/style-common.css">
-  <link rel="stylesheet" href="/w3.css">
-  <script src="/scripts/lazysizes.min.js" async=""></script>
-</head>
-
-<body>
-
-  <div class="w3-top">
-    <div class="w3-bar w3-black">
-      <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+  <body>
+    <div class="w3-top">
+      <div class="w3-bar w3-black">
+        <a href="/" class="w3-bar-item w3-button w3-mobile"
+          ><b>Colloquia Latina</b></a
+        >
+        <div class="w3-bar-item w3-mobile w3-center">
+          <i>{{ page.title }}</i>
+        </div>
+      </div>
     </div>
-  </div>
-  <div style="height:3em"></div>
+    <div style="height: 3em"></div>
 
-  <div class="main-content">
-    <h1>Archived Files</h1>
+    <div class="main-content">
+      <h1>Archived Files</h1>
 
-    <p>For the best reading experience, navigate elsewhere on our site.
-      But if you really want the original text version, we've saved them here.
-      This also serves as a backup access method, which is important to us
-      as one of the goals of this project is to preserve these texts for many years.
-    </p>
+      <p>
+        For the best reading experience, navigate elsewhere on our site. But if
+        you really want the original text version, we've saved them here. This
+        also serves as a backup access method, which is important to us as one
+        of the goals of this project is to preserve these texts for many years.
+      </p>
 
-    <table class="archive-table">
-      <thead>
-        <tr>
-          <th>File Name</th>
-          <th>Notes</th>
-          <th>Source</th>
-          <th>Colloquium Link</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% assign files = site.pages
-        | where_exp: "page", "page.path contains 'archive-files/'" %}
-        {% assign archive_pages = files
-        | where: "type", "Archive"
-        | sort: "title" %}
-        {% for page in archive_pages %}
-        <tr>
-          <td>
-            <a href="{{ page.url }}">{{ page.title }}</a>
-          </td>
-          <td>
-            {{ page.subtitle }}
-          </td>
-          <td>
-            {% if page.source_link %}
-            <a href="{{ page.source_link }}" target="_blank" rel="noopener">
-              See External Source
-            </a>
-            {% endif %}
-          </td>
-          <td>
-            {% if page.colloquium_link %}
-            <a href="{{ page.colloquium_link }}">
-              View Colloquium
-            </a>
-            {% endif %}
-          </td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+      <table class="archive-table">
+        <thead>
+          <tr>
+            <th>File Name</th>
+            <th>Notes</th>
+            <th>Source</th>
+            <th>Colloquium Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% assign files = site.pages | where_exp: "page", "page.path contains
+          'archive-files/'" %} {% assign archive_pages = files | where: "type",
+          "Archive" | sort: "title" %} {% for page in archive_pages %}
+          <tr>
+            <td>
+              <a href="{{ page.url }}">{{ page.title }}</a>
+            </td>
+            <td>{{ page.subtitle }}</td>
+            <td>
+              {% if page.source_link %}
+              <a href="{{ page.source_link }}" target="_blank" rel="noopener">
+                See External Source
+              </a>
+              {% endif %}
+            </td>
+            <td>
+              {% if page.colloquium_link %}
+              <a href="{{ page.colloquium_link }}"> View Colloquium </a>
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
 
-
-  </div>
-
-  <div class="w3-container w3-black">
-    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
-  </div>
-
-</body>
-
+    <div class="w3-container w3-black">
+      <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+    </div>
+  </body>
 </html>

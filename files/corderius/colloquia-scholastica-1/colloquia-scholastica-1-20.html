@@ -14,139 +14,111 @@ permalink: /corderius/colloquia-scholastica-liber-primus-colloquium-vicesimum/
 <!DOCTYPE html>
 
 <head>
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style-reading.css">
-    <link rel="stylesheet" href="/style-common.css">
-    <link rel="stylesheet" href="/w3.css">
-    <script src="/scripts/lazysizes.min.js" async=""></script>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
 </head>
 
 <body>
-
-    <div class="w3-top">
-        <div class="w3-bar w3-black">
-            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
-            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
-            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
     </div>
-    <div style="height:3em"></div>
+  </div>
+  <div style="height: 3em"></div>
 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
 
-    <div class="main-content">
-        <h1>{{page.title}}</h1>
-        <h3>{{page.subtitle}}</h3>
-
-        <div class="characters">
-            Persōnae:<br>
-            Titus, Valerius
-        </div>
-
-        <div class="line-container" id="Titus.1">
-            <div class="line-character">
-                Titus
-            </div>
-            Cūr nōn scrībis?
-        </div>
-
-        <div class="line-container" id="Valerius.2">
-            <div class="line-character">
-                Valerius
-            </div>
-            Quia nōn libet.
-        </div>
-
-        <div class="line-container" id="Titus.3">
-            <div class="line-character">
-                Titus
-            </div>
-            Atquī praeceptor iusserat.
-        </div>
-
-        <div class="line-container" id="Valerius.4">
-            <div class="line-character">
-                Valerius
-            </div>
-            Sciō: sed est mihi aliquid legendum prius; praetereā, nihil habeō quod nunc scrībam.
-        </div>
-
-        <div class="line-container" id="Titus.5">
-            <div class="line-character">
-                Titus
-            </div>
-            Ō sī vellēs mihi scrībere!
-        </div>
-
-        <div class="line-container" id="Valerius.6">
-            <div class="line-character">
-                Valerius
-            </div>
-            Quidnam?
-        </div>
-
-        <div class="line-container" id="Titus.7">
-            <div class="line-character">
-                Titus
-            </div>
-            Habeō dēscrībenda dictāta praeceptōris.
-        </div>
-
-        <div class="line-container" id="Valerius.8">
-            <div class="line-character">
-                Valerius
-            </div>
-            Quae dictāta?
-        </div>
-
-        <div class="line-container" id="Titus.9">
-            <div class="line-character">
-                Titus
-            </div>
-            In Cicerōnis Epistolās.
-        </div>
-
-        <div class="line-container" id="Valerius.10">
-            <div class="line-character">
-                Valerius
-            </div>
-            Libenter dēscrībam tibi: sed exspectā fēriārum diem proximum.
-        </div>
-
-        <div class="line-container" id="Titus.11">
-            <div class="line-character">
-                Titus
-            </div>
-            Exspectābō igitur: sed nē fallās, quaesō.
-        </div>
-
-        <div class="line-container" id="Valerius.12">
-            <div class="line-character">
-                Valerius
-            </div>
-            Nec sciēns, nec volēns fallam.
-        </div>
-
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-
-        {% assign neighbors = files
-        | where: "type", "Colloquium"
-        | where: "author", page.author
-        | where: "collection", page.collection
-        %}
-
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
-
-
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="characters">
+      Persōnae:<br />
+      Titus, Valerius
     </div>
+
+    <div class="line-container" id="Titus.1">
+      <div class="line-character">Titus</div>
+      Cūr nōn scrībis?
+    </div>
+
+    <div class="line-container" id="Valerius.2">
+      <div class="line-character">Valerius</div>
+      Quia nōn libet.
+    </div>
+
+    <div class="line-container" id="Titus.3">
+      <div class="line-character">Titus</div>
+      Atquī praeceptor iusserat.
+    </div>
+
+    <div class="line-container" id="Valerius.4">
+      <div class="line-character">Valerius</div>
+      Sciō: sed est mihi aliquid legendum prius; praetereā, nihil habeō quod
+      nunc scrībam.
+    </div>
+
+    <div class="line-container" id="Titus.5">
+      <div class="line-character">Titus</div>
+      Ō sī vellēs mihi scrībere!
+    </div>
+
+    <div class="line-container" id="Valerius.6">
+      <div class="line-character">Valerius</div>
+      Quidnam?
+    </div>
+
+    <div class="line-container" id="Titus.7">
+      <div class="line-character">Titus</div>
+      Habeō dēscrībenda dictāta praeceptōris.
+    </div>
+
+    <div class="line-container" id="Valerius.8">
+      <div class="line-character">Valerius</div>
+      Quae dictāta?
+    </div>
+
+    <div class="line-container" id="Titus.9">
+      <div class="line-character">Titus</div>
+      In Cicerōnis Epistolās.
+    </div>
+
+    <div class="line-container" id="Valerius.10">
+      <div class="line-character">Valerius</div>
+      Libenter dēscrībam tibi: sed exspectā fēriārum diem proximum.
+    </div>
+
+    <div class="line-container" id="Titus.11">
+      <div class="line-character">Titus</div>
+      Exspectābō igitur: sed nē fallās, quaesō.
+    </div>
+
+    <div class="line-container" id="Valerius.12">
+      <div class="line-character">Valerius</div>
+      Nec sciēns, nec volēns fallam.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
 </body>
