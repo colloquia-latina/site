@@ -31,22 +31,36 @@ permalink: /all-topics-list/
 
     <div class="main-content">
       <h1>Colloquia argumento ordinata</h1>
-      <h2>Ecce, divisimus colloquia variis argumentis</h2>
 
       {% assign files = site.html_pages | where_exp: "page", "page.path contains
       'files/'" | where: "type", "Colloquium" %} {% assign sorted = files |
       sort: "topic" %} {% assign groups = sorted | group_by: "topic" %} {% for
       group in groups %}
-      <h3>{{ group.name }}</h3>
-      <ul>
-        {% assign pages = group.items | sort: "title" | sort: "sequence" | sort:
-        "author" %} {% for page in pages %}
-        <li>
-          <a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a>
-          <div class="subtitle">{{page.subtitle}}</div>
-        </li>
-        {% endfor %}
-      </ul>
+      <div class="accordion-item">
+        <input
+          type="checkbox"
+          id="accordion-characters-{{ forloop.index }}"
+          class="accordion-toggle" />
+        <label
+          class="accordion-header"
+          for="accordion-characters-{{ forloop.index }}">
+          {{ group.name }}
+        </label>
+
+        <div class="accordion-content">
+          <div class="w3-container">
+            <ul>
+              {% assign pages = group.items | sort: "title" | sort: "sequence" |
+              sort: "author" %} {% for page in pages %}
+              <li>
+                <a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a>
+                <div class="subtitle">{{ page.subtitle }}</div>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
       {% endfor %}
     </div>
 

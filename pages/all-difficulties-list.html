@@ -31,49 +31,79 @@ permalink: /all-difficulties-list/
 
     <div class="main-content">
       <h1>Colloquia difficultate ordinata</h1>
-      <h2>
-        Ecce, divisimus colloquia in tres greges: faciliora, in medio,
-        difficiliora
-      </h2>
 
-      <h3>Faciliora</h3>
-      <ul>
-        {% assign files = site.html_pages | where_exp: "page", "page.path
-        contains 'files/'" %} {% assign colloquia_pages = files | where: "type",
-        "Colloquium" | where: "difficulty", "Easy" | sort: "sequence" | sort:
-        "author" %} {% for page in colloquia_pages %}
-        <li>
-          <a href="{{ page.url }}">{{ page.author }} - {{ page.title }}</a>
-          <div class="subtitle">{{page.subtitle}}</div>
-        </li>
-        {% endfor %}
-      </ul>
+      <div class="accordion-item">
+        <input type="checkbox" id="accordion-easy" class="accordion-toggle" />
+        <label class="accordion-header" for="accordion-easy"> Faciliora </label>
 
-      <h3>In Medio</h3>
-      <ul>
-        {% assign files = site.html_pages | where_exp: "page", "page.path
-        contains 'files/'" %} {% assign colloquia_pages = files | where: "type",
-        "Colloquium" | where: "difficulty", "Moderate" | sort: "sequence" |
-        sort: "author" %} {% for page in colloquia_pages %}
-        <li>
-          <a href="{{ page.url }}">{{ page.author }} - {{ page.title }}</a>
-          <div class="subtitle">{{page.subtitle}}</div>
-        </li>
-        {% endfor %}
-      </ul>
+        <div class="accordion-content">
+          <div class="w3-container">
+            {% assign files = site.html_pages | where_exp: "page", "page.path
+            contains 'files/'" %} {% assign colloquia_pages = files | where:
+            "type", "Colloquium" | where: "difficulty", "Easy" | sort: "title" |
+            sort: "sequence" | sort: "author" %}
+            <ul>
+              {% for page in colloquia_pages %}
+              <li>
+                <a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a>
+                <div class="subtitle">{{ page.subtitle }}</div>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
 
-      <h3>Difficiliora</h3>
-      <ul>
-        {% assign files = site.html_pages | where_exp: "page", "page.path
-        contains 'files/'" %} {% assign colloquia_pages = files | where: "type",
-        "Colloquium" | where: "difficulty", "Hard" | sort: "title" | sort:
-        "sequence" | sort: "author" %} {% for page in colloquia_pages %}
-        <li>
-          <a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a>
-          <div class="subtitle">{{page.subtitle}}</div>
-        </li>
-        {% endfor %}
-      </ul>
+      <div class="accordion-item">
+        <input
+          type="checkbox"
+          id="accordion-moderate"
+          class="accordion-toggle" />
+        <label class="accordion-header" for="accordion-moderate">
+          In Medio
+        </label>
+
+        <div class="accordion-content">
+          <div class="w3-container">
+            {% assign files = site.html_pages | where_exp: "page", "page.path
+            contains 'files/'" %} {% assign colloquia_pages = files | where:
+            "type", "Colloquium" | where: "difficulty", "Moderate" | sort:
+            "title" | sort: "sequence" | sort: "author" %} {% for page in
+            colloquia_pages %}
+            <ul>
+              <li>
+                <a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a>
+                <div class="subtitle">{{ page.subtitle }}</div>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <input type="checkbox" id="accordion-hard" class="accordion-toggle" />
+        <label class="accordion-header" for="accordion-hard">
+          Difficiliora
+        </label>
+
+        <div class="accordion-content">
+          <div class="w3-container">
+            {% assign files = site.html_pages | where_exp: "page", "page.path
+            contains 'files/'" %} {% assign colloquia_pages = files | where:
+            "type", "Colloquium" | where: "difficulty", "Hard" | sort: "title" |
+            sort: "sequence" | sort: "author" %} {% for page in colloquia_pages
+            %}
+            <ul>
+              <li>
+                <a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a>
+                <div class="subtitle">{{ page.subtitle }}</div>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="w3-container w3-black footer">
