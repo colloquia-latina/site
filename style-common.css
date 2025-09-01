@@ -40,6 +40,24 @@ html {
 .navbar-item:hover {
   background: #222;
 }
+
+.note {
+  background-color: #f9f9f9;
+  border-left: 4px solid #aaa;
+  padding: 1em;
+  margin: 2em 0;
+  font-size: 0.95em;
+  color: #555;
+}
+
+@media (prefers-color-scheme: dark) {
+  .note {
+    background-color: #262626;
+    border-left-color: #666;
+    color: #bbb;
+  }
+}
+
 /*
 .card {
   background: #fff;
