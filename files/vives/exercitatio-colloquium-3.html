@@ -13,78 +13,96 @@ permalink: /vives/exercitatio-colloquium-tertium/
 <!DOCTYPE html>
 
 <head>
-  <title>{{page.title}}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-  <link rel="stylesheet" href="/style-reading.css" />
-  <link rel="stylesheet" href="/style-common.css" />
-  <link rel="stylesheet" href="/w3.css" />
+    <title>{{page.title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/style-reading.css">
+    <link rel="stylesheet" href="/style-common.css">
+    <link rel="stylesheet" href="/w3.css">
+    <script src="/scripts/lazysizes.min.js" async=""></script>
 </head>
 
 <body>
-  <div class="w3-top">
-    <div class="w3-bar w3-black">
-      <a href="/" class="w3-bar-item w3-button w3-mobile"
-        ><b>Colloquia Latina</b></a
-      >
-      <a
-        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-        class="w3-bar-item w3-button w3-mobile"
-        >{{ page.author }}</a
-      >
-      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+
+    <div class="w3-top">
+        <div class="w3-bar w3-black">
+            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
+            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
+            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+        </div>
     </div>
-  </div>
-  <div style="height: 3em"></div>
+    <div style="height:7em"></div>
 
-  <div class="main-content">
-    <h1>{{page.title}}</h1>
-    <h3>{{page.subtitle}}</h3>
 
-    <div class="characters">
-      Persōnae:<br />
-      Puer, Mater, Pater, Isabellula
+    <div class="main-content">
+        <h1>{{page.title}}</h1>
+        <h3>{{page.subtitle}}</h3>
+
+        <div class="characters">
+            Persōnae:<br>
+            Pater, Philoponus Ludimagister, Puer, Propinquus
+        </div>
+
+        <div class="line-container" id="Puer.1">
+            <div class="line-character">
+                Puer
+            </div>
+            Salvus sīs mī Pater, salvē mea mātercula, precor vōbīs fēlīcem hunc diem germānulī, propitium vōbīs optō
+            Chrīstum sororculae.
+        </div>
+
+        {% assign prev_sequence = page.sequence | minus: 1 %}
+        {% assign next_sequence = page.sequence | plus: 1 %}
+
+        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
+
+        {% assign neighbors = files
+        | where: "type", "Colloquium"
+        | where: "author", page.author
+        | where: "collection", page.collection
+        %}
+
+        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
+        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
+
+
+        <div class="nav-buttons">
+            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+        </div>
     </div>
-
-    <div class="line-container" id="Puer.1">
-      <div class="line-character">Puer</div>
-      Salvus sīs mī Pater, salvē mea mātercula, precor vōbīs fēlīcem hunc diem
-      germānulī, propitium vōbīs optō Chrīstum sororculae.
-    </div>
-
-    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
-    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
-    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
-    files | where: "type", "Colloquium" | where: "author", page.author | where:
-    "collection", page.collection %} {% assign prev_page = neighbors | where:
-    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
-    where: "sequence", next_sequence | first %}
-
-    <div class="nav-buttons">
-      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-    </div>
-  </div>
 </body>
 
-DEDUCTIO AD LUDUM Personae Pater, Philoponus ludimagister, Propinquus Pater
-Signa te sacro signo Crucis. Duc nos Iesu Christe sapientissime dementes,
-potentissime imbecilles. Quaeso, mi Propinque, tu qui es versatus in studiis
-litterarum, ecquis est in hoc gymnasio optimus institutor puerorum? Propinquus
-Doctissimus quidem Varro, sed diligentissimus et vir probissimus Philoponus<a
-  href="#footnote.0"
-  ><sup>(1)</sup></a
->, nec eruditionis aspernandae. Habet Varro scholam frequentissimam, et domi
-numerosum gregem contubernalium. Philoponus non videtur delectari turba,
-paucioribus est contentus. Pater Hunc malo. Ellum in porticu gymnasii
-inambulantem. Fili, hoc est formatorium et quasi officina hominum et hic artifex
-formandi. Adsit tibi Christus, Magister. Aperi caput puer, et flecte poplitem
-dextrum, sicuti es edoctus: Sta jam rectus. Philoponus Prosperus sit nobis
-omnibus tuus adventus, ecquid rei est? Pater Hunc filiolum meum ad te adduco, ut
-ex belua hominem facias. Philoponus Dabo in eam rem operam sedulam. Fiet,
-revertetur ex pecude homo, ex nequam frugi, et bonus, id vero ne dubitaveris.
-Pater Quanti doces? Philoponus Si puer bene proficiat, vili: sin parum, caro.
-Pater Acute hoc dicis, et sapienter, ut omnia. Partiamur inter nos igitur hanc
-curam: tu ut sedulo instituas, ego ut benigne compensem tuam operam. (1)
-Philoponus, penultima brevi, id est, industrius, diligens, laboris amicus; aptum
-sane nomen Institutori puerorum.
+DEDUCTIO AD LUDUM
+Personae
+Pater, Philoponus ludimagister, Propinquus
+
+Pater
+Signa te sacro signo Crucis. Duc nos Iesu Christe sapientissime dementes, potentissime imbecilles. Quaeso, mi Propinque, tu qui es versatus in studiis litterarum, ecquis est in hoc gymnasio optimus institutor puerorum?
+
+Propinquus
+Doctissimus quidem Varro, sed diligentissimus et vir probissimus Philoponus<a href="#footnote.0"><sup>(1)</sup></a>, nec eruditionis aspernandae. Habet Varro scholam frequentissimam, et domi numerosum gregem contubernalium. Philoponus non videtur delectari turba, paucioribus est contentus.
+
+Pater
+Hunc malo. Ellum in porticu gymnasii inambulantem. Fili, hoc est formatorium et quasi officina hominum et hic artifex formandi. Adsit tibi Christus, Magister. Aperi caput puer, et flecte poplitem dextrum, sicuti es edoctus: Sta jam rectus.
+
+Philoponus
+Prosperus sit nobis omnibus tuus adventus, ecquid rei est?
+
+Pater
+Hunc filiolum meum ad te adduco, ut ex belua hominem facias.
+
+Philoponus
+Dabo in eam rem operam sedulam. Fiet, revertetur ex pecude homo, ex nequam frugi, et bonus, id vero ne dubitaveris.
+
+Pater
+Quanti doces?
+
+Philoponus
+Si puer bene proficiat, vili: sin parum, caro.
+
+Pater
+Acute hoc dicis, et sapienter, ut omnia. Partiamur inter nos igitur hanc curam: tu ut sedulo instituas, ego ut benigne compensem tuam operam.
+
+(1) Philoponus, penultima brevi, id est, industrius, diligens, laboris amicus; aptum sane nomen Institutori puerorum.
