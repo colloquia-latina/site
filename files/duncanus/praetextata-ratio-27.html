@@ -1,0 +1,462 @@
+New chat
+Latin Colloquium Transcription
+/
+I am going to first share with you a template, then the unadapted text of a colloquium that I would like you to modify to match the template. Does that work?
+
+Yes, that works perfectly! I'm ready to help you adapt your colloquium text to match your template.
+
+Please go ahead and share:
+
+The template first
+Then the unadapted colloquium text
+I'll carefully modify the colloquium content to align with the template's structure and style while preserving the original meaning and information.
+
+Here's the template. ---
+title: Praetextata Latine Loquendi Ratio - Colloquium Tertium
+subtitle: Dē Strēnulis Novī Annī, et Iūrāmentō Vītandō
+type: Colloquium
+author: Duncanus
+topic: New Year's Gifts, Oaths
+difficulty: Moderate
+sequence: 3
+character_count: 2
+permalink: /duncanus/praetextata-ratio-colloquium-tertium/
+---
+
+<!DOCTYPE html>
+
+<head>
+<title>{{page.title}}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+<link rel="stylesheet" href="/style-reading.css" />
+<link rel="stylesheet" href="/style-common.css" />
+<link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+<div class="w3-top">
+<div class="w3-bar w3-black">
+<a href="/" class="w3-bar-item w3-button w3-mobile"
+><b>Colloquia Latina</b></a
+>
+
+href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+class="w3-bar-item w3-button w3-mobile"
+>{{ page.author }}</a
+>
+<div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+</div>
+</div>
+<div style="height: 3em"></div>
+
+<div class="main-content">
+<h1>{{page.title}}</h1>
+<h3>{{page.subtitle}}</h3>
+
+<div class="characters">
+Persōnae:<br>
+Hierardus Diddīnus, Petrus Pillicānus
+</div>
+
+<div class="line-container" id="Hierardus.1">
+<div class="line-character">
+Hierardus
+</div>
+Quid est Petre, quod sīc prae laeticiā gestis? Quid tam laetus es, fronteque exporrēctā, atque hilārī? Quid ita frontem exporrigis, vultumque diffundis, et tē laetum exhibēs?
+</div>
+
+<div class="line-container" id="Petrus.2">
+<div class="line-character">
+Petrus
+</div>
+Rogās, quum sint hodiē trium Rēgum fēriae praecīdāniae?
+</div>
+
+<div class="line-container" id="Hierardus.3">
+<div class="line-character">
+Hierardus
+</div>
+Quid tum posteā?
+</div>
+
+<div class="line-container" id="Petrus.4">
+<div class="line-character">
+Petrus
+</div>
+Nescīs, quid hodiē facere solēmus, quī hanc in rem antesīgnānus assolēs esse? quī hāc in rē puppis et prōra solēs esse?
+</div>
+
+{% assign prev_sequence = page.sequence | minus: 1 %}
+{% assign next_sequence = page.sequence | plus: 1 %}
+{% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
+{% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection %}
+{% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
+{% assign next_page = neighbors | where: "sequence", next_sequence | first %}
+
+<div class="nav-buttons">
+<a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+<a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+</div>
+</div>
+</body>
+
+Perfect! I have the template and understand its structure. Now please share the unadapted colloquium text that you'd like me to modify to match this format.
+
+I'll pay attention to:
+
+The front matter (title, subtitle, author, topic, difficulty, sequence, character count, permalink)
+The HTML structure with proper styling links
+The character list format
+The line-by-line dialogue structure with character IDs
+The navigation buttons at the end
+Ready for the colloquium text whenever you'd like to share it!
+
+
+1761431676105_pasted-content-1761431676104.txt
+txt
+
+Here's the 27th colloquium:
+
+
+Reading the uploaded colloquium text to see what needs to be adapted
+Show working file
+Now I'll adapt this colloquium to match the template format. Let me create the properly formatted HTML file:
+
+
+Creating the adapted colloquium 27 following the template structure with proper front matter, HTML formatting, character dialogue structure, and navigation buttons
+colloquium-27-adapted.html
+Perfect! I've successfully adapted the 27th colloquium to match your template. Here's what I did:
+
+Key adaptations made:
+
+Front matter: Created proper YAML front matter with:
+Title: "Praetextata Latine Loquendi Ratio - Colloquium Vīcēsimum Septimum"
+Subtitle: "Dē Aprosdionysa, sīve Absurda"
+Sequence: 27
+Topic: Absurdities, Learning, Virtue
+Difficulty: Advanced (given the philosophical depth and length)
+Character count: 2
+HTML structure: Added all the proper header tags, stylesheets, and navigation bar matching your template exactly
+Character formatting: Converted "Persōnae" section to match template style with proper macrons (Nicolaus Nicolaī fīl. Amstelredāmus, Iōannēs Spānus)
+Dialogue structure: Reformatted all dialogue into the line-container format with unique IDs (e.g., "Nicolaus.1", "Ioannes.2")
+Macrons: Added proper long vowel markings (macrons) throughout the Latin text
+Navigation: Added the Liquid template code for Previous/Next buttons at the end
+View your adapted colloquium
+
+Colloquium 27 adapted
+Code · HTML 
+
+
+
+
+
+
+
+
+Latin Colloquium Transcription
+
+
+
+Colloquium 27 adapted · HTML
+Copy
+
+---
+title: Praetextata Latine Loquendi Ratio - Colloquium Vīcēsimum Septimum
+subtitle: Dē Aprosdionysa, sīve Absurda
+type: Colloquium
+author: Duncanus
+topic: Absurdities, Learning, Virtue
+difficulty: Advanced
+sequence: 27
+character_count: 2
+permalink: /duncanus/praetextata-ratio-colloquium-vicesimum-septimum/
+---
+
+<!DOCTYPE html>
+
+<head>
+<title>{{page.title}}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+<link rel="stylesheet" href="/style-reading.css" />
+<link rel="stylesheet" href="/style-common.css" />
+<link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+<div class="w3-top">
+<div class="w3-bar w3-black">
+<a href="/" class="w3-bar-item w3-button w3-mobile"
+><b>Colloquia Latina</b></a
+>
+<a
+href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+class="w3-bar-item w3-button w3-mobile"
+>{{ page.author }}</a
+>
+<div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+</div>
+</div>
+<div style="height: 3em"></div>
+
+<div class="main-content">
+<h1>{{page.title}}</h1>
+<h3>{{page.subtitle}}</h3>
+
+<div class="characters">
+Persōnae:<br>
+Nicolaus Nicolaī fīl. Amstelredāmus, Iōannēs Spānus
+</div>
+
+<div class="line-container" id="Nicolaus.1">
+<div class="line-character">
+Nicolaus
+</div>
+Quid ita dēsidēs ōciōsus, et mollī solūtus inertiā, laxātīs studiōrum habēnīs? Quid ita sedēs male fēriātus? Quid ita supīnō et inūtilī contābēscis ōciō? Quid ita sedēs ignāvus, inērs, discinctus, atque supīnus? Cūr animum ab omnibus laxāstī studiīs? Nōn est enim remissiōnis tempus. Quid ita tōtus animōque et corpore torpēs? Cūr ita vacuum studiīsque solūtum trānsmittis omne tempus? nec vel ūllam dās litterīs operam, nec līneam dūcis? Insolēns ita sedēs sine librōrum commerciō, quī nostrum omnium solēs esse studiōsissimus, et temporis observantissimus. Quid tēcum animō cōgitās? quid animō voluis? quās age iactās pectore cūrās? quibus cōgitātiōnibus agitāre? quae tē exercet animī agitātiō? Neque enim inūtiliter ōciārī vidēris. Quibus animī cūrīs teipsum torquēs? quae mentem tuam phantasmata versant? quae tē suspēnsum cōgitāta reddunt? aut quae phantasmata tē stupefaciunt? Sedēs quasi attōnitus et rigidus. quid imāginārīs animō? dēsidēs quasi obstipus, stupidus, et sēnsibus captus, obtūtuque dēfīxus in ūnō. Sedēs quasi rigidō capite, oculīs immōtīs et dēfīxīs in idem. Quid ita rigidum cernīs et tragicum, nē semel quidem aliō mōtīs oculīs, quam quō semel flexeris? Quid ita sedēs oculīs fīxīs fīrmīsque? quid ōra tenēs obtūtū sīc dēfīxa? quid ita ūnīus aspectū stupefactus haerēs? lūmina cūr sīc indēflexa tenēs, et eidem immōbilis haerēs? quid ita in ūnō eōdemque pendēs? quid ita immōbilibus oculīs ūnum idemque semper contuērīs? quid animō tam arduum versās, ut oculōs ab ūnō eōdemque nē semel quidem dēflectās? quid tam grave in mente cōgitātiōneque tuā versātur, ut oculōs nusquam vagārī sīnās, sed in idem semper fīxōs teneās? quae cōgitātiō animum tuum subit? Ehodum nihil audīs? Captusne es auribus? crēdō mentem tuam peregrīnārī in Hispāniīs. Opīnor tē animō Hesperiam tuam perambulāre, aut imāginārī aureōs montēs in Arabiā. Quid tuā mente persequeris, quod ita praesēns abēs, an quid vel apud Hispānōs, vel apud Antipodās agātur? Hēus tū nōn ūteris auribus? Tam hebetēs sunt tibi aurēs? Tam obtūsīs, tam stupidīs es auribus, ut nihil audiās? Cūr nōn praebēs mihi patulās aurēs? Cūr surdīs et obtūrātīs adversum mē ūteris auribus? Quid commeruī sōdēs, quod mihi difficilēs atque surdās praebēs aurēs?
+</div>
+
+<div class="line-container" id="Ioannes.2">
+<div class="line-character">
+Iōannēs
+</div>
+Hem, quid ais? Quid vīs? Aliud ēgī, nec intellēxī quid dīxeris. Dic ōrō tē dēnuō. Dic apertius, vix quicquam exaudīsse mihi videor.
+</div>
+
+<div class="line-container" id="Nicolaus.3">
+<div class="line-character">
+Nicolaus
+</div>
+Apage. Quid verba nihil profutūra vacuās diffundam in aurās? Quid opus est verba prōfundere ventīs? Nōn est cōnsilī inānēs ēdere vōcēs. Nōn canimus surdīs eandem cantilēnam bis. Nōn est bis eadem cantilēna surdīs occinenda. Nōn est operae pretium eandem cantilēnam bis repetere nihil exaudītūrīs.
+</div>
+
+<div class="line-container" id="Ioannes.4">
+<div class="line-character">
+Iōannēs
+</div>
+Dīc amābō tē dēnuō. Quid ita obfīrmās animum? Istam precor obfīrmātam exue mentem. Sine tē exōrem, precibus sī sit locus ūllus.
+</div>
+
+<div class="line-container" id="Nicolaus.5">
+<div class="line-character">
+Nicolaus
+</div>
+Quandō miserē cupis, dīcam. Tē rogābam, quidnam tēcum reputārēs, quid animō voluērēs, quid cōgitābundus sedērēs, quō tam vehementer animum tuum intenderēs.
+</div>
+
+<div class="line-container" id="Ioannes.6">
+<div class="line-character">
+Iōannēs
+</div>
+Id nimis longum sit explicāre, nōn est prōmptum nārrāre, nōn est facile dictū. Id sī tōtum referam, prius tempore quam verbīs dēstituar, prius mē tempus quam verba dēficiat, nōn fore mihi sat temporis timeō, tempus mihi fore nimis angustum, nimis breve, nimis exiguum, nec sat spāciōsum vereor. Timeō mihi tempus āvolātūrum, abitūrum, lāpsūrum, efflūxūrum, praetercursūrum citius, quam istud expedierō. Metuō nē mihi tempus effluat, ēlābātur citius, quam istud dictīs cōnsequar, dīcendō absolverō. Dīcam tamen nōnnihil. Sciās licet saltem paululum. Est enim memorātū et scītū nōn indīgnum. Dīgnum est nī fallor, quod sciās. Sedeō et trānsāctum aetātis meae tempus in mentem, et ad calculum revocō, vītamque meam pene tōtam exāctā lance pensiculō, et ad amussim perpendō, tempora temporibus comparāns, annōs annīs, et ācta āctīs, atque mē in dolōrem nōn levem cōniciō, animum meum nōn levī moeröre exulcerō atque cōnficiō.
+</div>
+
+<div class="line-container" id="Nicolaus.7">
+<div class="line-character">
+Nicolaus
+</div>
+Quid ita? Quī fit ut tē macerēs et dolōre affligās? ut tibi metipsī author sīs dolōris? ut tē animī angās, dum ācta vītae tempora cōgitātiōne percurrīs? Quōmodo animum tuum dolōribus afficiunt et exhulcerant tālia cōgitāta? Mīror equidem, cūr cum tēcum āctī temporis ratiōnem ineās, animō consterneris, et trīsticiā frangāris. Ego potius laetor et triumphō, quod hūc aetātis mihi sit ventum. Quandō superiōris vītae ratiōnem mente complector, et praeterita tempora recolō, vix crēdās quantō gaudiō tālis recordātiō animum meum tangat atque titillet. Fuī enim annīs superiōribus puer saepenumerō valētūdine parum fīrmā, nunc vērō grātiā Deō, pancratice et athletice valeō. Ēgī quondam īnfantem, et meipsum subinde ventrīs proluviē, honor auribus, contāmināvī: quīn sī vel in ignem, vel in aquam dēlāpsus fuissem, nōn quīvissem mihi met ipsī esse admīniculō. Nunc vērō iūstum corporis robur collēgī, et ad aetātem adultam virīlemque aspīrāvī. Nunc mihi rōbustīs adōlēvit vīribus aetās. Nunc relictīs nucibus, et exūtā praetextā, laus superīs, virīlem togam sūmpsī, et in numerum virōrum referor: nunc sum in virōrum albō, cum prius essem in puerōrum grege. Nōnne igitur laeter? quid nī sim igitur animō laetō?
+</div>
+
+<div class="line-container" id="Ioannes.8">
+<div class="line-character">
+Iōannēs
+</div>
+Loqueris, quasi nesciās, quid distent āera lupīnīs. Quod minimī faciendum est, id tū maximī dūcis. Quod anteuertendum sit omnibus, et prīmā mentiōne dīgnum, id tū vel silentiō praeterīs, vel omnibus rēbus posthābēs. Multō aliter ego sentiō atque tū, longē mihi mēns est alia atque tibi. Hīc tibi mēcum nōn convenit. Nēquāquam accēdō tuae sententiae. Hīc nōn assentior, nōn astipulor tibi. Neque verba neque sententiae nōbīs coeunt. Nostrae sententiae ex diametrō sēcum pugnant.
+</div>
+
+<div class="line-container" id="Nicolaus.9">
+<div class="line-character">
+Nicolaus
+</div>
+Quī dum? Dīc ergō quid tacitus tēcum volūtāveris animō, quod tē torserit ac cruciārit, quōs cūrārum flūctūs in pectore volueris, quō cūrārum aestuāveris ardōre, quō fluctuāveris aestū, quibus cōgitātiōnibus animum tuum distrinxeris, quibus cūrārum undīs cōnflictātus et iactātus sīs, in quās cōgitātiōnēs mentem tuam distrāxeris, quibus cūrīs cōgitātiōnibusque animum tuum agitāveris, quā tē torseris et affeceris sollicitūdine, quibus cōgitātīs tē sollicitum et anxium reddideris, quibus commentātiōnibus et agitātiōnibus mentem distinueris, quibus contemplātiōnibus tē occupāveris, quibus cūrārum ardōribus flagrāverit animus tuus, quibus animī mōtibus aestuāveris, quās trīstēs cōgitātiōnēs discusseris, quid contemplāns animō tēcum expenderis, quid tēcum in animō cōnsīderāveris, quae animī cōnsulta tēcum pēnsāveris, quid tēcum sollicitā cōgitātiōne pertractāveris, in quā contemplātiōne dēfīxus fuerit animus tuus, quid mente complexus sīs, quid animō comprehenderis, quid commentātus sīs animō, quid meditātus, quid animō cōgitātiōneque versāveris, quid ratiōne animōque lustrāveris, quid tēcum reputāveris, in quās cūrās animum tuum rapueris, et in quās sollicitūdinēs dīvīseris.
+</div>
+
+<div class="line-container" id="Ioannes.10">
+<div class="line-character">
+Iōannēs
+</div>
+Quid mente agitāverim, clārius et apertius, adverte, docēbō. Tōtīus vītae meae ratiōnem excutiēbam, et ab ipsīs iam inde incūnābulīs aetātem meam altius repetēns, nōn quemadmodum tū, cōgitātiōne trīstī prōsequēbar. Prīncipiō quidem mēcum in animō volūtābam, quōmodo nunc, sūmptā virīlī togā, plūs minus vīgintī nātus annōs, vīribus multō sim maiōribus, grātiā Deō, firmioribus, solidioribus, rōbustioribus et validioribus, quam cum essem nōn nisi annōrum decem (neque hīc disērepāmus) et quōmodo iam aliquot annōs in litterāriā versātus arēnā, in litterāriā palaēstrā exercitātus, manibus ferulae subditis, gymnasia Palladiā terendō, lūdōs litterāriōs frequentandō, et assidvam litterīs operam dandō, nōn mediocriter, laus superīs, prōmōverim. Deinde recolēbam animō atque pensīculābam, quōmodo in prīmō studiōrum ingressū, cum prīmum ultrā prīmās litterās paululum prōgressus, iam callerem ūnum atque alterum et nōmen suīs inclīnāre atque īnflectere cāsibus, et verbum modīs atque temporibus variāre, vīsus fuerim mihi vix habēre secundum, nūllī secundus esse. Vīsus fuerit vix quisquam inventū facilis, quī mē doctrīnā suā exaequāret. Meminī enim etiam nunc quae fuerit animī meī puerīlis īnsolentia atque ineptia. Rursus mente tractābam et percurrēbam, quōmodo cum prīmum ad Vergilium et Terentium, atque id genus aliōs authōrēs diurnīs nocturnīsque evolvendōs studiīs appulissem ingenium, auspice magistrō, cristās mīrum in modum extulerim, putāverimque et mihi persuāserim vel ipsum Erasmum ērudītiōne aut mihi cēdere, aut mē nōn admodum superāre. Et quōmodo cum subdium et in pūblicum prōdī rem, extrāque līmen pedēs ferrem, crēdiderim, quotquot in mē oculōs forte cōnīcerent, ac mē intuērentur, eōs omnēs meam ērudītiōnem admīrārī, quī tam magnōs scilicet versārem librōs, quantōs vidērent sub axillā gestāre et circumferre. Cumque per haec omnia sīc animum volūtārem, mentemque versārem, satis intellegēbam, quod secundō studiōrum meōrum annō maiōris et prōvectioris fuerim ērudītiōnis, longius fuerim studiō prōvectus, maiōrem fēcerim prōgressum in studiīs, meliōris et prōvectioris fuerim prōfectūs, magis prōfēcerim et prōmōverim, quam annō prīmō, atque ita longius prōmicuerim indiēs ac prōvolārim, dōnec eō nunc perfectionis prōdierim atque prōvectus sim, ut tam in graecīs quam latīnīs nōn admodum cuiusquam magistrī operam et admīniculum dēsīderem, utque nunc, quod dīcitur, sine cortice propemodum nāre queam, neque sit mihi admodum opus aut Polemōne quōpiam, aut Thēseō, aut Dēliō nātātōre, aut Oedipō coniectōre. Atque hāctenus quae recēnsuī, rīdicula magis, et puerīlium crepundiōrum similiōra sunt, quam magnī momentī. Quīn et hāctenus inter nōs bene convenit. Postrēmō autem aliō flectēbam animum, et mēcum perpendēbam, quā ratiōne, et quibus mōribus, quibusve vīvendī modīs vītam hāctenus dūxissem, et trānsēgissem: atque tum dēmum trīsticiā nōn mediōcrī mē ipsum cōnflictābam.
+</div>
+
+<div class="line-container" id="Nicolaus.11">
+<div class="line-character">
+Nicolaus
+</div>
+Quid ita? Num quid perperam aut sēditiōsē, aut violenter aut molestē? num quid importūnē aut īnīqvum? num quid scelestum atque nefārium? Num quid turpe, inhonestum et dēdecōrosum? Num quid flāgitiī patēfēceris? Quid admīsistī cūlpae? Quid dēliquistī? Quid peccāvistī? Ō mē infelicem! Num quam stuprum commīsistī, aut adulterium? ō mē miserum! Num cruentum aliquod facinus? mē miserum, mē perditum! Num caedis māculam contrāxistī? Num sangvinis humānī lābēs eluenda sitiat? Num fundō quem, aut frangō, aut petō quem violentiā? Num hōmicīdium perpretāvistī aliquod? mē miserissimum omnium, quī tam amīcus sim malō tantī?
+</div>
+
+<div class="line-container" id="Ioannes.12">
+<div class="line-character">
+Iōannēs
+</div>
+Quid tū tam impotenter exclāmās, et tam tūmidās iaculāris vōcēs? Nihil commissum est, dē quō oporteat tam exclāmāre trāgicē. Nihil istīusmōdī admissī vel in somniīs. Etiamsī aliud sēcus vīxerim quam oportuit, et quam mē dēcuit, nullīus tamen tam sceleris rea mea manus est, propter quod magnoperē nōn liceat expīātiōnem sperāre.
+</div>
+
+<div class="line-container" id="Nicolaus.13">
+<div class="line-character">
+Nicolaus
+</div>
+Dīs grātiās, dīs grātiās agō maximās, bonī aliquid affectātō. Iam lēvior est meus dolor, et mē paulātin recipiō. Iam lēniōrī saucius sum aurā, nec tot fulgoribus excrucior.
+</div>
+
+<div class="line-container" id="Ioannes.14">
+<div class="line-character">
+Iōannēs
+</div>
+Bene exclāmās. Nihil tamen perperam, nihil immōdestē ēgī: sed neque iterum idem aut aequē bene, aut tam rēctē, ut opportuit. Rēctius vīvendī fuit, et ratiōnem studiōrumque et vītae meae cautius praestantius ūtrimque īnstituendī.
+</div>
+
+<div class="line-container" id="Nicolaus.15">
+<div class="line-character">
+Nicolaus
+</div>
+Quā tam vīā sīve metā?
+</div>
+
+<div class="line-container" id="Ioannes.16">
+<div class="line-character">
+Iōannēs
+</div>
+Nōnne tū illam perīnsīgnem veram ipsam Philōsophiam nōstī?
+</div>
+
+<div class="line-container" id="Nicolaus.17">
+<div class="line-character">
+Nicolaus
+</div>
+Quam? Prō Dī Immortālēs, est aliqua alia Philōsophia?
+</div>
+
+<div class="line-container" id="Ioannes.18">
+<div class="line-character">
+Iōannēs
+</div>
+Īnficiārī nōn possum, aliam esse velutī profānam, et prophānis hominum studīīs atque oblectāmentis mancipātam, quam ipse quoque Apostolus omnis lūcis expers, et fumōsam dīxit. Illa namque, cuius Thālēs, Pythāgorās, Platō, Aristotelēs, Cleanthēs, Arisōn, Zēnō, Chrysippus, Carneadēs, Epicūrus, et aliī illam profitentēs, magnī quondam habitī sunt, Christī vēritātem adeptīs nihil prōficit. Dē ipsā vērā Philōsophiā quaerō, quae sacris bibliīs cōntinētur, quamque sacrae litterae nōs docent. Quae tam vexa tam cōntrōversa, tam vexāta iam olim, tam ancipitī et ventōsā disceptātiōne oppugnāta, disputātiōne obtrita, et tam ancipitī in discrīmine versāta est, sub tot sententīīs, tot opīniōnibus, tamque variīs haereticōrum phrēnēticōrum dōgmatibus, et haereticōrum monstrīs et portentīs, ac sub tam multīs ratiōnum involūcris et ambigiis.
+</div>
+
+<div class="line-container" id="Nicolaus.19">
+<div class="line-character">
+Nicolaus
+</div>
+Quam? Nōnne Theōlogiam vocās?
+</div>
+
+<div class="line-container" id="Ioannes.20">
+<div class="line-character">
+Iōannēs
+</div>
+Istam ipsam.
+</div>
+
+<div class="line-container" id="Nicolaus.21">
+<div class="line-character">
+Nicolaus
+</div>
+Nōvī hanc.
+</div>
+
+<div class="line-container" id="Ioannes.22">
+<div class="line-character">
+Iōannēs
+</div>
+Quid sapis dē istā?
+</div>
+
+<div class="line-container" id="Nicolaus.23">
+<div class="line-character">
+Nicolaus
+</div>
+Istam ipsam.
+</div>
+
+<div class="line-container" id="Ioannes.24">
+<div class="line-character">
+Iōannēs
+</div>
+Eam profectō et ipse multīs efferendam praecōniīs, summīsque evehendam laudibus, et prīmō maximōque studiō dīgnam cēnseō, eiusque professōrēs nōn mediocriter suspiciendōs et observandōs, sed amplīs honōribus cumulandōs exīstimō. Sed age, crēdis nē Analphabētōs, Amūsōs, atque illitterātōs, quīque eximiae istīus Theōlogiae sint rūdēs, in dīvōrum quoque referendōs numerum? aspīrātūrōs ad coelum, sī modo sibi comparārint lēgitimum viāticum illīc ūsuī futūrum?
+</div>
+
+<div class="line-container" id="Nicolaus.25">
+<div class="line-character">
+Nicolaus
+</div>
+Quid nī crēdam? Omnibus crēdō et ērudītīs et inērudītīs patēre viam ad superōs, nisi quī sibi ipsīs illam praeclūdant. Omnibus tam doctīs quam indoctīs crēdō beātitūdinis et immortālitātis palmam in mediō positam, quam sudōribus assequantur. Caeterūm doctōs, eōsque quī suae doctrīnae mūneribus et officiīs rīte perfūnctī sint, putō maiōrī glōriā cōnspicuōs fore: quemadmodum nunc nūper cōnciōnātōrem quendam magnī nōminis dēpraedicāntem audīvī.
+</div>
+
+<div class="line-container" id="Ioannes.26">
+<div class="line-character">
+Iōannēs
+</div>
+Rēctē putās. Vērum crēdis nē etiam tam doctīs quam indoctīs patēre ātrī iānuam Dītis, sī secus vīvant quam dīdicerint? Quīn putās nē iūxtā litterātōs et illitterātōs aliquandō vītam dūcere coelō indīgnam, atque sī ita pergant nēquiter et perperam vīvere et hanc vītam sīc expleant, ob id praecipitēs itūrōs ad īnfernās domōs, et in extrēmae perdītiōnis barathrum, quod Deus prohibeat, dēmergendōs, unde nūlla sit ēmergendī spēs umquam?
+</div>
+
+<div class="line-container" id="Nicolaus.27">
+<div class="line-character">
+Nicolaus
+</div>
+Nōn eam īnficiās istud fīerī posse, quanvīs meō met mē iūgulem gladiō.
+</div>
+
+<div class="line-container" id="Ioannes.28">
+<div class="line-character">
+Iōannēs
+</div>
+Līquet igitur, ut fatēris, nūllam scientiam quamvīs rērum sublīmium sine virtūtibus nōs aethereīs sēdibus reddere dīgnōs. Neque vel ipsōs Theōlogōrum prīmicēriōs, Coryphaeōs, et summōs, in sōlā dīvīnārum rērum cognitiōne, magis beātōs fore, quam ex īnfimā hominum faece, aut fīgulōs, aut cerdōnēs, aut fullōnēs, aut pelliōnēs, aut bāiulōs, aut rhedāriōs āctōrēs, aut quī dīvitibus sint vel ā pedibus, vel ā mātulis, vel ā scōpis, vel ā culīnīs, vel ab expūrgandīs sīve latrīnīs, sīve forīcīs, aut mediastīnōs, aut dēnique aliōs pinguī Minervā hominēs. Sed cōnstat utrīsque tam litterātīs quam illitterātīs iūxtā opus esse et pietāte, et vītā sānctissimē et honestissimē āctā. Studēmus enim, et litterīs operam nāvāmus (sīcut mihi persuāsum habeō) nōn ut dīvitēs ēvādāmus, nōn ut multa glōriōsē nōrīmus, nōn ut in pretiō ubīque et honōre sīmus.
+</div>
+
+<div class="line-container" id="Nicolaus.29">
+<div class="line-character">
+Nicolaus
+</div>
+Istud sciō.
+</div>
+
+<div class="line-container" id="Ioannes.30">
+<div class="line-character">
+Iōannēs
+</div>
+Exspectā, nōndum habēs omnia, sed ut bene beātēque vīvāmus. Nōn vīvimus ut duntaxat studēāmus, et absolūtā studendī cyclopaediā nōbīs continuō perfectī videāmur. Nam scientia, ūtilissima quidem illa et pene necessāria, ad cōnstantem probātamque vītam, nōn nisi viam mōnstrat et forēs aperit, idque mentī praestat quod lux oculīs. Iam quid prōfuerit, discussīs tenebrīs in clārō versārī lūmine, sī obthūrātīs oculīs, et quasi fenestrīs animī serātīs clāthrātīsque, in praecipitium, aut in lacum ruere mālīs, quam rēctam īnsistere viam? Rursus quid iūverit, quod parentēs tibi quondam puerulō mānsum in ōs īnsēruerint, tēque et comedere, et vestibus ūtī condocēfēcerint, sī nunc mālīs aut nūdus frīgore ūrī, et hībernīs rīgōribus enēcārī, quam vestibus et parandīs et induendīs operam dare? aut inediā atque fame exhaurīrī, tābēscere, cōnficī, atque perīre, tibīque continentī et obstinātō iēiūniō mortem cōnscīscere accelerāreque, quam latrāntī stomachō rēctē cōnsulere, et ventrī inānī atque famēlicō indulgēre, quod stimulante fame et necessitāte urgente postulat? Sīc et multa quidem scīre, praeclārum quidem est, et magnō studiō affectandum: at nihil bonī patrāre, prout scientia dictet, oberit magis quam prōderit.
+</div>
+
+<div class="line-container" id="Nicolaus.31">
+<div class="line-character">
+Nicolaus
+</div>
+Quid ergō suādēs faciāmus?
+</div>
+
+<div class="line-container" id="Ioannes.32">
+<div class="line-character">
+Iōannēs
+</div>
+Quid aliud, quam ut studēāmus quidem prō virīlī, et ad summam omnium artium arcem Theōlogiam nōs aliquandō cōnferāmus, quō prōsīmus et aliīs, at prīmum et maximē omnium vulneribus et mentis et corporis medēāmur? Deinde ut tōtīs nervīs in virtūtēs incumbāmus, et prae Deō, mundī omnia quamvīs pretiōsissima prō nihilō dūcāmus ac contemnāmus? Ad huiusmodī studia sumus iamiam properandī, et ācribus fingendī sine fīne rotīs, sī modo vāsa ēlectiōnis (quemadmodum loquitur dīvīnum ōrāculum) exīre cupimus. Sed hōra nōs ad litterārium vocat audītōrium. Tempus monet ut litterāriīs audītiōnibus nōs reddāmus. Haec itaque intermittāmus, aliās sī vōlēs, dē iīsdem lātius āctūrī.
+</div>
+
+<div class="line-container" id="Nicolaus.33">
+<div class="line-character">
+Nicolaus
+</div>
+Quid nī velim? Nihil est, quod aequē velim. Nihil mihi antīquius, nihil cārius istīusmōdī verbīs, quibus mē pulchrē docuistī quid factū sit optimum. Sed eāmus, nōsque reddāmus audiendīs lēctiōnibus, ut temporī intersīmus litterāriīs ācrōāmātīs, nē aut male audiāmus, quod sērius nōs praesentēs exhibuerīmus, aut poenās dēmus.
+</div>
+
+<div class="line-container" id="Nicolaus.34">
+<div class="line-character">
+Nicolaus
+</div>
+Eāmus.
+</div>
+
+{% assign prev_sequence = page.sequence | minus: 1 %}
+{% assign next_sequence = page.sequence | plus: 1 %}
+{% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
+{% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection %}
+{% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
+{% assign next_page = neighbors | where: "sequence", next_sequence | first %}
+
+<div class="nav-buttons">
+<a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+<a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+</div>
+</div>
+</body>
