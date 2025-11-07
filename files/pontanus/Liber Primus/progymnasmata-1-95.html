@@ -1,0 +1,110 @@
+---
+title: Progymnasmata Latinitatis - Prōgymnasma Nōnāgēsimum Quīntum
+subtitle: Hebraea lingua
+type: Colloquium
+author: Pontanus
+topic: Hebrew Language, Sacred Languages
+difficulty: Advanced
+sequence: 95
+character_count: 2
+permalink: /pontanus/progymnasmata-liber-primus-progymnasma-nonagesimum-quintum/
+---
+
+<!DOCTYPE html>
+
+<head>
+    <title>{{page.title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/style-reading.css" />
+    <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+    <div class="w3-top">
+        <div class="w3-bar w3-black">
+            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
+            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
+            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+        </div>
+    </div>
+    <div style="height: 3em"></div>
+
+    <div class="main-content">
+        <h1>{{page.title}}</h1>
+        <h3>{{page.subtitle}}</h3>
+
+        <div class="characters">
+            Persōnae:<br>
+            Aelius, Maximinus
+        </div>
+
+        <div class="line-container" id="Aelius.1">
+            <div class="line-character">
+                Aelius
+            </div>
+            Hebraeam dici potest Deus ipse invenisse per se, cum reliquae ab hominibus inventae et expolitae sint. Eadem ipse cum genere nostro, et nos cum illo: et angeli nobiscum, et nos cum angelis saepenumero collocuti sumus. Eadem unigena DEI IESUS CHRISTUS, cum in terris corpoream indutus naturam degeret, conciones habuit, et directum ad caelos iter monstravit. De Plauto notum est illud Epii Stolonis, a Quintiliano repetitum: Musas, si latine loquantur, Plautino sermone usuras, quia nimirum verborum Latinorum auctor est elegantissimus, seu princeps in latina eloquentia, ut Gellius censet. Nonne magis optabimus nos ea lingua uti posse, qua Deum esse usum cognovimus? Singulae item literae admirandam multis in locis vim et energiam habent, reconditosque sensus, et divinos significatus efficiunt.
+        </div>
+
+        <div class="line-container" id="Maximinus.2">
+            <div class="line-character">
+                Maximinus
+            </div>
+            Frequens Iudaeos colloquentes audivi horrida omnino, ac difficilis pronuntiatu mihi prae caeteris visa est haec lingua.
+        </div>
+
+        <div class="line-container" id="Aelius.3">
+            <div class="line-character">
+                Aelius
+            </div>
+            Non tamen horridior, neque asperior quam vel Turcica, vel Persica, vel Aethiopica: quas nihilominus percipi, et commode pronuntiari a nostrarum regionum hominibus, cum in illis oris aliquandiu versati fuerint, ne tu quidem nescis. Nec ego satis dispicio, quamobrem adeo inconcinna, et dura videri debeat oratio, quae sua sponte, scriptore id non laborante, ad aptos numeros venit.
+        </div>
+
+        <div class="line-container" id="Maximinus.4">
+            <div class="line-character">
+                Maximinus
+            </div>
+            Ad quos numeros? Quis hoc affirmat?
+        </div>
+
+        <div class="line-container" id="Aelius.5">
+            <div class="line-character">
+                Aelius
+            </div>
+            D. Hieronymus hebraice doctissimus. Is Isaiae orationem phaleratam, et apud Prophetas creberrima carmina hexametra, iambica, sapphica reperiri: imo quosdam pene totos versibus confectos testatur.
+        </div>
+
+        <div class="line-container" id="Maximinus.6">
+            <div class="line-character">
+                Maximinus
+            </div>
+            Testis omni exceptione maior Hieronymus.
+        </div>
+
+        <div class="line-container" id="Aelius.7">
+            <div class="line-character">
+                Aelius
+            </div>
+            Est insuper pudica admodum et verecunda haec lingua, et sine honestarum aurium offensione plerumque effert, quae turpicula, parumque casta sunt: quam illi laudem Graeca et Latina merito inviderint, in quibus ad res obscoenas explicandas (in Graeca praesertim) nimis copiosam vocabulorum sylvam, et loquendi nimis multa genera invenias.
+        </div>
+
+        <div class="footnote" id="footnote.1">
+            <a href="#Aelius.1">(1)</a> <i>mūsās plautīnō sermōne:</i> Idem Quintil. de Xenophonte lib.10. cap.1. Adde quod M. Tullius ne Thucydidem quidem aut Xenophontem utiles oratori putat, quanquam illum bellicum canere, huius ore Musas esse locutas existimet. In eodem cap. longe admodum infra. Quid ego commemorem Xenophontis iucunditatem illam inaffectatam, sed quam nulla possit affectatio consequi, ut ipsae finxisse sermonem Gratiae videantur. Celebre est etiam Cic. illud de Platone in orat. perf. Iovem, si, ut aiunt Philosophi, graece loqui velit, Platonis sermone usurum. Non potuit certe maior hisce scriptoribus ornatissimae dictionis, et omni numero consummatae elegantiae laus impertiri.
+        </div>
+
+        {% assign prev_sequence = page.sequence | minus: 1 %}
+        {% assign next_sequence = page.sequence | plus: 1 %}
+        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
+        {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection",
+        page.collection %}
+        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
+        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
+
+        <div class="nav-buttons">
+            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+        </div>
+    </div>
+</body>
