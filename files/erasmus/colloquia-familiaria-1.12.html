@@ -1,0 +1,92 @@
+---
+title: Colloquia Familiaria - Domestica Confabulatio
+subtitle: Cūr nōn vīsīs?
+type: Colloquium
+author: Erasmus
+topic: Not Visiting, Excuses
+difficulty: Intermediate
+sequence: 3e
+character_count: 2
+permalink: /erasmus/colloquia-familiaria-domestica-confabulatio-cur-non-visis/
+---
+
+<!DOCTYPE html>
+
+<head>
+    <title>{{page.title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/style-reading.css" />
+    <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+    <div class="w3-top">
+        <div class="w3-bar w3-black">
+            <a href="/" class="w3-bar-item w3-button w3-mobile"><b>Colloquia Latina</b></a>
+            <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+                class="w3-bar-item w3-button w3-mobile">{{ page.author }}</a>
+            <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+        </div>
+    </div>
+    <div style="height: 3em"></div>
+
+    <div class="main-content">
+        <h1>{{page.title}}</h1>
+        <h3>{{page.subtitle}}</h3>
+
+        <div class="characters">
+            Persōnae:<br>
+            Geta, Syrus
+        </div>
+
+        <div class="line-container" id="Geta.1">
+            <div class="line-character">
+                Geta
+            </div>
+            Quid caussae est, quod tam diū nōs nōn invīseris? Quid reī est, quod nōs tam rārō vīsīs? Quid accidit, quod tantō tempore nōs nōn adieris? Quārē tam rārus es salūtātor? Quid sibi vult, quod nōs tam diū nōn convēneris? Quid obstitit, quō minus vīsās nōs frequentius? Quid impedīmentō fuit, quō minus iam diū fēceris nōbīs tuī videndī cōpiam?
+        </div>
+
+        <div class="line-container" id="Syrus.2">
+            <div class="line-character">
+                Syrus
+            </div>
+            Nōn licuit per ōtium. Voluī quidem, at nōn licuit mihi per mea negōtia. Hāctenus nōn sinēbant negōtia, ut tē vīserem. Nōn patiēbantur undae negōtiōrum, quibus involvēbar, ut tē salūtārem. Occupātior fuī, quam ut potuerim. Tam variīs distringēbar cūrīs, ut mihi nōn fuerit līberum adīre tē: vix ipsī mihi fuit cōpia meī, sīc mē tōtum molesta quaedam negōtia possidēbant. Negōtiīs meīs imputābis, nōn mihi. Nōn dēfuit voluntās, sed vetuit necessitās. Hāctenus nōn vacāvit. Hāctenus nōn contigit ōtium. Hāctenus nōn fuit vacuum. Nōn licuit per valētūdinem. Nōn licuit per tempestātem.
+        </div>
+
+        <div class="line-container" id="Geta.3">
+            <div class="line-character">
+                Geta
+            </div>
+            Equidem accipiō tuam excūsātiōnem, sed hāc lēge, nē saepius ūtāris. Excūsātiō tua iūstior est, quam vellem, sī quidem valētūdō fuit in caussā. Hāc lēge mihi pūrgātus eris, sī, quod cessātum est, officiō sarciās: sī superiōrem cessātiōnem crebrā vīsātiōne pēnsēs.
+        </div>
+
+        <div class="line-container" id="Syrus.4">
+            <div class="line-character">
+                Syrus
+            </div>
+            Tū nihil mōrāris istiusmodī officia nimium vulgāria. Amīcitia nostra fīrmior est, quam ut sit officiīs istīs vulgāribus alenda. Satis crebrō vīsit, quī cōnstanter amat.
+        </div>
+
+        <div class="line-container" id="Geta.5">
+            <div class="line-character">
+                Geta
+            </div>
+            Male sit istīs cūrīs, quae tē nōbīs adimunt. Quid imprecor istīs negōtiīs, quae tālem amīcum nōbīs invident? Pessimē sit istī febrī, quae nōs tam gravī dēsīderiō torsit tuī. Male pereat ista febris, tē quidem incolumī.
+        </div>
+
+        {% assign prev_sequence = page.sequence | minus: 1 %}
+        {% assign next_sequence = page.sequence | plus: 1 %}
+        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
+        {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection",
+        page.collection %}
+        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
+        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
+
+        <div class="nav-buttons">
+            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+        </div>
+    </div>
+</body>

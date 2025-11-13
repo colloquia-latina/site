@@ -1,0 +1,426 @@
+---
+title: Erasmus
+type: Author
+permalink: /erasmus/
+---
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{ page.title }}</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-list.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile">
+        <b>Colloquia Latina</b>
+      </a>
+      <div class="w3-bar-item w3-mobile w3-center">
+        <i>{{ page.title }}</i>
+      </div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <a href="/all-authors-list/">
+      <<< Auctores</a>
+
+        <h1>{{ page.title }}</h1>
+        <h2>Ecce, haec sunt colloquia quae {{ page.title }} scripsit:</h2>
+
+        <div style="padding-bottom: 3em">
+          <div class="row">
+            <div class="column">
+              <div class="card">
+                <a href="/erasmus/colloquia-tomus-primus/">
+                  <h3>Liber Primus</h3>
+                </a>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <a href="/erasmus/colloquia-tomus-secundus/">
+                  <h3>Liber Secundus</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <ul>
+          {% assign files_list = site.html_pages | where_exp: "page", "page.path
+          contains 'files/'" %} {% assign author_pages = files_list | where_exp:
+          "page", "page.author == 'Erasmus'" | where_exp: "page", "page.type ==
+          'Colloquium'" | sort: "sequence" %} {% for page in author_pages %}
+          <li>
+            <a href="{{ page.url }}">{{ page.title }}</a>
+            <div class="subtitle">{{page.subtitle}}</div>
+          </li>
+          {% endfor %}
+        </ul>
+
+        <div class="note">
+          Erasmus, Desiderius, d. 1536. Desiderii Erasmi Roterodami colloquia familiaria. ad optimarum editionum fidem
+          diligenter emendata, cum succincta difficiliorum explanatione. Ed. stereotypa. Lipsiae. sumptibus Ottonis
+          Holtze. 1867-1872. 771 pp. (2 vols)
+          <br />
+          Source:
+          <a href="https://web.archive.org/web/20160220004338/http:/www.stoa.org/hopper/text.jsp?doc=Stoa:text:2003.02.0006"
+            target="_blank">Stoa.org</a>
+          <br />
+          Thīs version created by Meagan Ayer for Dickinson College Commentariēs,
+          2024.
+          <br />
+          Desiderius Erasmus. Colloquia familiaria
+          <br />
+          Dē ūtilitāte colloquiōrum ad lēctōrem
+          <br />
+          Adeō nunc in omnēs et in omnia per ūniversum orbem grassātur comitāta Furiīs ή διαβολή, ut tūtum nōn sit ūllum
+          ēmittere librum, nisi satellitō mūnītum. Quamquam quid satis esse tūtum possit adversus sȳcophantae morsum,
+          quī, velut aspis ad vōcem incantantis, ita ad omnem pūrgātiōnem quamvīs iūstissimam obtūrat aurēs? Prīma pars
+          huius operis, quae mea fuit et nōn mea, temeritāte cuiusdam erat ēdita. Quam cum ingentī applausū vidērem
+          exceptam ā studiōsīs, abūsus sum affectū vulgārī ad prōfectum studiōrum. Quandoquidem nec medicī semper
+          aegrōtīs ministrant salūberrima, sed illīs nōnnihil concēdunt ob hoc ipsum, quod vehementer appetant. Itidem
+          mihi vīsum est, hoc genus illecēbrīs inēscāre teneram aetātem, quae iūcundīs facilius dūcitur, quam seriīs aut
+          exāctīs. Itaque, quod ēditum erat, repūrgāvī; deinde adiēcī quae mōribus etiam fōrmandīs condūcerent, velut
+          irrēpēns in animōs adulēscentium, quōs rēctē scrīpsit Aristotelēs inidōneōs audītōrēs ēthicae philosophiae,
+          dumtaxat eius quae seriīs praeceptīs trāditur. Quodsī quis clāmet, indecōrum hominī senī sīc puerīliter
+          lūdere, nihil moror quam puerīliter, modō ūtiliter. Et, sī laudantur līttterātōrēs aetāte prōvectī, quī
+          pueritiae crūstulīs blandiuntur, elementa velint ut dīscere prīma; mihi nōn arbitror vitiō vertī dēbēre, quod
+          similī studiō iuventūtem illectō, vel ad ēlegantiam Latīnī sermōnis, vel ad pietātem. Adde quod bonae
+          prūdentiae pars est, nōsse stultās vulgī cupiditātēs et absurdās opīniōnēs. Eās arbitror satius ex hōc libellō
+          dīscere, quam experientiā stultōrum magistrā. Multīs amāra sunt grammaticēs praecepta: Aristotelēs ēthicē nōn
+          est apta puerīs: theologia Scotī minus; nē virīs quidem admodum ūtilis ad parandam bonam mentem: et plūrimum
+          habet momentī, gustum optimārum rērum prōtinus īnsēvisse tenerīs animīs. Et haud sciō an quidquam dīscitur
+          fēlīcius, quam quod lūdendō dīscitur. Est hoc nīmirum sānctissimum fallendī genus, per impostūram dare
+          beneficium. Laudantur enim medicī, quī sīc fallunt aegrōtōs. Et tamen sī nihil hīc aliud quam nūgātus fuissem,
+          vidēbantur lātūrī; nunc quoniam praeter linguae polītiem īnspersī quaedam, quae mentem īnstruant ad
+          religiōnem, calumniantur, ac perinde quasi dogmata Chrīstiānae professiōnis hīc seriō prōnūntientur, ita
+          syllabās etiam ad vīvum excutiunt. Id quam faciant inīquē, magis erit perspicuum, ubi dēclārārō colloquiōrum
+          aliquot nōn vulgārem ūtilitātem. Ut enim omittam tot seriās sententiās mediīs iōcīs admīxtās, tot fābulās, tot
+          historiās, tot rērum nātūrās dignās cōgnitū: in colloquiō dē vīsendō loca sacra cohibētur superstitiōsus et
+          immodicus quōrundam affectus, quī summam pietātem esse dūcunt vīdisse Hierosōlymam: et hūc per tanta terrārum
+          marisque spatia currunt senēs episcopī, relictō grege, quī cūrandus erat: hūc virī prīncipēs, relictā familiā
+          ac ditiōne: hūc marītī, relictīs domī līberīs et uxōre, quōrum mōribus ac pudīcitiae necessārius erat custōs:
+          hūc adulēscentēs ac fēminae, nōn sine gravī discrīmine mōrum et integritātis. Quidam etiam iterum atque iterum
+          recurrunt, nec aliud faciunt per omnem vītam, et interim superstitiōnī, incōnstantiae, stultitiae, temeritātī
+          praetexitur religiōnis titulus, ac dēsertor suōrum, contrā doctrīnam Paulī, sānctimōniae laudem aufert, ac
+          sibi quoque pietātis omnēs numerōs explēsse vidētur. Paulus 1 Timoth. 2. intrepidē prōnūntiat: Sī quis autem
+          suōrum, et maximē domesticōrum, cūram nōn habet, fidem abnegāvit et est īnfidēlī dēterior. Atquī hīc Paulus
+          loquī vidētur dē viduīs, quae līberōs atque nepōtēs neglegunt, idque praetextū religiōnis, dum sēsē mancipent
+          obsequiīs ecclēsiae. Quid dictūrus dē marītīs, quī dēstitūtīs tenerīs līberīs, uxōre iuvenculā, idque in rē
+          tenuī, proficīscuntur Hierosōlymam? Ex multīs ūnicum exemplum prōferam, nec tam recēns, ut metuenda sit
+          invidia, nec tam vetus, quīn nepōtēs supersint, quōs damnī magnitūdō nōn sinit oblīvīscī reī gestae. Vir
+          quidam praepotēns dēcrēverat ante mortem invīsere Hierosōlymam, piō quidem animō, sed parum fēlīcī cōnsiliō.
+          Rēbus igitur ōrdināțīs, facultātum omnium, uxōris, quam gravidam relīquit, oppidōrum et arcium cūram
+          tūtēlamque commīsit archiepīscopō, ceu parentī. Ubi rūmor allātus est, hominem in eā peregrīnātiōne periisse,
+          archiepīscopus prō parente gessit praedōnem: occupāvit possessiōnēs omnēs dēfūnctī: dēnique et arcem
+          mūnītiōrem, in quam gravida cōnfūgerat, vī expugnāvit: et nē superesset ultor ātrōcissimī factī, gravida
+          cōnfossa simul cum fētū periit. Nōnne pium erat, tālī virō dissuādēre perīculōsam et nōn necessāriam
+          prōfectiōnem? Huius generis quam multa comperiantur exempla, cēterīs aestīmandum relinquō. Nē quid interim
+          dīcam dē sūmptibus, quōs, ut fateāmur nōn omnīnō perīre, tamen nēmō prūdēns nōn fatebitur in ūsūs longē
+          meliōrēs expendī potuisse. Quod autem ad religiōnem attinet, dīvus Hieronymus laudat Hilāriōnem, quod, cum
+          esset Palaestīnus, et in Palaestīnā vīveret, tamen semel duntaxat vīserit Hierosōlymam, ob locī vīcīniam, nē
+          vidērētur contemnere loca sacra. Sī meritō laudātus est Hilāriōn, quod abstinuit ab Hierosōlymā tam vīcīnus,
+          nē deum angustō locō claudere vidērētur; semel tantum adierit, ob locī propinquitātem, nē quōs offenderet;
+          quid dīcendum dē hīs, quī ex Angliā et Scōtiā tantīs impendīīs per tot discrīmina petunt Hierosōlymam;
+          praesertim domī relictīs cārissimīs, quibus iuxtā doctrīnam apostolī dēbent perpetuam cūram? Clāmat sānctus
+          Hieronymus: Nōn magnum est Hierosōlymīs fuisse; sed bene vīxisse magnum est. Et tamen aetāte Hieronymī
+          probābile est, ēvidentōra vestīgia veterum monumentōrum exstitisse, quam nunc exstant. Dē vōtīs disputātiōnem
+          aliīs relinquō; tantum hoc agit colloquium, nē quis temerē tālia vōta suscipiat. Id esse vērum, dēclārant haec
+          mea verba: Praesertim cum domī habērem uxōrem, integrā adhūc aetāte, līberōs et familiam, quae pendēbat ex mē
+          et operā meā quotīdiānā alēbātur: et cētera quae sequuntur. Dē vōtīs igitur susceptīs nihil dīcam, nisi quod
+          sī summus essem pontifex, nōn admodum gravātē relaxārem obstrīctōs. In suscipiendīs, quemadmodum fateor fierī
+          posse, ut aliquis cum frūctū pietātis eat Hierosōlymam, ita nōn dubitārem, multīs, ex rērum circumstantiīs,
+          dare cōnsilium, ut eās impēnsās, tempus et operam īnsūmerent in alia, quae propius condūcunt ad vēram
+          pietātem. Haec arbitror esse pia: eōque cōnsīderātā multōrum vel levitāte vel ignōrantiā vel superstitiōne,
+          vīsum est super eā rē monēre iuventūtem: neque videō quōs offendere dēbeat haec admonitō, nisi forte quōsdam
+          istōs, quibus cārior est quaestus quam pietās. Nec illic damnō pontificiās indulgentiās, aut diplōmata; sed
+          taxō nūgācissimum nūgātōrem, quī nē cōgitāns quidem dē corrigendā vītā, tōtam spem collocārit in
+          condōnātiōnibus hūmānīs. Hīc sī quis mihi cōnsīderet, quanta iāctūrā pietātis nāta sit inter mortālēs, partim
+          ex eōrum vitiō, quī prostituunt pontificiās indulgentiās, partim eōrum culpā, quī illās secus quam oportet
+          accipiunt, fatēbitur operae pretium, iuventūtem super hāc rē commonitam esse. Vērum hoc modō parum cōnsultum
+          est commissāriīs. Audiō, ō bone: sī virī bonī sunt, gaudēbunt esse monitōs simplicēs: sīn potior est illīs
+          quaestus quam pietās, valeant.
+          <br />
+          In colloquiō dē captandīs sacerdōtiīs, taxō eōs, quī Rōmam cursitant, vēnanturque sacerdōtia, crebrō gravī
+          iāctūrā tum mōrum tum pecūniae: eōque dēdūcō sermōnem, ut sacerdōs, prō concubīnā, lēctiōne bonōrum auctōrum
+          sēmet oblectet.
+          <br />
+          In Mīlitis cōnfessiōne taxō facinora mīlitum, et impiam mīlitum cōnfessiōnem; ut adulēscentēs ab eiusmodī
+          mōribus abhorreant.
+          <br />
+          In Monītīs paedagōgicīs doceō puerum verēcundiam ac mōrēs aetātī decōrōs.
+          <br />
+          In Pietāte puerīlī nōnne piīs praeceptīs imbuō puerīlem animum ad studium pietātis? Nam quod quidam arrōdēbant
+          dē cōnfessiōne, mera fuit calumnia, cuī iam prīdem respondī. Doceō cōnfessiōnem esse suscipiendam perinde
+          quasi nōbīs esset īnstitūta ā Chrīstō. Cēterum an id sit factum, nec refellere est animus, nec assevērāre,
+          quod nec mihi satis persuāsum est, nec aliīs probāre possim. Quod autem admoneō dē genere vītae seriō
+          dēligendō, dēque sēligendō sacerdōte cuī committās arcāna tua, iūdicābam adulēscentibus esse necessārium, nec
+          videō cūr mē dēbeat paenitēre. At sīc erunt pauciōrēs monachī et sacerdōtēs. Fortassis erunt, sed meliōrēs.
+          Idem probābit quisquis vērē monachus est. Porrō quī vēnantur prōselytōs vel ad praedam vel ob superstitiōnem,
+          dignissimī sunt, quī omnibus omnium scrīptīs trādūcantur, quō resīpiscant.
+          <br />
+          In Cōnviviō profānō nōn damnō cōnstitūtiōnēs ecclēsiae dē iēiūniīs ac dēlēctum cibōrum; sed indicō
+          superstitiōnem quōrundam, quī hīs plūs tribuunt quam oportet, neglegentēs eōrum quae magis faciunt ad
+          pietātem: damnōque eōrum crūdēlitātem, quī haec exigunt ab hīs, ā quibus ecclēsiae mēns nōn exigit: item eōrum
+          praeposterām sānctimōniam, quī ex huiusmodī rēbus condemnant proximum. Hīc sī quis reputet quanta vērae
+          pietātis luēs hinc nāta sit inter mortālēs, fatēbitur vix aliam admonitōnem esse magis necessāriam. Sed hāc dē
+          rē cōpiōsius aliās respondēbimus.
+          <br />
+          In Cōnviviō religiōsō, cum omnēs faciam aliēnōs ā sacrīs, omnēs coniugātōs, satis doceō, quāle dēbeat esse
+          cōnvīvium omnium Chrīstiānōrum. Ad quam fōrmam sī sacerdōtēs quidam et monachī cōnferant sua cōnvīvia,
+          intellegent quantum absint ab eā perfectiōne, quā conveniēbat illōs laicīs antecellere.
+          <br />
+          In Apotheōsī doceō, quantum honōris dēbeātur egregiīs virīs, quī suīs vigiliīs bene meritī sunt dē līberālibus
+          studiīs.
+          <br />
+          Sunt ineptī, quibus colloquium Prōcī et puellae videātur lascīvum, cum nihil fingī possit castius. Sī rēs
+          honesta est mātrimōnium, et prōcum agere honestum est. Atque utinam omnēs prōcī tālēs essent, quālem hīc
+          fingō, nec aliīs colloquiīs coīrent mātrimōnia! Quid faciās istīs ingeniīs tetricīs, et ab omnibus Grātiīs
+          aliēnīs, quibus impūdicum vidētur quidquid amīcum est ac festīvum? Haec puella negat prōcō dīscēssūrō ōsculum,
+          quō tōtam virginitātem illī servet illibātam. Quid autem nunc vulgō nōn dant puellae prōcīs? Deinde nōn
+          vident, quam multa philosophica sint īnspersa iōcīs, dē nōn praecipitandō coniugiō, dē dēlēctū nōn sōlum
+          corporum, sed multō magis animōrum, dē firmitāte coniugiī, dē nōn contrahendō mātrimōniō sine cōnsēnsū
+          parentum, dē castē colendō mātrimōniō, dē sānctē ēducandīs līberīs: postrēmō puella comprecātur Chrīstum, ut
+          illius auspiciīs sit fēlīx connūbium. An haec nōn convenit scīre iuvenēs? Et quī hanc lēctiōnem ob lascīviam
+          putant esse noxiam puerīs, patiuntur illīs praelegī Plautum et facētiās Poggiī. Praeclāra iūdicia!
+          <br />
+          In Virgine mīsogamō dētestor eōs, quī adulēscentēs aut puellās invītīs parentibus pelliciunt in monastērium,
+          abūtentēs illōrum vel simplicitāte vel superstitiōne; persuādentēs eīs nōn esse spem salūtis extrā monastēria.
+          Nisi tālibus piscātōribus plēnus esset mundus; nisi innumerae fēlīcissimae ingenia per istōs īnfēlīcissimē
+          sepelirentur ac dēfōderentur vīva, quae fuissent ēlecta vāsa dominī, sī iūdiciō sūmpsissent īnstitūtum nātūrae
+          congruēns; nōn rēctē admonuī. At sī quandō cōgar in hōc argūmentō prōferre quod sentiō, sīc dēpingam et
+          plagiāriōs illōs, et ipsīus malī magnitūdinem, ut nūllus nōn fassūrus sit mē nōn sine causā haec monuisse:
+          quamquam cīvīliter id quidem ā mē factum est, nē malīs darētur ānsa dēlinquendī.
+          <br />
+          In proximō colloquiō Virginis paenitentis nōn indūcō virginem, quae professa mūtārit īnstitūtum, sed quae ante
+          peractam professiōnem redierit ad parentēs, quōs habēbat optimōs.
+          <br />
+          In Mēmpsigamō quam multa sunt philosophica, dē cēlandīs marītōrum vitiīs, dē nōn interrumpendā coniugum
+          benevolentiā, dē sarciendīs offēnsīs, dē corrigendīs marītōrum mōribus, dē obsequiīs ergā marītōs? Quid aliud
+          docet Plūtarchus, Aristotelēs et Xenophōn, nisi quod hīc persōnae vītam quandam addunt ōrātiōnī!
+          <br />
+          In colloquiō Mīlitis et Carthūsiānī simul dēpingō et īnsāniam iuvenum, quī prōcurrunt ad bellum, et piī
+          Carthūsiānī vītam, quae sine studiōrum amōre nōn potest nōn esse trīstis et inamoena.
+          <br />
+          In Pseudocheō dēpingō quōrundam ingenia, quī nātī sunt ad mentiendum, quō quidem hominum genere nihil est
+          execrābilius; utinam esset rārius!
+          <br />
+          In colloquiō Adulēscentis et scortī nōnne et lupānāria faciō casta? Quid autem dīcī potuit efficācius vel ad
+          īnferendam adulēscentum animīs pudīcitiae cūram, vel ad revocandās ab īnstitūtō nōn minus aerumnōsō quam turpī
+          puellās ad quaestum expositās? Ūnica vōx commōvit quōsdam, quod impūdica puella blandiēns adulēscentī vocat
+          illum suam mentulam, cum hoc apud nōs vulgātissimum sit etiam honestīs mātrōnīs. Hoc quī ferre nōn potest, prō
+          meā mentulā scrībat mea voluptās, aut sī quid aliud māvult.
+          <br />
+          In Cōnviviō poēticō doceō, cuiusmodī dēbeat esse cōnvīvium inter studiōsōs, parcum, sed festīvum et hilāre,
+          conditum līttterātīs fābulīs, sine rīxīs, sine obtrectātiōne, sine turpiloquiō.
+          <br />
+          In Inquīsītiōne doceō summam catholicae professiōnis, idque aliquantō vīvidius ac liquidius, quam docent
+          theologī quidam magnī nōminis, inter quōs pōnō et Gersōnem, quem interim honōris caussā nōminō. Ideō porrō
+          fingō persōnam Lūthērānī, quō facilius redeant in concordiam, inter quōs dē praecipuīs articulīs orthodoxae
+          professiōnis convenit; etsī reliquam inquīsītiōnis partem nōn addidī propter haec exulcerātissima tempora.
+          <br />
+          In Senīlī colloquiō quam multa velut in speculō exhibentur, quae vel fugienda sunt in vītā vel illam reddunt
+          tranquillam! Haec praestat adulēscentēs ex festīvīs colloquiīs quam experīmentīs dīscere. Socrātēs
+          philosophiam ē caelō dēdūxit in terrās: ego philosophiam etiam in lūsūs, cōnfābulātiōnēs et compōtātiōnēs
+          dēdūxī. Oportet enim et lūdicra Chrīstiānōrum sapere philosophiam.
+          <br />
+          In Ptochoplusiīs quam multa sunt, ad quae pāstōrēs rūsticānī, rudēs et indoctī, nihilque minus quam pāstōrēs,
+          possint suam vītam corrigere! praetereāque ad tollendam stultam glōriam vestium: rūrsus ad coercendam illōrum
+          īnsāniam, quī monachōrum cultum exsecrantur, quasi per sē mala sit vestis. Et obiter dēscrībitur fōrma, quālēs
+          dēbeant esse monachī, quī per vīcōs obambulant. Neque enim admodum multī tālēs sunt, quālēs hīc dēscrībō.
+          <br />
+          In Ērudītā puellā simul et Paulae, Eustochiae, Marcellae vetus exemplum renovō, quae cum integritāte mōrum
+          coniūnxērunt studium līttterārum; et monachōs abbātēsque sacrōrum studiōrum ōsōrēs, luxuī, ōtiō, vēnātiōnibus,
+          āleaeque dēditōs, puellae coniugātae exemplō exstīmulō ad aliud studiōrum genus ipsīs magis congruēns.
+          <br />
+          In Spectrō dētegō technās impostōrum, quī crēdulīs simplicium animīs solent illūdere, fingentēs appāritiōnēs
+          daemōnum et animārum, vōcēsque dīvīnās. Quantam vērō pestem hae praestigiae invēxērunt pietātī Chrīstiānae!
+          Quoniam autem rudis ac simplex aetās huiusmodī fraudibus potissimum est obnoxia, vīsum est exemplō nōn
+          inamoēnō dēpingere modum impostūrae. Sīc impositum fuit Caelesīnō Pont. Rōmānō. Sīc Bernae dēlūsus iuvenis ā
+          monachīs. Sīc commentītiīs ōrāculīs et hodiē plūrimī dēlūduntur.
+          <br />
+          Nec minima pars hūmānārum calamitātum est Alcumistica: quae doctīs etiam et cordātīs virīs impōnit: adeō
+          morbus hīc adlūbēscit, sī quem corripuerit. Huic affīnis est Magia, eōdem nōmine, sed cognōmine blandiēns,
+          nātūrālis. Similēs impostūrās taxō in Hippoplānō et Ptochologiā; rūrsus in Cōnviviō fābulōsō. Ex hīs sī nihil
+          aliud dīscerent puerī, quam Latīnē loquī, quantō plūs laudis mea merērētur industria, quī per lūsum ac
+          voluptātem id faciō, quam illōrum, quī miserae iuventūtī Mametrēctōs, Brachylogōs, Catholicontās, et
+          signficandī modōs obtrūdēbant?
+          <br />
+          In Puerperā, praeter nātūrālium rērum cognitiōnem, quam multa sunt mōrālia dē cūrā mātrum ergā līberōs, prīmum
+          īnfantēs, mox grandiōrēs.
+          <br />
+          In Peregrinatiōne religiōnis ergō taxō istōs, quī per tumultum ēiēcērunt omnēs imāginēs ē templīs: rūrsus eōs
+          quī īnsaniunt in peregrinatiōnēs, quae suscipiuntur praetextū religiōnis; unde iam et sodālitātēs inventae
+          sunt. Quī Hierosōlymae fuērunt, equitēs aurātī vocantur, sēque Frātrēs vocant, et in diē Palmārum seriō rem
+          agunt rīdiculam, fūne trahentēs asinum, ipsī nōn multum differentēs ab asinō ligneō quem trahunt. Id imitātī
+          sunt quī Compostēllam adiērunt. Dentur haec sānē, dentur affectibus hominum; at nōn ferendum, quod hinc sibi
+          vendicant pietātem. Notantur et iī, quī reliquiās incertās prō certīs ostendunt, quī hīs plūs tribuunt quam
+          oportet, quī quaestum ex hīs sordidē faciunt.
+          <br />
+          In Ichthyophagīā tractō quaestiōnem dē cōnstitūtiōnibus hūmānīs, quās quidam prorsus reiciunt, multum
+          aberrantēs ā rēctā ratiōne: quidam prōpemodum antepōnunt dīvīnīs lēgibus: rūrsus aliī abūtuntur et dīvīnīs et
+          hūmānīs cōnstitūtiōnibus ad quaestum ac tyrannidem. Cōnor itaque partem utramque ad moderātiōnem temperāre,
+          inquīrēns unde nātae sint, et quibus gradibus hūc usque prōgressae cōnstitūtiōnēs hūmānae; quōs et quātēnus
+          obligent, ad quid condūcant, quantum distent ā dīvīnīs; obiter indicāns praeposterā mortālium iūdicia, quibus
+          iam ōlim mundus plēnus est, et unde tōtus hīc orbis tumultus nātus est. Haec ideō quoque tractāvī cōpiōsius,
+          quō doctīs suppeditārem occāsiōnem accūrātius hīsce dē rēbus scrībendī. Nam quae adhūc prōdiērunt, nōn
+          satisfaciunt cūriōsīs. Trādūcere scortātiōnem, tēmulentiam, adulterium, nōn perinde ad rem pertinēbat;
+          quandoquidem haec mala nūllum fallunt: sed ex hīs est perīculum vērae pietātis, quae vel nōn sentiuntur, vel
+          sānctimōniae fallācī speciē blandiuntur. Quod sī quis calumniētur, persōnīs sordidīs affingī theologicam
+          disputātiōnem; ab hīs tālia nunc in omnibus cōnviviīs disputantur, et huiusmodī persōnīs opus erat familiārius
+          crassiusque rem tractātūrō.
+          <br />
+          In Fūnere, quoniam mors arguere solet Chrīstiānam fīdūciam, in duōbus idiōtīs dēpīnxī dīversum mortis genus,
+          velut imāgine vīvā pōnēns ob oculōs dissimilem excessum eōrum, quī fīdunt rēbus commentītiīs, et quī spem
+          salūtis fīxērunt in misericordiā Dominī: obiter taxāns dīvitum stultissimam ambitiōnem, quī lūxum ac superbiam
+          suam et ultrā mortem prōferunt, quam mors saltem dēbēbat auferre: simul eōrum perstringēns vitium, quī suī
+          compendiī grātiā stultitiā locuplētum abūtuntur, quam ipsī potissimum dēbēbant corrigere. Quis enim audēbit
+          līberē monēre potentēs ac dīvitēs, sī monachī, quī sē profitēntur mundō mortuōs, palpantur illōrum vitiīs? Sī
+          nūllī tālēs sunt, quālēs dēscrīpsī, tamen ostēnsum est exemplum, quod oportet vītārī: sīn vulgō referuntur
+          longē hīs quae proposuimus execrābiliōra; quī sunt aequī, meam agnoscant cīvīlitātem suumque vitium corrigant,
+          et sī vitiō vacant ipsī, aliōs peccantēs vel ēmendent vel coerceant. Nūllum ōrdinem perstrinximus; nisi forte
+          tōtum Chrīstiānismum īnfāmat quī quidquam monendī grātiā dīxerit in corruptōs Chrīstiānōrum mōrēs. Quōs
+          tantopere movet honōs ōrdinis, eōs in prīmīs compēscere dēbēbant quī palam factīs suīs dēhonestant ōrdinem.
+          Nunc cum illōs ut germānōs sodālēs agnoscant, foveant ac tueantur, quā fronte caussantur ā bene monente laedī
+          exīstimātiōnem ōrdinis? Quamquam quae ratiō dictat, sīc habendam huius aut illīus hūmānae sodālitātis
+          ratiōnem, ut pūblicam Chrīstiānōrum ūtilitātem neglegās?
+          <br />
+          In Differentiā verbōrum ac rērum taxō praeposterā quōrundam iūdicia.
+          <br />
+          In Cōnviviō variō commōnstrō rem cīvīlitātī congruam.
+          <br />
+          In Charonte dētestor bellum inter Chrīstiānōs.
+          <br />
+          In Synodō grammaticōrum rīdeō studium cuiusdam Carthūsiānī, suō iūdiciō doctissimī, quī cum in Graecās
+          litterās soleat stolidissimē dēbacchārī, nunc librō suō indiderit Graecum titulum, sed rīdiculē,
+          Anticomnarītās dīcēns, quōs appellāre poterat Antimariānōs vel Antidicomariānōs.
+          <br />
+          In Cyclōpe taxō quōsdam, quī ēvangelium semper habent in ōre, cum in vītā nihil sit ēvangelicum.
+          <br />
+          In Coniugiō imparī pōnō ob oculōs vulgī stultitiam, quī in spōnsālibus suppūtant dōtis modum, nec ad ratiōnem
+          vocant spōnsī scabiēm leprā dēteriōrem. Atque id hodiē fit tam passim, ut nēmō mīrētur, cum nihil sit in
+          līberōs crūdēlius.
+          <br />
+          In Ēmentitā nōbilitāte dēpingō genus hominum, quī sub umbrā nōbilitātis exīstimant sibi nihil nōn licēre, quae
+          praecipua pestis est Germāniae.
+          <br />
+          In Senātulō trāductūrus eram vitia quaedam mulierum, sed cīvīliter, nē quis exspectet tāle quippiam, quāle
+          habet Iuvēnālis: vērum hoc agentī obortus est quidam ίππεύς άνιππος, lupus, ut aiunt, in fābulā.
+          <br />
+          Reliqua ferē comparāta sunt ad voluptātem, sed nōn illīberālem. Nōn hoc est dēhonestāre ōrdinēs, sed ērudīre.
+          Quāpropter omnibus ōrdinibus et prīvātim et pūblicē rēctius cōnsultum fuerit, sī dēpositā quidvīs calumniandī
+          rabiē, candidīs animīs amplectamur omnēs quidquid piō studiō in pūblicam ūtilitātem adfertur. Aliīs aliae sunt
+          dōtēs et aliōs alia capiunt, mīlleque modīs hominēs trahuntur ad pietātem. Laudātum est Iuvencī studium, quī
+          sacram ēvangeliōrum historiam carmine prōdidit. Nec suā laude fraudātus est Arātor, quī idem fēcit in Ācta
+          Apostolōrum. Adversus haereticōs tūbam intendit Hilārius, argūtātur Augustīnus, Hieronymus dialōgīs pūgnat,
+          Prūdentius variō metrī genere dīmicat, Thōmās et Scotus dialecticēs ac philosophiae praesidiīs pūgnant. Simile
+          studium omnium; sed dissimilis singulōrum ratiō. Nōn reprehenditur dīversitās, quae scopum eundem petit.
+          Praelēgitur puerīs Petrus Hispānus, quō dociliōrēs veniant ad Aristotelem. Multum enim prōmōvit, quī gustum
+          dedit. Atquī hīc libellus, sī tenerae pūbī praelēgātur, trādet illōs ad multās disciplīnās magis habilēs, ad
+          poēticēn, ad rhētōricēn, ad physycēn, ad ēthicēn: dēnique ad ea, quae sunt pietātis Chrīstiānae. Stultī
+          persōnam suscēpī, factus ipse meārum rērum encomiastēs; sed mē compulit partim quōrundam improbitās nihil nōn
+          calumniantium, partim Chrīstiānae iuventūtis ūtilitās, in quam oportet omnēs omnibus studiīs incumbere.
+          <br />
+          Haec ita cum habeant, omnibusque quī litterās didicērunt perspicua sint, est tamen quoddam hominum genus mīrē
+          bliteon, Dēputātōs appellant, Gallī; opīnor quod male pūtātī sint, aut certē plūs satis pūtātī, quī sīc
+          prōnūntiat dē meīs colloquiīs, opus esse fugiendum, praesertim monachīs, quōs illī Religiōsōs appellant, et
+          adulēscentibus; eō quod iēiūnia et abstinentiae ecclēsiae parvī penderentur: beātae virginis et sānctōrum prō
+          lūdibriō habērentur suffrāgia: virginitās, sī coniugiō cōnferātur, nūllīus esse aut parvī momentī: religiōnis
+          etiam dissuādērētur omnibus ingressus: quodque in eō arduae difficilēsque theologiae quaestiōnēs grammaticulīs
+          prōpōnantur, contrā statūta per magistrōs in artibus iūrāta. Agnōscis, mī lēctor, Atticam ēloquentiam. Ut ad
+          postrēmum prīmō locō respondeam, quid artium magistrī prōpōnant grammaticulīs, nesciō: quae tractantur in
+          colloquiīs, dē symbolō, dē missā, dē iēiūniīs, dē vōtīs, dē cōnfessiōne, nihil habent theologicae
+          difficultātis, sed eius generis sunt, ut nōn oporteat ea quemquam nēscīre. Et sī puerīs praelēguntur epistolae
+          Paulī, quid perīculī est, sī gustus quidam illīs praebētur theologicae disputātiōnis? Ad haec cum nōn
+          ignōrent, puerīs sophisticēs candidātīs perplexās dē persōnīs dīvīnīs statim quaestiōnēs summae difficultātis
+          prōpōnī, nē dīcam ōtiōsae subtīlitātis; cūr nōlunt puerōs hoc dīscere, quod ad commūnem vītam pertinet! Iam sī
+          putant nihil referre, quid sub quā persōnā dīcātur; intellegunt, opīnor, quam multa comperiantur in
+          ēvangelicīs et apostolicīs litterīs, quae, secundum hanc lēgem, manifēstam habent blasphēmiam. Multīs locīs
+          probō iēiūnium, nusquam damnō. Quī secus asseverat, eum dēclārābō impudentissimē mentīrī. Sed in Pietāte
+          Puerīlī, inquiunt, lēguntur haec verba: Cum iēiūniō mihi nihil est negōtiī. Finge haec verba dīcī sub persōnā
+          mīlitis aut tēmulentī, num prōtinus Erasmus damnat iēiūnia? Nōn opīnor. Nunc dīcuntur ab adulēscente nōndum
+          adultō, quam aetātem lēx nōn obstringit ad iēiūnandum: et tamen is adulēscēns praeparat sē ad iūsta iēiūnia.
+          Sīc enim subiicit, Sed tamen, sī sēnserō opus, prandeō cēnōque parcius, quō mē praebeam alacrīōrem studiīs
+          pietātis per diem festum.
+          <br />
+          Abstinentiās vērō quam damnem, dēclārant haec verba, quae sunt in Cōnviviō profānō: In plērīsque nōn rēs, sed
+          animus dīscernit nōs ā Iūdaeīs. Illī manūs abstinēbant ā certīs cībīs, velut ab immundīs et animum
+          inquīnātūrīs: nōs cum intellegāmus omnia munda esse mundīs, tamen carnī lascientī, velut equō ferociēntī,
+          pābulum subdūcimus, quō magis sit audiēns dictō spīrituī. Nōnnunquam immoderātium suāvium rērum ūsum
+          abstinentiae mōlestiae castīgāmus. Paulō post reddit ratiōnem, quārē Ecclēsia interdīxerit ēsum quōrundam
+          cibōrum. Omnibus, inquit, condūcet. Nam tenuibus, cochleīs aut rānīs licēbit vēscī, aut caepās porrumve
+          arrōdere; mediocmēs dētrahent nōnnihil quotīdiānīs obsōniīs; quod sī quid dīvitēs dēlīciantur hāc occāsiōne,
+          suae gulae imputent, nōn incūsent Ecclēsiae cōnstitūtiōnem. Mox loquor hīs similia. Rūrsus aliquantō post:
+          Sciō, medicīs māgnopere damnātum esse piscium ēsum: sed secus vīsum est māiōribus nostrīs, quibus obtemperāre
+          religiōsum est. Inibī prōtinus doceō hīc vītandum etiam offendiculum īnfīrmōrum.
+          <br />
+          Aeque falsum est, in colloquiīs irrīdērī suffrāgia beātae Virginis et aliōrum Sānctōrum; sed illōs irrīdeō,
+          quī petunt ā sānctīs, quae nōn audērent ā bonō virō petere; aut hōc animō petunt ā certīs dīvīs, quasi hoc aut
+          illud, hic aut ille citius velit aut possit praestāre quam alius, aut quam ipse Chrīstus. Immō in puerīlī
+          pietāte sīc loquitur puer: Salūtem dīxī nōnnūllīs. Quibus? Chrīstō ac dīvīs aliquot. Et aliquantō post: Rūrsus
+          tribus verbīs salūtō Iēsum, ac dīvōs dīvāsque omnēs; sed nōminātim Virginem mātrem; tum eōs quōs habeō mihi
+          pecūliārēs. Et īnfrā commemorat nōminātim quōs dīvōs salūtet quotīdiē.
+          <br />
+          Mīrum vērō, sī procus amāns laudat nūptiās, dīcitque, castum coniugium nōn multum abesse ā laude virginitātis,
+          cum Augustīnus patriarchārum polyg
+          amiam antepōnat nostrō caelibātū.
+          <br />
+          Quod obiciunt dē ingressū religiōnis, quam sit manifēstae vānitātis, dēclārant mea verba in Virgine Mīsogamō.
+          Sīc enim loquitur virgō: Damnās igitur hoc tōtum vītae īnstitūtum? Respondet iuvenis: Nēquāquam: vērum
+          quemadmodum nēminī suādērī velim, ut quae sē in hoc vītae genus coniēcerit, luctētur ēmergere, ita nōn dubitem
+          hortārī puellās omnēs, praesertim indolis generōsae, nē sē temerē eō praecipitent, unde post sēsē nōn possint
+          explicāre. Haec est illīus colloquiī conclūsiō, utcunque certātum est argūmentīs. Obsecrō, an hoc est omnibus
+          dissuādēre ingressum religiōnis? Nōn damnātur ingressus, sed praeceps temeritās damnātur. Haec igitur
+          malitiōsē dētorquent ad calumniam. At nōn perpendunt, quam multa illic dīscunt grammaticulī, quae pūgnant cum
+          dēcrētīs Lūthērānōrum.
+          <br />
+          In Puerīlī pietāte trāditur ratiō bene et ūtiliter audiendī missam. Docētur ratiō bene et efficāciter
+          cōnfitendī. Admonētur puer, ut antequam sūmat eucharistiam, cōnfessiōne pūrget animum. Ibidem docentur
+          grammaticulī, quae recepta sunt ūsū populī Chrīstiānī, cum tamen in sacrīs litterīs nōn habeantur, hāctenus
+          esse servanda, nē cuī sīmus offendiculō.
+          <br />
+          In Profānō cōnviviō docentur, magis obtemperandum pontificum cōnstitūtiōnibus, quam medicōrum cōnsiliīs:
+          tantum admonentur, in necessitāte cessāre vigōre cōnstitūtiōnis hūmānae, et mentem lēgislātōris. Ibidem probat
+          quispiam benignitātem in monachōrum collēgia, modō dētur ad ūsum, nōn ad lūxum, et potissimum dētur religiōnis
+          disciplīnam observantibus.
+          <br />
+          Dē cōnstitūtiōnibus hūmānīs haec prōnūntiantur in colloquiō ίχϑυοφαγίᾳ. Pūgnent quī volent, ego cēnseō, lēgēs
+          māiōrum reverenter suscipiendās et observandās religiōsē, velut ā Deō profectās; nec esse tūtum, nec esse
+          pium, dē potestāte pūblicā sinistram concipere aut serere suspīciōnem. Et sī quid est tyrannidis, quod tamen
+          nōn cōgat ad impietātem, satius est ferre quam sēditiōsē reluctārī. Huiusmodī permulta grammaticulī dīscunt ex
+          meīs colloquiīs, quibus sīc obmurmurant istī. Sed indecōrum est, theologum iocārī: saltem hoc mihi concēdant
+          apud puerōs, quod ipsī permittunt sibi virī apud virōs in vesperiīs, ut vocant rem īnsulsam īnsulsō vocābulō.
+          <br />
+          Īnsulsās calumniās, quās in Hispāniīs obēcēre quidam, ostendī mera esse somnia hominum nec sōbriōrum nec
+          Latīnē scientium. Nec minus indoctum est, quod quidam prōnūntiāvit haereticē dictum, quod in Symbolō pater
+          dīcitur simpliciter auctor omnium. Vērum is dēceptus īnscītiā Latīnī sermōnis, exīstimat auctōrem nihil aliud
+          quam creātōrem aut fabricātōrem significāre. Atquī sī cōnsulat eōs, quī callent ēlegantiam Rōmānī sermōnis, sī
+          ēvolvat Hilārium, aliōsque vetustōs auctōrēs, comperiet auctōritātem accipī prō eō, quod scholasticī vocant
+          ratiōnem perfectissimam prīncipiī, eōque patrī pecūliāriter tribuunt, et auctōris nōmine saepe dēsignant
+          patrem, cum persōnās inter sē cōnferunt. An pater rēctē dīcātur caussa fīliī, nihil mea refert, cum numquam eō
+          verbō sim abūsus; nisi quod illud est vērissimum, nōs dē Deō nōn posse loquī nisi verbīs imprōpriīs; nec magis
+          proprium verbum est fōns aut prīncipium, aut orīgō, quam caussa.
+          <br />
+          Iam hinc mihi perpende, lēctor, quālēs sint interdum quī suīs sententiīs hominēs pertrahunt ad incendium.
+          Nihil turpius, quam reprehendere quod nōn intellegās. At ista quidvīs calumniandī febris quid aliud gignit
+          quam āmarulentiam ac dissidia? Quīn potius aliēna candidē interpretēmur, nec statim nostra prō ōrāculīs habērī
+          velīmus; nec eōrum iūdicia prō ōrāculīs dūcāmus, quī quod legunt, nōn intellegunt. Ubi in cōnsiliō est ōdium,
+          ibī caecum est iūdicium. Pācificātor ūniversōrum Spīritus, quī suīs organīs variīs ūtitur modīs, faciat nōs
+          omnēs concordēs et ūnanimēs in sānā doctrīnā sānctīsque mōribus: quō contingat pariter ad caelestis
+          Hierosōlymae, quae nescit ūlla dissidia, cōnsortium pervenīre. Āmēn. Annō 1526. 12 Calend. Iūniās, Basileae.
+        </div>
+  </div>
+</body>
+
+</html>
