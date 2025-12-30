@@ -1077,9 +1077,115 @@ permalink: /erasmus/colloquia-familiaria-funus/
         page.collection %}
         {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
 
+
+                <div class="footnotes">
+            <h3>Notae</h3>
+            
+            <div class="footnote" id="footnote.1">
+                <a href="#footnote-ref.1">(1)</a>. <em>Ex antrō</em>: Vide proverbium de Trophonii antro.
+            </div>
+
+            <div class="footnote" id="footnote.2">
+                <a href="#footnote-ref.2">(2)</a>. <em>Nihil minus</em>: Quia Phaearus Graecis sonat hilarem.
+            </div>
+
+            <div class="footnote" id="footnote.3">
+                <a href="#footnote-ref.3">(3)</a>. <em>Statiō medicōrum</em>: Id est, conventus stati.
+            </div>
+
+            <div class="footnote" id="footnote.4">
+                <a href="#footnote-ref.4">(4)</a>. <em>Vulturēs</em>: Praesetiunt cadavera, unde captatores testamentorum, vultures dicuntur.
+            </div>
+
+            <div class="footnote" id="footnote.5">
+                <a href="#footnote-ref.5">(5)</a>. <em>Manzarēs</em>: Iureconsulti manzares vocant ex incoesto natos.
+            </div>
+
+            <div class="footnote" id="footnote.6">
+                <a href="#footnote-ref.6">(6)</a>. <em>Cicādam ālā</em>: Vide proverbium.
+            </div>
+
+            <div class="footnote" id="footnote.7">
+                <a href="#footnote-ref.7">(7)</a>. <em>Ē stipulīs fabārum</em>: E culmis tritici nectuntur galeri, nonnunquam & pallia adversus pluviam, faba caules habet grandes intortos & fragiles, ad nihil minus utiles quam ad texendum. Est vulgo jactatum proverbium apud Batavos.
+            </div>
+
+            <div class="footnote" id="footnote.8">
+                <a href="#footnote-ref.8">(8)</a>. <em>Impressiō</em>: Est vehemens hostium irruptio.
+            </div>
+
+            <div class="footnote" id="footnote.9">
+                <a href="#footnote-ref.9">(9)</a>. <em>Syncrētismus</em>: Id est, conspiratio prius dissidentium in communem hostem. Vide Chiliades.
+            </div>
+
+            <div class="footnote" id="footnote.10">
+                <a href="#footnote-ref.10">(10)</a>. <em>Mussābant</em>: Mussare est tacite loqui.
+            </div>
+
+            <div class="footnote" id="footnote.11">
+                <a href="#footnote-ref.11">(11)</a>. <em>Plēnīs tibiīs</em>: Id est, clare. Vide proverbium.
+            </div>
+
+            <div class="footnote" id="footnote.12">
+                <a href="#footnote-ref.12">(12)</a>. <em>Oeconomicum</em>: Peritum rei domesticae sic vocat.
+            </div>
+
+            <div class="footnote" id="footnote.13">
+                <a href="#footnote-ref.13">(13)</a>. <em>Arte dūcēbat</em>: Ducunt bellum, qui de industria proferunt: sed gerunt qui vere bellant.
+            </div>
+
+            <div class="footnote" id="footnote.14">
+                <a href="#footnote-ref.14">(14)</a>. <em>Commeātūs</em>: Id est, cibus. militare verbum. & ideo praesidium vocat domum unde alios depulerant.
+            </div>
+
+            <div class="footnote" id="footnote.15">
+                <a href="#footnote-ref.15">(15)</a>. <em>Vulpēs anus</em>: Vide proverbium.
+            </div>
+
+            <div class="footnote" id="footnote.16">
+                <a href="#footnote-ref.16">(16)</a>. <em>Ut asinī</em>: Allusit ad illud Flacci: Demitto auriculas, ut iniqua mentis asellus, Quum gravius dorso subiit onus.
+            </div>
+
+            <div class="footnote" id="footnote.17">
+                <a href="#footnote-ref.17">(17)</a>. <em>Dē solidō</em>: Id est, de integra haereditate, quae assis dicitur, nondum divisa. Uncia duodecima pars assis.
+            </div>
+
+            <div class="footnote" id="footnote.18">
+                <a href="#footnote-ref.18">(18)</a>. <em>Diplōmatī</em>: Quo literes consecrat sacerdotem ante tempus legitimum.
+            </div>
+
+            <div class="footnote" id="footnote.19">
+                <a href="#footnote-ref.19">(19)</a>. <em>Naeniae</em>: Proprie cantilenae funebres. Nonnunquam tamen nugas quaslibet appellamus naenias.
+            </div>
+
+            <div class="footnote" id="footnote.20">
+                <a href="#footnote-ref.20">(20)</a>. <em>Daduchī</em>: Taediferi.
+            </div>
+
+            <div class="footnote" id="footnote.21">
+                <a href="#footnote-ref.21">(21)</a>. <em>In plānicie</em>: Data opera fingit insignia vitiosa. nam caduceatorum leges habent, adulterina esse insignia quae habent metallum, super metallum.
+            </div>
+
+            <div class="footnote" id="footnote.22">
+                <a href="#footnote-ref.22">(22)</a>. <em>Diaphragmatī</em>: Diaphragma est septum transversum quod separat praecordia, in quibus cor est & pulmo, ab inferiore corporis parte, in qua splen & hepar, & renes.
+            </div>
+
+            <div class="footnote" id="footnote.23">
+                <a href="#footnote-ref.23">(23)</a>. <em>Anniversāriam</em>: Id est, in singulis annis recurrentem.
+            </div>
+
+        </div>
+
+        {% assign prev_sequence = page.sequence | minus: 1 %}
+        {% assign next_sequence = page.sequence | plus: 1 %}
+        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
+        {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection",
+        page.collection %}
+        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
+        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
+
         <div class="nav-buttons">
             <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <span class="nav-button" style="opacity: 0.5;">Complete!</span>
+            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
         </div>
     </div>
 </body>
