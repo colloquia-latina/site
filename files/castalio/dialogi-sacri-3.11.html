@@ -1,0 +1,107 @@
+---
+title: Dialogi Sacri - Dialogus Undecimus (Liber Tertius)
+subtitle: Chaldaeī. Dan. 2.
+type: Colloquium
+author: Castalio
+topic: Dream and Failure
+difficulty: Easy
+sequence: 83
+book: 3
+character_count: 2
+permalink: /castalio/dialogi-sacri-liber-tertius-dialogus-undecimus/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Nebuchodonoſor Babylōniae rēx, Chaldaeōs iubet ut somnium quoddam suum (quod ipsī exciderat) dīcant, et interpretentur: quod cum illī nōn possent, imperat eōs necārī.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Nebuchodonosōr, Chaldaeī
+    </div>
+
+    <div class="line-container" id="Nebuchodonosor.1">
+      <div class="line-character">Nebuchodonosōr</div>
+      Agite vērō coniectōrēs, augurēs, hariōlī Chaldaeī, hominēs explicandī ea, quae sunt obscūritāte involūta, perītissimī, ēvellite hunc mihi ex animō scrūpulum, meumque mihi somnium aperīte cuius interpretātiōnem anxius dēsīderō: nam eam ob rem estis convocātī.
+    </div>
+
+    <div class="line-container" id="Chaldaei.2">
+      <div class="line-character">Chaldaeī</div>
+      Vītam tibi, rēx, sempiternam precāmur. Ēloquere sānē nōbīs somnium: et nōs id interpretandō ēvolvēmus.
+    </div>
+
+    <div class="line-container" id="Nebuchodonosor.3">
+      <div class="line-character">Nebuchodonosōr</div>
+      Oblītus sum: quod nisi vōs et somnium mihi et somniī sīgnificātiōnem ēdisseritis, et vōs per summum dedecus vītam āmittētis, et vestrae domūs complanābuntur. Sīn autem ēditis, multīs ā mē mūneribus et praemiīs atque honōre afficiēminī. Proinde facite, sī sapitis.
+    </div>
+
+    <div class="line-container" id="Chaldaei.4">
+      <div class="line-character">Chaldaeī</div>
+      At somnium dīcere, tuum est; nōs interpretātiōnem recipimus.
+    </div>
+
+    <div class="line-container" id="Nebuchodonosor.5">
+      <div class="line-character">Nebuchodonosōr</div>
+      Ēnimvērō videō vōs ex eō excūsātiōnis occāsiōnem arripere, quod vidētis eam rem mihi memoriā excidisse. Sed nihil agitis, nisi enim mē hāc suspiciōne levātis: nōn potest esse dubium, quīn ūnō omnēs animō statueritis, mē longīs quibusdam ambāgibus pessimē dēlūdere, et tempus cōnsūmere dicendō. Quamobrem ēloquiminī mihi somnium ut intelligam vōs interpretārī etiam posse.
+    </div>
+
+    <div class="line-container" id="Chaldaei.6">
+      <div class="line-character">Chaldaeī</div>
+      Nēmō est in terrā, quī istud praestāre possit, neque quisquam unquam rēx, aut prīnceps, aut dominātor, tāle quid quaesīvit ex ūllō dīvīnō. Est enim, quod tū rogās, omnīnō difficilius, quam quod possit quisquam expedīre, praeter ūnōs Deōs, quī inter mortālēs nōn versantur.
+    </div>
+
+    <div class="line-container" id="Nebuchodonosor.7">
+      <div class="line-character">Nebuchodonosōr</div>
+      Papae! ergō vōs prōrsus inūtilēs estis, et hominum animīs, ināni praeclārae reī professiōne, tenebrās offunditis. Quis vestrī erit ūsus? Comprehendite, satellitēs, colligāte, abdūcite ad extrēmum supplicium istōs omnēs nebulōnēs. Iubeō ego atque imperō, tōtum hoc indoctum, et insipiens doctōrum et sapientum genus, ad necem trahī: ut, quōrum nūllus in vītā ūsus est, eōrum mors sit vīventibus salūtāris.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Deus sapientum sapientiam perdit. Deus sapientēs huius mundī implicat inexplicābiliter.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "book", page.book %} {% assign prev_page = neighbors | where: "sequence",
+    prev_sequence | first %} {% assign next_page = neighbors | where: "sequence",
+    next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

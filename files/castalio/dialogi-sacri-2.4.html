@@ -1,0 +1,101 @@
+---
+title: Dialogi Sacri - Dialogus Quartus (Liber Secundus)
+subtitle: Sortilēgium. 1 Rēg. 14.
+type: Colloquium
+author: Castalio
+topic: Rash Vows
+difficulty: Easy
+sequence: 37
+character_count: 3
+permalink: /castalio/dialogi-sacri-liber-secundus-dialogus-quartus/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Sortibus, ad Deī ōrācula, dēprehēnsus est Saulus, Ionathanem fīlium suum edisse mel, adversus patris edictum. Quem, quia voverat populō dē interēmptiōne, volēbat et occīdere: nisi populus ipsum prohibuisset.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Saulus, Sacerdōs, Ionathan, Populus
+    </div>
+
+    <div class="line-container" id="Saulus.1">
+      <div class="line-character">Saulus</div>
+      Cōnsulāmus ōrāculum, sacerdōs, num persequī debeāmus Palaestīnōs. Quid ait Deus?
+    </div>
+
+    <div class="line-container" id="Sacerdos.2">
+      <div class="line-character">Sacerdōs</div>
+      Tacet.
+    </div>
+
+    <div class="line-container" id="Saulus.3">
+      <div class="line-character">Saulus</div>
+      Haud dubiē aliquod nefās admissum est ā nostrīs. Ego sānē iūrō, Deum immortālem testor, mortem lūere eum oportēre, quī fēcerit id; nisī sit etiam fīlius Ionathānus. Iactētur sors ubī culpa. Darīa respondat cui malum. Tenētur Ionathan ūnā mēcum. Quid ergō? Etiamnē iterum? Cadā rursus ācus, dēsignatque Ionathanem: Dic mihi quid fēceris.
+    </div>
+
+    <div class="line-container" id="Ionathan.4">
+      <div class="line-character">Ionathan</div>
+      Ego primoribus labris extremō vīrgulae fastigiō, adhaerentem mellis modī paululum, gustārī. Eheu nunc mē venīre morīendum.
+    </div>
+
+    <div class="line-container" id="Saulus.5">
+      <div class="line-character">Saulus</div>
+      Sīc dēxteram perdat Deus; morī tē oportet, Ionathān.
+    </div>
+
+    <div class="line-container" id="Populus.6">
+      <div class="line-character">Populus</div>
+      Haud patiemur: Ionathanisne peribit capillus, quī tam īnsignem Israēlitīs hodiē peperererat victōriam? Absit illud: per Iovam iūrāmus vīvere Ionathanem.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Rē impīnsā et temerē vovēmus, sed Deus nōbīs est ēvocātor vōta nostra.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

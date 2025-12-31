@@ -1,0 +1,112 @@
+---
+title: Dialogi Sacri - Dialogus Decimus (Liber Quartus)
+subtitle: Philippus. Matth. 14. Marc. 6. Lūc. 9. Iōan. 6.
+type: Colloquium
+author: Castalio
+topic: Feeding the Multitude
+difficulty: Moderate
+sequence: 100
+book: 4
+character_count: 4
+permalink: /castalio/dialogi-sacri-liber-quartus-dialogus-decimus/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Iēsus quīnque pānibus & duōbus piscibus quīnque virōrum mīllia satiat.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Discipulī, Iēsus, Philippus, Andreas
+    </div>
+
+    <div class="line-container" id="Discipuli.1">
+      <div class="line-character">Discipulī</div>
+      Vidēs, quae tē circumsistat hominum multitūdō, in tam vastā sōlitūdine, & iam diēs multum inclīnāvit: Itaque cēnsēmus, ut eōs dīmittās, ut in finitima rūra, & vīcōs dīvertant, & sibi cibāria comparent. Hīc enim, quod edant, nōn habent.
+    </div>
+
+    <div class="line-container" id="Iesus.2">
+      <div class="line-character">Iēsus</div>
+      Nihil opus est ut abeant. Praebēte vōs eīs cibum.
+    </div>
+
+    <div class="line-container" id="Discipuli.3">
+      <div class="line-character">Discipulī</div>
+      At nōn satis nōbīs suppedit, unde tantum hominum numerum pāscāmus (sunt enim, quantum licet coniectūrā fierī, plūs minus quīnquiēs mīlle virōrum, ut mulierēs & parvulōs omittāmus) nisi forte eāmus ēmptum pānēs.
+    </div>
+
+    <div class="line-container" id="Iesus.4">
+      <div class="line-character">Iēsus</div>
+      Unde autem emēmus ad tam multōs, Philippe?
+    </div>
+
+    <div class="line-container" id="Philippus.5">
+      <div class="line-character">Philippus</div>
+      Equidem nōn videō: nam ducentīs dēnāriīs vix tantum emī possit, ut inde ad singulōs minimum quantum perveniat.
+    </div>
+
+    <div class="line-container" id="Iesus.6">
+      <div class="line-character">Iēsus</div>
+      Quot habētis? Vidēte.
+    </div>
+
+    <div class="line-container" id="Andreas.7">
+      <div class="line-character">Andreas</div>
+      Adest hīc puer, quī habet quīnque pānēs hordeāceōs, & duōs piscēs, praetereā nihil est. Sed haec quantula sunt ad tam multōs!
+    </div>
+
+    <div class="line-container" id="Iesus.8">
+      <div class="line-character">Iēsus</div>
+      Adferte hūc modō. Iubēte omnēs in viridī grāmine discumbere catervātim, centēnōs & quīnquāgenōs. Cedō mihi istōs pānēs. Nunc, Pater caelestis, quī prō tuā benignitāte pāscis omnia, neque in multīs pāscendīs tenuior, neque in paucīs cōpiōsior es, quī nūllā lēge rērum tenēris, Ā quō omnium nātūra pendet; effice, rogō, hīs tantillīs cibāriīs multiplicandīs, ut haec hominum multitūdō admīrābiliter saturāta, tuam inexhaustam līberālitātem recognōscat. Agite discipulī, distribuite hōs cibōs in omnēs; satis superque erit, unde ad satiētātem comedant.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Plūs habet Chrīstus in ūnō pāne, quam cēterī in mīlle. Chrīstō ūtente, nihil dēest.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "book", page.book %} {% assign prev_page = neighbors | where: "sequence",
+    prev_sequence | first %} {% assign next_page = neighbors | where: "sequence",
+    next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,102 @@
+---
+title: Dialogi Sacri - Dialogus Vicesimus Quartus (Liber Quartus)
+subtitle: Dīvēs Immisericors. Lūc. 16.
+type: Colloquium
+author: Castalio
+topic: Rich Man and Lazarus
+difficulty: Moderate
+sequence: 114
+book: 4
+character_count: 2
+permalink: /castalio/dialogi-sacri-liber-quartus-dialogus-vicesimus-quartus/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Dīvēs immisericors apud īnferōs cruciātus nē tantulam quidem misericordiam ab Abrahāmō impetrāre potest.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Dīvēs, Abrahāmus
+    </div>
+
+    <div class="line-container" id="Dives.1">
+      <div class="line-character">Dīvēs</div>
+      Pater Abrahāme, miserēre meī, & mitte Lazarum, quī summō digitō in aquā intinctō, linguam mihi refrīgeret: discrūcior enim in hāc flammā.
+    </div>
+
+    <div class="line-container" id="Abrahamus.2">
+      <div class="line-character">Abrahāmus</div>
+      Fīlī, memineris, tē bonīs in vītā, Lazarum malīs esse dēfūnctum; Nunc vīcissim hīs in voluptāte, tū in dolōre es: Praetereā, cōnstat omnīnō inter nōs & vōs vasta vorāgō, ut hinc ad vōs, aut istinc ad nōs aditūs trānsīre volentibus nōn pateat.
+    </div>
+
+    <div class="line-container" id="Dives.3">
+      <div class="line-character">Dīvēs</div>
+      Saltem illud ōrō tē, pater, ut eum mittās, in domum meī patris, ut meōs frātrēs (habeō enim quīnque) commonefaciat, nē ipsī quoque committant, ut in hunc tam tetrī cruciātūs locum veniendum sit.
+    </div>
+
+    <div class="line-container" id="Abrahamus.4">
+      <div class="line-character">Abrahāmus</div>
+      Habent Mōsem, & caeterōs vātēs, eōs audīuntō.
+    </div>
+
+    <div class="line-container" id="Dives.5">
+      <div class="line-character">Dīvēs</div>
+      Fit illud quidem aliquid, pater Abrahāme. Sed sī quis ā mortuīs ad eōs fuerit prōfectus, facilius vītam corrigent.
+    </div>
+
+    <div class="line-container" id="Abrahamus.6">
+      <div class="line-character">Abrahāmus</div>
+      Sī Mōsem & vātēs nōn audiunt, nē eī quidem, quī revīxerit, obtemperātūrī sunt.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Inclēmentēs inclēmenter pūnientur. Quālem sē quisque alterī praebeat, tālem in sē experiētur Deum. Impiōrum sēra poenitentia. Beātī, quī plōrant: nam cōnsōlātiōne afficientur. Vae gaudentibus: dēflēbunt enim. Nam rērum vīcissitūdō est. Quī sānctā doctrīnā ad sānitātem nōn revocātur, dēsperandus est.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "book", page.book %} {% assign prev_page = neighbors | where: "sequence",
+    prev_sequence | first %} {% assign next_page = neighbors | where: "sequence",
+    next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

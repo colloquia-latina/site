@@ -1,0 +1,126 @@
+---
+title: Dialogi Sacri - Dialogus Vicesimus Quartus (Liber Secundus)
+subtitle: Solomon. 3 Rēgum 3.
+type: Colloquium
+author: Castalio
+topic: Wisdom and Justice
+difficulty: Moderate
+sequence: 57
+character_count: 3
+permalink: /castalio/dialogi-sacri-liber-secundus-dialogus-vicesimus-quartus/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Duārum meretrīcum lītem, dē oppressō per somnum alterīus īnfante contendentium, dīrimit Solomon dīvīnā sapientiā.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Meretrīx, Solomon, Altera Meretrīx
+    </div>
+
+    <div class="line-container" id="Meretrix.1">
+      <div class="line-character">Meretrīx</div>
+      Tuam fidem implōrō, Ō Rēx: audī mē paulisper.
+    </div>
+
+    <div class="line-container" id="Solomon.2">
+      <div class="line-character">Solomon</div>
+      Quid novae reī est? loquere.
+    </div>
+
+    <div class="line-container" id="Meretrix.3">
+      <div class="line-character">Meretrīx</div>
+      Ego et haec mulier in eādem domō agimus, et utraque peperimus; sed ea triduō post mē: cumque domī essēmus, neque quisquam praetereā adesset, mortuus est eius fīlius noctū, ut forte incubuit eī. Itaque mediā nocte surrexit, et surreptum meum fīlium, quī meō laterī accubābat, suppōsuit sibi; suum autem mortuum mihi, mē dormiente. Māne, ubi mē ērēxī, mammam īnfantī datūra, videō mortuum. Hīc ego, cum iam dīlūxisset, dum eum dīligenter contemplor, animadvertī, nōn esse eum quem pepereram.
+    </div>
+
+    <div class="line-container" id="Altera.4">
+      <div class="line-character">Altera Meretrīx</div>
+      Nōn ita est: quīn meus est, quī vīvit; tuus, quī interiit.
+    </div>
+
+    <div class="line-container" id="Meretrix.5">
+      <div class="line-character">Meretrīx</div>
+      Immō vērō tuus mortuus est, meus vīvit.
+    </div>
+
+    <div class="line-container" id="Altera.6">
+      <div class="line-character">Altera Meretrīx</div>
+      Mentīris.
+    </div>
+
+    <div class="line-container" id="Meretrix.7">
+      <div class="line-character">Meretrīx</div>
+      Nōn enimvērō mentior, sed dīcō quod rēs est.
+    </div>
+
+    <div class="line-container" id="Solomon.8">
+      <div class="line-character">Solomon</div>
+      Utraque suum esse affīrmat eum, quī vīvit, dēmortuumque repudiat. Cedō hūc mihi cultrum: partīminī aequaliter puerum viventem, et date utrīque dīmidium.
+    </div>
+
+    <div class="line-container" id="Meretrix.9">
+      <div class="line-character">Meretrīx</div>
+      Obtestor tē, rēx, dētur eī potius tōtus, quam intereat.
+    </div>
+
+    <div class="line-container" id="Altera.10">
+      <div class="line-character">Altera Meretrīx</div>
+      Nec meus estō nec tuus, placet dīvidī medium.
+    </div>
+
+    <div class="line-container" id="Solomon.11">
+      <div class="line-character">Solomon</div>
+      Hunc adiūdicō priōrī, quae perimī vetat: nam ea māter est.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Ad plērāsque lītēs dīiūdicandās aut opus est dīvīnā sapientiā, aut iūdicī multa simulanda sunt, ut sapienter iūdicet. Et vērum et fictum amōrem rēs ipsa dētegit.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

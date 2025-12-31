@@ -1,0 +1,101 @@
+---
+title: Dialogi Sacri - Dialogus Octavus (Liber Secundus)
+subtitle: Nōvilūnium. 1 Rēg. 20.
+type: Colloquium
+author: Castalio
+topic: Anger and Violence
+difficulty: Moderate
+sequence: 41
+character_count: 2
+permalink: /castalio/dialogi-sacri-liber-secundus-dialogus-octavus/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Saulus fīlium suum Ionathanem, propter eius cum Davide amīcitiam, iaculō trānsfīgere cōnātur.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Saulus, Ionathan
+    </div>
+
+    <div class="line-container" id="Saulus.1">
+      <div class="line-character">Saulus</div>
+      Cūr nōn vēnit Isaī fīlius ad cibum capiendum, neque herī, neque hodiē?
+    </div>
+
+    <div class="line-container" id="Ionathan.2">
+      <div class="line-character">Ionathan</div>
+      Petiit ā mē veniam concēdendī Bēthlehemam: futūrum enim sacrificium Gentīlitium in eō oppidō, ad quod adesse iussus esset ā frātre suō: Itaque magnopere ōrāvit, ut, sī sibi vellem grātissimum facere, facerem, eō sē cōnferendī, frātrēsque vīsendī, potestātem. Haec causa est, quamobrem ad rēgiam mēnsam nōn vēnerit.
+    </div>
+
+    <div class="line-container" id="Saulus.3">
+      <div class="line-character">Saulus</div>
+      Ō improbae et contumācis foeminae prōgeniēs! quasī ego nesciām tē Isaī nātī percupidum esse, ad tuum quidem et tuī parentis dedecus atque ignōminiam. Nam quamdiū vīvet in terrīs Isaī fīlius, nunquam tū fīrmum rēgnum habēbis. Quāre cūrā ut ad mē sistātur: nam morte dignus est.
+    </div>
+
+    <div class="line-container" id="Ionathan.4">
+      <div class="line-character">Ionathan</div>
+      Cūr ita tandem? Quid commīsit?
+    </div>
+
+    <div class="line-container" id="Saulus.5">
+      <div class="line-character">Saulus</div>
+      Docēbō tē hoc iaculō quid commīserit.
+    </div>
+
+    <div class="line-container" id="Ionathan.6">
+      <div class="line-character">Ionathan</div>
+      At ego hinc effugiam. Rem indignam! Āctum est dē Davide, nisi aufūgerit.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Impiī pietātem amīcitiamque ferre nōn possunt. Iniūstīs nihil est intolerabīlius iūstitiā.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

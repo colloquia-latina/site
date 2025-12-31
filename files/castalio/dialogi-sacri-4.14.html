@@ -1,0 +1,107 @@
+---
+title: Dialogi Sacri - Dialogus Quartus Decimus (Liber Quartus)
+subtitle: Fermentum. Matth. 16. Marc. 8.
+type: Colloquium
+author: Castalio
+topic: Spiritual Understanding
+difficulty: Easy
+sequence: 104
+book: 4
+character_count: 2
+permalink: /castalio/dialogi-sacri-liber-quartus-dialogus-quartus-decimus/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Iēsus Discipulōrum dīffīdentiam & tarditātem arguit. Quī quod ipse dē fermentō spīrituālī dīxerat, intellegēbant dē carnālī.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Iēsus, Discipulī
+    </div>
+
+    <div class="line-container" id="Iesus.1">
+      <div class="line-character">Iēsus</div>
+      Cavēte vōbīs dīligenter ā fermentō Pharīsaeōrum & Sadducaeōrum, tum etiam Hērōdis.
+    </div>
+
+    <div class="line-container" id="Discipuli.2">
+      <div class="line-character">Discipulī</div>
+      Hoc dīcit proptereā, quia pānēs nōn habēmus.
+    </div>
+
+    <div class="line-container" id="Iesus.3">
+      <div class="line-character">Iēsus</div>
+      Quid dē pānibus inter vōs disputātis? Adeōne parum intellegitis, ita ut nihil intelligātis, neque vōbīs veniat in mentem illōrum quīnque pānum, quōs in quīnque hominum mīllia dispertīvī? Quot enim corbēs frūstīs refertās abstulīstis?
+    </div>
+
+    <div class="line-container" id="Discipuli.4">
+      <div class="line-character">Discipulī</div>
+      Duodecim.
+    </div>
+
+    <div class="line-container" id="Iesus.5">
+      <div class="line-character">Iēsus</div>
+      Quid, cum septem pānēs in quattuor mīllia dissecuī, quot frūstōrum canistra abstulīstis?
+    </div>
+
+    <div class="line-container" id="Discipuli.6">
+      <div class="line-character">Discipulī</div>
+      Septem.
+    </div>
+
+    <div class="line-container" id="Iesus.7">
+      <div class="line-character">Iēsus</div>
+      Quī fit, ut nōn intelligātis, mē nōn dē pāne loquī, dum iubeō vītārī fermentum Pharīsaeōrum, & Sadducaeōrum?
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Dicta Chrīstī spīrituālia interdum secundum carnem interpretantur etiam Chrīstiānī. Hominem ā carne ad spīritum trādūcere est difficile. Dīffīdentia ex homine, quamvīs piō, expellitus.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "book", page.book %} {% assign prev_page = neighbors | where: "sequence",
+    prev_sequence | first %} {% assign next_page = neighbors | where: "sequence",
+    next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

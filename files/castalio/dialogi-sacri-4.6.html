@@ -1,0 +1,92 @@
+---
+title: Dialogi Sacri - Dialogus Sextus (Liber Quartus)
+subtitle: Centuriō. Matth. 8. Lūc. 7.
+type: Colloquium
+author: Castalio
+topic: Faith and Healing
+difficulty: Easy
+sequence: 96
+book: 4
+character_count: 2
+permalink: /castalio/dialogi-sacri-liber-quartus-dialogus-sextus/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Iēsus ā Centuriōne exōrātus, ēius puerum, membrīs captum, verbō sānat.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Centuriō, Iēsus
+    </div>
+
+    <div class="line-container" id="Centurio.1">
+      <div class="line-character">Centuriō</div>
+      Domine, puer meus iacet domī membrīs captus graviterque cruciātur.
+    </div>
+
+    <div class="line-container" id="Iesus.2">
+      <div class="line-character">Iēsus</div>
+      Ego ībō eum curātum.
+    </div>
+
+    <div class="line-container" id="Centurio.3">
+      <div class="line-character">Centuriō</div>
+      At ego nōn sum dignus, cuius tū tēctum subeās: sed tantum iube verbō, et sānābitur. Nam ego quoque, quī sub alterīus sum potestāte, tamen obtineō auctōritātem in eōs, quibus praesum, mīlitēs. Sī quem iubeō īre, it: sī venīre, venit; sī servum facere quid, facit.
+    </div>
+
+    <div class="line-container" id="Iesus.4">
+      <div class="line-character">Iēsus</div>
+      Ō rem admīrātiōne dignissimam! Crēdite mihi, nē in Īsraēlītīs quidem tantam fidem invēnī. Et, sine dubiō, multī ab oriente atque occidente profectī, accumbent cum Abrahāmō, Iāsacō, & Iacōbō, in rēgnō caelestī: cum intereā illī, ad quōs rēgnum pertinēbat, in altā noctis calīgine dēmersī, nihil aliud quam flēbunt & frendēbunt. Tū abī, & ut cōnfīdistī, sīc obtinētō.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Chrīstō tam facile morbīs imperat, quam dux mīlitibus. Prīmī erunt ultimī, & ultimī, prīmī.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "book", page.book %} {% assign prev_page = neighbors | where: "sequence",
+    prev_sequence | first %} {% assign next_page = neighbors | where: "sequence",
+    next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

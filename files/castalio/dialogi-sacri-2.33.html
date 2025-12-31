@@ -1,0 +1,121 @@
+---
+title: Dialogi Sacri - Dialogus Tricēsimus Tertius (Liber Secundus)
+subtitle: Ioas. 4 Rēgum 13.
+type: Colloquium
+author: Castalio
+topic: Prophecy and Victory
+difficulty: Easy
+sequence: 66
+character_count: 2
+permalink: /castalio/dialogi-sacri-liber-secundus-dialogus-tricēsimus-tertius/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Ioas Israēlitārum rēgī sē aegrotum vīsentī, praedīcit Elīsaeus victōriās, quās sit dē Syrīs rēx relātūrus.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Ioas Rēx Israēlitārum, Elīsaeus
+    </div>
+
+    <div class="line-container" id="Ioas.1">
+      <div class="line-character">Ioas</div>
+      Heu pater patriae, heu columen Israēlitārum! Tū quidem nunc aeger iacēs.
+    </div>
+
+    <div class="line-container" id="Elisaeus.2">
+      <div class="line-character">Elīsaeus</div>
+      Nōn est ēiulandī tempus. Cape arcum et sagittās.
+    </div>
+
+    <div class="line-container" id="Ioas.3">
+      <div class="line-character">Ioas</div>
+      Ēn cape. Quōrsum?
+    </div>
+
+    <div class="line-container" id="Elisaeus.4">
+      <div class="line-character">Elīsaeus</div>
+      Impōne manum arcuī.
+    </div>
+
+    <div class="line-container" id="Ioas.5">
+      <div class="line-character">Ioas</div>
+      Fēcī.
+    </div>
+
+    <div class="line-container" id="Elisaeus.6">
+      <div class="line-character">Elīsaeus</div>
+      Aperī fenestram obversam Orientī.
+    </div>
+
+    <div class="line-container" id="Ioas.7">
+      <div class="line-character">Ioas</div>
+      Aperiō.
+    </div>
+
+    <div class="line-container" id="Elisaeus.8">
+      <div class="line-character">Elīsaeus</div>
+      Iaculāre. Hem sīc volō. Collineāstī. Ista est salūtāris nōbīs, mortifera Syrīs sagitta, quōs tū in Aphekō, Deī praesidiō, occīsiōne occīdēs. Sed perge porrō, cape sagittās.
+    </div>
+
+    <div class="line-container" id="Ioas.9">
+      <div class="line-character">Ioas</div>
+      Cēpī: quid tum?
+    </div>
+
+    <div class="line-container" id="Elisaeus.10">
+      <div class="line-character">Elīsaeus</div>
+      Terī terram. Ō factum male! sī quinquiēs percussissēs, aut sexiēs, tum poterās Syrōs dēlēre funditus. Nunc eōs ter tantum superābis, quotiēs vidēlicet terram pulsāvistī.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      In vāte plūs est praesidiī, quam in exercitū. Vātis mors est et rēgī dēplōranda. Fāta abstrūsa sunt.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

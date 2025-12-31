@@ -1,0 +1,106 @@
+---
+title: Dialogi Sacri - Dialogus Quintus Decimus (Liber Secundus)
+subtitle: Achīs. 1 Rēg. 29.
+type: Colloquium
+author: Castalio
+topic: Trust and Loyalty
+difficulty: Moderate
+sequence: 48
+character_count: 3
+permalink: /castalio/dialogi-sacri-liber-secundus-dialogus-quintus-decimus/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Achīs, Gēthae Rēx, admonitū procērum suōrum, Davidem (quī ad ipsum cōnfūgerat) ab exercitū suō dīmittit.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Procērēs Palaestīnī, Achīs Rēx, David
+    </div>
+
+    <div class="line-container" id="Proceres.1">
+      <div class="line-character">Procērēs</div>
+      Quīnam sunt Hebraeī istī, quōs habēs in nostrō exercitū?
+    </div>
+
+    <div class="line-container" id="Achis.2">
+      <div class="line-character">Achīs</div>
+      David est, Saulī Israēlitārum rēgis servus, quī mēcum ēgit per hōsce diēs, vel potius annōs: in quō nihil adhūc reprehēnsiōne dignum dēprehendī, ex quō ad nōs aufūgit.
+    </div>
+
+    <div class="line-container" id="Proceres.3">
+      <div class="line-character">Procērēs</div>
+      Remitte hominem in eam prōvinciam, cui tū eum praefēcistī; nē sī nōbīscum dēscenderit in certāmen, in nōs sē convertat. Nam quā tandem rē melius possit cum suō dominō reconciliārī, quam hōrum hominum capitibus? Nōnne hīc est ille David, carmine illō in chorēīs celebrātus: Saulus mīlle, decem concīdit mīllia David.
+    </div>
+
+    <div class="line-container" id="Achis.4">
+      <div class="line-character">Achīs</div>
+      David, Iovam ego immortālem testor, tē mihi tuamque castrēnsem cōnsuētūdinem probārī: neque enim ūllum adhūc in tē vitium, postquam ad mē prīmum tē contulistī, dēprehendī, Sed optimātibus nōn placēs. Quamobrem discēde cum bonā pāce, nē Palaestīnōs procērēs offendās.
+    </div>
+
+    <div class="line-container" id="David.5">
+      <div class="line-character">David</div>
+      Nam quid ego commīsī? Aut quid in mē adhūc dēprehendistī, ex quō prīmum in tuum cōnspectum vēnī, ut in bellum contrā hostēs tuōs nōn proficīscar?
+    </div>
+
+    <div class="line-container" id="Achis.6">
+      <div class="line-character">Achīs</div>
+      Sciō equidem, tē mihi tam placēre, quam sī dīvīnus essēs Genius. Sed vetant satrapae Palaestīnī, tē praelium sēcum inīre. Quamobrem, māne ubi dīlūxerit, proficīscere sānē ūnā cum tuī dominī servīs, quī tēcum vēnērunt.
+    </div>
+
+    <div class="line-container" id="David.7">
+      <div class="line-character">David</div>
+      Equidem invītīs illīs mīlitāre nōlim: parēbitur.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Nōn abs rē suspectum est perfugārum contrā suōs auxilium.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

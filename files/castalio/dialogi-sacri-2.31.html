@@ -1,0 +1,101 @@
+---
+title: Dialogi Sacri - Dialogus Tricēsimus Primus (Liber Secundus)
+subtitle: Hazaēl. 4 Rēgum 8.
+type: Colloquium
+author: Castalio
+topic: Prophecy and Evil
+difficulty: Easy
+sequence: 64
+character_count: 2
+permalink: /castalio/dialogi-sacri-liber-secundus-dialogus-tricēsimus-primus/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Hazaelī percōntantī, praedīcit Elīsaeus mortem Benadādī rēgis Syriae et īnsuper ipsius Hazaelis rēgnum, eiusque sevitiem in Israēlitās.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Hazaēl, Elīsaeus
+    </div>
+
+    <div class="line-container" id="Hazahel.1">
+      <div class="line-character">Hazaēl</div>
+      Benadādus Syriae Rēx, quī nunc aeger est, mīsit mē ad tē, Elīsae, ad percōntandum dē salūte suā.
+    </div>
+
+    <div class="line-container" id="Elisaeus.2">
+      <div class="line-character">Elīsaeus</div>
+      Renūntiātō eī, eō morbō levātum īrī: et tamen Iova mihi interitūrum significāvit. Heu!
+    </div>
+
+    <div class="line-container" id="Hazahel.3">
+      <div class="line-character">Hazaēl</div>
+      Quid sibi volunt ista suspīria, quae fīxō vultū ita altē trahis?
+    </div>
+
+    <div class="line-container" id="Elisaeus.4">
+      <div class="line-character">Elīsaeus</div>
+      Ō Hazaēl, Hazaēl, videō quantam tū vastātātem sīs Israēlitīs illātūrus. Tū eōrum aedificia incendēs, tū iuvenēs ferrō trucīdābis, tū puerōs illīdēs, tū gravidās mulierēs discerpēs.
+    </div>
+
+    <div class="line-container" id="Hazahel.5">
+      <div class="line-character">Hazaēl</div>
+      Exne vīlissimus homunciō, tanta facīnora poterō?
+    </div>
+
+    <div class="line-container" id="Elisaeus.6">
+      <div class="line-character">Elīsaeus</div>
+      Ostendit mihi Iova, tē fore rēgem Syrōrum.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Piīs dolet populī Deī calamitās, quamvīs meritā, et dīvīnitūs illāta.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

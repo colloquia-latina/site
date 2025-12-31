@@ -1,0 +1,96 @@
+---
+title: Dialogi Sacri - Dialogus Vicesimus Quintus (Liber Secundus)
+subtitle: Roboamus. 3 Rēgum 12.
+type: Colloquium
+author: Castalio
+topic: Foolish Counsel
+difficulty: Moderate
+sequence: 58
+character_count: 3
+permalink: /castalio/dialogi-sacri-liber-secundus-dialogus-vicesimus-quintus/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Roboamus, repudiātō senum sānō cōnsiliō, iuvenum īnsānum cōnsilium sequitur, dē opprimendō māiōrī īnsuper servitūte populō, quam quā ipsius pater Solomon oppresserat.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Roboamus, Senēs, Iuvenēs
+    </div>
+
+    <div class="line-container" id="Roboamus.1">
+      <div class="line-character">Roboamus</div>
+      Petiit ā mē ūniversum Israēlitārum vulgus, ut, quoniam meus pater iugō eōs pressit, ego illius servitūtis gravitātem levārem; sē enim ita dēmum mihi obēditūrōs. Nunc, ex vōbīs, senēs, scīre velim, quid mihi suādeātis, ut eīs respondeam super hāc rē.
+    </div>
+
+    <div class="line-container" id="Senes.2">
+      <div class="line-character">Senēs</div>
+      Sī hodiē populō obsecūtus fuerīs, eīque obtemperāns hūmāne responderīs, habēbis eum semper obtemperantem.
+    </div>
+
+    <div class="line-container" id="Roboamus.3">
+      <div class="line-character">Roboamus</div>
+      Audiō. Nunc exīte paulisper forās. Intrōdūcantur iuvenēs, aequālēs meī, mēcumque ēducātī. Quid mihi auctōrēs estis, iuvenēs, ut populō respondeam, petentī ut sibi ā gravitāte servitūtis quā sunt ā patre meō oppressī, relaxem aliquid?
+    </div>
+
+    <div class="line-container" id="Iuvenes.4">
+      <div class="line-character">Iuvenēs</div>
+      Tū vērō respondeās, tuōrum membrōrum minimum crassius esse, quam tuī parentis medium corporis truncum: Quod sī ille eōs gravī iugō pressit, tē pressūrum graviōre; sī eōs scūticīs caecīdit, tē eōs scorpiōnibus concīsūrum.
+    </div>
+
+    <div class="line-container" id="Roboamus.5">
+      <div class="line-character">Roboamus</div>
+      Probe. Vestrum mihi cōnsilium magis probātur, quam senum: itaque id sequar.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Senum propria est prūdentia, iuvenum temeritās. Stultī stultōrum cōnsiliīs libenter obsequuntur.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

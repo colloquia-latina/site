@@ -1,0 +1,107 @@
+---
+title: Dialogi Sacri - Dialogus Tertius Decimus (Liber Quartus)
+subtitle: Chananaea. Matth. 15. Marc. 7.
+type: Colloquium
+author: Castalio
+topic: Persistent Faith
+difficulty: Moderate
+sequence: 103
+book: 4
+character_count: 3
+permalink: /castalio/dialogi-sacri-liber-quartus-dialogus-tertius-decimus/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Iēsus ā Chananaeā exōrātus, ēius fīliam līberāt ā Furiā.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Chananaea, Discipulī, Iēsus
+    </div>
+
+    <div class="line-container" id="Chananaea.1">
+      <div class="line-character">Chananaea</div>
+      Miserēre meī, Ō tū Davidide: fīliam habeō quae Furiīs miserē agitus. Heu mē īnfēlīcem; obsectrō tē etiam atque etiam, miserēte meī: respice mē, ūtere tuā in mē clēmentiā & mānsuētūdine.
+    </div>
+
+    <div class="line-container" id="Discipuli.2">
+      <div class="line-character">Discipulī</div>
+      Absolve eam, quaesumus: clāmōre nōs obtundit.
+    </div>
+
+    <div class="line-container" id="Iesus.3">
+      <div class="line-character">Iēsus</div>
+      Nōn sum missus nisi ad ovēs perditās domūs Īsraēlis.
+    </div>
+
+    <div class="line-container" id="Chananaea.4">
+      <div class="line-character">Chananaea</div>
+      Domine, subvenī mihi.
+    </div>
+
+    <div class="line-container" id="Iesus.5">
+      <div class="line-character">Iēsus</div>
+      Sine prīmum salūtārī līberōs. Neque enim convenit līberōrum pānem obicere catellīs.
+    </div>
+
+    <div class="line-container" id="Chananaea.6">
+      <div class="line-character">Chananaea</div>
+      Etiam sānē: & tamen catellī quoque comedunt dē mīcīs līberōrum, quae dēcidunt dē mēnsā dominōrum suōrum.
+    </div>
+
+    <div class="line-container" id="Iesus.7">
+      <div class="line-character">Iēsus</div>
+      Ō mulier, magna est tua fidēs. Obtinētō sānē quod vīs; & propter istud dictum abī laeta: nam Furia ēmigrāvit ē tuā fīliā.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Chrīstus exōrābilis est, etiam iīs quōs maximē vidētur exclūdere. Fīde Chrīstus expugnātur.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "book", page.book %} {% assign prev_page = neighbors | where: "sequence",
+    prev_sequence | first %} {% assign next_page = neighbors | where: "sequence",
+    next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

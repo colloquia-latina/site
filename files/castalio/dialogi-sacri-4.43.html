@@ -1,0 +1,127 @@
+---
+title: Dialogi Sacri - Dialogus Quadragensimus Tertius (Liber Quartus)
+subtitle: Ananīās. Act. 23.
+type: Colloquium
+author: Castalio
+topic: Paul Before the Council
+difficulty: Moderate
+sequence: 133
+book: 4
+character_count: 6
+permalink: /castalio/dialogi-sacri-liber-quartus-dialogus-quadragensimus-tertius/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Paulus vinctus Ananīam pontificem ācerrimē reprehēndit ut exlēgem. Deinde dīcēns sē spērātae resurrēctiōnis reum, Pharīsaeōs & Sadducaeōs inter sē committit, & ab illīs adversus hōs dēfenditur.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Paulus, Ananias, Assistentēs, Lysiās, Sadducaeī, Pharīsaeī
+    </div>
+
+    <div class="line-container" id="Paulus.1">
+      <div class="line-character">Paulus</div>
+      Virī frātrēs, ego ad hoc tempus, Deō cōnsciō, optimē mihi cōnscius fuī.
+    </div>
+
+    <div class="line-container" id="Ananias.2">
+      <div class="line-character">Ananias</div>
+      Percutiātur eī ōs.
+    </div>
+
+    <div class="line-container" id="Paulus.3">
+      <div class="line-character">Paulus</div>
+      Percussūrus est tē Deus, pariēs incrustāte. Ergō tū sedēs, ut dē mē ex lēge iūdicēs; & contrā lēgem iubēs mē pulsārī?
+    </div>
+
+    <div class="line-container" id="Assistentes.4">
+      <div class="line-character">Assistentēs</div>
+      Pontificī Deī convītiāris?
+    </div>
+
+    <div class="line-container" id="Paulus.5">
+      <div class="line-character">Paulus</div>
+      Nesciēbam, frātrēs, eum esse Pontificem. Scrīptum est enim, Prīncipī populī tuī nē maledīxeris. Vērum audīte, frātrēs, quī in hōc conciliō adestis. Ego Pharīsaeus sum, Pharīsaeī Fīlius: spērātae resurrēctiōnis mortuōrum reus sum.
+    </div>
+
+    <div class="line-container" id="Sadducaei.6">
+      <div class="line-character">Sadducaeī</div>
+      Lepidum nūgātōrem! hoc sē modō ēvādere posse spērat.
+    </div>
+
+    <div class="line-container" id="Pharisaei.7">
+      <div class="line-character">Pharīsaeī</div>
+      Nōn male loquitur: nihil in eō malī videō; Quod sī Spīritus cum eō locūtus est, aut aliquis genius, nē Deō repugnēmus.
+    </div>
+
+    <div class="line-container" id="Sadducaei.8">
+      <div class="line-character">Sadducaeī</div>
+      Ideō eum dēfenditis vōs, quia sē vōbīscum sentīre clāmat.
+    </div>
+
+    <div class="line-container" id="Pharisaei.9">
+      <div class="line-character">Pharīsaeī</div>
+      Nōs eum ideō dēfendimus, quia dēfēnsiōne dignus est. Quid enim commīsit? Vultis opprimere īnsontēs?
+    </div>
+
+    <div class="line-container" id="Sadducaei.10">
+      <div class="line-character">Sadducaeī</div>
+      Immō vōs vultis tuērī sontēs.
+    </div>
+
+    <div class="line-container" id="Lysias.11">
+      <div class="line-character">Lysiās</div>
+      Videndum nōbīs est, nē hīc ab istīs discerpātur. Tū iube hūc dēscendere exercitum, ut eīs ēripiātur, & in castra abdūcātur.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Iniūstus iūdex, incrustātus pariēs. Piīs prōdunt interdum adversāriōrum inter sē contrōversiae: quemadmodum, inter sē rīxantibus canibus, ēvādunt hominēs. Sī quandō tuētur simulātor pium, id magis suī, quam aequī amōre facit.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "book", page.book %} {% assign prev_page = neighbors | where: "sequence",
+    prev_sequence | first %} {% assign next_page = neighbors | where: "sequence",
+    next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

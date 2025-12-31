@@ -1,0 +1,87 @@
+---
+title: Dialogi Sacri - Dialogus Quintus (Liber Tertius)
+subtitle: Raphaēl. Tob. 12.
+type: Colloquium
+author: Castalio
+topic: Angelic Revelation
+difficulty: Moderate
+sequence: 77
+book: 3
+character_count: 3
+permalink: /castalio/dialogi-sacri-liber-tertius-dialogus-quintus/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Raphaēl, Tobaēs et Tobiae, sibi mercēdem solvere volentibus, sē indicat, ēiīsque officium praecīpit.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Tobaeus, Tobiās, Raphaēl
+    </div>
+
+    <div class="line-container" id="Tobias.1">
+      <div class="line-character">Tobiās</div>
+      Tobiā fīlī, solvāmus istī hominī, quī tē comitātus est, mercēdem; et eam cum corōllāriō.
+    </div>
+
+    <div class="line-container" id="Tobias.2">
+      <div class="line-character">Tobiās</div>
+      Pater, dēmus eī dīmidiam partem pecūniae, quam illinc attulī. Nam is mē incolumem dūxit, et redūxit, meamque uxōrem sānāvit, et argentum ā Gabēle abstulit, et tibi oculōs sānāvit: prō quibus omnibus, quaenam eī referrī per grātia potest? Hūc adēs, Azariā. Accipe, frāter, mercēdem tuam, id est, dīmidiam pecūniam, quam illinc asportāstī: et valē.
+    </div>
+
+    <div class="line-container" id="Raphael.3">
+      <div class="line-character">Raphaēl</div>
+      Canite Iovae carmen novum, ēique grātiās agite, et ēius nōmen celebrāte, prō tantīs ēius in vōs collātīs beneficiīs; crebrīsque precibus, supplicātiōnibus, et beneficentiā ergā egentēs, eum affectāte, quoad vīvētis: Nam plūs apud eum valet assiduum beneficentiae officium, quam argentī aurīque cōpiōsa congeriēs, utpote cum beneficentia vindicet ā morte. Equidem nihil vōs dē reī vēritāte cēlābō. Quō tempore tū, tuaque nurus Sarā, sānctī opem Nūminis precibus suppliciter magnō cum animī angōre implōrābātis, vestrās ego precēs (ut vōs sciātis) ad maiestātis solium subvehēbam: cumque tū mortuōs sepeliēbās, aderam tibi, tuīsque difficillimīs rēbus, ab Iovā, quī tē oculōrum caecitāte tentāverat, (solet enim hōc pactō perīculum facere bonōrum,) missus sum ad tē sānandum, et Saram tuam nurum. Sum autem Raphaēl genius, ūnus dē prīncipibus quī ad glōriae solium famuluntur. Nōlīte timēre. Bene vōbīs sē rēs habet. Agite Iovae grātiās prō tantīs mīrāculīs, quae vōbīs exhibuit. Nam quod mē, quamdiū vōbīscum versātus sum, edere et bibere vīdistis: speciēs illa fuit quae vestrīs oculīs obversābātur, cum rē ipsā neque ederem, neque biberem. Quāre mandāte haec omnia līterīs, quae vōs vestrī ergā Deum officiī per omnem vītam admoneant, atque hanc rem omnem in omnium aetātum aeternitātem testentur: et Iovae grātiās agite, ēiusque sācram memoriam perpetuō retinēte; mēque iam absolvite, ut ad Deum mē recipiam ā quō sum missus ad vōs.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Deus piīs saepe, nē cōgitantibus quidem prōspicit. Per crucēs dūcit Deus suōs ad fēlīcitātem. Piōrum prīmordia trīstia, exitūs laetī.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "book", page.book %} {% assign prev_page = neighbors | where: "sequence",
+    prev_sequence | first %} {% assign next_page = neighbors | where: "sequence",
+    next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

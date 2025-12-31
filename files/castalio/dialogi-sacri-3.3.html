@@ -1,0 +1,102 @@
+---
+title: Dialogi Sacri - Dialogus Tertius (Liber Tertius)
+subtitle: Raguēl. Tob. 10.
+type: Colloquium
+author: Castalio
+topic: Farewell and Blessing
+difficulty: Easy
+sequence: 75
+book: 3
+character_count: 3
+permalink: /castalio/dialogi-sacri-liber-tertius-dialogus-tertius/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Tobiās Raguēlī socerō suō valedīcit, sēcum abdūcēns illīus fīliam Saram, uxōrem suam.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Tobiās, Raguēl, Sarā
+    </div>
+
+    <div class="line-container" id="Tobias.1">
+      <div class="line-character">Tobiās</div>
+      Tū socer Raguēle, tū ā mē postulāstī, ut manērem apud tē diēs quattuordecim, et cum fīliā tuā, uxōre meā Sarā suāviter vīverem; id quod tibi concessī. Nunc fīnīta est diēs; itaque petō abs tē ut mē dīmittās. Meī enim parentēs ambō, diēs numerant, neque putant hoc locō rem esse.
+    </div>
+
+    <div class="line-container" id="Raguel.2">
+      <div class="line-character">Raguēl</div>
+      Doleō mē tam parvum spatium ā tē petīvisse. Sed nihil obstat, quō minus id fiat longius. Manē apud mē diūtius: ego mittam ad tuum patrem nūncium, et eī tōtum negōtium renūntiet, nē sit dē tē sollicitus.
+    </div>
+
+    <div class="line-container" id="Tobias.3">
+      <div class="line-character">Tobiās</div>
+      Quaesō tē, nōlī mē remorārī: cupiō omnīnō ad parentēs revertī.
+    </div>
+
+    <div class="line-container" id="Raguel.4">
+      <div class="line-character">Raguēl</div>
+      Quandō urgēs, nōn remorābor invītum. Ēn trādō tibi meam fīliam Saram, necnōn dīmidium facultātum meārum. Īte fēlīciter. Deus Iova, Deus maiōrum nostrōrum, vōs secundet, mihīque ex vōbīs līberōs mārēs ostendat, quī dīvīnae lēgī dent operam. Agite, dēosculārī vōs volō. Vide, mea fīlia, ut tuum socerum et socrum (quī nunc tuī parentēs sunt) habeās in magnō honōre, marītum dīligās, familiam regās, domum gubernēs, et tēipsam praestēs inculpātam; et, cum bonā pāce profecta, efficiās, ut bonam dē tē fāmam vīventēs adhūc laetī hilarēsque accipiāmus. Et tū, Tobiā fīlī, valē. Iova tē Deus, caelestiissimus salvum perdūcat, mihīque ex tē, et fīliā meā Sarā, līberōs Iovae studiōsōs ēique probātōs ostendat, antequam moriar. Ecce Saram fīliam meam in potestāte tuā, nōlī eam unquam male tractāre. Īte sānē incolumēs.
+    </div>
+
+    <div class="line-container" id="Sara.5">
+      <div class="line-character">Sarā</div>
+      Valēte, parentēs chārissimī: Valēte, cognātī, et amīcī omnēs.
+    </div>
+
+    <div class="line-container" id="Tobias.6">
+      <div class="line-character">Tobiās</div>
+      Valē, Socer: Valē, Socrus; valēte omnēs. Ego Iovae grātiās agō, quī mē laetum reddiderit, et tot beneficiīs tam mīrificē affēcerit.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Uxōris est sequī virum, et propter eum parentēs patriamque relinquere. Est enim mātrīmōniī coniūnctiō arctiōr quam nātūrae.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "book", page.book %} {% assign prev_page = neighbors | where: "sequence",
+    prev_sequence | first %} {% assign next_page = neighbors | where: "sequence",
+    next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

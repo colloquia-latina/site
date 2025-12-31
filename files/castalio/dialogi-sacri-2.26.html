@@ -1,0 +1,101 @@
+---
+title: Dialogi Sacri - Dialogus Vicesimus Sextus (Liber Secundus)
+subtitle: Sarephthana. 3 Rēgum 17.
+type: Colloquium
+author: Castalio
+topic: Faith and Providence
+difficulty: Easy
+sequence: 59
+character_count: 2
+permalink: /castalio/dialogi-sacri-liber-secundus-dialogus-vicesimus-sextus/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Ēlias missus ā Iovā, Sarephthānam mulierculam, perpetuātā eius farīnā et oleō, ā fame tuētur.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Ēlias, Sarephthāna mulier
+    </div>
+
+    <div class="line-container" id="Elias.1">
+      <div class="line-character">Ēlias</div>
+      Heus, mulier, quaesō tē, ut petās paululum aquae in aliquō vāsculō, quod mihi bibendum dēs.
+    </div>
+
+    <div class="line-container" id="Sarephthana.2">
+      <div class="line-character">Sarephthāna mulier</div>
+      Ego vērō et perlibenter.
+    </div>
+
+    <div class="line-container" id="Elias.3">
+      <div class="line-character">Ēlias</div>
+      Sed heus, adfertō tēcum et frūstum pānis.
+    </div>
+
+    <div class="line-container" id="Sarephthana.4">
+      <div class="line-character">Sarephthāna mulier</div>
+      Ego vērō (Iovam Deum tuum immortālem testor) coctum nōn habeō; sed tantum farīnae pusillum in cadō, et oleī pusillum quid in ampullā. Nunc colligō paululum lignī ad id, quod habeō, mihi meīsque līberīs parandum: quō cōnsumptō supereest ut fame pereāmus.
+    </div>
+
+    <div class="line-container" id="Elias.5">
+      <div class="line-character">Ēlias</div>
+      Bonō es animō. Ī factum ut dīxistī. Sed mihi prius dēpstitium inde cōnfectum adfertō, deinde tibi tuīsque līberīs factūra. Nam hoc tibi ā Iovā Israēlitārum Deō cōnfīrmō, nōn prius farīnae cadum, et oleī ampullam exhaustum īrī, quam Iova terram pluviā irrigāverit.
+    </div>
+
+    <div class="line-container" id="Sarephthana.6">
+      <div class="line-character">Sarephthāna mulier</div>
+      Faciam, ut iubēs.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Tenuēs et famēlicōs respicit Deus. Tenuēs et famēlicī multō facilius crēdunt Deō quam potentēs et saturī. Prīmitiae dēbentur Deō et suīs. Deus eōrum labōrem fēlīcitat, quī sibi prīmitiās tribuunt. Fēlīciter habet, quī Deum habet, quantulumcunque habet.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,112 @@
+---
+title: Dialogi Sacri - Dialogus Sextus Decimus (Liber Tertius)
+subtitle: Artaxerxēs. 2 Esdr. 2. vel Nehem. 2.
+type: Colloquium
+author: Castalio
+topic: Permission and Favor
+difficulty: Easy
+sequence: 88
+book: 3
+character_count: 2
+permalink: /castalio/dialogi-sacri-liber-tertius-dialogus-sextus-decimus/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Nehemiās ā rēge Artaxerxe veniam et opēs impetrat eundī īnstaurātum urbem Hierosolymam.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Artaxerxēs, Nehemiās
+    </div>
+
+    <div class="line-container" id="Artaxerxes.1">
+      <div class="line-character">Artaxerxēs</div>
+      Quī fit ut vultū sīs adeō trīstī, cum nōn aegrōtēs? Mīrum, nī animī trīstitia est.
+    </div>
+
+    <div class="line-container" id="Nehemias.2">
+      <div class="line-character">Nehemiās</div>
+      Rēx, in perpetuum vīve. Possumne nōn trīstī vultū esse, cum urbs, in quā sepulchra sunt maiōrum meōrum, ēversa sit, et ēius portae igne dēflāgrāverint?
+    </div>
+
+    <div class="line-container" id="Artaxerxes.3">
+      <div class="line-character">Artaxerxēs</div>
+      Quidnam ergō petis?
+    </div>
+
+    <div class="line-container" id="Nehemias.4">
+      <div class="line-character">Nehemiās</div>
+      Sī tibi vidētur, et sī quid apud tē valeō, ut mē dīmittās in Iūdaeam, ad īnstaurandam urbem patriam.
+    </div>
+
+    <div class="line-container" id="Artaxerxes.5">
+      <div class="line-character">Artaxerxēs</div>
+      Ego vērō dīmittō. Tū dīcitō, quid tibi ad istud fierī velīs.
+    </div>
+
+    <div class="line-container" id="Nehemias.6">
+      <div class="line-character">Nehemiās</div>
+      Cūrābis, sī placet, ut mihi dentur litterae ad praetōrēs Syriae, quī mē cūrent dēdūcendum, dum perveniam in Iūdaeam. Deinde litterae ad Asaphum rēgiae silvae custōdem, quī mihi ligna suggerat ad refīciendās portās arcis, quae est aedī coniūncta, urbisque moenia, et domum, in quam sum dīversūrus.
+    </div>
+
+    <div class="line-container" id="Artaxerxes.7">
+      <div class="line-character">Artaxerxēs</div>
+      Dabuntur quae petis.
+    </div>
+
+    <div class="line-container" id="Nehemias.8">
+      <div class="line-character">Nehemiās</div>
+      Agō tibi grātiās immortālēs, Rēx, tibīque fortūnātissimum longissimumque rēgnum precor.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Rēgis animum Deus habet in manū, eamque quōcumque vult inclīnat. Cui propitius est Deus, huic conciliat benevolentiam potentium.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "book", page.book %} {% assign prev_page = neighbors | where: "sequence",
+    prev_sequence | first %} {% assign next_page = neighbors | where: "sequence",
+    next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

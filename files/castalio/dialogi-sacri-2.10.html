@@ -1,0 +1,101 @@
+---
+title: Dialogi Sacri - Dialogus Decimus (Liber Secundus)
+subtitle: Doegus. 1 Rēgum 22.
+type: Colloquium
+author: Castalio
+topic: Injustice and Murder
+difficulty: Moderate
+sequence: 43
+character_count: 3
+permalink: /castalio/dialogi-sacri-liber-secundus-dialogus-decimus/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Saulus iniūstē cūrat occīdendōs Iovae sacerdōtēs, quia Davidem nōn indicāverint.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Saulus, Ahimelechēeus, Doegus
+    </div>
+
+    <div class="line-container" id="Saulus.1">
+      <div class="line-character">Saulus</div>
+      Audī, Ahitōbī nāte.
+    </div>
+
+    <div class="line-container" id="Ahimelecheeus.2">
+      <div class="line-character">Ahimelechēeus</div>
+      Adsum, domine.
+    </div>
+
+    <div class="line-container" id="Saulus.3">
+      <div class="line-character">Saulus</div>
+      Cūr in mē coniūrāstī, cum Isaī nātō: cui et cibāria et ēnsem dedistī, et prō quō Deum cōnsuluistī? Quae īnsidiae mihi manifēstō parantur?
+    </div>
+
+    <div class="line-container" id="Ahimelecheeus.4">
+      <div class="line-character">Ahimelechēeus</div>
+      Ecquis autem est ex tuīs omnibus aequē fīdus, atque David? Rēgis gener, tuō iussū profectus, et apud tē maximā dignitāte habitus? An nunc prīmum Deī ōrāculum eius nōmine sum percōntātus? Absit ā mē omne scelus: cavē nē mihi, aut omnīnō meae paternae familiae, ūllum in hāc rē crīmen impōnās: nam istīus tōtīus negōtiī sum plānē ignārus.
+    </div>
+
+    <div class="line-container" id="Saulus.5">
+      <div class="line-character">Saulus</div>
+      Moriēris, Ahimeleche, ūnā cum tōtā tuā paternā familiā. Agite, meī cursōrēs, circumdate, et occīdite hōs Iovae sacerdōtēs: nam Davidis partēs tuentur, sciuntque profugum esse, neque mē certiōrem fēcērunt. Quid dubitātis? Quae vōs religiō impedit? Cūr et vōs mihi nōn pārētis? Age, Doege, circumvenī eōs tū, et interfice.
+    </div>
+
+    <div class="line-container" id="Doegus.6">
+      <div class="line-character">Doegus</div>
+      Fiet.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Impius prīnceps sanguinārius est, et suspīciōnī magis crēdit et obsequitur, quam vēritātī. Miserum est cum iūdice negōtium habēre, quī vēram causae dictiōnem nōn admittit.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

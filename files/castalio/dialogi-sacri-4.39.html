@@ -1,0 +1,107 @@
+---
+title: Dialogi Sacri - Dialogus Tricensimus Nonus (Liber Quartus)
+subtitle: Circumcīsī. Act. 11.
+type: Colloquium
+author: Castalio
+topic: Peter's Defense
+difficulty: Easy
+sequence: 129
+book: 4
+character_count: 2
+permalink: /castalio/dialogi-sacri-liber-quartus-dialogus-tricensimus-nonus/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Reprehēnsus ā Chrīstiānīs Iūdaeīs Petrus, quod cum Cornēliō extrānae gentis homō congrēssus fuisset, causam dīcit, & obtinet.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Chrīstiānī, Petrus
+    </div>
+
+    <div class="line-container" id="Christiani.1">
+      <div class="line-character">Chrīstiānī</div>
+      Tuum quidem factum probāre nūllō pactō possumus, ut līberē loquāmur.
+    </div>
+
+    <div class="line-container" id="Petrus.2">
+      <div class="line-character">Petrus</div>
+      Quodnam id est tandem?
+    </div>
+
+    <div class="line-container" id="Christiani.3">
+      <div class="line-character">Chrīstiānī</div>
+      Quod hominēs praeputiō praeditōs convēnistī, & cum eīs cibum cēpistī.
+    </div>
+
+    <div class="line-container" id="Petrus.4">
+      <div class="line-character">Petrus</div>
+      Sī vōbīs vidētur, rem omnem, prout sēsē habet, ēnarrābō, vōs eā audītā iūdicābitis.
+    </div>
+
+    <div class="line-container" id="Christiani.5">
+      <div class="line-character">Chrīstiānī</div>
+      Placet: ēnarrā.
+    </div>
+
+    <div class="line-container" id="Petrus.6">
+      <div class="line-character">Petrus</div>
+      Cum in oppidō Ioppe ōrārem, vīsus sum mihi vidēre (cum essem extrā mē raptus) vās quoddam dēscendēns, quasī linteum magnum, quod quattuor capitibus dē caelō dēmissum, ad mē usque pervēnit. Id cum attentus contemplārer, vīdī quadrupedia terrestria, & ferās, & rēptilia, & aerēās volucrēs, simulque audīvī vōcem dīcentem mihi; Age, Petre, macta & vēscere. Tum ego; Minimē, Domine: nihil enim unquam immūndum aut impūrum per ōs meum intrāvit. At illa vōx iterum dē caelō inquit; Quae Deus pūrgāvit, tū nē polluē. Idque ter factum est, & tum dēmum omnia in caelum subdūcta sunt. Tum continuō praestō fuērunt trēs hominēs in eā domō, in quā eram, ad mē Caesarēā missī. Cum hīs ut abiectā omnī cūnctātiōne congrederer, dīvīnō afflātū admonitus sum. Īvērunt ūnā mēcum sex frātrēs hī, ac nōbīs hominis domum ingressīs renūntiāvit ille, ut genium domī suae vīdisset adstantem, & sibi praecipientem, ut mitteret Ioppen hominēs, quī accerserent Simōnem cognōmine Petrum, ex quō ea audiret, quae & ipsī essent, & ipsīus tōtī familiae salūtāria. Hīc cum ego loquī coepissem, illī dīvīnō afflātū correptī sunt, quemadmodum & nōs fuimus prīncipiō. Tum recordātus sum istud Dominī dictum quō dīxerat, Iōannem quidem abluisse aquā, sed nōs Spīritū sācrō ablūtum īrī. Quod sī eōdem illōs mūnere affēcerat Deus quō nōs, cum in Iēsū Chrīstī Dominī fidem vēnissēmus: ego quis eram ut possem obsistere Deō?
+    </div>
+
+    <div class="line-container" id="Christiani.7">
+      <div class="line-character">Chrīstiānī</div>
+      Iam nihil addimus: sed grātiās Deō agimus, quī etiam exterīs per vītae castīgātiōnem aditum ad vītam patefēcerit.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Imitanda est Petrī modestia, quī quod dīvīnō iussū fēcerat, ēius tamen causam hominibus reddere nōn dēdignātur. Quō Deus admittit, eōs repudiāre nēmō dēbet.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "book", page.book %} {% assign prev_page = neighbors | where: "sequence",
+    prev_sequence | first %} {% assign next_page = neighbors | where: "sequence",
+    next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

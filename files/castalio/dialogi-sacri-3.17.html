@@ -1,0 +1,117 @@
+---
+title: Dialogi Sacri - Dialogus Septimus Decimus (Liber Tertius)
+subtitle: Nehemiās. 2 Esdr. 5. vel Nehem. 5.
+type: Colloquium
+author: Castalio
+topic: Justice and Reform
+difficulty: Moderate
+sequence: 89
+book: 3
+character_count: 4
+permalink: /castalio/dialogi-sacri-liber-tertius-dialogus-septimus-decimus/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Expostulant pauperēs Iūdaeī dē dīvitum ergā sē inīquitāte avāritiāque. Et Nehemiās dīvitēs cōgit in ōrdinem.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Plēbeiī, Nehemiās, Prīmātēs, Sacerdōtēs, Populus
+    </div>
+
+    <div class="line-container" id="Plebeii.1">
+      <div class="line-character">Plēbeiī</div>
+      Magnus est tum noster, tum nostrōrum līberōrum numerus; comparandum est inde frūmentum, quō vīvāmus.
+    </div>
+
+    <div class="line-container" id="Plebeii.2">
+      <div class="line-character">Plēbeiī</div>
+      Oppīgnorandī sunt fundī nostrī, et vīneae, et domūs, ut nōs frūmentō contrā famem mūniāmus.
+    </div>
+
+    <div class="line-container" id="Plebeii.3">
+      <div class="line-character">Plēbeiī</div>
+      Iam prō nostrīs agrīs, et vīneīs, ad tribūtum rēgī pendendum, pecūniam sūmpsimus mūtuam. An aequum est, ut cum ēiusdem nōbīscum cōnsanguinitātis sint aliī, eademque sit līberōrum eōrum atque nostrōrum condiciō, nōs tamen līberōs nostrōs in servitūtem dēdāmus, sintque iam fīliārum nostrārum nōnnūllae ēmancipātae, neque eās vindicāre possīmus, cum fundōs et vīneās nostrās teneant aliī?
+    </div>
+
+    <div class="line-container" id="Nehemias.4">
+      <div class="line-character">Nehemiās</div>
+      Ō indignum facinus! Itine vērō, prīncipēs, foenus ā vestrīs exigitis? Ergō nōs cōnsanguineōs nostrōs Iūdaeōs, in extrēneās gentēs venditōs, prō nostrīs vīribus redēmerimus, et vōs eōsdem emetis ut dominōs nōn āmīserint, sed mūtāverint; nōn rēctē facitis. Nōnne in metū Deī nostrī vīvitis? ut barbarōrum hostium nostrōrum vituperātiōnem ēvitētis? Ego quoque, et meī cognātī, atque famulī, argentum eīs frūmentumque mūtuō dedimus. Agite, remittāmus hoc nōmen. Reddite eīs hodiē agrōs suōs, et vīneās, et olīvēta, et domōs: tum centēsimam condōnāte argentī, et frūmentī, et vīnī, et oleī, quae eīs mūtuō dedistis.
+    </div>
+
+    <div class="line-container" id="Primates.5">
+      <div class="line-character">Prīmātēs</div>
+      Reddēmus, neque ab eīs quicquam exigēmus: Sīc faciēmus, ut tū hortāris.
+    </div>
+
+    <div class="line-container" id="Nehemias.6">
+      <div class="line-character">Nehemiās</div>
+      Vōs vērō, sacerdōtēs, iūrāte vōs ita factūrōs.
+    </div>
+
+    <div class="line-container" id="Sacerdotes.7">
+      <div class="line-character">Sacerdōtēs</div>
+      Faciēmus.
+    </div>
+
+    <div class="line-container" id="Nehemias.8">
+      <div class="line-character">Nehemiās</div>
+      Ergō quemadmodum ego meum gremium excutiō, sīc, quīcumque nōn haec praestiterit, eum excutiat Deus ex domō et labōre suō: sīcque estō excussus, vacuusque.
+    </div>
+
+    <div class="line-container" id="Populus.9">
+      <div class="line-character">Populus</div>
+      Āmēn.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Avārō homine nihil est inīquius. Avārus animam vēnālem habet. Multum pollet, etiam apud inīquōs, Iūstus et gravis homō.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "book", page.book %} {% assign prev_page = neighbors | where: "sequence",
+    prev_sequence | first %} {% assign next_page = neighbors | where: "sequence",
+    next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

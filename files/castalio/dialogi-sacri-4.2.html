@@ -1,0 +1,107 @@
+---
+title: Dialogi Sacri - Dialogus Secundus (Liber Quartus)
+subtitle: Baptista. Matth. 3. Marc. 1. Lūc. 3.
+type: Colloquium
+author: Castalio
+topic: John the Baptist
+difficulty: Moderate
+sequence: 92
+book: 4
+character_count: 4
+permalink: /castalio/dialogi-sacri-liber-quartus-dialogus-secundus/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Iōannēs Baptista populum docet vītae correctiōnem, & dē Chrīstō vāticinātur.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Iōannēs Baptista, Plēbs, Pūblicānī, Mīlitēs
+    </div>
+
+    <div class="line-container" id="Ioannes.1">
+      <div class="line-character">Iōannēs</div>
+      Prōgeniēs vīperīna, quis vōs summonuit futūram poenam fugere? Dite ergō vītae meliōris indicēs frūctūs, & nē ideō magnōs vōbīs spīritūs & arrogantiam sūmite, quod patrem habētis Abrahāmum. Dīcō enim vōbīs, Deum posse ex hīs saxīs suscitāre līberōs Abrahāmō. Iam vērō secūris arborum rādīcī admōta est, omnisque arbor frūctum bonum nōn ēdēns, exscindenda est, & in ignem inicienda.
+    </div>
+
+    <div class="line-container" id="Plebs.2">
+      <div class="line-character">Plēbs</div>
+      Quid ergō faciēmus?
+    </div>
+
+    <div class="line-container" id="Ioannes.3">
+      <div class="line-character">Iōannēs</div>
+      Quī habet duās vestēs, impertiat nōn habentī: & quī habet cibāria, idem faciat.
+    </div>
+
+    <div class="line-container" id="Publicani.4">
+      <div class="line-character">Pūblicānī</div>
+      Nōbīs autem, Magister, quid faciendum est?
+    </div>
+
+    <div class="line-container" id="Ioannes.5">
+      <div class="line-character">Iōannēs</div>
+      Nihil amplius, quam quantum vōbīs dēcrētum est, exigite.
+    </div>
+
+    <div class="line-container" id="Milites.6">
+      <div class="line-character">Mīlitēs</div>
+      Quid etiam, nōbīs?
+    </div>
+
+    <div class="line-container" id="Ioannes.7">
+      <div class="line-character">Iōannēs</div>
+      Nē quem pulsāte, aut per sycophantiam circumvenīte, & stipendiīs vestrīs este contentī. Sed audīte ūniversī. Ego quidem abluō vōs aquā ad vītae ēmendātiōnem. Sed mē praestantior mē subsequitur, & ita praestantior, ut ego nōn sim dignus quī ēius calceōrum solvam corrigiam. Is vōs ablūet sācrō Spīritū & igne: quī quidem vannum manū tenet, āream suam perpurgātūrus, frūmentumque in horreum comportātūrus, & paleam ignī cremātūrus inextinctō.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Bona arbor bonōs frūctūs edit. Abstinendum ab iniūstitiā, sī poenās vītāre velīs.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "book", page.book %} {% assign prev_page = neighbors | where: "sequence",
+    prev_sequence | first %} {% assign next_page = neighbors | where: "sequence",
+    next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

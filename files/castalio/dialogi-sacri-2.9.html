@@ -1,0 +1,111 @@
+---
+title: Dialogi Sacri - Dialogus Nonus (Liber Secundus)
+subtitle: Ahimelecus. 1 Rēg. 21.
+type: Colloquium
+author: Castalio
+topic: Deception and Necessity
+difficulty: Moderate
+sequence: 42
+character_count: 2
+permalink: /castalio/dialogi-sacri-liber-secundus-dialogus-nonus/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      David fugiēns Saulum, ab Ahimeleche sacerdōte pānem ēnsemque impetrat, sēsē ad rēgium quoddam negōtium ex ipsius rēgis mandātō proficīscī simulāns.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Ahimelechēeus sacerdōs, David
+    </div>
+
+    <div class="line-container" id="Ahimelecheeus.1">
+      <div class="line-character">Ahimelechēeus</div>
+      Quid est, quod sōlus sīs, nūllō comitātū?
+    </div>
+
+    <div class="line-container" id="David.2">
+      <div class="line-character">David</div>
+      Rēx mihi quoddam negōtium mandāvit; quod negōtium, nē quis omnīnō mortālium resciśceret, nēve quō mitterer, praecepit. Eam ob rem famulīs certum quendam locum assignāvī. Quāre, sī habēs quinque pānēs, trade mihi; aut quot habēs.
+    </div>
+
+    <div class="line-container" id="Ahimelecheeus.3">
+      <div class="line-character">Ahimelechēeus</div>
+      Pānem profānum nōn habeō, sed sācrum habeō, sī modo tuī famulī ā mulieribus abstinuerint.
+    </div>
+
+    <div class="line-container" id="David.4">
+      <div class="line-character">David</div>
+      Cum mulieribus nihil nōbīs reī fuit hunc iam tertium diem, ex quō profectus sum, suntque corpora meōrum famulōrum casta. Quod sī forte tum, cum profectī sumus, fuerant cum uxōribus, atque ita corpora pūra nōn habēbant: at hodiē quidem, antequam sacrīs pānibus vescāntur, pūrī erunt; quoniam hic diēs tertius est, quod spatium lūstrātiōnī tribuitur in nostrā lēge.
+    </div>
+
+    <div class="line-container" id="Ahimelecheeus.5">
+      <div class="line-character">Ahimelechēeus</div>
+      Accipe igitur pānem sācrum. Nam nūllum habeō praeter hōs apposititiōs pānēs, ā cōnspectū Iovae sublātōs, summissīs statim in eōrum locum recentibus.
+    </div>
+
+    <div class="line-container" id="David.6">
+      <div class="line-character">David</div>
+      Habēsne hīc praetereā ūllam hastam aut ēnsem? nam neque hastam, neque ēnsem cēpī, adeō mē rēgis mandātum urgēbat.
+    </div>
+
+    <div class="line-container" id="Ahimelecheeus.7">
+      <div class="line-character">Ahimelechēeus</div>
+      Hīc est ēnsis Goliāthī Palaestīnī, ā tē in valle quercūs occīsī, involūtus pannō post Ephōdum. Eum, tū sī vīs, capiās licet: nam alius nūllus est.
+    </div>
+
+    <div class="line-container" id="David.8">
+      <div class="line-character">David</div>
+      Nūllus est istō melior: trade eum mihi.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      In perīculīs interdum simulant sānctī hominēs. Lēx est facta propter hominem, nōn homō propter lēgem. David, urgente necessitāte, pānēs sacrōs īnsōns comedit, quamvīs nōn esset sacerdōs, sōlīs sacerdōtibus vēscī per lēgem licet.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

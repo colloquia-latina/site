@@ -1,0 +1,91 @@
+---
+title: Dialogi Sacri - Dialogus Vicesimus (Liber Secundus)
+subtitle: Achitophel. 2 Rēgum 17.
+type: Colloquium
+author: Castalio
+topic: Counsel and Providence
+difficulty: Moderate
+sequence: 53
+character_count: 3
+permalink: /castalio/dialogi-sacri-liber-secundus-dialogus-vicesimus/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Achitophel Absalomō, prūdēns, sed impium cōnsilium dat, dē opprimendō Absalomī patre Davide. Vērum Chusaeus Davidī bene volēns, alterō cōnsiliō illud reddit irritum.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Achitophel, Absalomus, Chusaeus
+    </div>
+
+    <div class="line-container" id="Achitophel.1">
+      <div class="line-character">Achitophel</div>
+      Absalome, cēnseō, ut ego nunc lēctīs duodecim hominum mīlibus, Davidem hāc nocte persequar, eumque perterritum et fatīgātum, dēfessumque, omnibus quī cum eō sunt fugā dīlāpsīs, sōlum interficiam: deinde cēterōs omnēs ad tē sīc redūcam, ut spōnsa dēdūcī solet ad spōnsum. Ita fiet, ut cum tū ūnius mortem expetās, cēterōrum omnium salūtī cōnsultum sit.
+    </div>
+
+    <div class="line-container" id="Absalomus.2">
+      <div class="line-character">Absalomus</div>
+      Perplacet quidem tuum cōnsilium: sed vocētur hūc etiam Chusaeus Archīta, ut audiāmus, quid ipse quoque dīcat. Chusae, suādet Achitophel, ut rēgem hāc nocte invādāmus, territumque et ā suīs dēstitūtum, salvīs reliquīs, opprimāmus. Tū quid cēnsēs? Sequemurne eius cōnsilium, an nōn sequemur?
+    </div>
+
+    <div class="line-container" id="Chusaeus.3">
+      <div class="line-character">Chusaeus</div>
+      Achitophelis cōnsilium, hominis aliōquī prūdentis, hāc quidem in rē nōn probō. Tū scīs, ut pater tuus, et quī eum comitantur, hominēs sint strēnuī, et ut agrestī pullīs orbāta ferōciōrēs. Praetereā, pater tuus vir reī mīlitāris scientissimus, nōn est cum reliquā turbā per noctem āctūrus. Nunc latet in aliquō antrō, aut aliō locō. Quod sī quis principiō dē tuīs ceciderit, et rūmor sparsus fuerit, factam esse caedem Absalomanōrum, illī ipsī quī nunc sunt leōnibus animōsiōrēs, exanimābuntur. Sciunt enim ūniversī Israēlitae patrem tuum, virum esse fortissimum, nec nōn eius mīlitēs. Vērum meum cōnsilium est, ut conveniant ad tē omnēs Israēlitae ā Dān ad Bērsabam, quī futūrī sunt arēnae numerōsiōrēs; utque tū ipse inter eōs praesēns incēdās. Tum eum aggressī ubi ubi erit, rōre dēnsius invādēmus; ut neque ipse, neque eius comitum vel ūnus ēvadat. Quod sī sē in aliquod oppidum recēperit, id oppidum ūniversī vel fūnibus cīnctum in flūmen ita ēverriculābimus, ut nē calculus quidem relictus sit.
+    </div>
+
+    <div class="line-container" id="Absalomus.4">
+      <div class="line-character">Absalomus.</div>
+      Melius est istud cōnsilium quam Achitophelis: obtemperābitur tibi.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Impiōrum prūdentia bonīs ēreptō ē mediō piōrum salūtāris. Impiīs favēre, et cōnsulere contrā piōs, impium est. Rursus, impiōs ad piōrum salūtem dēcipere, pium est, et ipsīs etiam impiīs ūtile. Minus enim gravēs poenās Deō dabunt, sī piōs nōn occīderint.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "collection", page.collection %} {% assign prev_page = neighbors | where:
+    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
+    where: "sequence", next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

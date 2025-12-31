@@ -1,0 +1,127 @@
+---
+title: Dialogi Sacri - Dialogus Quadragensimus (Liber Quartus)
+subtitle: Rhodē. Act. 12.
+type: Colloquium
+author: Castalio
+topic: Peter's Escape
+difficulty: Easy
+sequence: 130
+book: 4
+character_count: 3
+permalink: /castalio/dialogi-sacri-liber-quartus-dialogus-quadragensimus/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Ēductus dīvīnitūs ex carcere Petrus, Chrīstiānīs nārrat quemadmodum fuerit ēductus.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Petrus, Rhodē, Chrīstiānī
+    </div>
+
+    <div class="line-container" id="Petrus.1">
+      <div class="line-character">Petrus</div>
+      Aperīte mihi hās forēs aliquis.
+    </div>
+
+    <div class="line-container" id="Rhode.2">
+      <div class="line-character">Rhodē</div>
+      Nesciō quis pulsat ostium: prōvīsō quis sit.
+    </div>
+
+    <div class="line-container" id="Petrus.3">
+      <div class="line-character">Petrus</div>
+      Ecquis mihi aperit tandem?
+    </div>
+
+    <div class="line-container" id="Rhode.4">
+      <div class="line-character">Rhodē</div>
+      Petrus est, Petrus est, Ō mē fēlīcem! Ō populārēs, salvī sumus: Petrus prō foribus vestibulī stat.
+    </div>
+
+    <div class="line-container" id="Christiani.5">
+      <div class="line-character">Chrīstiānī</div>
+      Īnsānīs?
+    </div>
+
+    <div class="line-container" id="Rhode.6">
+      <div class="line-character">Rhodē</div>
+      Minimē vērō. Agnōvī ēius vōcem.
+    </div>
+
+    <div class="line-container" id="Christiani.7">
+      <div class="line-character">Chrīstiānī</div>
+      Genius ēius est.
+    </div>
+
+    <div class="line-container" id="Petrus.8">
+      <div class="line-character">Petrus</div>
+      Heus, heus, an expectātis dum ego hāsce effringam forēs.
+    </div>
+
+    <div class="line-container" id="Rhode.9">
+      <div class="line-character">Rhodē</div>
+      Nōn audītis eum pulsantem?
+    </div>
+
+    <div class="line-container" id="Christiani.10">
+      <div class="line-character">Chrīstiānī</div>
+      Aperiāmus. Ō mīrum mīrāculum! Tūne ergō vērus adēs Petrus?
+    </div>
+
+    <div class="line-container" id="Petrus.11">
+      <div class="line-character">Petrus</div>
+      Pāx sit rēbus. Audīte, ut mē Dominus ēdūxerit ē carcere. Ā quater quaternīs mīlitibus per vicēs custōdiēbar. Cumque hāc nocte dormirem inter duōs mīlitēs, vinctus duābus catēnīs, carceremque custōdirent ante iānuam custōdēs; ecce, adest Genius Dominī, cuius in adventū domus splendōre illūstrāta est. Is mē, pulsātō latere, expergefactum iussit surgere cōnfestim, continuōque mihi ē manibus excidērunt catēnae. Tum ille: Praecinge tē, inquit, & indue sandalia. Atque ita fēcī, iussūsque amicīre pallium, & eum sequī, pārēbam: cum iam ēgressus nōndum intellegerem rem vēram agī, sed mihi vīsum cernere vidērer. Et iam praeteregressī prīmōs & secundōs custōdēs, vēnimus ad portam ferream, quā ītur in urbem: quam ultrō nōbīs patefactam ēgressī prōcessimus vīcum ūnum; atque ibī mē relīquit ille. Tum ego, ubi ad mē rediī, apertē intellēxī, eum ā Dominō missum esse ad mē, ex Hērōdis manū, & tantā Iūdaeī populī expectātiōne, ēripiendum. Haec vōs Iacōbō & frātribus nūntiābitis. Mihi aliō concēdendum est.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Deum nūllī carcerēs, nūllae catēnae prohibent, quōminus līberēs suōs. Quōs līberāre vult Deus, tenēre nēmō potest.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "book", page.book %} {% assign prev_page = neighbors | where: "sequence",
+    prev_sequence | first %} {% assign next_page = neighbors | where: "sequence",
+    next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

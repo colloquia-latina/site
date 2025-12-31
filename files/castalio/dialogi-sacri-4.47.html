@@ -1,0 +1,98 @@
+---
+title: Dialogi Sacri - Dialogus Quadragensimus Septimus (Liber Quartus)
+subtitle: Iūdēa. Matth. 25.
+type: Colloquium
+author: Castalio
+topic: Final Judgment
+difficulty: Moderate
+sequence: 137
+book: 4
+character_count: 3
+permalink: /castalio/dialogi-sacri-liber-quartus-dialogus-quadragensimus-septimus/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Chrīstus in ultimō adventū suō, dē bonīs malīsque sententiam prōnūntiat.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Iēsus, Iūdex, Dextrī, Sinistrī
+    </div>
+
+    <div class="line-container" id="Iesus.1">
+      <div class="line-character">Iēsus</div>
+      Venīte, Beātī Patris meī, possidēte parātum vōbīs rēgnum ab orbe conditō. Nam cum ēsūrirem, dedistis mihi comedere: cum sītirem, bibere: hospitem mē accēpistis, nūdum vestīvistis, aegrum vīsitāvistis, in custōdiam datum invīsistis.
+    </div>
+
+    <div class="line-container" id="Dextri.2">
+      <div class="line-character">Dextrī</div>
+      Domine, quandō tē vīdimus ēsurientem, ut alverimus? aut sitientem, ut pōtum dederimus? Quandō autem hospitem, ut accēperimus? aut nūdum, ut vestīverimus? Quandō aegrum, aut in vinculīs, ut invīserimus?
+    </div>
+
+    <div class="line-container" id="Iesus.3">
+      <div class="line-character">Iēsus</div>
+      Crēdite mihi, quatenus minimō hōrum frātrum meōrum fēcistis, mihi fēcistis. Vōs autem abīte ā mē, exsecrābilēs, in ignem aeternum, Veiōve, ēiusque geniīs parātum: quī mē neque ēsurientem cibō, neque sitientem pōtiōne refēcistis: hospitem nōn suscēpistis, nūdum nōn vestīvistis, īnfirmum & in carcerem coniectum nōn invīsistis.
+    </div>
+
+    <div class="line-container" id="Sinistri.4">
+      <div class="line-character">Sinistrī</div>
+      Domine, quandō tē vīdimus ēsurientem, aut sitientem, aut hospitem, aut nūdum, aut īnfirmum, aut in carcere, neque subvēnimus?
+    </div>
+
+    <div class="line-container" id="Iesus.5">
+      <div class="line-character">Iēsus</div>
+      Crēdite mihi, quatenus hōrum minimō nōn fēcistis, mihi nōn fēcistis.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Prō suīs quemque factīs remūnerābitur Chrīstus. Quod cuivis Chrīstiānōrum fit, id ipsī Chrīstō fit.
+    </div>
+
+    <div class="note" style="margin-top: 2em; font-weight: bold; text-align: center;">
+      FĪNIS DIALOGŌRUM
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "book", page.book %} {% assign prev_page = neighbors | where: "sequence",
+    prev_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+    </div>
+  </div>
+</body>

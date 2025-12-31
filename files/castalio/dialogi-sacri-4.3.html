@@ -1,0 +1,112 @@
+---
+title: Dialogi Sacri - Dialogus Tertius (Liber Quartus)
+subtitle: Nāthanaēl. Iōan. 1.
+type: Colloquium
+author: Castalio
+topic: Faith and Recognition
+difficulty: Easy
+sequence: 93
+book: 4
+character_count: 3
+permalink: /castalio/dialogi-sacri-liber-quartus-dialogus-tertius/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Nāthanaēl, Philippō monitus, venit ad Iēsum, & in eum crēdit.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Philippus, Nāthanaēl, Iēsus
+    </div>
+
+    <div class="line-container" id="Philippus.1">
+      <div class="line-character">Philippus</div>
+      Eum quō scrīpsit Mōsēs in nostrā disciplīnā, & vātēs, eum reperimus: Iēsum dīcō, fīlium Iōsēphī, ā Nazarēthā.
+    </div>
+
+    <div class="line-container" id="Nathanael.2">
+      <div class="line-character">Nāthanaēl</div>
+      Ā Nazarēthā potest aliquid bonum exīstere?
+    </div>
+
+    <div class="line-container" id="Philippus.3">
+      <div class="line-character">Philippus</div>
+      Prōvīse mēcum.
+    </div>
+
+    <div class="line-container" id="Iesus.4">
+      <div class="line-character">Iēsus</div>
+      Videō hūc venīre vērē Īsraēlītam; id est, hominem ab omnī fraude aliēnum.
+    </div>
+
+    <div class="line-container" id="Nathanael.5">
+      <div class="line-character">Nāthanaēl</div>
+      Unde mē nōstī?
+    </div>
+
+    <div class="line-container" id="Iesus.6">
+      <div class="line-character">Iēsus</div>
+      Priusquam tē Philippus appellāret, cum essēs sub fīcū, vidēbam tē.
+    </div>
+
+    <div class="line-container" id="Nathanael.7">
+      <div class="line-character">Nāthanaēl</div>
+      Magister, Tū es fīlius Deī. Tū es rēx Īsraēlītārum.
+    </div>
+
+    <div class="line-container" id="Iesus.8">
+      <div class="line-character">Iēsus</div>
+      Quoniam dīxī tibi, tē ā mē sub fīcū esse vīsum, ideō crēdis? Maiōra hīs vidēbis. Crēdite, indicēs mihi, posthāc vidēbitis caelum apertum, & geniōs dīvīnōs ascendentēs & dēscendentēs ad mē.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Unde minimē spērēs, inde exīstet bonum. Adeundus est Chrīstus, ut eum cognōscās. Ā minōribus, sī crēdās, ad maiōra veniēs.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "book", page.book %} {% assign prev_page = neighbors | where: "sequence",
+    prev_sequence | first %} {% assign next_page = neighbors | where: "sequence",
+    next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

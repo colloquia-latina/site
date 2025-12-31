@@ -1,0 +1,102 @@
+---
+title: Dialogi Sacri - Dialogus Octavus (Liber Quartus)
+subtitle: Simōn. Lūc. 7.
+type: Colloquium
+author: Castalio
+topic: Forgiveness and Love
+difficulty: Moderate
+sequence: 98
+book: 4
+character_count: 2
+permalink: /castalio/dialogi-sacri-liber-quartus-dialogus-octavus/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Iēsus mīrantī cum animō suō Simōnī, apud quem ad cibum capiēbat, cūr sē paterētur ab impudīcā muliere attingī, causam reddit.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Simōn, Iēsus
+    </div>
+
+    <div class="line-container" id="Simon.1">
+      <div class="line-character">Simōn</div>
+      Iamdudum spernō mulierem istam, quae meum hunc hospitem tam molliter cūrat. Quī sī vātēs esset, intellegeret utique, quae & quālis sit mulier, quae ipsum attrectat, nam prōstitūtā pudīcitiā est.
+    </div>
+
+    <div class="line-container" id="Iesus.2">
+      <div class="line-character">Iēsus</div>
+      Simōn, paucīs tē volō.
+    </div>
+
+    <div class="line-container" id="Simon.3">
+      <div class="line-character">Simōn</div>
+      Dīcās licet, Magister.
+    </div>
+
+    <div class="line-container" id="Iesus.4">
+      <div class="line-character">Iēsus</div>
+      Duōs dēbitōrēs habēbat quīdam crēditor, quōrum alter quīngentōs, alter quīnquāgintā dēbēbat dēnāriōs: iī cum nōn essent solvendō, utrīque condōnāvit. Dīc uter eum plūs amāre dēbeat.
+    </div>
+
+    <div class="line-container" id="Simon.5">
+      <div class="line-character">Simōn</div>
+      Opīnor, cuī plūs condōnāvit.
+    </div>
+
+    <div class="line-container" id="Iesus.6">
+      <div class="line-character">Iēsus</div>
+      Rēctē iūdicās. Vidēs hanc mulierem? Cum introīvissem domum tuam, nē aquam quidem ad lavandōs pedēs meōs dedistī: ea & lachrymīs eōs perfūdit, & suī capitis capillō extersit. Tū mihi ōsculum nōn dedistī: ea postquam sum ingressus, nōn dēstitit mihi pedēs dēosculārī. Tū nec oleō mihi caput ūnxistī: ea unguentō etiam mihi pedēs perūnxit: Quā dē causā sīc habētō, eī multa remittī peccāta, quoniam multum amāvit. Cuī autem minus remittitur, minus amat. Remittuntur tibi peccāta, mulier; tua tē fīdūcia servāvit, abī cum bonā pāce.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Ā sinīstrīs suspiciendibus abstinendum. Ex coniectūrā iūdicāre, temerārium est. Magna beneficia magnus amor conciliātur.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "book", page.book %} {% assign prev_page = neighbors | where: "sequence",
+    prev_sequence | first %} {% assign next_page = neighbors | where: "sequence",
+    next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

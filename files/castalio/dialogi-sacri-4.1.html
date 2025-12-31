@@ -1,0 +1,92 @@
+---
+title: Dialogi Sacri - Dialogus Primus (Liber Quartus)
+subtitle: Maria. Lūcae 1.
+type: Colloquium
+author: Castalio
+topic: Annunciation
+difficulty: Easy
+sequence: 91
+book: 4
+character_count: 2
+permalink: /castalio/dialogi-sacri-liber-quartus-dialogus-primus/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Gabriēl Genius Mariae nūntiat ēditūram fīlium Deī; quaerentīque modum, dēmōnstrat id fore ā Spīritū Sānctō. Illa crēdēns assentitur.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Gabriēl, Maria
+    </div>
+
+    <div class="line-container" id="Gabriel.1">
+      <div class="line-character">Gabriēl</div>
+      Salvē, ōrnātissima, Dominō coniūnctissima, mulierum fēlīcissima. Quid metuis, Maria? Bonō es animō; nam accepta es Deō. Ēn ego tibi renūntiō, tē istō uterō conceptum paritūram nātum, quem IĒSUM nōmine vocābis. Is erit maximus, & fīlius summī Parentis cēnsēbitur, eamque dōnābit rērum omnium praepotēns Deus soliō Davidis, auctōris generis ēius. Itaque posterīs Iacōbī rēgnābit in aeternum, nec ūllus erit ēius rēgnī fīnis.
+    </div>
+
+    <div class="line-container" id="Maria.2">
+      <div class="line-character">Maria</div>
+      Quōmodo fiet istud, cum ego virī nōtitiam nōn habeam?
+    </div>
+
+    <div class="line-container" id="Gabriel.3">
+      <div class="line-character">Gabriēl</div>
+      Spīritus sānctus sēsē in tē īnsīnuābit, tēque Deī Opt. Max. vīs gravidābit. Itaque sānctissimus iste fētus, ut erit, ita etiam dīcētur Deī fīlius. Ēlīsabetha quoque (quō magis crēdās) tua cognāta, iam senex concēpit fīlium, & nunc sextum iam mēnsem fert uterō; & tamen inter sterilēs habēbātur. Usque adeō nūlla rēs est, quam Deus nōn possit.
+    </div>
+
+    <div class="line-container" id="Maria.4">
+      <div class="line-character">Maria</div>
+      Ecce rēgis servam! Ēveniat mihi, prout tū dīxistī.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Deō nihil arduum. Prōmittentī Deō crēdendum est, etsī quid nātūrae contrārium prōmittat. Neque enim nātūrae obnoxius est auctor ipsae nātūrae.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "book", page.book %} {% assign prev_page = neighbors | where: "sequence",
+    prev_sequence | first %} {% assign next_page = neighbors | where: "sequence",
+    next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>

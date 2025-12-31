@@ -1,0 +1,112 @@
+---
+title: Dialogi Sacri - Dialogus Vicesimus Secundus (Liber Quartus)
+subtitle: Repudium. Matth. 19. Marc. 10.
+type: Colloquium
+author: Castalio
+topic: Marriage and Divorce
+difficulty: Moderate
+sequence: 112
+book: 4
+character_count: 3
+permalink: /castalio/dialogi-sacri-liber-quartus-dialogus-vicesimus-secundus/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/w3.css" />
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-mobile"
+        ><b>Colloquia Latina</b></a
+      >
+      
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="w3-bar-item w3-button w3-mobile"
+        >{{ page.author }}</a
+      >
+      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="note">
+      Iēsus cum Pharīsaeīs & discipulīs dē dīvortiīs colloquitur.
+    </div>
+
+    <div class="characters">
+      Persōnae:<br />
+      Pharīsaeī, Iēsus, Discipulī
+    </div>
+
+    <div class="line-container" id="Pharisaei.1">
+      <div class="line-character">Pharīsaeī</div>
+      Licetne virō repudiāre uxōrem, quālibet dē causā?
+    </div>
+
+    <div class="line-container" id="Iesus.2">
+      <div class="line-character">Iēsus</div>
+      Quid vōbīs praecēpit Mōsēs?
+    </div>
+
+    <div class="line-container" id="Pharisaei.3">
+      <div class="line-character">Pharīsaeī</div>
+      Mōsēs permīsit uxōrī nūntium remittere, scrīptō dīvortiī īnstrūmentō.
+    </div>
+
+    <div class="line-container" id="Iesus.4">
+      <div class="line-character">Iēsus</div>
+      Annōn lēgistis, ut, quī eōs prīncipiō fēcit, mārem simul & foemīnam fēcerit? utque ita prōnūntiātum sit: proptereā vir, relictō utrōque parente, haerēbit suae coniugī, fietque ex duōbus ūnum corpus. Itaque iam nōn sunt duo, sed ūnum corpus. Proinde quod Deus coniūnxit, homō nē disiungat.
+    </div>
+
+    <div class="line-container" id="Pharisaei.5">
+      <div class="line-character">Pharīsaeī</div>
+      Cūr ergō praecēpit Mōsēs, eī dare dīvortiī tabulam, eamque repudiārī?
+    </div>
+
+    <div class="line-container" id="Iesus.6">
+      <div class="line-character">Iēsus</div>
+      Habuit vidēlicet ratiōnem, vestrae pervicāciae. Vērum ōlim nōn erat ita factitātum. Quīn hoc vōbīs cōnfīrmō. Quīcumque repudiāverit uxōrem suam, nisi ob stuprum, & dūxerit aliam, adulterat; & quī repudiātam dūxerit, adulterat. Eadem in causā sunt & foemīnae.
+    </div>
+
+    <div class="line-container" id="Discipuli.7">
+      <div class="line-character">Discipulī</div>
+      Sī ea est virī cum uxōre condiciō, nōn expedit cōnūbia coniungere.
+    </div>
+
+    <div class="line-container" id="Iesus.8">
+      <div class="line-character">Iēsus</div>
+      At nōn omnēs id praestāre possunt, sed iī duntaxat quibus datum est. Nam ēvirātōrum aliī ita ex uterō mātrum ortī sunt, aliī manū castrātī sunt, aliī sēipsōs castrāvērunt propter rēgnum caeleste. Quī hoc potest praestāre, praestātō.
+    </div>
+
+    <div class="note">
+      Sententia<br />
+      Deus ipse propter hominum pervicāciam aliquid interdum permittat, quod alioquīn permittendum nōn esset. Ōlim fuit mundus minus malus: & omnia abeunt indiēs in dēterius. Libīdinī resistere, nisi dōnā Deī, nēmō potest.
+    </div>
+
+    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
+    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
+    files | where: "type", "Colloquium" | where: "author", page.author | where:
+    "book", page.book %} {% assign prev_page = neighbors | where: "sequence",
+    prev_sequence | first %} {% assign next_page = neighbors | where: "sequence",
+    next_sequence | first %}
+
+    <div class="nav-buttons">
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+  </div>
+</body>
