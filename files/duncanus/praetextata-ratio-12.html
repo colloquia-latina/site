@@ -144,7 +144,19 @@ permalink: /duncanus/praetextata-ratio-colloquium-duodecimum/
             Quis lūdat cum uitilītīgātōribus illīs? Vix arreptīs certandī armīs, quibus mēcum congrediātur, continuō mēcum occipit commūtāre uerba: statim incipit mēcum expostulāre, dē nōn factā sibi prius lūdendī potestāte: quasi per mē stetisset, quō minus lūserit. Sī ab ipsīs lūdendī carceribus altercārī incipit, quid in prōgressū futūrum sperem, quandō nōn omnia respondērent uōtō? Ab unguibus aestimāmus leōnem, et ab inauspicātō prīncipiō fīnem. Valeant quī dissidium uolunt. Nihil nouī, nihil īnsolēns facis, ō bone. Semper tibi similis es. Crātēr lītium es. Quid autem mēcum frūstrā stomachor? Gaudeam potius mē dēfūnctum illīs lūdendī rīxandīque molēstiīs, et mihi datam ānsam mūtōs magistrōs adeundī, litterīsque operae dandae. Valeat rēslūdīcra, sī mē palmā negātā, macrum: dōnātā, redūcit auārum lūdendī, et studiōrum itidem damnum accipiendī.
         </div>
 
-    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
     next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
     | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
     files | where: "type", "Colloquium" | where: "author", page.author | where:
@@ -155,6 +167,10 @@ permalink: /duncanus/praetextata-ratio-colloquium-duodecimum/
     <div class="nav-buttons">
       <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
       <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+    </div>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
     </div>
   </div>
 </body>

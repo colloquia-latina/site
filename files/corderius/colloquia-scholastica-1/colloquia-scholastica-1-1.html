@@ -175,12 +175,6 @@ permalink: /corderius/colloquia-scholastica-liber-primus-colloquium-primum/
     found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
     %}
 
-    <ul>
-      {% for p in neighbors %}
-      <li>{{ p.sequence }} ({{ p.sequence | jsonify }}) — {{ p.url }}</li>
-      {% endfor %}
-    </ul>
-
     <div class="nav-buttons">
       {% if prev_page %}
       <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
