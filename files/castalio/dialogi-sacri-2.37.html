@@ -127,18 +127,7 @@ permalink: /castalio/dialogi-sacri-liber-secundus-dialogus-tricēsimus-septimus/
 
     <div class="nav-buttons">
       {% if prev_page %}
-      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>    {% assign prev_sequence = page.sequence | minus: 1 %} {% assign
-    next_sequence = page.sequence | plus: 1 %} {% assign files = site.html_pages
-    | where_exp: "page", "page.path contains 'files/'" %} {% assign neighbors =
-    files | where: "type", "Colloquium" | where: "author", page.author | where:
-    "collection", page.collection %} {% assign prev_page = neighbors | where:
-    "sequence", prev_sequence | first %} {% assign next_page = neighbors |
-    where: "sequence", next_sequence | first %}
-
-    <div class="nav-buttons">
       <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-    </div>
       {% endif %} {% if next_page %}
       <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
       {% endif %}
