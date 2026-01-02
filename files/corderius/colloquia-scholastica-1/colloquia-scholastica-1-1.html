@@ -3,15 +3,15 @@ title: Colloquia Scholastica - Liber Prīmus - Colloquium Primum
 subtitle:
 type: Colloquium
 author: Corderius
-collection: Colloquia Scholastica Liber Primus Liber Primus
+collection: Colloquia Scholastica Liber Primus
 topic: Waking Up
 difficulty: Moderate
-sequence: 1
+sequence: "001"
 character_count: 2
 permalink: /corderius/colloquia-scholastica-liber-primus-colloquium-primum/
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 
 <head>
   <title>{{page.title}}</title>
@@ -164,44 +164,29 @@ permalink: /corderius/colloquia-scholastica-liber-primus-colloquium-primum/
       Habeō tibi grātiam: age, repetāmus praelēctiōnem; nam brevī praeceptor
       aderit.
     </div>
-    
-     
-{% assign files = site.html_pages
-  | where_exp: "p", "p.path contains 'files/'" %}
 
-{% assign neighbors = files
-  | where: "type", "Colloquium"
-  | where: "author", page.author
-  | where: "collection", page.collection
-  | sort: "sequence" %}
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
 
-{% assign prev_page = nil %}
-{% assign next_page = nil %}
-{% assign found_current = false %}
+    <ul>
+      {% for p in neighbors %}
+      <li>{{ p.sequence }} ({{ p.sequence | jsonify }}) — {{ p.url }}</li>
+      {% endfor %}
+    </ul>
 
-{% for p in neighbors %}
-  {% if found_current and next_page == nil %}
-    {% assign next_page = p %}
-  {% endif %}
-
-  {% if p.url == page.url %}
-    {% assign found_current = true %}
-  {% endif %}
-
-  {% if found_current == false %}
-    {% assign prev_page = p %}
-  {% endif %}
-{% endfor %}
-
-<div class="nav-buttons">
-  {% if prev_page %}
-    <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-  {% endif %}
-
-  {% if next_page %}
-    <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-  {% endif %}
-</div>
-
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
   </div>
 </body>
