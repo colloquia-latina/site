@@ -179,17 +179,22 @@ permalink: /pontanus/progymnasma-quinquagesimum-septimum/
             <a href="#Discipulus.9">(1)</a> <i>istōs Corycaeōs:</i> Quī sint Corycaeī, et unde hoc illīs nōmen, docēbit cōpiōsē Paroemiōgraphus, proverb. <i>Corycaeus auscultāvit</i>: nē frūstrā pāginās impleāmus. Quod autem plērīque eōsdem appellant <i>syndicōs</i>, parum propriē loquuntur. Sunt enim Syndicī advocātī, quī ut patrōnī ad commūnem caussam dēfendendam mittuntur, et συνδικεῖν verbum idem quod συνηγορεῖν: ac sī <i>syndicārī</i> verbum fingās prō <i>dēfendere</i>, et <i>patrōcinium praestāre</i>. Sunt etiam <i>syndicī cīvitātum</i>, et <i>advocātī et dēfēnsōrēs iūris pūblicī</i>: quasi in caussam pūblicam commūniter incumbentēs, Būdaeus in Pāndect.
         </div>
 
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-        {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection",
-        page.collection %}
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
 
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
     </div>
 </body>

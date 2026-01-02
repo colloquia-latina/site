@@ -245,17 +245,22 @@ permalink: /pontanus/progymnasmata-liber-primus-progymnasma-decimum-quintum/
             <a href="#Augustinus.24">(9)</a> <i>in quem exempla fient:</i> Pūniendōrum peccātōrum ratiōnēs trēs addūcit Gellius lib. 6. cap. 14. <i>Tertia ratiō vindicta est</i>, inquit, <i>quae παράδειγμα ā Graecīs nōminā tur: cum pūnītiō propter exemplum necessāria, ut caeterī ā similibus peccātīs, quae prohibērī pūblicitus interest, metū cōgnitae poenae dēterreantur</i>. Idcircō veterēs quoque nostrī exempla prō maximīs gravissimīsque poenīs dīcēbant. Iam, Latīnī dīcunt <i>exemplum prōdere in aliquō</i>, ut Cicer. prō Flaccō. <i>In aliquō exemplum statuere</i>, ut īdem in 4. Verr. <i>Exempla cruciātus ēdere in aliquem</i>, ut Caesar 1. dē bellō Gall. <i>Exempla ēdere</i>, ut Terent. Eunuch. <i>Exempla faciam ego in tē</i>: aut sine praepositiōne (ut quidam legunt) est apud Plaut. Mostell.
         </div>
 
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-        {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection",
-        page.collection %}
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
 
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
     </div>
 </body>

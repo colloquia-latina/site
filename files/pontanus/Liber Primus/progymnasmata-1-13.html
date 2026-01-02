@@ -267,17 +267,22 @@ permalink: /pontanus/progymnasmata-liber-primus-progymnasma-decimum-tertium/
             <a href="#Caelestinus.30">(4)</a> <i>nē fraudī sit hoc aucupium:</i> <i>Fraus</i> poenam quoque, damnum, perīculum et incommodum veteribus significat: nōn modo dēceptiōnem, fallāciam, atque dolum. Līvius lib.1. <i>Rēx, facisn' mē tū rēgium nūntium pop. Rōm. Quirītium? Quod sine fraude meā, populīque Rōmānī Quirītium fiat, faciō.</i> Cic. ad Lentulum epist. 5. <i>Sī quid ex hīs rēbus, quās tibi fortūna largīta est, nōnnūllōrum hominum perfidia dētrāxerit, id maiōrī illīs fraudī quam tibi futūrum.</i> Et prō Cluent. <i>Quaerēs nēminī umquam fraudī fuit.</i> Id est, numquam poenā dīgnam exīstimārunt, vel, numquam damnō fuit. Terent. Heaut. <i>In eandem fraudem ex largitāte nimiā, atque ex pārsimōniā incidēs.</i> Id est, utrumque perinde damnōsum est. Sed priōris illius significātus sunt duo bellissima loquendī genera apud Lūcrētium, <i>dare fraudem alicuī</i>, et <i>induere sē in fraudem</i>, quōmodo dīcimus <i>induere sē in plāgās, in laqueōs</i>.
         </div>
 
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-        {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection",
-        page.collection %}
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
 
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
     </div>
 </body>

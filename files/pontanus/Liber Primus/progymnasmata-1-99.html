@@ -136,17 +136,22 @@ permalink: /pontanus/progymnasmata-liber-primus-progymnasma-nonagesimum-nonum/
             <a href="#Constans.2">(1)</a> <i>cum rosciō prīncipe:</i> Tanta fuit huius actoris excellentia, ut qui in aliqua arte praestaret, is in suo genere Roscius diceretur. Cic. 1. de Orat. Eundem laudat orat. pro Quint. Festus. Roscii appellabantur in omnibus perfecti artibus, quod Roscius quidam perfectus unus in arte sua, id est, comoedia iudicatus sit. Horat. epist.1. lib.2. Quae gravis Aesopus, quae doctus Roscius egit. Vide et Macrob. lib.3. cap.14. Disputavimus de variis exercitationum, scriptionumve generibus in duobus antegressis progymnasmatis, et quae adolescentum viribus aequa videbantur attulimus. Nunc robustioribus alium magistrum doctiorem, Plinium scilicet Secundum dabimus, qui eos varietatem exercitationis tam oratoriae, quam poeticae admodum erudite ac diserte doceat epist.9. lib.7. quam subscribamus per capita distinctam, quo omnia dilucidiora fiant.
         </div>
 
-        {% assign prev_sequence = page.sequence | minus: 1 %}
-        {% assign next_sequence = page.sequence | plus: 1 %}
-        {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" %}
-        {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection",
-        page.collection %}
-        {% assign prev_page = neighbors | where: "sequence", prev_sequence | first %}
-        {% assign next_page = neighbors | where: "sequence", next_sequence | first %}
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
 
-        <div class="nav-buttons">
-            <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
-            <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
-        </div>
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
     </div>
 </body>
