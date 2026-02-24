@@ -17,23 +17,23 @@ permalink: /castalio/dialogi-sacri-liber-quartus-dialogus-tricensimus-quartus/
   <title>{{page.title}}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-  <link rel="stylesheet" href="/style-reading.css" />
   <link rel="stylesheet" href="/style-common.css" />
-  <link rel="stylesheet" href="/w3.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
 </head>
 
 <body>
-  <div class="w3-top">
-    <div class="w3-bar w3-black">
-      <a href="/" class="w3-bar-item w3-button w3-mobile"
+  <div class="navbar">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
         ><b>Colloquia Latina</b></a
       >
       <a
         href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
-        class="w3-bar-item w3-button w3-mobile"
+        class="navbar-item btn"
         >{{ page.author }}</a
       >
-      <div class="w3-bar-item w3-mobile w3-center"><i>{{ page.title }}</i></div>
+      <span class="navbar-dynamic">{{ page.title }}</span>
     </div>
   </div>
   <div style="height: 3em"></div>
@@ -119,4 +119,8 @@ permalink: /castalio/dialogi-sacri-liber-quartus-dialogus-tricensimus-quartus/
       <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
     </div>
   </div>
+
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
 </body>
