@@ -56,6 +56,31 @@ body {
   color: #444;
 }
 
+/* Bilingual text: side-by-side layout */
+.line-bilingual {
+  display: flex;
+  gap: 1em;
+}
+
+.line-left,
+.line-right {
+  flex: 1;
+  padding: 0.5em;
+  background-color: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 3px;
+}
+
+.line-left {
+  font-family: "Palatino Linotype", "Times New Roman", Georgia, serif;
+}
+
+@media (max-width: 600px) {
+  .line-bilingual {
+    flex-direction: column;
+  }
+}
+
 /* Space paragraph blocks more pleasantly */
 p {
   margin-bottom: 1.25em;
@@ -95,6 +120,16 @@ p {
 
   .line-poetry {
     color: #ccc;
+  }
+
+  .line-bilingual {
+    gap: 0.75em;
+  }
+
+  .line-left,
+  .line-right {
+    background-color: #333;
+    border-color: #444;
   }
 
   p {
