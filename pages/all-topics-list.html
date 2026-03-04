@@ -27,26 +27,35 @@ permalink: /all-topics-list/
     <div class="main-content">
       <h1>Colloquia argumento ordinata</h1>
 
-      {% assign files = site.html_pages | where_exp: "page", "page.path contains
-      'files/'" | where: "type", "Colloquium" %} {% assign sorted = files |
-      sort: "topic" %} {% assign groups = sorted | group_by: "topic" %} {% for
-      group in groups %}
+      {% assign files = site.html_pages | where_exp: "page", "page.path contains 'files/'" | where: "type", "Colloquium" %}
+
+      {% assign all_topics = "" | split: "" %}
+      {% for file in files %}
+        {% if file.topic %}
+          {% assign topics_list = file.topic %}
+          {% for topic in topics_list %}
+            {% assign trimmed_topic = topic | strip %}
+            {% unless all_topics contains trimmed_topic %}
+              {% assign all_topics = all_topics | push: trimmed_topic %}
+            {% endunless %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+
+      {% assign sorted_topics = all_topics | sort %}
+
+      {% for topic in sorted_topics %}
       <div class="accordion-item">
-        <input
-          type="checkbox"
-          id="accordion-characters-{{ forloop.index }}"
-          class="accordion-toggle" />
-        <label
-          class="accordion-header"
-          for="accordion-characters-{{ forloop.index }}">
-          {{ group.name }}
+        <input type="checkbox" id="accordion-{{ forloop.index }}" class="accordion-toggle" />
+        <label class="accordion-header" for="accordion-{{ forloop.index }}">
+          {{ topic }}
         </label>
 
         <div class="accordion-content">
           <div class="container">
             <ul>
-              {% assign pages = group.items | sort: "title" | sort: "sequence" |
-              sort: "author" %} {% for page in pages %}
+              {% assign pages = files | where: "type", "Colloquium" | where_exp: "page", "page.topic contains topic" | sort: "title" | sort: "sequence" | sort: "author" %}
+              {% for page in pages %}
               <li>
                 <a href="{{ page.url }}">{{ page.author }}: {{ page.title }}</a>
                 <div class="subtitle">{{ page.subtitle }}</div>
