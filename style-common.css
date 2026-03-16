@@ -101,6 +101,18 @@ div.footer p {
     flex-basis: 100%;
     text-align: center;
   }
+
+  /* Headroom.js - hide header on scroll down, show on scroll up */
+  .headroom {
+    will-change: transform;
+    transition: transform 0.25s ease-in-out;
+  }
+  .headroom--unpinned {
+    transform: translateY(-100%);
+  }
+  .headroom--pinned {
+    transform: translateY(0);
+  }
 }
 
 .text-center {
