@@ -1,0 +1,65 @@
+---
+title: Hermeneumata Pseudodositheana
+type: Author
+permalink: /Hermeneumata_Pseudodositheana/
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/style-list.css" />
+    <link rel="stylesheet" href="/style-common.css" />
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+
+  <body>
+    <div class="navbar headroom">
+      <div class="navbar-inner">
+        <a href="/" class="navbar-item btn"
+          ><b>Colloquia Latina</b></a
+        >
+        <a href="/all-authors-list/" class="navbar-item btn"
+          >Auctores</a
+        >
+        <span class="navbar-dynamic">
+          <i>{{ page.title }}</i>
+        </div>
+      </div>
+    </div>
+    <div style="height: 3em"></div>
+
+    <div class="main-content">
+      <h1>{{ page.title }}</h1>
+      <h2>Index Colloquiorum:</h2>
+
+      <ul>
+        {% assign files_list = site.html_pages | where_exp: "page", "page.path
+        contains 'files/'" %} {% assign author_pages = files_list | where_exp:
+        "page", "page.author == 'Salazar'" | sort: "sequence"%} {% for page in
+        author_pages %}
+        <li>
+          <a href="{{ page.url }}">{{ page.title }}</a>
+          <div class="subtitle">{{page.subtitle}}</div>
+        </li>
+        {% endfor %}
+      </ul>
+
+      <p>
+        Franciscus Cervantes de Salazar (1514-1575) was a Spaniard scholar and
+        friend of Iohannes Vives noted for his works in both Latin and Spanish.
+        From 1550 to his death, he was a leading academic figure in Mexico,
+        serving as rector of the Pontifical University twice.
+      </p>
+    </div>
+  
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>
+</html>
