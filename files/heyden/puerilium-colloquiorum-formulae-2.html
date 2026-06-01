@@ -1,0 +1,174 @@
+---
+title: Puerilium Colloquiorum Formulae - Colloquium Secundum
+subtitle: SALŪTĀTIŌ MERĪDIĀNA
+type: Colloquium
+author: Heyden
+collection: Puerilium Colloquiorum Formulae
+topic:
+- Daily Life
+difficulty: Easy
+sequence: '002'
+character_count: 2
+permalink: /sebald-heyden/puerilium_colloquiorum_formulae-colloquium-secundum/
+---
+
+<!doctype html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Blāsius, Clēmēns
+    </div>
+
+    <div class="line-container" id="Blāsius.01">
+      <div class="line-character">Blāsius</div>
+      <div class="line-bilingual">
+        <div class="line-left">Salvē, Clēmēns.</div>
+        <div class="line-right">Dieu vous sauve, Clement.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Clēmēns.01">
+      <div class="line-character">Clēmēns</div>
+      <div class="line-bilingual">
+        <div class="line-left">Salvē et tū.</div>
+        <div class="line-right">Et vous aussi.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Blāsius.01">
+      <div class="line-character">Blāsius</div>
+      <div class="line-bilingual">
+        <div class="line-left">Salvē plūrimum.</div>
+        <div class="line-right">Salut et bonne santé vous doint Dieu.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Clēmēns.01">
+      <div class="line-character">Clēmēns</div>
+      <div class="line-bilingual">
+        <div class="line-left">Et tū tantundem salvē.</div>
+        <div class="line-right">Et à vous pareillement.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Blāsius.01">
+      <div class="line-character">Blāsius</div>
+      <div class="line-bilingual">
+        <div class="line-left">Salvus sīs tū.</div>
+        <div class="line-right">Je prie Dieu qu'il vous maintienne en bonne santé.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Clēmēns.01">
+      <div class="line-character">Clēmēns</div>
+      <div class="line-bilingual">
+        <div class="line-left">Tū quoque salvē.</div>
+        <div class="line-right">Et vous aussi semblablement.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Blāsius.01">
+      <div class="line-character">Blāsius</div>
+      <div class="line-bilingual">
+        <div class="line-left">Salūtem tibī precor.</div>
+        <div class="line-right">Je vous salue.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Clēmēns.01">
+      <div class="line-character">Clēmēns</div>
+      <div class="line-bilingual">
+        <div class="line-left">Eandem et tibī optō.</div>
+        <div class="line-right">Et moy vous pareillement.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Blāsius.01">
+      <div class="line-character">Blāsius</div>
+      <div class="line-bilingual">
+        <div class="line-left">Salūtem tibī impertiōr.</div>
+        <div class="line-right">Je vous envoye mille saluts.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Clēmēns.01">
+      <div class="line-character">Clēmēns</div>
+      <div class="line-bilingual">
+        <div class="line-left">Et ego eādem tē quoque.</div>
+        <div class="line-right">Et moy à vous.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Blāsius.01">
+      <div class="line-character">Blāsius</div>
+      <div class="line-bilingual">
+        <div class="line-left">Iubeō tē salvēre.</div>
+        <div class="line-right">Je vous salue.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Clēmēns.01">
+      <div class="line-character">Clēmēns</div>
+      <div class="line-bilingual">
+        <div class="line-left">Et ego tē quoque.</div>
+        <div class="line-right">Et moy à vous.</div>
+      </div>
+    </div>
+
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+
+    <!--Footer goes here-->
+  </div>
+
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>
