@@ -1,0 +1,161 @@
+---
+title: Quotidiani Sermonis Formulae - Colloquium Duodecimum
+subtitle: ĀCICULĀRUM LŪSUS (Le jeu des Espingles)
+type: Colloquium
+author: Jacobus Zovitius
+collection: Quotidiani Sermonis Formulae
+topic:
+- Games
+difficulty: Moderate
+sequence: '012'
+character_count: 0
+permalink: /jacobus-zovitius/quotidiani_sermonis_formulae-colloquium-duodecimum/
+---
+
+<!doctype html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="line-container" id="Scaena.01">
+      <div class="line-character"></div>
+      <div class="line-bilingual">
+        <div class="line-left">Dīvīnēmus dē āciculārum sitū.</div>
+        <div class="line-right">Jouons à culbechevet.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Scaena.02">
+      <div class="line-character"></div>
+      <div class="line-bilingual">
+        <div class="line-left">Ut libet.</div>
+        <div class="line-right">Comme il vous plaist.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Scaena.03">
+      <div class="line-character"></div>
+      <div class="line-bilingual">
+        <div class="line-left">Āciculam in manū sēpōnam, tū coniectūram faciēs.</div>
+        <div class="line-right">Je feray le jeu, tu devineras.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Scaena.04">
+      <div class="line-character"></div>
+      <div class="line-bilingual">
+        <div class="line-left">Ex aequō sī tēs sunt.</div>
+        <div class="line-right">Elles sont teste contre teste.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Scaena.05">
+      <div class="line-character"></div>
+      <div class="line-bilingual">
+        <div class="line-left">Vērus es.</div>
+        <div class="line-right">Il est vray, tu as gangné.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Scaena.06">
+      <div class="line-character"></div>
+      <div class="line-bilingual">
+        <div class="line-left">Nunc meum est sēpōnere.</div>
+        <div class="line-right">C'est maintenant à moy à faire le jeu.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Scaena.07">
+      <div class="line-character"></div>
+      <div class="line-bilingual">
+        <div class="line-left">Dīvīnātō.</div>
+        <div class="line-right">Devine.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Scaena.08">
+      <div class="line-character"></div>
+      <div class="line-bilingual">
+        <div class="line-left">Sī dissīdent.</div>
+        <div class="line-right">Pointe contre teste.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Scaena.09">
+      <div class="line-character"></div>
+      <div class="line-bilingual">
+        <div class="line-left">Falsus est.</div>
+        <div class="line-right">Il s'abuse.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Scaena.10">
+      <div class="line-character"></div>
+      <div class="line-bilingual">
+        <div class="line-left">Incidam lūdum, nē praeceptor rescīscat.</div>
+        <div class="line-right">Je rompray le jeu que le maistre ne le sache.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Scaena.11">
+      <div class="line-character"></div>
+      <div class="line-bilingual">
+        <div class="line-left">Victrīcī manuī facitō satis.</div>
+        <div class="line-right">Fay le jeu bon.</div>
+      </div>
+    </div>
+
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+
+    <!--Footer goes here-->
+  </div>
+
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>

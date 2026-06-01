@@ -1,0 +1,166 @@
+---
+title: Puerilium Colloquiorum Formulae - Colloquium Quīntum
+subtitle: DUM ĪTUR CUBITUM
+type: Colloquium
+author: Sebald Heyden
+collection: Puerilium Colloquiorum Formulae
+topic:
+- Daily Life
+difficulty: Easy
+sequence: '005'
+character_count: 2
+permalink: /sebald-heyden/puerilium_colloquiorum_formulae-colloquium-quintum/
+---
+
+<!doctype html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Fēlīx, Gaspar
+    </div>
+
+    <div class="line-container" id="Fēlīx.01">
+      <div class="line-character">Fēlīx</div>
+      <div class="line-bilingual">
+        <div class="line-left">Quota hōra est?</div>
+        <div class="line-right">Quelle heure est il?</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Gaspar.01">
+      <div class="line-character">Gaspar</div>
+      <div class="line-bilingual">
+        <div class="line-left">Campāna sonuit tertiam.</div>
+        <div class="line-right">Sont trois heures sonnées.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Fēlīx.01">
+      <div class="line-character">Fēlīx</div>
+      <div class="line-bilingual">
+        <div class="line-left">Eundum est cubitum.</div>
+        <div class="line-right">Il nous faut aller coucher.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Gaspar.01">
+      <div class="line-character">Gaspar</div>
+      <div class="line-bilingual">
+        <div class="line-left">Nōn dormituriō.</div>
+        <div class="line-right">Je n'ay point de sommeil.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Fēlīx.01">
+      <div class="line-character">Fēlīx</div>
+      <div class="line-bilingual">
+        <div class="line-left">At ego oppidō.</div>
+        <div class="line-right">Mais moy j'ay grand sommeil.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Gaspar.01">
+      <div class="line-character">Gaspar</div>
+      <div class="line-bilingual">
+        <div class="line-left">Tū ī cubitum.</div>
+        <div class="line-right">Va t'en dormir.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Fēlīx.01">
+      <div class="line-character">Fēlīx</div>
+      <div class="line-bilingual">
+        <div class="line-left">Quid tū autem agēs?</div>
+        <div class="line-right">Et tu que feras tu?</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Gaspar.01">
+      <div class="line-character">Gaspar</div>
+      <div class="line-bilingual">
+        <div class="line-left">Legam ulterius.</div>
+        <div class="line-right">Je liray davantage.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Fēlīx.01">
+      <div class="line-character">Fēlīx</div>
+      <div class="line-bilingual">
+        <div class="line-left">Mālo quiēscere.</div>
+        <div class="line-right">J'ayme micus reposer.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Gaspar.01">
+      <div class="line-character">Gaspar</div>
+      <div class="line-bilingual">
+        <div class="line-left">Facessē hinc, Endymiōn.</div>
+        <div class="line-right">Va t'en d'ici, dormeur.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Fēlīx.01">
+      <div class="line-character">Fēlīx</div>
+      <div class="line-bilingual">
+        <div class="line-left">Haud tē impedīverō.</div>
+        <div class="line-right">Je ne vous empeścheray pas.</div>
+      </div>
+    </div>
+
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+
+    <!--Footer goes here-->
+  </div>
+
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>

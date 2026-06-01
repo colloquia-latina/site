@@ -1,0 +1,158 @@
+---
+title: Puerilium Colloquiorum Formulae - Colloquium Vīcēsimum quārtum
+subtitle: MŪTUŌ GRĀTULANTIUM
+type: Colloquium
+author: Sebald Heyden
+collection: Puerilium Colloquiorum Formulae
+topic:
+- Daily Life
+difficulty: Easy
+sequence: '024'
+character_count: 2
+permalink: /sebald-heyden/puerilium_colloquiorum_formulae-colloquium-vicesimum-quartum/
+---
+
+<!doctype html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Cyrillus, Dōnātus
+    </div>
+
+    <div class="line-container" id="Cyrillus.01">
+      <div class="line-character">Cyrillus</div>
+      <div class="line-bilingual">
+        <div class="line-left">Unde iam prōrēpis?</div>
+        <div class="line-right">D'ou viens-tu maintenant?</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Dōnātus.01">
+      <div class="line-character">Dōnātus</div>
+      <div class="line-bilingual">
+        <div class="line-left">Ē domō meā.</div>
+        <div class="line-right">De ma maison.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Cyrillus.01">
+      <div class="line-character">Cyrillus</div>
+      <div class="line-bilingual">
+        <div class="line-left">Iam diū tē nōn vīderam.</div>
+        <div class="line-right">Il y a longtemps que je ne t'avoye veu.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Dōnātus.01">
+      <div class="line-character">Dōnātus</div>
+      <div class="line-bilingual">
+        <div class="line-left">Nec ego tē longiōre tempore.</div>
+        <div class="line-right">Encores y a-il plus longtemps que je ne vous vi.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Cyrillus.01">
+      <div class="line-character">Cyrillus</div>
+      <div class="line-bilingual">
+        <div class="line-left">Valīsne bene?</div>
+        <div class="line-right">Tes-tu toujours bien porté?</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Dōnātus.01">
+      <div class="line-character">Dōnātus</div>
+      <div class="line-bilingual">
+        <div class="line-left">Optimē valuī.</div>
+        <div class="line-right">Tresbien.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Cyrillus.01">
+      <div class="line-character">Cyrillus</div>
+      <div class="line-bilingual">
+        <div class="line-left">Ēdepol gaudeō.</div>
+        <div class="line-right">En bonne foy j'en suis bien joyeus.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Dōnātus.01">
+      <div class="line-character">Dōnātus</div>
+      <div class="line-bilingual">
+        <div class="line-left">Ut tū autem valēs?</div>
+        <div class="line-right">Mais toy, comment te portes-tu?</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Cyrillus.01">
+      <div class="line-character">Cyrillus</div>
+      <div class="line-bilingual">
+        <div class="line-left">Admodum bene.</div>
+        <div class="line-right">Tresbien.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Dōnātus.01">
+      <div class="line-character">Dōnātus</div>
+      <div class="line-bilingual">
+        <div class="line-left">Et id ipsum gaudeō.</div>
+        <div class="line-right">J'en suis bien fort joyeus.</div>
+      </div>
+    </div>
+
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+
+    <!--Footer goes here-->
+  </div>
+
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>

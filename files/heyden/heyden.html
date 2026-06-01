@@ -1,0 +1,75 @@
+---
+title: Heyden
+type: Author
+permalink: /heyden/
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/style-list.css" />
+    <link rel="stylesheet" href="/style-common.css" />
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+
+  <body>
+    <div class="navbar headroom">
+      <div class="navbar-inner">
+        <a href="/" class="navbar-item btn">
+          <b>Colloquia Latina</b>
+        </a>
+        <span class="navbar-dynamic">
+          <i>{{ page.title }}</i>
+        </div>
+      </div>
+    </div>
+    <div style="height: 3em"></div>
+
+    <div class="main-content">
+      <a href="/all-authors-list/"><<< Auctores</a>
+
+      <h1>{{ page.title }}</h1>
+      <h2>Index Colloquiorum:</h2>
+
+      <ul>
+        {% assign files_list = site.html_pages | where_exp: "page", "page.path
+        contains 'files/'" %} {% assign author_pages = files_list | where_exp:
+        "page", "page.author == 'Leech'" | where_exp: "page", "page.type ==
+        'Colloquium'" | sort: "sequence" %} {% for page in author_pages %}
+        <li>
+          <a href="{{ page.url }}">{{ page.title }}</a>
+          <div class="subtitle">{{page.subtitle}}</div>
+        </li>
+        {% endfor %}
+      </ul>
+
+      <div class="note">
+    Puerīlium Colloquiōrum Fōrmulae<br>
+    
+    Antverpiæ, apud Antōnium Tilēnium Brechtānum, 1576.<br><br>
+
+    Sebaldus Heyden puerīs suae fidei commissīs, S.D.<br>
+
+    Procul dubiō meministis adhūc, optimī puerī, cūr alterō abhinc annō veterem illum ūsum — quō vōbīs per singulōs diēs bīna rērum vocābula ad τελευτικῆς ἑρμηνείας addiscenda prōpōnēbantur — ē meō lūdō explōserim: nempe quod absurdus et ferē nullīus frūctūs vidērētur, quid enim is ad Latīnam phrāsim faceret, sī ūnō et alterō vocābulō perceptō, nullus praetereā ūsus accēderet? Substituī autem in locum vōbīs singulīs diēbus singulās ōrātiunculas — quae tamen octō syllabās nōn excēderet — addiscendas; idque in fōrmam dialogōrum, ut sīc in addiscendō grātior facultās et in repetendō iūcundior commoditās rudibus adhūc ingeniīs accēderet.<br>
+
+    Quia vērō libellī illī Latīnāriī — ut vocāntur — nostrā manū vōbīs cōnscrīptī perpetuī esse nequeunt, et immēnsus labor sit, quotiēs periērint illī, novōs exscrībere; et tamen nisi hōs dialogōs tōtōs quisque habeat, praeterquam quod citrā taedium repetere neutiquam possit, etiam nūllum frūctum cōnsequī valeat: ideō eōs quālescumque tandem sunt imprimendōs cūrāvī, ut exiguō aere laceratōs libellōs reparāre possētis, et vōs cotīdiānae repetītiōnis vel ob characteris venustātem tantō minus pigēret. Grātīs igitur haec mūnera accipite animīs, atque vestrum praeceptōrem, ut dignum est, diligite et colite. Valē.<br><br>
+
+    Ad nāsūtum lēctōrem:<br>
+      <div class="line-poetry">
+Cōnsultum puerīs volumus, nāsūte, valetō:<br/>
+Quaeritur hīs frūctus — glōria nūlla mihi.
+      </div>
+      </div>
+    </div>
+  
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>
+</html>

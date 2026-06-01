@@ -1,0 +1,63 @@
+---
+title: Leech
+type: Author
+permalink: /leech/
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/style-list.css" />
+    <link rel="stylesheet" href="/style-common.css" />
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+
+  <body>
+    <div class="navbar headroom">
+      <div class="navbar-inner">
+        <a href="/" class="navbar-item btn">
+          <b>Colloquia Latina</b>
+        </a>
+        <span class="navbar-dynamic">
+          <i>{{ page.title }}</i>
+        </div>
+      </div>
+    </div>
+    <div style="height: 3em"></div>
+
+    <div class="main-content">
+      <a href="/all-authors-list/"><<< Auctores</a>
+
+      <h1>{{ page.title }}</h1>
+      <h2>Index Colloquiorum:</h2>
+
+      <ul>
+        {% assign files_list = site.html_pages | where_exp: "page", "page.path
+        contains 'files/'" %} {% assign author_pages = files_list | where_exp:
+        "page", "page.author == 'Leech'" | where_exp: "page", "page.type ==
+        'Colloquium'" | sort: "sequence" %} {% for page in author_pages %}
+        <li>
+          <a href="{{ page.url }}">{{ page.title }}</a>
+          <div class="subtitle">{{page.subtitle}}</div>
+        </li>
+        {% endfor %}
+      </ul>
+
+      <div class="note">
+        Four Little Dialogues, or Colloquies<br>
+        By John Leech (London, 1650)<br>
+        In these a Scholar shall have some Example and Praxis for all the most necessary Rules of Construction.
+      </div>
+    </div>
+  
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>
+</html>

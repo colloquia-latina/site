@@ -1,0 +1,126 @@
+---
+title: Puerilium Colloquiorum Formulae - Colloquium Quārtum
+subtitle: SUB PRĪMAM FACIEM NOCTIS
+type: Colloquium
+author: Sebald Heyden
+collection: Puerilium Colloquiorum Formulae
+topic:
+- Daily Life
+difficulty: Easy
+sequence: '004'
+character_count: 2
+permalink: /sebald-heyden/puerilium_colloquiorum_formulae-colloquium-quartum/
+---
+
+<!doctype html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Decius, Eustachius
+    </div>
+
+    <div class="line-container" id="Decius.01">
+      <div class="line-character">Decius</div>
+      <div class="line-bilingual">
+        <div class="line-left">Sit tibī haec nox fēlīx.</div>
+        <div class="line-right">Dieu vous doint la bonne nuict.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Eustachius.01">
+      <div class="line-character">Eustachius</div>
+      <div class="line-bilingual">
+        <div class="line-left">Et tibī fausta haec sit.</div>
+        <div class="line-right">Et à vous bien heureuse.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Decius.01">
+      <div class="line-character">Decius</div>
+      <div class="line-bilingual">
+        <div class="line-left">Faustam dēge noctem.</div>
+        <div class="line-right">Ayes la bonne nuit.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Eustachius.01">
+      <div class="line-character">Eustachius</div>
+      <div class="line-bilingual">
+        <div class="line-left">Tū quoque nōn infaustam.</div>
+        <div class="line-right">Dieu ne la vous doint mauvaise.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Decius.01">
+      <div class="line-character">Decius</div>
+      <div class="line-bilingual">
+        <div class="line-left">Nox ista tibī commodet.</div>
+        <div class="line-right">Ceste nuit vous soit proufitable.</div>
+      </div>
+    </div>
+
+    <div class="line-container" id="Eustachius.01">
+      <div class="line-character">Eustachius</div>
+      <div class="line-bilingual">
+        <div class="line-left">Et tibī nōn incommodet.</div>
+        <div class="line-right">Passer la puissiez vous sans empeschement.</div>
+      </div>
+    </div>
+
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+
+    <!--Footer goes here-->
+  </div>
+
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>
