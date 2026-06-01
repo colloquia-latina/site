@@ -40,7 +40,7 @@ permalink: /heyden/
       <ul>
         {% assign files_list = site.html_pages | where_exp: "page", "page.path
         contains 'files/'" %} {% assign author_pages = files_list | where_exp:
-        "page", "page.author == 'Leech'" | where_exp: "page", "page.type ==
+        "page", "page.author == 'heyden'" | where_exp: "page", "page.type ==
         'Colloquium'" | sort: "sequence" %} {% for page in author_pages %}
         <li>
           <a href="{{ page.url }}">{{ page.title }}</a>
