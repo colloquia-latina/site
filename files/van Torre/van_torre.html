@@ -6,187 +6,254 @@ permalink: /van_torre/
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{{ page.title }}</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-    <link rel="stylesheet" href="/style-list.css" />
-    <link rel="stylesheet" href="/style-common.css" />
-    
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <title>{{ page.title }}</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-list.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="/scripts/headroom.min.js"></script>
-    <script src="/scripts/common.js"></script>
-  </head>
+  <script src="/scripts/common.js"></script>
+</head>
 
-  <body>
-    <div class="navbar headroom">
-      <div class="navbar-inner">
-        <a href="/" class="navbar-item btn"
-          ><b>Colloquia Latina</b></a
-        >
-        <a href="/all-authors-list/" class="navbar-item btn"
-          >Auctores</a
-        >
-        <span class="navbar-dynamic">
-          <i>{{ page.title }}</i>
-        </div>
-      </div>
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a href="/all-authors-list/" class="navbar-item btn">Auctores</a>
+      <span class="navbar-dynamic">
+        <i>{{ page.title }}</i>
     </div>
-    <div style="height: 3em"></div>
+  </div>
+  </div>
+  <div style="height: 3em"></div>
 
-    <div class="main-content">
-      <h1>{{ page.title }}</h1>
-      <h2>Index Colloquiorum:</h2>
+  <div class="main-content">
+    <h1>{{ page.title }}</h1>
+    <h2>Index Colloquiorum:</h2>
 
-      <ul>
-        {% assign files_list = site.html_pages | where_exp: "page", "page.path
-        contains 'files/'" %} {% assign author_pages = files_list | where_exp:
-        "page", "page.author == 'van_torre'" | sort: "sequence"%} {% for page in
-        author_pages %}
-        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-        {% endfor %}
-      </ul>
+    <ul>
+      {% assign files_list = site.html_pages | where_exp: "page", "page.path
+      contains 'files/'" %} {% assign author_pages = files_list | where_exp:
+      "page", "page.author == 'van_torre'" | sort: "sequence"%} {% for page in
+      author_pages %}
+      <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+      {% endfor %}
+    </ul>
 
-        <div class="note">
-            STUDIŌSĪS<br>
-            <i>LINGUAE LATĪNAE</i><br>
-            TĪRUNCULĪS.<br>
-            Mactī animō ēstōte & vōs Puerī, quī prīma coepistis Linguae Latīnae pōnere rudīmenta. Et vestrae enim
-            imbēcillitātī cōnsultum esse voluimus in hāc exercitātiōnis Lūdovīcī Vivis ēditiōne. Ea scīlicet
-            adnotātiunculīs passim ōrnāvimus, quae tenellae vestrae aptārī possent aetātī, & quās vestrum ferret
-            ingeniolum. Nōn antīquitātis idcircō ērudītiōnem, nōn sermōnis ēlegantiam, nōn historiās, nōn fābulās
-            explicuimus, quae vestrās potius obruerent, quam adjuvārent mentēs: sed difficiliōra, & minus ūsitāta Latīna
-            vocābula, phrasēsque obscūriōrēs Italō reddidimus sermōne, quod vōbīs pernecessārium, atque ūtilissimum
-            exīstimābāmus. Sunt enim familiārēs dīcendī modī ex triviō Latiī aliquandō petītī, quī negōtium etiam
-            prōvectīs hominibus facessunt, quibus utriusque linguae fax aliqua pellūcida nōn affulgeat. Date igitur
-            operam, ut quae adnotāvimus, memoriā perdiscātis. Hoc sī fēceritis, satis amplam opellae nostrae mercēdem
-            rētulerimus.
-        </div>
-
-        <div class="note">
-            JŌANNĒS LŪDOVĪCUS VIVES,<br>
-            Philippō Carolī Caesaris Augustī fīliō hērēdī,<br>
-            optimam mentem.<br>
-            Latīnae linguae permagnae sunt et ad loquendum, et ad rēctē sentiendum ūtilitātēs; est enim ea velut
-            thēsaurus quīdam omnis ērudītiōnis, quoniam magna et praestantia ingenia Latīnō sermōne disciplīnās omnēs
-            cōnscrīpsērunt, ad quās nēmō potest pervenīre, nisi per linguae illīus cognitiōnem. Quam ob causam nōn
-            gravābor, inter majōrum studiōrum occupātiōnēs, hāc quoque parte pueritiae rudīmenta adjuvāre. Cōnscrīpsī in
-            ūsum Latīnae linguae prīmam loquendī exercitātiōnem, quam puerīs (ut spērō) condūcibilem, tibi Prīncipī
-            puerō vīsum est dicāre: quum propter patris tuī benevolentiam ergā mē summam, tum quod in animō tuō ad
-            rēctōs mōrēs fōrmandō, optimē dē Hispāniā, hoc est, patriā meā merēbor, cujus salūs sita est in tuā
-            probitāte ac sapientiā. Sed haec ā Jōanne Martīniō Siliccō, īnstitūtōre tuō et cōpiōsius audiēs, et
-            crēbrius.
-        </div>
-
-        <div class="note">
-            PETRUS MŌTA, COMPLŪTĒNSIS<br>
-            STUDIŌSĪS LĒCTŌRIBUS SALŪTEM.<br>
-            Possum equidem vōbīs, Lēctōrēs optimī, dē librīs omnibus, quōs Jōannēs Ludovicus Vīvēs, Hispānōrum decus,
-            composuit, illud ex animō affirmāre, quod apud Cicerōnem Catō, Scīpiōnī, et Leliō suādēre vidētur: multās ad
-            rēs perūtilēs esse Xenophontis librōs, quōs ut studiōsē lēgant, adhortātur. Vērum aliī fortasse nōn nisi
-            doctīs ērudītīsque lēctōribus erunt idōneī: hic autem ūnus colloquiōrum libellus ejusmodī est, ut nōn sōlum
-            Latīnae linguae tȳrunculī, sed quī jam diū in eā exercitātī sunt, maximam inde frūgem facere possint, ut ad
-            Latīnē ēnūntiandum quicquid velint, et doctiōrēs fīant, et prōmptiōrēs. Nōn vacat hujusce reī causās
-            ratiōnēsque persequī: longiōrem enim epistolam quam prō libellī modō prōpōnere nōn decet. Sed ūna illa
-            interim satis estō. Ex aliōrum librōrum lēctiōne, vel ut Terentiānā atque Plautīnā, excerpī quidem
-            ēlegantiae frūctum, quis negat? Sed in eīs tamen vitiōrum incitāmenta, et mōrum offendicula inesse quis nōn
-            videt? At in Auctōre nostrō, quid quam ēlegantiae Latīnae flōsculōs, quōs ex clārissimīs quibusque
-            Auctōribus excerptōs in hunc libellum congessit, inveniēs? Tum nihil est, quod vel Chrīstum ipsum, vel certē
-            optimōs mōrēs, et probam ēducātiōnem nōn sapiat.<br>
-            Ut omittam mīrābile illud artificium, quō rēs ūtilissimās dulcissimō jūcunditātis temperāmentō condīvit, ut
-            puerōrum animīs nōn minus jūcunda, quam idōnea prōposuerit. Ego certē prō virīlī meā hāctenus cōnātus sum,
-            ut nōtōs mihi, ac amīcōs omnēs ad hujus libellī lēctiōnem adhortārer. Cum iīs vērō quī Grammaticam docendī
-            mūnus obīrent, precibus et litterīs agere nōn dēstitī, ut eum discipulīs suīs expōnere vellent, darentque
-            operam, nē puerī eum audīrent modo, sed ēdiscerent etiam. Sed haec agentī mihi ab amīcīs aliquot
-            significātum est, plērōsque Grammaticae Professōrēs, quōs ipsī probē nōssent, libellī ēnārrātiōnem coepisse
-            quidem, sed in mediō tamen itinere ab incoeptō dēstitisse: ut nunquam magis Ascensiānam operam sibi
-            dēsīderātam esse dīcerent: adeō fuit vir ille dum vīveret, dē vulgō litterārum benemeritus. Neque mīror
-            sānē, cum apud nostrātēs ita sint exigua docentibus praemia cōnstitūta, tam male discipulī ipsī Praeceptōrum
-            operam compēnsent, tantus dēnique hujus molae versandae sit labor, ut doctissimus quisque Sysipium hunc
-            lapidem humerīs suīs subīre dēdignētur: multī rūrsus parva, et tenuis ērudītiōnis suppellectile, cum aliunde
-            honestiōrem (ut ipsī ajunt) quaestum facere nequeant, magnō sē huic labōrī accingant. Neque vērō jam ad
-            magistrum ēligendum, quantā quisque ērudītiōne sit praeditus, sed quam sit ad labōrem tolerandum ferreus, in
-            cōnsiliō habērī solet: ad rudīmenta enim docenda, vel īnfirmum quemque sufficere. Quārē operae precium mē
-            factūrum esse ajēbant, sī dictiōnēs aliquot, praeter eās, quae in margine expositae essent, vel eārum
-            ēlūcidātiō nōn ita facile sē offerret, adnotārem, quod ab ērudītissimīs virīs in nōnnūllīs Auctōribus
-            factitātum vidēmus. Jam quō id libentius facerem, quārundam vōcum expositiōnēs ab illīs commentās, nē nōn
-            eās intelligere vidērentur, mihi nārrārunt: quae nesciō, utrum rīsum mihi, an stomachum potius movēre
-            dēbērent. Obtemperāre igitur, tum amīcōrum eflāgitātiōnibus, tum commūnī ūtilitātī, quamlibet magnīs
-            negōtiīs districtus essem, optimum dūxī, et ea quae vel expositū digna, vel ab aliīs dubitāta cognōscerem,
-            quantā maximā possem brevitāte adnotāre. Hoc tamen prius candidum lēctōrem admonēre vellem, mē nōn
-            ostentandae ērudītiōnis (quam aliīs fortasse scrīptīs exhibēre possēmus) sed īnfimae Grammaticōrum plēbī
-            cōnsulendī animō, ad hās nūgās dēscendisse, in eōrum potissimum grātiam, quī vel Graecē nesciunt, vel nōn
-            perinde sunt ērudītī. Quī sī multa dēsīderāverint, quae per nōs exposita vellent, sciant vicissim multa nōs
-            adnotāsse, quōrum nōn poenitēre nōn poterat; quae nē meminissēmus quidem, nisi ab aliīs perperam,
-            rīdiculēque interpretāta, prō compertō habērēmus. Valē Lēctor optimē, et libellum hunc etiam atque etiam
-            amplectere.
-        </div>
-
-        <div class="note">
-            ANTONII VAN TORRE<br>
-            E SOCIETATE JESU<br>
-            Dialogī Familiārēs<br>
-            Litterārum Tyrōnibus in pietātis, scholae lūdōrum exercitātiōnibus ūtilēs et necessāriī<br>
-            Ūnā cum Orthographiae, interpungendī et dīvidendī rēctā ratiōne.<br>
-            Editiō Novissima.<br>
-            Antverpiæ, apud Martinum Verdussen, in foro Calceōrum sub signō Aviāriī.<br>
-            Cum Gratiā et Privilēgiō.<br><br>
-            Sanctī Angelī, Rudis Aetātis Custōdēs, Patrōnī, Paedagōgī —<br>
-            Vōbīs libellus hic sacer estō.<br>
-            Tūtēlam quaerit — tūtēlārēs estis.<br>
-            Scholārum ūtilitātem spectat — sine vōbīs ūtilis esse nōn potest.<br>
-            Aiēbat Platō abesse ā scholā mentem cum Aristotelēs aberat. Vōs tōtī mēns estis — aberit ā scholīs mēns, ā quibus vestrum praesidium.<br>
-            Altam igitur mentem ad humilēs exedrās, ad litterārium puerōrum lūdum quaesō dēmittite. Vōs amor, sciō — vōs cūra, vōs dīvīnum imperium volentēs hūc abiicit. Hīc vestrōrum clientium prīmōs cōnātūs provehite. Illīs ingenium et amōrem litterārum īnspīrāte. Cum Latīnē loquendum erit, verba subiicite. Quae ex hōc libellō hauserint, memoriae illōrum affīgite. Quī libellō frūctus cōnstiterit, vōbīs dēbēbitur. Per vōs factās esse fatēbimur linguās īnfantium disertās.<br><br>
-            Paraenesis ad Religiōsōs et Litterātōs Grammaticae Professōrēs.<br>
-            Vōs estis alterī adolēscentiae tūtōrēs ac praesidēs — vōbīs illa secundum Angelōs referat oportet īnstitūtiōnem suam. In huius vērō tam praeclārī mūneris vestrī dignitātem ūtilitātemque cum intuērer, exārsī animō oneris partem ferre aliquam, aut — ut vetus habet verbum — lapidem in Mercuriī acervum mittere ipse voluī, Dialogōs, quōs vidētis, in commūne cōnferendō.<br>
-            Sīve pietātis, sīve dīligentiae, sīve honestae relaxātiōnis dūcenda est ā discipulīs vestrīs ratiō, singulōrum aliquid in illīs leviter attigī, unde īnformārī possint — sed nōn id fateor praecipuē secūtus fuī. Quid igitur? Cum animadverterem puerōs in ipsō statim tyrōciniō, in summā Latīnī sermōnis inopiā, sī loquī dē rēbus suīs vellent, ad linguam vernaculam necessitāte compellī — vidēbar ipse mihi factūrus operae pretium, sī ea quae cotīdiē illīs in ōre sunt, Latīnē reddita familiāribus colloquiīs exsequerēr.<br>
-            Simul et illud cōgitābam fore ut, sī quā vōs attingeret — ut attingit — huius reī cūra, Latīnae linguae ūsus iam indē ā prīmīs rudimentīs sēsē paulātim efferret, ac deinde cum assidūō politiōris ōrātiōnis cultū magis in diēs magisque efflōresceret. Rēx enim vērō ad scholārum vestrārum commendātiōnem expetenda, compendiōsa Paraenesis ad ineundam optimārum artium viam, ad cōmitātem affābilitātemque sermōnis — in quā tantum est suāvitātis et lepōris — prōrsus necessāria.<br>
-            Quārē hūc cūram, quaesō, et indūstriam convertite, et ornāte hōc beneficiō puerōs, vel invītōs — nē, cum ē magisteriō vestrō aetās illīs excesserit, cōgantur aut balbutīre perpetuō, aut fatērī sē nescīre quod nesciunt et diū tamen didicērunt. Dolenter hōc potius quam contumēliōsē dīcam: esse nōnnumquam adolescentēs ingeniō praestābilī et ēlegantī et ad omnium disciplīnārum satis excipiendōs accommodātō, quī post annōs sex aut plūs eō in scholīs exāctōs, sī prō rē nātā Latīnē loquendum sit, ita haesitant et offendunt ut nōn ēruditīs modo virīs — quōrum in cōnsuētūdinem forte vēnerint — sed sibī etiam ipsī displiceant, adeoque quod narrāre īnstituerant, pudōre victī cōgantur abrumpere ac patriō sermōne praetexere.<br>
-            At hī tamen nūper, seu solūtā seu vinctā ōrātiōne inter sē contenderent, dē quācumque prōpositā rē cōpiōsē satis ōrnātēque scrībēbant — veniēbant scīlicet in lūdum meditātī et ab optimōrum auctōrum lēctiōne recentēs, et multīs ad excolendum stylum praesidiīs īnstrūctī. Quae — malum — ista est tam gravis tamque īnsolēns culpa, quae īnsignēs studiīsque mīrifice dēditōs adolescentēs ad illam redēgit in cotīdiānīs congressibus iēiūnitātem inopiam que verbōrum? Loquendī dēsuētūdō. Ūsus nīmirum — ūsus, magister et optimus — atque, ut ait in Cornēliānā Cicerō, ingenium et artem saepe vincit. Quōs ille ā prīmā aetāte dētexerit, tametsi in scholārum umbrīs cōnsidentēs nōn impolitum aliquid interdum medītentur et scrībant, tamen in lūce atque oculīs doctōrum hominum aut conticēscant aut tarditātem et ignōrantiam suam prōdant necesse est.<br>
-            At quī carminis aut ōrātiōnis ēlūcubrandae locus est rārior, et ad paucōs ea laus redit — loquendī vērō nōn proprius cuiusdam sed commūnis est omnium. Faciat utinam illa familiāris sermōnis perspēcta necessitās et venustās ut discipulōrum aequē ac magistrōrum animōs studiaque continenter exsuscitet ad infantiam illam — nimis quam patienter ac diū in gymnāsiīs tolerātam — commūnī tandem omnium eadem volentium cōnspīrātiōne prōfligandam.<br>
-            Equidem sī quis vestrum mē neget in hīs Dialogīs scrībendīs rem magnam praestītisse, nihil est aequē quod fatēbor lubēns. Sed sī familiārēs — quem titulum illōs ferre voluī — cūrā hortātūque vestrō discipulīs fiant (nōlim hōc arroganter ā mē dictum aestimārī), ad id quod contendimus nōn parum ūtilēs futūrī sunt. Ūtilēs, dīcō? Immō et iūcundī, sī cum vestrōs docēbitis vōcem atque gestum moderārī, scholasticae huius umbrātilis exercitātiōnis māteriammodō hac, modo illa colloquia praescrībātis. Quid illī melius, quid iūcundius dēclāmitent quam quod integrē plānēque intellegunt, quod cotīdiē loquuntur et tractant, in quō et sēnsūs et mōrēs et studia et vītae suae ratiōnēs omnēs ipsī recēnsēbunt? Sternit hoc viam ut, cum longī verbōrum ambitūs et operōsae dēscriptiōnēs et dēlīberātīva iūdiciālisvē māteria vīrēs et latera grandiōremque vōcis sōnum requirent, nātūrālī omnia — nihil ambitiōsō putidōque dīcendī modō — prōnūntient.<br>
-            Quid sī hinc etiam excerpantur cotīdiānārum argūmenta scrīptiōnum? Quam tenāciter in memoriā īnsidēbunt commūnēs loquendī fōrmulae! Quam in prōmptū erit quicquid dīcendum occurret! Porrō quod scitā quāpiam novitāte videāmus puerōrum animōs capī, centuriam adagiōrum in decadās dīgerere, obiicātque illīc interpōnere vīsum fuit — frūctū, ut augūror, minimē paenitendō. Ut enim gemma annulō inclūsa, aurum purpurā intertextum, ita paroemia sermōnī — praesertim familiārī — opportunē ac decenter īnserta grātiam ac decōrem conciliat. Quid quod adagium, ut ait Festus, ex eō nōmen sortiātur, quod ad agendum dūcat et viam commōnstret — ac proinde puerī ad illās prūdentiae rēgulās efformārī paulātim posse videantur?<br>
-            Haec igitur ediscant, ūsurpent in locō, ex hīs sapere incipiant; haec inter disputandum ē vernaculō in Latīnum et ē Latīnō — cum libet — in vernaculum vertere iubeantur. Nunc — mihi crēdite — recondent in memoriā pēnum quā iuvābit olim — cum ūtātās ita iūdicium mātūruerit — meminisse et prōmere nōn sine aliquā doctrīnae aestimātiōne atque audientium voluptāte. Et cui nōn suus pudor cōnsuētūdinem ēruditōrum claudat, quī prōferre nihil possit quō sē studia coluisse testētur?<br>
-            At quia loquendī cūram suscēpimus, nē scrībendī neglēxisse vidērēmur, ad huius opusculī calcem ex Aldō Manutiō dē Orthographiā adiiciendum aliquid dūximus. Minūtus labor, quī in scrībendīs et coniugandīs dīvidendīsque syllabīs et verbīs sententiīsque interpungendīs versātur — vērum ut minūtus sit, tamen mīrābile est, certē ūsū compertum: sī quī rudēs adhūc et tyrōnēs in haec elementa litterāriī peccāre cōnsuerint, aegrē admodum, cum tyrōciniō exīverint, ad eadem rēctē concinnanda posse revocārī, turpem īnscītiae nōtam — sī quid manū exārāverint — chartīs suō simul nōmine semper impressūrī.<br>
-            Cassiodōrus, ille Gothōrum rēgis magister ac religiōsō deinde habitū quam lātō clāvō illūstrior, trēs suprā nōnāgintā nātus annōs Orthographica scrībere aggressus est — cuius praeclāra haec est sententia: vōcem articulātam nōn ā bestiīs, scrībendī ratiōnem ab imperitīs et cōnfūsīs distinguere. Audiant puerī senem quem puerī senēs audīvērunt, eiusque monitū nōn minus rēctē loquī quam scrībere contendant.<br>
-            Atque hīc habētis, Professōrēs, cōnsilii meī dē hōc Opusculō ratiōnem. Cuius ēditiōne sī hōc fuerō cōnsecūtus ut Latīnē loquendī cōnsuētūdō in scholīs vestrīs invālēscat, habēbō quod iuventūtī et mihi grātūler — mihi, quod libellō nōn maximā operā rem nōn minimī frūctūs prōmōverim; iuventūtī, quod assidūā ac iūcundā etiam exercitātiōne tantam nancīscētur bene et ēmendātē loquendī facilitātem, quantam sibi fortasse numquam labōriōsa scrībendī cūra comparāsset.<br>
-            Dē mē vērō hōc addam Cicerōnis verbīs:<br>
-            Sī temerē aliquid praeteriisse, aut nōn satis ēleganter secūtī vidēbimur, doctī ab aliquō facile et libenter sententiam mūtābimus. Nōn enim parum cognōsse, sed in parum cognitō stultē diūque persevērāsse turpe est — proptereā quod alterum commūnī hominum īnfirmitātī, alterum singulārī ūnīuscuiusque vitiō est attribūtum. — Lib. 2 dē Inventione.<br><br><br>
-
-            Ad Illūstrēs, Nōbilēs, Ingenuōs Adolescentēs Convictūs Societātis Jesu.<br>
-            Magnā vōs laetitia prōsequor, lectissimī adolescentēs, cum illa tempora cōgitātiōne et vōtō praecapiō quibus litterae vōbīs erunt īnstrūmenta virtūtis et ornāmenta dignitātis. Cum enim sine illārum praesidiō ad rem ūllam illūstriōrem nēmō possit accēdere, hoc habet honestissima vestra ēducātiō in Convictū ac propē sinū nostrōrum hominum — quī velut nūtritiī ōs vōbīs fingunt et praeeunt vōbīs — ut, cum olim in templīs, in cūriīs, in exedrīs et cōnsessibus loquendum erit, īnsignis Latīnae linguae facilitās et cōpia subsidium et laudem nōn vulgārem vōbīs allātūra sit.<br>
-            Antiphanēs, poēta Cōmicus egregie facētus et ex eō praecipuē captāre solitus fēstīvitātis laudem quod incrēdibilia commīnīscerētur, terrārum aliquem tractum apud extrēmōs Scythās esse fīnxit ubi loquentium vōcēs hieme perfrīgidā concrēscerent vinctaeque tenērentur, dum iīsdem quibus terra temporibus resolūtae ad aurēs pervenirent. Sit illa fābulōsa — ut est — et in poētae tantum mente sit regiō: at haec bonārum artium sēdēs quam incolitis, haec ingeniōrum palaestra, haec ēloquentiae officīna vōcēs cotīdiē vestrās excipit, quae quidem nunc, angustīs intersaeptae spatiīs, vidērī possint quōdam velutī rigōre adstrīctae cōnsistere — at, cum aetās vōbīs maior accesserit, in lūce doctōrumque hominum corōnā exaudientur, et intellegent illī quam articulātim et expedītē et ēleganter hīc ā vōbīs priūs expressae sint.<br>
-            Circumferētis ipsī tum Convictūs vestrī commendātiōnem atque fāmam; et, quantum ego quidem eōrum quī vōs audient mentem cōnsequī possum, hī fēlīcitātem īnstitūtiōnis vestrae admīrābuntur et efferent. Dolēbunt aliī iīs frūctibus atque ornāmentīs — quae ex arctiōre huius contubernī disciplīnā redundāverint — cum adolēscerent caruisse; aliī sēsē in cōnsuētūdinem vestram immergent, captī ēlegantiā suāvitāteque sermōnis.<br>
-            Nunc, quaesō, mēcum hunc quem dīcō ēducātiōnis vestrae frūctum plēnius recognōscite, Convictōrēs. Nesciō enim an quidquam sit — sīve ad commūnem vītam fovendam illō dulcius, sīve ad auctōritātem et ērudītiōnis aestimātiōnem conciliandam gravius. In ēruditōrum virōrum congressū Latīnē disserendum est — quam aequābilī et nusquam haerente opus est ōrātiōne ut placeās? Adeundus prehendendusque vir gravis, postulandum, dēprecandum est aliquid, referendae sunt grātiae — quantī id refert nē quis loquendō titūbet et verbīs nisi idōneīs et sponte suā prōvenientibus ūtātur? Epistula, aut etiam nōn multōrum versuum schedula festīnanter dē pūblicīs prīvātīsque negōtiīs scrībenda est — potest hoc fierī nisi ab eō quī cultō facilīque sermōne assuerit? Rēs aliqua, ut fuit gesta, subiicienda est aliōrum oculīs — subiiciet quī, dum nārrātiō in cursū est, ob verbōrum inopiām restitābit saepius, aut inchoātō Latīnī sermōnis textō peregrīnum vernaculae linguae subtēmen — ut ita loquar — identidem cogitur inicere?<br>
-            Fingite, sī placet, cōgitātiōne fīgulum ūnum aliquem esse quī nōn diū multumque ā puerō informe lūtum subēgerit ac circumdūxerit — cum amphoram īnstituere coeperit, fore cēnsetis ut currentī rotā partibus suīs omnibus explēta perfectaque exeat? Nōn potest similiter Latīnus sermō aptē congruenterque ab ūllō continuārī et perficī, quī nōn ab ineuntē adolescentiā magnō studiō subāctus assuerit praesantī animō et promptē et ēmendātē loquī. Omnēs artēs omnique opera, inquit Vegetius, cotīdiānō ūsū et exercitātiōne proficiunt.<br>
-            At vōs gaudēte: laudātissimīs illīs ūtilissimīsque Convictūs vestrī īnstitūtīs et lēgibus — quae vōbīs perpetuam impōnunt Latīnē loquendī necessitātem et ad ea quae modō ā mē commemorāta sunt bene perfectēque praestanda maximīs vōs praesidiīs īnstruunt. Est enim cōnsultissimōrum virōrum sententia plūs — sī sepārēs — ūsum sine doctrīnā quam citrā ūsum doctrīnam valēre. Ipsī certē audīvimus ē vestrō numerō aliquōs, quamvis per aetatem Grammaticae praecepītiōnibus nōn admodum īnstitūtōs, iīs tamen quī in illārum cognitiōne longius prōcesserant, celerī et exercitātā linguā praestītisse. Nīmīrum tyrōnēs ac rudēs ut erant, audēbant et cōnābāntur nec ērubēscēbant loquī — ratī: sī bene, favōrem et laudem; sī minus, veniam prīmīs cōnātibus parātam esse.<br>
-            Valet quippe in puerīlibus prōlūsiōnibus quod integrī validissimī valēre ait oportēre Quīntiliānus, cum de tempore disputat quō causās agere ōrātor incipiat, negatque agendī tyrōcinium diū esse differendum. Nam cotīdiē metus crēscit maius que fit semper quod ausūrī sumus; et dum dēlīberāmus quandō incipiendum sit, incipere iam sērum est. Quārē frūctum studiōrum viridem et adhūc dulcem prōmī decet, dum et venia spēs est et parātus favor — audēre nōn dēdecet; sī quid dēsit operī, supplet aetās; sī qua dicta sunt iuvenīliter, prō indole accipiuntur.<br>
-            Ita vōs facite, et hāc aetāte, quae ferventium studiōrum et errātōrum excūsātiōnem merētur, assidūō Latīnī sermōnis ūsū prōgressūs vestrōs urgēte, plānēque crēdite tum dignum operae pretium venīre cum inter sē congruunt praecepta et experimenta.<br>
-            At cum in illum dē experīmentīs sermōnem incidimus, vidēte quam nōn sevērē sed familiāriter ac remissē vōbīscum agam, quī nōn ea postulent quae sint palaestrae et oleī, sed quōrum facilis et solūta sit ratiō. Volō enim ex eō quod aetātī vestrae dulcissimum est aliquid ad studiōrum vestrōrum prōgressūs impellendōs adferre. Sī quis enim ex vōbīs quid expetātis avidius quaerat, animī remissiōnem, opīnor, respondēbitis et lūdum. Atquī nē tum quidem partem solidī diēī sine frūctū dēmerēre vōs velim, sīve pilā, sīve sphaerā volūbilī, sīve contentō ad mētās cursū, sīve aliō lūdendī genere certābitis. Dabit hīc, quī vōbīs īnscrīptus est, libellus, quod in ōtiō animōrumque relaxātiōne et iūcundē et ūtiliter efferātis.<br>
-            Tamen sī tum forte, aut aliās, vernācula vox ōre exciderit — an eōs quī proptereā leve nescio quid ad aliquam multae speciem vōbīs irrōgāverint, molestōs exāctōrēs appellābitis? Nōn — per illam praeclāram indolem vestram parātam ad omnia maiōrum imperia ultrō dēscendere; nōn — per discendī cupiditātem quā īnflammātī vōs hīc īnformandōs trādidistis; nōn — per exspectātiōnem parentum quam nōn tuērī tantum sed etiam superāre contenditis; nōn — per hūmānae cōnsuētūdinis iūcunditātem, quem vītae frūctum vōbīs reddet suāviōrem promptus et ēlēgāns sermō.<br>
-            Est apud Senecam illa incōnsultī prōmissōris et fidem tamen exsolvere volentis ōrātiō: Verba mea redimam, et aurem mihi pervellam. Damnō castīgābō prōmittendī temeritātem: linguārium dabō. Quae postrēma verba clārissimī illī duumvirī — dē Senecā et dē omnī rē litterāriā optimē meritī — Mūrētus et Lipsius sīc interpretantur: ut sīcut vāsārium aut hordeārium illud fuit quod prō vāsīs aut hordeō ērōgābātur, ita linguārium velint mulctam esse et quasi vectīgal prō linguā temerē locūtā dēpendendum.<br>
-            Enimvērō hinc velim sibī exemplum quisque vestrum capiat, et sī quid vernāculō sermōne temerē effūderit, abs sē dictum damnet, sē obiurgat, suīque prōfectūs dēsideriō incēnsus et meliōra pollicitus et ingenuō rubōre — qualem M. Porcius Catō in iuvenibus laudābat — suffūsus dīcat: Verba mea redimam, linguārium dabō.<br>
-            Sed unde linguārium quod exigō petendum existimātis? Nōn ex altō quam memoriae vestrae thēsaurō — quā sōlā initia litterārum cōnstant et iuvārī cūrā docentium potest. In hanc recondite quod, cum opus fuerit, dēprōmātis — ingenium ut dē nescio quō dictum fuit, in numerātō semper habitūrī. Atque ita quod Afrānius, vetus et ā Gelliō laudātus poēta, dē sapientiā cecinit, in illam etiam quam cōnsecūtī fueritis Latīnae linguae cognitiōnem rēctē conveniet:<br>
-
+    <div class="note">
+      ANTONII VAN TORRE<br>
+      E SOCIETATE JESU<br>
+      Dialogī Familiārēs<br>
+      Litterārum Tyrōnibus in pietātis, scholae lūdōrum exercitātiōnibus ūtilēs et necessāriī<br>
+      Ūnā cum Orthographiae, interpungendī et dīvidendī rēctā ratiōne.<br>
+      Editiō Novissima.<br>
+      Antverpiæ, apud Martinum Verdussen, in foro Calceōrum sub signō Aviāriī.<br>
+      Cum Gratiā et Privilēgiō.
+    </div>
+    <div class="note">
+      Sanctī Angelī, Rudis Aetātis Custōdēs, Patrōnī, Paedagōgī —<br>
+      Vōbīs libellus hic sacer estō.<br>
+      Tūtēlam quaerit — tūtēlārēs estis.<br>
+      Scholārum ūtilitātem spectat — sine vōbīs ūtilis esse nōn potest.<br>
+      Aiēbat Platō abesse ā scholā mentem cum Aristotelēs aberat. Vōs tōtī mēns estis — aberit ā scholīs mēns, ā quibus
+      vestrum praesidium.<br>
+      Altam igitur mentem ad humilēs exedrās, ad litterārium puerōrum lūdum quaesō dēmittite. Vōs amor, sciō — vōs cūra,
+      vōs dīvīnum imperium volentēs hūc abiicit. Hīc vestrōrum clientium prīmōs cōnātūs provehite. Illīs ingenium et
+      amōrem litterārum īnspīrāte. Cum Latīnē loquendum erit, verba subiicite. Quae ex hōc libellō hauserint, memoriae
+      illōrum affīgite. Quī libellō frūctus cōnstiterit, vōbīs dēbēbitur. Per vōs factās esse fatēbimur linguās
+      īnfantium disertās.
+    </div>
+    <div class="note">
+      Paraenesis ad Religiōsōs et Litterātōs Grammaticae Professōrēs.<br>
+      Vōs estis alterī adolēscentiae tūtōrēs ac praesidēs — vōbīs illa secundum Angelōs referat oportet īnstitūtiōnem
+      suam. In huius vērō tam praeclārī mūneris vestrī dignitātem ūtilitātemque cum intuērer, exārsī animō oneris partem
+      ferre aliquam, aut — ut vetus habet verbum — lapidem in Mercuriī acervum mittere ipse voluī, Dialogōs, quōs
+      vidētis, in commūne cōnferendō.<br>
+      Sīve pietātis, sīve dīligentiae, sīve honestae relaxātiōnis dūcenda est ā discipulīs vestrīs ratiō, singulōrum
+      aliquid in illīs leviter attigī, unde īnformārī possint — sed nōn id fateor praecipuē secūtus fuī. Quid igitur?
+      Cum animadverterem puerōs in ipsō statim tyrōciniō, in summā Latīnī sermōnis inopiā, sī loquī dē rēbus suīs
+      vellent, ad linguam vernaculam necessitāte compellī — vidēbar ipse mihi factūrus operae pretium, sī ea quae
+      cotīdiē illīs in ōre sunt, Latīnē reddita familiāribus colloquiīs exsequerēr.<br>
+      Simul et illud cōgitābam fore ut, sī quā vōs attingeret — ut attingit — huius reī cūra, Latīnae linguae ūsus iam
+      indē ā prīmīs rudimentīs sēsē paulātim efferret, ac deinde cum assidūō politiōris ōrātiōnis cultū magis in diēs
+      magisque efflōresceret. Rēx enim vērō ad scholārum vestrārum commendātiōnem expetenda, compendiōsa Paraenesis ad
+      ineundam optimārum artium viam, ad cōmitātem affābilitātemque sermōnis — in quā tantum est suāvitātis et lepōris —
+      prōrsus necessāria.<br>
+      Quārē hūc cūram, quaesō, et indūstriam convertite, et ornāte hōc beneficiō puerōs, vel invītōs — nē, cum ē
+      magisteriō vestrō aetās illīs excesserit, cōgantur aut balbutīre perpetuō, aut fatērī sē nescīre quod nesciunt et
+      diū tamen didicērunt. Dolenter hōc potius quam contumēliōsē dīcam: esse nōnnumquam adolescentēs ingeniō
+      praestābilī et ēlegantī et ad omnium disciplīnārum satis excipiendōs accommodātō, quī post annōs sex aut plūs eō
+      in scholīs exāctōs, sī prō rē nātā Latīnē loquendum sit, ita haesitant et offendunt ut nōn ēruditīs modo virīs —
+      quōrum in cōnsuētūdinem forte vēnerint — sed sibī etiam ipsī displiceant, adeoque quod narrāre īnstituerant,
+      pudōre victī cōgantur abrumpere ac patriō sermōne praetexere.<br>
+      At hī tamen nūper, seu solūtā seu vinctā ōrātiōne inter sē contenderent, dē quācumque prōpositā rē cōpiōsē satis
+      ōrnātēque scrībēbant — veniēbant scīlicet in lūdum meditātī et ab optimōrum auctōrum lēctiōne recentēs, et multīs
+      ad excolendum stylum praesidiīs īnstrūctī. Quae — malum — ista est tam gravis tamque īnsolēns culpa, quae īnsignēs
+      studiīsque mīrifice dēditōs adolescentēs ad illam redēgit in cotīdiānīs congressibus iēiūnitātem inopiam que
+      verbōrum? Loquendī dēsuētūdō. Ūsus nīmirum — ūsus, magister et optimus — atque, ut ait in Cornēliānā Cicerō,
+      ingenium et artem saepe vincit. Quōs ille ā prīmā aetāte dētexerit, tametsi in scholārum umbrīs cōnsidentēs nōn
+      impolitum aliquid interdum medītentur et scrībant, tamen in lūce atque oculīs doctōrum hominum aut conticēscant
+      aut tarditātem et ignōrantiam suam prōdant necesse est.<br>
+      At quī carminis aut ōrātiōnis ēlūcubrandae locus est rārior, et ad paucōs ea laus redit — loquendī vērō nōn
+      proprius cuiusdam sed commūnis est omnium. Faciat utinam illa familiāris sermōnis perspēcta necessitās et venustās
+      ut discipulōrum aequē ac magistrōrum animōs studiaque continenter exsuscitet ad infantiam illam — nimis quam
+      patienter ac diū in gymnāsiīs tolerātam — commūnī tandem omnium eadem volentium cōnspīrātiōne prōfligandam.<br>
+      Equidem sī quis vestrum mē neget in hīs Dialogīs scrībendīs rem magnam praestītisse, nihil est aequē quod fatēbor
+      lubēns. Sed sī familiārēs — quem titulum illōs ferre voluī — cūrā hortātūque vestrō discipulīs fiant (nōlim hōc
+      arroganter ā mē dictum aestimārī), ad id quod contendimus nōn parum ūtilēs futūrī sunt. Ūtilēs, dīcō? Immō et
+      iūcundī, sī cum vestrōs docēbitis vōcem atque gestum moderārī, scholasticae huius umbrātilis exercitātiōnis
+      māteriammodō hac, modo illa colloquia praescrībātis. Quid illī melius, quid iūcundius dēclāmitent quam quod
+      integrē plānēque intellegunt, quod cotīdiē loquuntur et tractant, in quō et sēnsūs et mōrēs et studia et vītae
+      suae ratiōnēs omnēs ipsī recēnsēbunt? Sternit hoc viam ut, cum longī verbōrum ambitūs et operōsae dēscriptiōnēs et
+      dēlīberātīva iūdiciālisvē māteria vīrēs et latera grandiōremque vōcis sōnum requirent, nātūrālī omnia — nihil
+      ambitiōsō putidōque dīcendī modō — prōnūntient.<br>
+      Quid sī hinc etiam excerpantur cotīdiānārum argūmenta scrīptiōnum? Quam tenāciter in memoriā īnsidēbunt commūnēs
+      loquendī fōrmulae! Quam in prōmptū erit quicquid dīcendum occurret! Porrō quod scitā quāpiam novitāte videāmus
+      puerōrum animōs capī, centuriam adagiōrum in decadās dīgerere, obiicātque illīc interpōnere vīsum fuit — frūctū,
+      ut augūror, minimē paenitendō. Ut enim gemma annulō inclūsa, aurum purpurā intertextum, ita paroemia sermōnī —
+      praesertim familiārī — opportunē ac decenter īnserta grātiam ac decōrem conciliat. Quid quod adagium, ut ait
+      Festus, ex eō nōmen sortiātur, quod ad agendum dūcat et viam commōnstret — ac proinde puerī ad illās prūdentiae
+      rēgulās efformārī paulātim posse videantur?<br>
+      Haec igitur ediscant, ūsurpent in locō, ex hīs sapere incipiant; haec inter disputandum ē vernaculō in Latīnum et
+      ē Latīnō — cum libet — in vernaculum vertere iubeantur. Nunc — mihi crēdite — recondent in memoriā pēnum quā
+      iuvābit olim — cum ūtātās ita iūdicium mātūruerit — meminisse et prōmere nōn sine aliquā doctrīnae aestimātiōne
+      atque audientium voluptāte. Et cui nōn suus pudor cōnsuētūdinem ēruditōrum claudat, quī prōferre nihil possit quō
+      sē studia coluisse testētur?<br>
+      At quia loquendī cūram suscēpimus, nē scrībendī neglēxisse vidērēmur, ad huius opusculī calcem ex Aldō Manutiō dē
+      Orthographiā adiiciendum aliquid dūximus. Minūtus labor, quī in scrībendīs et coniugandīs dīvidendīsque syllabīs
+      et verbīs sententiīsque interpungendīs versātur — vērum ut minūtus sit, tamen mīrābile est, certē ūsū compertum:
+      sī quī rudēs adhūc et tyrōnēs in haec elementa litterāriī peccāre cōnsuerint, aegrē admodum, cum tyrōciniō
+      exīverint, ad eadem rēctē concinnanda posse revocārī, turpem īnscītiae nōtam — sī quid manū exārāverint — chartīs
+      suō simul nōmine semper impressūrī.<br>
+      Cassiodōrus, ille Gothōrum rēgis magister ac religiōsō deinde habitū quam lātō clāvō illūstrior, trēs suprā
+      nōnāgintā nātus annōs Orthographica scrībere aggressus est — cuius praeclāra haec est sententia: vōcem articulātam
+      nōn ā bestiīs, scrībendī ratiōnem ab imperitīs et cōnfūsīs distinguere. Audiant puerī senem quem puerī senēs
+      audīvērunt, eiusque monitū nōn minus rēctē loquī quam scrībere contendant.<br>
+      Atque hīc habētis, Professōrēs, cōnsilii meī dē hōc Opusculō ratiōnem. Cuius ēditiōne sī hōc fuerō cōnsecūtus ut
+      Latīnē loquendī cōnsuētūdō in scholīs vestrīs invālēscat, habēbō quod iuventūtī et mihi grātūler — mihi, quod
+      libellō nōn maximā operā rem nōn minimī frūctūs prōmōverim; iuventūtī, quod assidūā ac iūcundā etiam exercitātiōne
+      tantam nancīscētur bene et ēmendātē loquendī facilitātem, quantam sibi fortasse numquam labōriōsa scrībendī cūra
+      comparāsset.<br>
+      Dē mē vērō hōc addam Cicerōnis verbīs:
+    </div>
+    <div class="note">
+      Sī temerē aliquid praeteriisse, aut nōn satis ēleganter secūtī vidēbimur, doctī ab aliquō facile et libenter
+      sententiam mūtābimus. Nōn enim parum cognōsse, sed in parum cognitō stultē diūque persevērāsse turpe est —
+      proptereā quod alterum commūnī hominum īnfirmitātī, alterum singulārī ūnīuscuiusque vitiō est attribūtum. — Lib. 2
+      dē Inventione.
+    </div>
+    <div class="note">
+      Ad Illūstrēs, Nōbilēs, Ingenuōs Adolescentēs Convictūs Societātis Jesu.<br>
+      Magnā vōs laetitia prōsequor, lectissimī adolescentēs, cum illa tempora cōgitātiōne et vōtō praecapiō quibus
+      litterae vōbīs erunt īnstrūmenta virtūtis et ornāmenta dignitātis. Cum enim sine illārum praesidiō ad rem ūllam
+      illūstriōrem nēmō possit accēdere, hoc habet honestissima vestra ēducātiō in Convictū ac propē sinū nostrōrum
+      hominum — quī velut nūtritiī ōs vōbīs fingunt et praeeunt vōbīs — ut, cum olim in templīs, in cūriīs, in exedrīs
+      et cōnsessibus loquendum erit, īnsignis Latīnae linguae facilitās et cōpia subsidium et laudem nōn vulgārem vōbīs
+      allātūra sit.<br>
+      Antiphanēs, poēta Cōmicus egregie facētus et ex eō praecipuē captāre solitus fēstīvitātis laudem quod incrēdibilia
+      commīnīscerētur, terrārum aliquem tractum apud extrēmōs Scythās esse fīnxit ubi loquentium vōcēs hieme perfrīgidā
+      concrēscerent vinctaeque tenērentur, dum iīsdem quibus terra temporibus resolūtae ad aurēs pervenirent. Sit illa
+      fābulōsa — ut est — et in poētae tantum mente sit regiō: at haec bonārum artium sēdēs quam incolitis, haec
+      ingeniōrum palaestra, haec ēloquentiae officīna vōcēs cotīdiē vestrās excipit, quae quidem nunc, angustīs
+      intersaeptae spatiīs, vidērī possint quōdam velutī rigōre adstrīctae cōnsistere — at, cum aetās vōbīs maior
+      accesserit, in lūce doctōrumque hominum corōnā exaudientur, et intellegent illī quam articulātim et expedītē et
+      ēleganter hīc ā vōbīs priūs expressae sint.<br>
+      Circumferētis ipsī tum Convictūs vestrī commendātiōnem atque fāmam; et, quantum ego quidem eōrum quī vōs audient
+      mentem cōnsequī possum, hī fēlīcitātem īnstitūtiōnis vestrae admīrābuntur et efferent. Dolēbunt aliī iīs frūctibus
+      atque ornāmentīs — quae ex arctiōre huius contubernī disciplīnā redundāverint — cum adolēscerent caruisse; aliī
+      sēsē in cōnsuētūdinem vestram immergent, captī ēlegantiā suāvitāteque sermōnis.<br>
+      Nunc, quaesō, mēcum hunc quem dīcō ēducātiōnis vestrae frūctum plēnius recognōscite, Convictōrēs. Nesciō enim an
+      quidquam sit — sīve ad commūnem vītam fovendam illō dulcius, sīve ad auctōritātem et ērudītiōnis aestimātiōnem
+      conciliandam gravius. In ēruditōrum virōrum congressū Latīnē disserendum est — quam aequābilī et nusquam haerente
+      opus est ōrātiōne ut placeās? Adeundus prehendendusque vir gravis, postulandum, dēprecandum est aliquid,
+      referendae sunt grātiae — quantī id refert nē quis loquendō titūbet et verbīs nisi idōneīs et sponte suā
+      prōvenientibus ūtātur? Epistula, aut etiam nōn multōrum versuum schedula festīnanter dē pūblicīs prīvātīsque
+      negōtiīs scrībenda est — potest hoc fierī nisi ab eō quī cultō facilīque sermōne assuerit? Rēs aliqua, ut fuit
+      gesta, subiicienda est aliōrum oculīs — subiiciet quī, dum nārrātiō in cursū est, ob verbōrum inopiām restitābit
+      saepius, aut inchoātō Latīnī sermōnis textō peregrīnum vernaculae linguae subtēmen — ut ita loquar — identidem
+      cogitur inicere?<br>
+      Fingite, sī placet, cōgitātiōne fīgulum ūnum aliquem esse quī nōn diū multumque ā puerō informe lūtum subēgerit ac
+      circumdūxerit — cum amphoram īnstituere coeperit, fore cēnsetis ut currentī rotā partibus suīs omnibus explēta
+      perfectaque exeat? Nōn potest similiter Latīnus sermō aptē congruenterque ab ūllō continuārī et perficī, quī nōn
+      ab ineuntē adolescentiā magnō studiō subāctus assuerit praesantī animō et promptē et ēmendātē loquī. Omnēs artēs
+      omnique opera, inquit Vegetius, cotīdiānō ūsū et exercitātiōne proficiunt.<br>
+      At vōs gaudēte: laudātissimīs illīs ūtilissimīsque Convictūs vestrī īnstitūtīs et lēgibus — quae vōbīs perpetuam
+      impōnunt Latīnē loquendī necessitātem et ad ea quae modō ā mē commemorāta sunt bene perfectēque praestanda maximīs
+      vōs praesidiīs īnstruunt. Est enim cōnsultissimōrum virōrum sententia plūs — sī sepārēs — ūsum sine doctrīnā quam
+      citrā ūsum doctrīnam valēre. Ipsī certē audīvimus ē vestrō numerō aliquōs, quamvis per aetatem Grammaticae
+      praecepītiōnibus nōn admodum īnstitūtōs, iīs tamen quī in illārum cognitiōne longius prōcesserant, celerī et
+      exercitātā linguā praestītisse. Nīmīrum tyrōnēs ac rudēs ut erant, audēbant et cōnābāntur nec ērubēscēbant loquī —
+      ratī: sī bene, favōrem et laudem; sī minus, veniam prīmīs cōnātibus parātam esse.<br>
+      Valet quippe in puerīlibus prōlūsiōnibus quod integrī validissimī valēre ait oportēre Quīntiliānus, cum de tempore
+      disputat quō causās agere ōrātor incipiat, negatque agendī tyrōcinium diū esse differendum. Nam cotīdiē metus
+      crēscit maius que fit semper quod ausūrī sumus; et dum dēlīberāmus quandō incipiendum sit, incipere iam sērum est.
+      Quārē frūctum studiōrum viridem et adhūc dulcem prōmī decet, dum et venia spēs est et parātus favor — audēre nōn
+      dēdecet; sī quid dēsit operī, supplet aetās; sī qua dicta sunt iuvenīliter, prō indole accipiuntur.<br>
+      Ita vōs facite, et hāc aetāte, quae ferventium studiōrum et errātōrum excūsātiōnem merētur, assidūō Latīnī
+      sermōnis ūsū prōgressūs vestrōs urgēte, plānēque crēdite tum dignum operae pretium venīre cum inter sē congruunt
+      praecepta et experimenta.<br>
+      At cum in illum dē experīmentīs sermōnem incidimus, vidēte quam nōn sevērē sed familiāriter ac remissē vōbīscum
+      agam, quī nōn ea postulent quae sint palaestrae et oleī, sed quōrum facilis et solūta sit ratiō. Volō enim ex eō
+      quod aetātī vestrae dulcissimum est aliquid ad studiōrum vestrōrum prōgressūs impellendōs adferre. Sī quis enim ex
+      vōbīs quid expetātis avidius quaerat, animī remissiōnem, opīnor, respondēbitis et lūdum. Atquī nē tum quidem
+      partem solidī diēī sine frūctū dēmerēre vōs velim, sīve pilā, sīve sphaerā volūbilī, sīve contentō ad mētās cursū,
+      sīve aliō lūdendī genere certābitis. Dabit hīc, quī vōbīs īnscrīptus est, libellus, quod in ōtiō animōrumque
+      relaxātiōne et iūcundē et ūtiliter efferātis.<br>
+      Tamen sī tum forte, aut aliās, vernācula vox ōre exciderit — an eōs quī proptereā leve nescio quid ad aliquam
+      multae speciem vōbīs irrōgāverint, molestōs exāctōrēs appellābitis? Nōn — per illam praeclāram indolem vestram
+      parātam ad omnia maiōrum imperia ultrō dēscendere; nōn — per discendī cupiditātem quā īnflammātī vōs hīc
+      īnformandōs trādidistis; nōn — per exspectātiōnem parentum quam nōn tuērī tantum sed etiam superāre contenditis;
+      nōn — per hūmānae cōnsuētūdinis iūcunditātem, quem vītae frūctum vōbīs reddet suāviōrem promptus et ēlēgāns
+      sermō.<br>
+      Est apud Senecam illa incōnsultī prōmissōris et fidem tamen exsolvere volentis ōrātiō: Verba mea redimam, et aurem
+      mihi pervellam. Damnō castīgābō prōmittendī temeritātem: linguārium dabō. Quae postrēma verba clārissimī illī
+      duumvirī — dē Senecā et dē omnī rē litterāriā optimē meritī — Mūrētus et Lipsius sīc interpretantur: ut sīcut
+      vāsārium aut hordeārium illud fuit quod prō vāsīs aut hordeō ērōgābātur, ita linguārium velint mulctam esse et
+      quasi vectīgal prō linguā temerē locūtā dēpendendum.<br>
+      Enimvērō hinc velim sibī exemplum quisque vestrum capiat, et sī quid vernāculō sermōne temerē effūderit, abs sē
+      dictum damnet, sē obiurgat, suīque prōfectūs dēsideriō incēnsus et meliōra pollicitus et ingenuō rubōre — qualem
+      M. Porcius Catō in iuvenibus laudābat — suffūsus dīcat: Verba mea redimam, linguārium dabō.<br>
+      Sed unde linguārium quod exigō petendum existimātis? Nōn ex altō quam memoriae vestrae thēsaurō — quā sōlā initia
+      litterārum cōnstant et iuvārī cūrā docentium potest. In hanc recondite quod, cum opus fuerit, dēprōmātis —
+      ingenium ut dē nescio quō dictum fuit, in numerātō semper habitūrī. Atque ita quod Afrānius, vetus et ā Gelliō
+      laudātus poēta, dē sapientiā cecinit, in illam etiam quam cōnsecūtī fueritis Latīnae linguae cognitiōnem rēctē
+      conveniet:<br>
       <div class="line-poetry">
-            Ūsus mē genuit, māter peperit Memoria.
+        Ūsus mē genuit, māter peperit Memoria.
       </div>
-
-            Dēfendite hanc vōbīs laudem, adolescentēs ōrnātissimī, et cum aliī vōs Latīnē differentēs audient — quamvis ingeniō vestrō studiōrumque contentiōnī nihil nōn acceptum referent — dubitent tamen plūsne assidua loquendī exercitātiō, quam Convictuī vestrō propria esse intellexerint, an studendī labor ad id assequendum contulerit.<br>
-            Approbātiō<br>
-            Dialogī P. Antoniī van Torre amoenī, variī, cultī sunt, quibus haurīre puerī frūctum possint quem illōs scrībendō auctor spectāvit. Neque enim, ut ab ipsīs rudīmentīs Latīnē loquī consuēscerent, exsecūtus ea tantum est quae ad pietātem ac studia pertinent, sed Agēsilāum rēgum paene aemulātus, ad puerīlēs lūsūs sēsē dēmīsit ut verba et lūdendī fōrmulās eīs praestet. Quārē, ut Plīnius in praefātiōne magnī operis suī — quod Vespasiānō imperātōrī īnscrīpsit — eōs laudat quī in studiīs ūtilitātem iuvandī praetulērunt grātiae placendī, ita suam quoque merētur commendātiōnem quī exiguō hōc opusculō iuvāre potius studuit quam placēre.<br>
-            Ita cēnsēbam Antverpiāe, 22. Octōb. 1657.<br>
-            T. Voochts, Archidiāconus, Canōnicus Antverp. et Lib. Cēnsor.<br><br>
-            Summa Prīvilēgiī<br>
-            Carolus, Deī grātiā rēx Castellae, Legiōnis, Aragōniae, utrīusque Siciliae etc., Archidux Austriae, Dux Burgundiae, Lotharīngiae, Brabantiae etc., Comes Flandriae, Arthesiae etc., diplomate suō sāncit nē quis citrā voluntātem Martīnī Verdussen, typographī Antverpiensis, librum — cui titulus est Antoniī van Torre ē Societāte Jesu Dialogī Familiārēs litterārum tyrōnibus etc. — intrā novem annōs proximōs ūllō modō imprimat et excūdat, alibive impressum in hāsce ditiōnēs invehat vēnalemve habeat. Quī secus faxerit, cōnfiscātiōne librōrum et aliā gravī poenā mulctābitur, utī lātius patet in litterīs datīs Bruxellae.<br>
-            Signāt: de Waha.<br>
-            Johannes Ludovicus Vives. Exercitātiō Linguae Latīnae.<br>
-        </div>
-
+      Dēfendite hanc vōbīs laudem, adolescentēs ōrnātissimī, et cum aliī vōs Latīnē differentēs audient — quamvis
+      ingeniō vestrō studiōrumque contentiōnī nihil nōn acceptum referent — dubitent tamen plūsne assidua loquendī
+      exercitātiō, quam Convictuī vestrō propria esse intellexerint, an studendī labor ad id assequendum contulerit.
     </div>
-  
-   <div class="footer">
-     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
-   </div>
+    <div class="note">
+      Approbātiō<br>
+      Dialogī P. Antoniī van Torre amoenī, variī, cultī sunt, quibus haurīre puerī frūctum possint quem illōs scrībendō
+      auctor spectāvit. Neque enim, ut ab ipsīs rudīmentīs Latīnē loquī consuēscerent, exsecūtus ea tantum est quae ad
+      pietātem ac studia pertinent, sed Agēsilāum rēgum paene aemulātus, ad puerīlēs lūsūs sēsē dēmīsit ut verba et
+      lūdendī fōrmulās eīs praestet. Quārē, ut Plīnius in praefātiōne magnī operis suī — quod Vespasiānō imperātōrī
+      īnscrīpsit — eōs laudat quī in studiīs ūtilitātem iuvandī praetulērunt grātiae placendī, ita suam quoque merētur
+      commendātiōnem quī exiguō hōc opusculō iuvāre potius studuit quam placēre.<br>
+      Ita cēnsēbam Antverpiāe, 22. Octōb. 1657.<br>
+      T. Voochts, Archidiāconus, Canōnicus Antverp. et Lib. Cēnsor.
+    </div>
+    <div class="note">
+      Summa Prīvilēgiī<br>
+      Carolus, Deī grātiā rēx Castellae, Legiōnis, Aragōniae, utrīusque Siciliae etc., Archidux Austriae, Dux
+      Burgundiae, Lotharīngiae, Brabantiae etc., Comes Flandriae, Arthesiae etc., diplomate suō sāncit nē quis citrā
+      voluntātem Martīnī Verdussen, typographī Antverpiensis, librum — cui titulus est Antoniī van Torre ē Societāte
+      Jesu Dialogī Familiārēs litterārum tyrōnibus etc. — intrā novem annōs proximōs ūllō modō imprimat et excūdat,
+      alibive impressum in hāsce ditiōnēs invehat vēnalemve habeat. Quī secus faxerit, cōnfiscātiōne librōrum et aliā
+      gravī poenā mulctābitur, utī lātius patet in litterīs datīs Bruxellae.<br>
+      Signāt: de Waha.
+    </div>
+
+    <div class="footer">
+      <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+    </div>
 </body>
+
 </html>
