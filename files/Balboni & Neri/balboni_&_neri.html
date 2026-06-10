@@ -6,53 +6,56 @@ permalink: /Balboni-&-Neri/
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{{ page.title }}</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-    <link rel="stylesheet" href="/style-list.css" />
-    <link rel="stylesheet" href="/style-common.css" />
-    
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <title>{{ page.title }}</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-list.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="/scripts/headroom.min.js"></script>
-    <script src="/scripts/common.js"></script>
-  </head>
+  <script src="/scripts/common.js"></script>
+</head>
 
-  <body>
-    <div class="navbar headroom">
-      <div class="navbar-inner">
-        <a href="/" class="navbar-item btn"
-          ><b>Colloquia Latina</b></a
-        >
-        <a href="/all-authors-list/" class="navbar-item btn"
-          >Auctores</a
-        >
-        <span class="navbar-dynamic">
-          <i>{{ page.title }}</i>
-        </div>
-      </div>
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a href="/all-authors-list/" class="navbar-item btn">Auctores</a>
+      <span class="navbar-dynamic">
+        <i>{{ page.title }}</i>
     </div>
-    <div style="height: 3em"></div>
+  </div>
+  </div>
+  <div style="height: 3em"></div>
 
-    <div class="main-content">
-      <h1>{{ page.title }}</h1>
-      <h2>Index Colloquiorum:</h2>
+  <div class="main-content">
+    <h1>{{ page.title }}</h1>
+    <h2>Index Colloquiorum:</h2>
 
-      <ul>
-        {% assign files_list = site.html_pages | where_exp: "page", "page.path
-        contains 'files/'" %} {% assign author_pages = files_list | where_exp:
-        "page", "page.author == 'Balboni'" | sort: "sequence"%} {% for page in
-        author_pages %}
-        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-        {% endfor %}
-      </ul>
-      <p>
-        Balboni & Neri were...
-      </p>
-    </div>
-  
-   <div class="footer">
-     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
-   </div>
+    <ul>
+      {% assign files_list = site.html_pages | where_exp: "page", "page.path
+      contains 'files/'" %} {% assign author_pages = files_list | where_exp:
+      "page", "page.author == 'Balboni'" | sort: "sequence"%} {% for page in
+      author_pages %}
+      <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+      {% endfor %}
+    </ul>
+    <p>
+      Ermanno Neri (ob. 1951) was a teacher and priest in Siena. He was a close collaborator with Gaetano Balboni,
+      with whom he wrote, in addition to these colloquia, a commentary on Lucretius' (i)De rerum natura(/i) and a
+      translation of the works of St. Basil the Great. Balboni also wrote a book of Greek/Latin exercises and a
+      translation into Italian of the (i)Historia Apollonii(/i). Their colloquia are most notable for a focus on
+      contemporaneous Italy, especially the rise of Italian facism, which they praise in elaborate propaganda. See the
+      database of <a href="https://flt.hf.uio.no/texts/work/102">Latin Facist Texts</a>.
+    </p>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
 </body>
+
 </html>
