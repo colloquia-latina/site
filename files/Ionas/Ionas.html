@@ -1,0 +1,89 @@
+---
+title: Ionas Philologus
+type: Author
+permalink: /ionas/
+---
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ page.title }}</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/style-list.css" />
+    <link rel="stylesheet" href="/style-common.css" />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+    <div class="navbar headroom">
+        <div class="navbar-inner">
+            <a href="/" class="navbar-item btn">
+                <b>Colloquia Latina</b>
+            </a>
+            <span class="navbar-dynamic">
+                <i>{{ page.title }}</i>
+        </div>
+    </div>
+    </div>
+    <div style="height: 3em"></div>
+
+    <div class="main-content">
+        <a href="/all-authors-list/">
+            <<< Auctores</a>
+
+                <h1>{{ page.title }}</h1>
+                <h2>Index Colloquiorum:</h2>
+
+                <ul>
+                    {% assign files_list = site.html_pages | where_exp: "page", "page.path
+                    contains 'files/'" %} {% assign author_pages = files_list | where_exp:
+                    "page", "page.author == 'Ionas'" | where_exp: "page", "page.type ==
+                    'Colloquium'" | sort: "sequence" %} {% for page in author_pages %}
+                    <li>
+                        <a href="{{ page.url }}">{{ page.title }}</a>
+                        <div class="subtitle">{{page.subtitle}}</div>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <div class="note">
+                    Ionas Philologus (1505-1574), better known Ioannes Guinterius Andernacus, was a university professor
+                    and physician who focused his writing on making Greek medical texts available in Latin. From
+                    1527-1537 he taught in Paris, moving in 1537 to Protestant Metz. From 1543 to 1556, he taught at the
+                    Stasbourg grammar school, then devoted the rest of his life to translating Greek physicians. This
+                    book, published in 1529, can therefore be dated to the earliest part of his career, when he had
+                    begun teaching at the University of Paris. It is notable also for including Protestant polemic very
+                    early in the Reformation, written in Paris.
+                </div>
+                <div class="note">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Portr%C3%A4t_Johann_Winter_von_Andernach.jpg"
+                        alt="Ionas Philologus" width="500">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Jean_d%27Andernac%2C_docteur_m%C3%A9decin_de_la_facult%C3%A9_de_Paris._Tir%C3%A9_du_cabinet_des_estampes_du_porte-feuille_de_monsieur_Gani%C3%A8re.jpg/3840px-Jean_d%27Andernac%2C_docteur_m%C3%A9decin_de_la_facult%C3%A9_de_Paris._Tir%C3%A9_du_cabinet_des_estampes_du_porte-feuille_de_monsieur_Gani%C3%A8re.jpg"
+                        alt="Ionas Philologus" width="500">
+                </div>
+                <div class="note">
+                    Taken from <a
+                        href="https://books.google.com/books?id=UPs5AAAAcAAJ&pg=PA2&source=gbs_toc_r&cad=1#v=onepage&q&f=false">this
+                        source</a>.<br><br>
+                    IŌNAE PHILOLOGĪ DIALOGĪ ALIQUOT lepidī ac fēstīvī, in studiōsae iuventūtis īnfōrmātiōnem nunc prīmum
+                    & nātī & ēditī.<br><br>
+                    QUIBUS ACCESSIT ADULĀTIŌNIS & PAUPERTĀTIS dialogus pulcherrimus, quō iuventūs monētur, nē vel ūllā
+                    necessitūdine dēvicta, ā bonīs literīs animum īnflectat.<br><br>
+                    PARĪSIĪS.<br>
+                    Ex officīnā Ioānnis Ruelliī.
+                </div>
+                <div class="note">
+                    EXCUSUM MOGUNTIAE PER IOANNEM SCHOEFFER, QUARTO NONAS AUGUSTI, ANNO POST CHRISTUM NATUM M. D. XXIX.
+                </div>
+    </div>
+
+    <div class="footer">
+        <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+    </div>
+</body>
+
+</html>
