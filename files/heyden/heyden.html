@@ -6,70 +6,103 @@ permalink: /heyden/
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{{ page.title }}</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-    <link rel="stylesheet" href="/style-list.css" />
-    <link rel="stylesheet" href="/style-common.css" />
-    
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <title>{{ page.title }}</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-list.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="/scripts/headroom.min.js"></script>
-    <script src="/scripts/common.js"></script>
-  </head>
+  <script src="/scripts/common.js"></script>
+</head>
 
-  <body>
-    <div class="navbar headroom">
-      <div class="navbar-inner">
-        <a href="/" class="navbar-item btn">
-          <b>Colloquia Latina</b>
-        </a>
-        <span class="navbar-dynamic">
-          <i>{{ page.title }}</i>
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn">
+        <b>Colloquia Latina</b>
+      </a>
+      <span class="navbar-dynamic">
+        <i>{{ page.title }}</i>
+    </div>
+  </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <a href="/all-authors-list/">
+      <<< Auctores</a>
+
+        <h1>{{ page.title }}</h1>
+        <h2>Index Colloquiorum:</h2>
+
+        <ul>
+          {% assign files_list = site.html_pages | where_exp: "page", "page.path
+          contains 'files/'" %} {% assign author_pages = files_list | where_exp:
+          "page", "page.author == 'heyden'" | where_exp: "page", "page.type ==
+          'Colloquium'" | sort: "sequence" %} {% for page in author_pages %}
+          <li>
+            <a href="{{ page.url }}">{{ page.title }}</a>
+            <div class="subtitle">{{page.subtitle}}</div>
+          </li>
+          {% endfor %}
+        </ul>
+
+        <div class="note">
+          Sebaldus Heyden (1499-1561) was a noted cantor, music teacher, and has been called the first true
+          musicologist. While his <i>De Arte Canendi</i> is his most famous work, his Puerilium Colloquiorum Formulae
+          proved extremely popular throughout Eastern Europe in his own day. It remain spopular today for bridging the
+          gap between Formulae, which are often presented without context, and Colloquia, which can often be so wordy as
+          to offput early readers. We have made use of <a
+            href="https://books.google.com/books/download/Sebaldi_Heyden_Puerilium_Colloquirnm_For.pdf?id=VdJlAAAAcAAJ&hl=en&capid=AFLRE71J-khPnTy1gql9zpRIODXM3YDScCKPbHCnJdLNB0Kn_Cp5TAt4kxDYRQhCluT3oRFOsuQCgZ2r9ZTFOZI9CLPYpLvV2w&continue=https://books.google.com/books/download/Sebaldi_Heyden_Puerilium_Colloquirnm_For.pdf%3Fid%3DVdJlAAAAcAAJ%26output%3Dpdf%26hl%3Den">this
+            edition</a> which includes the dialogues of Zovitius. See <a
+            href="https://en.wikipedia.org/wiki/Sebald_Heyden">Wikipedia</a>. For an audio recording, see <a
+            href="https://indwellinglanguage.com/latin-media/latin-audio/heyden/">Indwelling Language</a>. For an
+          ongoing scholarly treatment of the Formulae, see <a
+            href="https://diglib.hab.de/wdb.php?dir=edoc/ed000267&distype=start&pvID=start">this link</a>.
         </div>
-      </div>
-    </div>
-    <div style="height: 3em"></div>
 
-    <div class="main-content">
-      <a href="/all-authors-list/"><<< Auctores</a>
+                <div class="note">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Sebald_Heyden_001.jpeg"
+                        alt="Seybaldus Heyden" width="300">
+                    Image taken from wikimedia.
+        </div>
 
-      <h1>{{ page.title }}</h1>
-      <h2>Index Colloquiorum:</h2>
+                    <div class="note">
+          Puerīlium Colloquiōrum Fōrmulae<br>
 
-      <ul>
-        {% assign files_list = site.html_pages | where_exp: "page", "page.path
-        contains 'files/'" %} {% assign author_pages = files_list | where_exp:
-        "page", "page.author == 'heyden'" | where_exp: "page", "page.type ==
-        'Colloquium'" | sort: "sequence" %} {% for page in author_pages %}
-        <li>
-          <a href="{{ page.url }}">{{ page.title }}</a>
-          <div class="subtitle">{{page.subtitle}}</div>
-        </li>
-        {% endfor %}
-      </ul>
+          Antverpiæ, apud Antōnium Tilēnium Brechtānum, 1576.<br><br>
 
-      <div class="note">
-    Puerīlium Colloquiōrum Fōrmulae<br>
-    
-    Antverpiæ, apud Antōnium Tilēnium Brechtānum, 1576.<br><br>
+          Sebaldus Heyden puerīs suae fidei commissīs, S.D.<br>
 
-    Sebaldus Heyden puerīs suae fidei commissīs, S.D.<br>
+          Procul dubiō meministis adhūc, optimī puerī, cūr alterō abhinc annō veterem illum ūsum — quō vōbīs per
+          singulōs diēs bīna rērum vocābula ad τελευτικῆς ἑρμηνείας addiscenda prōpōnēbantur — ē meō lūdō explōserim:
+          nempe quod absurdus et ferē nullīus frūctūs vidērētur, quid enim is ad Latīnam phrāsim faceret, sī ūnō et
+          alterō vocābulō perceptō, nullus praetereā ūsus accēderet? Substituī autem in locum vōbīs singulīs diēbus
+          singulās ōrātiunculas — quae tamen octō syllabās nōn excēderet — addiscendas; idque in fōrmam dialogōrum, ut
+          sīc in addiscendō grātior facultās et in repetendō iūcundior commoditās rudibus adhūc ingeniīs accēderet.<br>
 
-    Procul dubiō meministis adhūc, optimī puerī, cūr alterō abhinc annō veterem illum ūsum — quō vōbīs per singulōs diēs bīna rērum vocābula ad τελευτικῆς ἑρμηνείας addiscenda prōpōnēbantur — ē meō lūdō explōserim: nempe quod absurdus et ferē nullīus frūctūs vidērētur, quid enim is ad Latīnam phrāsim faceret, sī ūnō et alterō vocābulō perceptō, nullus praetereā ūsus accēderet? Substituī autem in locum vōbīs singulīs diēbus singulās ōrātiunculas — quae tamen octō syllabās nōn excēderet — addiscendas; idque in fōrmam dialogōrum, ut sīc in addiscendō grātior facultās et in repetendō iūcundior commoditās rudibus adhūc ingeniīs accēderet.<br>
+          Quia vērō libellī illī Latīnāriī — ut vocāntur — nostrā manū vōbīs cōnscrīptī perpetuī esse nequeunt, et
+          immēnsus labor sit, quotiēs periērint illī, novōs exscrībere; et tamen nisi hōs dialogōs tōtōs quisque habeat,
+          praeterquam quod citrā taedium repetere neutiquam possit, etiam nūllum frūctum cōnsequī valeat: ideō eōs
+          quālescumque tandem sunt imprimendōs cūrāvī, ut exiguō aere laceratōs libellōs reparāre possētis, et vōs
+          cotīdiānae repetītiōnis vel ob characteris venustātem tantō minus pigēret. Grātīs igitur haec mūnera accipite
+          animīs, atque vestrum praeceptōrem, ut dignum est, diligite et colite. Valē.<br><br>
 
-    Quia vērō libellī illī Latīnāriī — ut vocāntur — nostrā manū vōbīs cōnscrīptī perpetuī esse nequeunt, et immēnsus labor sit, quotiēs periērint illī, novōs exscrībere; et tamen nisi hōs dialogōs tōtōs quisque habeat, praeterquam quod citrā taedium repetere neutiquam possit, etiam nūllum frūctum cōnsequī valeat: ideō eōs quālescumque tandem sunt imprimendōs cūrāvī, ut exiguō aere laceratōs libellōs reparāre possētis, et vōs cotīdiānae repetītiōnis vel ob characteris venustātem tantō minus pigēret. Grātīs igitur haec mūnera accipite animīs, atque vestrum praeceptōrem, ut dignum est, diligite et colite. Valē.<br><br>
+          Ad nāsūtum lēctōrem:<br>
+          <div class="line-poetry">
+            Cōnsultum puerīs volumus, nāsūte, valetō:<br />
+            Quaeritur hīs frūctus — glōria nūlla mihi.
+          </div>
+        </div>
+  </div>
 
-    Ad nāsūtum lēctōrem:<br>
-      <div class="line-poetry">
-Cōnsultum puerīs volumus, nāsūte, valetō:<br/>
-Quaeritur hīs frūctus — glōria nūlla mihi.
-      </div>
-      </div>
-    </div>
-  
-   <div class="footer">
-     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
-   </div>
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
 </body>
+
 </html>
