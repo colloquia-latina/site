@@ -1,0 +1,102 @@
+---
+title: Hegendorfinus
+type: Author
+permalink: /hegendorfinus/
+---
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ page.title }}</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/style-list.css" />
+    <link rel="stylesheet" href="/style-common.css" />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+    <div class="navbar headroom">
+        <div class="navbar-inner">
+            <a href="/" class="navbar-item btn">
+                <b>Colloquia Latina</b>
+            </a>
+            <span class="navbar-dynamic">
+                <i>{{ page.title }}</i>
+        </div>
+    </div>
+    </div>
+    <div style="height: 3em"></div>
+
+    <div class="main-content">
+        <a href="/all-authors-list/">
+            <<< Auctores</a>
+
+                <h1>{{ page.title }}</h1>
+                <h2>Index Colloquiorum:</h2>
+
+                <ul>
+                    {% assign files_list = site.html_pages | where_exp: "page", "page.path
+                    contains 'files/'" %} {% assign author_pages = files_list | where_exp:
+                    "page", "page.author == 'hegendorfinus'" | where_exp: "page", "page.type ==
+                    'Colloquium'" | sort: "sequence" %} {% for page in author_pages %}
+                    <li>
+                        <a href="{{ page.url }}">{{ page.title }}</a>
+                        <div class="subtitle">{{page.subtitle}}</div>
+                    </li>
+                    {% endfor %}
+                </ul>
+
+                <div class="note">
+                    Christophorus Hegendorff (1500-1540) was a Protestant theologian, lawyer, and educator in Leipzig
+                    who was close to Erasmus. Two of his dialogues are appended to Erasmus' colloquia, while these
+                    <i>Dialogi pueriles</i> were frequently printed with Mosellanus' <i>Paedologia</i>. He wrote a
+                    number of works, including school plays and books on Theology. We've used here <a
+                        href="https://archive.org/details/gpl_6742139/page/n63/mode/2up">this 1529 edition of
+                        Mosellanus</a>, but it is important to note that separate printings exist: <a
+                        href="https://www.google.com/books/edition/_/Uj5OAAAAcAAJ?hl=en&gbpv=1">here (1520)</a> and <a
+                        href="https://www.google.com/books/edition/_/s0Y8AAAAcAAJ?hl=en&gbpv=1">here, also 1520</a>.
+                </div>
+
+                <div class="note">
+                    <img src="https://dia.pitts.emory.edu/woodcuts/1565Pant/00023791.jpg"
+                        alt="Christophorus Hegendorfinus" width="200">
+                    Image taken from Emory.
+                </div>
+
+                <div class="note">
+                    IALOGI PUERILES CHRISTOPHORI Hegendorphini XII, lepidi aeque ac docti.
+                </div>
+
+                <div class="note">
+                    EPISTOLA DEDICATORIA (p. 2)<br><br>
+                    DOCTISSIMO VIRO SIMONI OCHI, Gymnasiarchae in monte Divae Annae, Christophorus
+                    Hegendorffinus. S.D.<br>
+                    Circunferuntur passim, vir doctissime, dialogi virorum doctissimorum pueriles loquendi
+                    formas repraesentantes. Id quod vix dici potest quam pueris usui futurum sit. Errant illi,
+                    et vehementer errant, qui non his loquendi formulis appositis, puerorum linguam
+                    expolitiorem reddere laborant. Erasmus ille magnus alicubi hoc ipsum cum pueris faciundum
+                    esse admonet; eius calculum nemo non candide probat. Quapropter et ego illorum virorum
+                    stimulis excitatus, dialogos quosdam ludere coepi. In quibus si non omnia virorum
+                    superiorum vestigia imitabor, ignoscere debes. Mihi non tam propitius Mercurius est; mihi
+                    non tam dulces camoenae. Quicquid possum, reddo; non gloriolae choragium ambio, contentus,
+                    si quantulacunque utilitas ad bonae mentis adolescentes emanarit. Tibi autem viro doctissimo
+                    dedicare hos dialogos visum est, quod soleas rebus ipsis impensius favere, ex quibus
+                    puerorum lingua utcunque expoliri potest. Et non paucis annis huc omnes conatus destinasti,
+                    puerorum ut balbutiei succurreres. Et ego mutuam tibi operam praestare non erubesco, tua
+                    humanitate fretus, qua neminem non in et laboris et honoris collegium asciscis. Accipe
+                    igitur quicquid est xenioli; graviora, Deo auspicante, dabimus, si has nugas non omnino
+                    displicuisse videro. Vale.
+                </div>
+    </div>
+
+    <div class="footer">
+        <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+    </div>
+</body>
+
+</html>

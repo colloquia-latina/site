@@ -1,0 +1,173 @@
+---
+title: Dialogi Pueriles &mdash; Dialogus Sextus
+subtitle: de festis Bacchanalibus
+type: Colloquium
+author: Hegendorff
+collection: Dialogi Pueriles
+topic:
+- School
+difficulty: Moderate
+sequence: '006'
+character_count: 2
+permalink: /hegendorff/dialogi-pueriles-dialogus-sextus/
+---
+<!--Generated from Hegendorphinus_Transcription.txt (diplomatic; macrons NOT yet applied).-->
+<!doctype html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/" class="navbar-item btn">{{ page.author }}</a>
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+    <div class="characters">
+      Personae:<br />
+      Philippus, Melchior
+    </div>
+
+    <!--BODYSTART-->
+    <div class="line-container" id="Melchior.1">
+      <div class="line-character">Melchior</div>
+      Festa iam Dionisii appetunt, quo mihi nihil gratius obtingere posset.
+    </div>
+
+    <div class="line-container" id="Philippus.2">
+      <div class="line-character">Philippus</div>
+      Quid tum?
+    </div>
+
+    <div class="line-container" id="Melchior.3">
+      <div class="line-character">Melchior</div>
+      Quoniam ad satietatem usque me omni ciborum genere explebo.
+    </div>
+
+    <div class="line-container" id="Philippus.4">
+      <div class="line-character">Philippus</div>
+      Sed posthac in
+quadragesimae tempore fortiter esuriturus.
+    </div>
+
+    <div class="line-container" id="Melchior.5">
+      <div class="line-character">Melchior</div>
+      Ut ut res cadat, satis beatus videor si
+semel atque iterum ventriculum distendero.
+    </div>
+
+    <div class="line-container" id="Philippus.6">
+      <div class="line-character">Philippus</div>
+      Quo autem te profers?
+    </div>
+
+    <div class="line-container" id="Melchior.7">
+      <div class="line-character">Melchior</div>
+      Recta ad forum
+eo, ollas empturus, in quas victum capiam.
+    </div>
+
+    <div class="line-container" id="Philippus.8">
+      <div class="line-character">Philippus</div>
+      Emere soles ollas punica (ut opinor) fide.
+    </div>
+
+    <div class="line-container" id="Melchior.9">
+      <div class="line-character">Melchior</div>
+      Non nisi arte Pelasga figulos deludere possum; non cesso planum agere.
+    </div>
+
+    <div class="line-container" id="Philippus.10">
+      <div class="line-character">Philippus</div>
+      Quid si
+arripereris?
+    </div>
+
+    <div class="line-container" id="Melchior.11">
+      <div class="line-character">Melchior</div>
+      Pedes mihi remedio sunt.
+    </div>
+
+    <div class="line-container" id="Philippus.12">
+      <div class="line-character">Philippus</div>
+      Praeceptor remissionem a studiis (ut audio)
+ad tres dies dedit.
+    </div>
+
+    <div class="line-container" id="Melchior.13">
+      <div class="line-character">Melchior</div>
+      Si tres addidero, nihil (ut spero) damni adferet.
+    </div>
+
+    <div class="line-container" id="Philippus.14">
+      <div class="line-character">Philippus</div>
+      Ego certe
+octo dies mihi ad haec festa sumam; necessum est, si modo tempori (ut dicitur) serviendum
+est.
+    </div>
+
+    <div class="line-container" id="Melchior.15">
+      <div class="line-character">Melchior</div>
+      Nae tu mecum vehementer sentis; sed tamen ita Baccho indulgebimus ne a musarum
+aris recedere videamur.
+    </div>
+
+    <div class="line-container" id="Philippus.16">
+      <div class="line-character">Philippus</div>
+      Sed heus tu, cur nam Baccho has ferias consecrarunt?
+    </div>
+
+    <div class="line-container" id="Melchior.17">
+      <div class="line-character">Melchior</div>
+      Nempe
+quod his diebus nemo non Anticyra egeat, nemo non insania corripiatur.
+    </div>
+
+    <div class="line-container" id="Philippus.18">
+      <div class="line-character">Philippus</div>
+      Et Baccho cornua
+cur affingunt?
+    </div>
+
+    <div class="line-container" id="Melchior.19">
+      <div class="line-character">Melchior</div>
+      Quippe quod olim poculorum vice cornua fuerint.
+    </div>
+
+    <div class="line-container" id="Philippus.20">
+      <div class="line-character">Philippus</div>
+      Iam satis teneo. Tu
+vale.
+    </div>
+    <!--BODYEND-->
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}{% assign next_page = nil %}{% assign found_current = false %}
+    {% for p in neighbors %}{% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}{% if p.url == page.url %}{% assign found_current = true %}{% endif %}{% if found_current == false %}{% assign prev_page = p %}{% endif %}{% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}<a href="{{ prev_page.url }}" class="nav-button nav-back">&#10229; Previous</a>{% endif %}
+      {% if next_page %}<a href="{{ next_page.url }}" class="nav-button nav-next">Next &#10230;</a>{% endif %}
+    </div>
+  </div>
+
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright &#169; 2025 Jacob Terneus</p>
+   </div>
+</body>

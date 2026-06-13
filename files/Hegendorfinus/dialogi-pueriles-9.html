@@ -1,0 +1,122 @@
+---
+title: Dialogi Pueriles &mdash; Dialogus Nonus
+subtitle: de eleemosinis
+type: Colloquium
+author: Hegendorff
+collection: Dialogi Pueriles
+topic:
+- School
+difficulty: Moderate
+sequence: '009'
+character_count: 2
+permalink: /hegendorff/dialogi-pueriles-dialogus-nonus/
+---
+<!--Generated from Hegendorphinus_Transcription.txt (diplomatic; macrons NOT yet applied).-->
+<!doctype html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/" class="navbar-item btn">{{ page.author }}</a>
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+    <div class="characters">
+      Personae:<br />
+      Marcus, Petrus
+    </div>
+
+    <!--BODYSTART-->
+    <div class="line-container" id="Marcus.1">
+      <div class="line-character">Marcus</div>
+      Ut vales Petre?
+    </div>
+
+    <div class="line-container" id="Petrus.2">
+      <div class="line-character">Petrus</div>
+      Maceratam vivo vitam, sed tamen incolumem et inconcussam.
+    </div>
+
+    <div class="line-container" id="Marcus.3">
+      <div class="line-character">Marcus</div>
+      Quot
+eleemosynas hodie emendicatus es?
+    </div>
+
+    <div class="line-container" id="Petrus.4">
+      <div class="line-character">Petrus</div>
+      Vix unam aut alteram. Nam nescio quo pacto cives omnes
+fame contabescere volunt.
+    </div>
+
+    <div class="line-container" id="Marcus.5">
+      <div class="line-character">Marcus</div>
+      Non calles; audio qua via eleemosynarum vindemiam facere
+possis. Non oportet statim a foribus pedem moveas; si importunius tibi obgannierint, urgendi
+sunt, et si crebro iacias, Venerem iacies (ut in proverbio est).
+    </div>
+
+    <div class="line-container" id="Petrus.6">
+      <div class="line-character">Petrus</div>
+      Quid? non raro me
+lapidibus minantur, nisi e limine discessero.
+    </div>
+
+    <div class="line-container" id="Marcus.7">
+      <div class="line-character">Marcus</div>
+      Iocantur tecum; ego perstarem, visurus
+quorsum res abiret.
+    </div>
+
+    <div class="line-container" id="Petrus.8">
+      <div class="line-character">Petrus</div>
+      Ego posthac me tibi comitem in emendicando pane adiungam; alioqui
+ante diem (sat scio) fame mortem oppetam, necessum est.
+    </div>
+
+    <div class="line-container" id="Marcus.9">
+      <div class="line-character">Marcus</div>
+      Quid ni? Ego omnibus machinis
+tuae paupertatulae obviam ire volo. Num vides quo pacto soleant mulieres illas cadaverosas a
+foribus arcere, et solus praedae inhiare?
+    </div>
+
+    <div class="line-container" id="Petrus.10">
+      <div class="line-character">Petrus</div>
+      Bene se res habet; non ullus me a latere tuo
+arcebit. Iam autem vale.
+    </div>
+    <!--BODYEND-->
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}{% assign next_page = nil %}{% assign found_current = false %}
+    {% for p in neighbors %}{% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}{% if p.url == page.url %}{% assign found_current = true %}{% endif %}{% if found_current == false %}{% assign prev_page = p %}{% endif %}{% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}<a href="{{ prev_page.url }}" class="nav-button nav-back">&#10229; Previous</a>{% endif %}
+      {% if next_page %}<a href="{{ next_page.url }}" class="nav-button nav-next">Next &#10230;</a>{% endif %}
+    </div>
+  </div>
+
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright &#169; 2025 Jacob Terneus</p>
+   </div>
+</body>

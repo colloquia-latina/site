@@ -1,0 +1,120 @@
+---
+title: Dialogi Pueriles &mdash; Dialogus Undecimus
+subtitle: de repetundis lectionibus
+type: Colloquium
+author: Hegendorff
+collection: Dialogi Pueriles
+topic:
+- School
+difficulty: Moderate
+sequence: '011'
+character_count: 2
+permalink: /hegendorff/dialogi-pueriles-dialogus-undecimus/
+---
+<!--Generated from Hegendorphinus_Transcription.txt (diplomatic; macrons NOT yet applied).-->
+<!doctype html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/" class="navbar-item btn">{{ page.author }}</a>
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+    <div class="characters">
+      Personae:<br />
+      Gaspar, Balthasar
+    </div>
+
+    <!--BODYSTART-->
+    <div class="line-container" id="Balthasar.1">
+      <div class="line-character">Balthasar</div>
+      Ecquid agis Gaspar?
+    </div>
+
+    <div class="line-container" id="Gaspar.2">
+      <div class="line-character">Gaspar</div>
+      Qua via lectionibus iam repetendis uteris.
+    </div>
+
+    <div class="line-container" id="Balthasar.3">
+      <div class="line-character">Balthasar</div>
+      Primo solitus
+sum vulgarem accommodare rationem, tum ad Grammatices corticulam omnia exigere, inventionis
+acumen expendere, omnium vocularum situm subducta ratione ad calculum vocare. Tandem si quod
+novae vel priscae dictionis occurrerit, in nidos ad id paratos convehere; si quae <span class="greek" lang="grc" data-flag="G15">παροιμία</span>, si quae sententia insignis, stellis (ut dicitur) notare soleo. Et ea quae
+insigniora videntur in memoriae thesaurum deponere, subinde a lectione surgens et animo meo
+utcunque volvens quae legi. Nec deest Enchiridion in quod quicquid est illarum opum ceu
+promptuarium repono. Et ea via utendum est, <span class="greek" lang="grc" data-flag="G16">τὸ εἰς ἄφενον σπεύδουσι</span>, id est,
+properantibus ditescere opibus.
+    </div>
+
+    <div class="line-container" id="Gaspar.4">
+      <div class="line-character">Gaspar</div>
+      Nae ego homo sum vel Morycho stultior, qui talium rerum
+omnem curam abieci, alia super alia legens. Nec animum adverti quam omnem operam luderem. Sed
+verissimum illud in me ipso experior, qui semper domi veluti in umbra sese continet, nec in
+hominum frequentiam progreditur, puerum animalem agere. Non raro demiratus sum me ne pilo
+quidem doctiorem evadere, nullum omnino progressum in me experiri. Et iam veluti Epimetheus
+ille post factum prudentiam solidiorem sumo.
+    </div>
+
+    <div class="line-container" id="Balthasar.5">
+      <div class="line-character">Balthasar</div>
+      Nihil omnino posthabitum est. Tanto gravius
+in literas bonas incumbe, quanto serius eas vere adamare cepisti; imitare viatores ipsos qui
+dum mane in diem usque somnum protraxerunt, quam possunt celerrime iter carpunt, tarditatem
+celeritate resarcientes, et plerumque citius eo quo volunt pertingunt quam illi qui prima luce
+iter ingressi sunt.
+    </div>
+
+    <div class="line-container" id="Gaspar.6">
+      <div class="line-character">Gaspar</div>
+      Non ignoro nullam ad discendum seram aetatem esse; sed tamen istud
+tuum studium ego in lucro ponerem.
+    </div>
+
+    <div class="line-container" id="Balthasar.7">
+      <div class="line-character">Balthasar</div>
+      Serere ne dubita, non parvus in literis proventus tibi
+proveniet.
+    </div>
+
+    <div class="line-container" id="Gaspar.8">
+      <div class="line-character">Gaspar</div>
+      Faciam ut iubes; nihil non acturus quo te aut aequem aut superem.
+    </div>
+    <!--BODYEND-->
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}{% assign next_page = nil %}{% assign found_current = false %}
+    {% for p in neighbors %}{% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}{% if p.url == page.url %}{% assign found_current = true %}{% endif %}{% if found_current == false %}{% assign prev_page = p %}{% endif %}{% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}<a href="{{ prev_page.url }}" class="nav-button nav-back">&#10229; Previous</a>{% endif %}
+      {% if next_page %}<a href="{{ next_page.url }}" class="nav-button nav-next">Next &#10230;</a>{% endif %}
+    </div>
+  </div>
+
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright &#169; 2025 Jacob Terneus</p>
+   </div>
+</body>
