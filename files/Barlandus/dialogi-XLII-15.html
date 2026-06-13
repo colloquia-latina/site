@@ -1,0 +1,118 @@
+---
+title: Dialogī XLII - Dialogus Quīntus Decimus
+subtitle: Colloquium
+type: Colloquium
+author: Barlandus
+collection: Dialogī XLII
+topic:
+- School
+difficulty: Moderate
+sequence: '015'
+character_count: 2
+permalink: /barlandus/dialogi-xlii-dialogus-quintus-decimus/
+---
+ 
+<!--Use this page as our master template-->
+<!doctype html>
+ 
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+ 
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+ 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+ 
+    <div class="characters">
+      Persōnae:<br />
+      Laurentius, Rēmigius
+    </div>
+ 
+    <div class="line-container" id="Laurentius.1">
+      <div class="line-character">Laurentius</div>
+      Praetereuntī modō apud forum mihi occurrit pūblicus scholae nostrae tabellārius. Unde exīstimō tē literārum aliquid ā patre accēpisse.
+    </div>
+ 
+    <div class="line-container" id="Remigius.2">
+      <div class="line-character">Rēmigius</div>
+      Accēpī ā patre ūnās, alterās ā patruō.
+    </div>
+ 
+    <div class="line-container" id="Laurentius.3">
+      <div class="line-character">Laurentius</div>
+      Quid pater scrībit?
+    </div>
+ 
+    <div class="line-container" id="Remigius.4">
+      <div class="line-character">Rēmigius</div>
+      Minitātur sē factūrum mihi, quod moechīs fierī solet, nisī studeam, nisī literās mīrārī incipiam &amp; amāre.
+    </div>
+ 
+    <div class="line-container" id="Laurentius.5">
+      <div class="line-character">Laurentius</div>
+      Quid tam ille saevus pater est? Moechīs in adulteriō dēprehēnsīs, testiculī solent amputārī. Quod sī tibi quoque fiat, nōn eris amandus virginibus, neque papātuī (ut vulgō loquuntur) idōneus. Quamobrem sī isthuc sēriō scrībit pater, omninō ā pilā &amp; globīs in scholam redeundum est tibi.
+    </div>
+ 
+    <div class="line-container" id="Remigius.6">
+      <div class="line-character">Rēmigius</div>
+      Quid agam? Nōn dēlectat studium. In scholīs cum sedeō, corpore sum illīc, animō forīs sum. unde fit nōn rārō, ut ā lēctiōne domum reversus, nihil eōrum teneam quae praeceptor dīxerit.
+    </div>
+ 
+    <div class="line-container" id="Laurentius.7">
+      <div class="line-character">Laurentius</div>
+      Huic reī facile remedium invenērō. Conveniam patrem, ut tē collocet apud cucullātōs istōs. nihil erit illīc quod āvocet animum tuum.
+    </div>
+ 
+    <div class="line-container" id="Remigius.8">
+      <div class="line-character">Rēmigius</div>
+      Carcerem illum loqueris? &amp; nihil aliud quam frontistērium &amp; carnificīnam perpetuam. Sīquidem malim tōtōs vīgintī annōs in carcere Bonaventūrae apud Louaniēnsēs dētinērī, quam annum ūnum illīs convīvere tam saevīs tortōribus. Sī aliā nōn potest viā rēbus nostrīs cōnsulere, bene valēbis. ego ad aliōs trānseō amīcōs, unde plūs spēī siet mihi.
+    </div>
+ 
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+ 
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+ 
+    <!--Footer goes here-->
+  </div>
+ 
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>

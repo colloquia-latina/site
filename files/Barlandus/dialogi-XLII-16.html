@@ -1,0 +1,128 @@
+---
+title: Dialogī XLII - Dialogus Sextus Decimus
+subtitle: Colloquium
+type: Colloquium
+author: Barlandus
+collection: Dialogī XLII
+topic:
+- School
+difficulty: Moderate
+sequence: '016'
+character_count: 2
+permalink: /barlandus/dialogi-xlii-dialogus-sextus-decimus/
+---
+ 
+<!--Use this page as our master template-->
+<!doctype html>
+ 
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+ 
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+ 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+ 
+    <div class="characters">
+      Persōnae:<br />
+      Carīnus, Pamphilus
+    </div>
+ 
+    <div class="line-container" id="Carinus.1">
+      <div class="line-character">Carīnus</div>
+      Tōtus ne in aulam commigrāverās Pamphile?
+    </div>
+ 
+    <div class="line-container" id="Pamphilus.2">
+      <div class="line-character">Pamphilus</div>
+      Quam vellem in caulā interim.
+    </div>
+ 
+    <div class="line-container" id="Carinus.3">
+      <div class="line-character">Carīnus</div>
+      Versābāris illīc inter purpurātōs, in deōs quōsdam terrestrēs. Quotidiē prōdībās indūtus purpurā &amp; byssō, &amp; cōmessābāris quotidiē splendidē.
+    </div>
+ 
+    <div class="line-container" id="Pamphilus.4">
+      <div class="line-character">Pamphilus</div>
+      Splendōrem istum nimis quam libenter relīquī.
+    </div>
+ 
+    <div class="line-container" id="Carinus.5">
+      <div class="line-character">Carīnus</div>
+      Fortasse quod ea nōn nōrās, quae maximē sunt aulica.
+    </div>
+ 
+    <div class="line-container" id="Pamphilus.6">
+      <div class="line-character">Pamphilus</div>
+      Ista percupiō ex tē audīre ac discere.
+    </div>
+ 
+    <div class="line-container" id="Carinus.7">
+      <div class="line-character">Carīnus</div>
+      Vīs igitur eō recurrere?
+    </div>
+ 
+    <div class="line-container" id="Pamphilus.8">
+      <div class="line-character">Pamphilus</div>
+      Nihil minus, vērum ut eadem aliīs quibus bene faveam commemorāns, eōs ab aulicā vītā, hōc est, splendidā quādam miseriā dēterream.
+    </div>
+ 
+    <div class="line-container" id="Carinus.9">
+      <div class="line-character">Carīnus</div>
+      Nunc igitur audī: Ut grātus essēs, ut commodē agerēs, blandē salūtāre dēbuistī, complectī, cēdere viā, aperīre caput, subinde repetere honōris &amp; chāritātis titulōs, laudāre affātim, pollicērī benīgniter, assentārī etiam mōriōnibus. Ipsī prīncipī commodē subservīre, adōrātiōne arrīdēre, aut alia quaedam id genus, inūtilis pudor abstergendus erat, ac nātīvō vultū domī relictō, quasi persōna sūmenda. Ad haec sī sīs indocilis, probō quod relīqueris aulam. Nam sine hīs mōribus nihil aliud erās in aulā futūrus quam asinus inter simiās.
+    </div>
+ 
+    <div class="line-container" id="Pamphilus.10">
+      <div class="line-character">Pamphilus</div>
+      Maximā tibi habeō grātiam Carīne, quod haec amīcō tam amīcē impartīverīs, eadem &amp; ego contubernālibus quibusdam meīs impartiam, quī dē aulā adeundā iampridem inter sē cōnsultant, nōn magis ad haec quae dīxistī modō idōneī, quam asinus lyrae, aut citharae est is quī canere nesciat.
+    </div>
+ 
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+ 
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+ 
+    <!--Footer goes here-->
+  </div>
+ 
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>

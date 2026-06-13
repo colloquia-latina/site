@@ -1,0 +1,113 @@
+---
+title: Dialogī XLII - Dialogus Quadrāgēsimus Tertius
+subtitle: 
+type: Colloquium
+author: Barlandus
+collection: Dialogī XLII
+topic:
+- School
+difficulty: Moderate
+sequence: '043'
+character_count: 2
+permalink: /barlandus/dialogi-xlii-dialogus-quadragesimus-tertius/
+---
+ 
+<!--Use this page as our master template-->
+<!doctype html>
+ 
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+ 
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+ 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+ 
+    <div class="characters">
+      Persōnae:<br />
+      Gaspar, Pompōnius
+    </div>
+ 
+    <div class="line-container" id="Gaspar.1">
+      <div class="line-character">Gaspar</div>
+      Audiō novae reī quippiam allātum ē Germāniā.
+    </div>
+ 
+    <div class="line-container" id="Pomponius.2">
+      <div class="line-character">Pompōnius</div>
+      Librī sunt Erasmī, Paraphrasis in Euangelium Marcī Gallōrum rēgī, Paraphrasis in apostolōrum acta Clementī septimō pontificī dēdicāta.
+    </div>
+ 
+    <div class="line-container" id="Gaspar.3">
+      <div class="line-character">Gaspar</div>
+      Apud quōs virī huius nōn sānctum, nōn venerandum habeātur nōmen, quī dē studiīs literārum propāgandīs, dē iuvandīs mortālibus semper cōgitat?
+    </div>
+ 
+    <div class="line-container" id="Pomponius.4">
+      <div class="line-character">Pompōnius</div>
+      Alia item absolvit nōn minus frūgifera, quae vīdī ego ipse, atque hīsce manibus contrectāvī. Nam Basilēae convictor sum Erasmī, ā cuius virī suāvissimā familiāritāte, et convictū āvellī nōn possum, et hōc nōmine mē fēlīcem iūdicō, quod cum ōrātōre clārissimō, cum theologō eximiō aetātem dēgere mihi contigerit.
+    </div>
+ 
+    <div class="line-container" id="Gaspar.5">
+      <div class="line-character">Gaspar</div>
+      Vērē tū fēlīx es, optima sunt adolēscentis ad ērudītiōnem, ad sapientiam assequendam fundāmenta, sī cum ērudītus, cum sapiēns per aetātem esse nōn possit obstante īnscītiā, quā nec vidēre, nec agere rēs optimās valet, eōrum quī sunt ērudītī ac sapientēs cōnsuētūdine gaudeat.
+    </div>
+ 
+    <div class="line-container" id="Pomponius.6">
+      <div class="line-character">Pompōnius</div>
+      Ab huius virī latere nōn discēdō, huic ceu nova &amp; recēns nāta arbuscula tanquam adminiculīs quibusdam innītor, hunc dē rēbus graviōribus disserentem audiō quotīdiē. Hic est mihi, quod Cicerōnī fuit ille Scaevola, ad quem ā patre dēductum sē scrībit sūmptā virīlī togā, ut quoad posset, quoad licēret, ā senis latere nunquam discēderet.
+    </div>
+ 
+    <div class="line-container" id="Gaspar.7">
+      <div class="line-character">Gaspar</div>
+      Rēctē sentīs ac mīrē placent, quae dīcis omnia. Prīmum est enim ut sapientēs colere assuēscat iuvenis, secundum ut quae dīxerint illī, memoriae īnsculpat, tertium ut illōrum studeat quam maximē similis ēvādere &amp; facta &amp; dicta omnia imitandō. Hoc enim faciēns ad quam contendit ērudītiōnem &amp; sapientiam victor cōnsequētur.
+    </div>
+ 
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+ 
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+ 
+    <!--Footer goes here-->
+  </div>
+ 
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>

@@ -1,0 +1,113 @@
+---
+title: Barlandus
+type: Author
+permalink: /barlandus/
+---
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ page.title }}</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/style-list.css" />
+    <link rel="stylesheet" href="/style-common.css" />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+    <div class="navbar headroom">
+        <div class="navbar-inner">
+            <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+            <a href="/all-authors-list/" class="navbar-item btn">Auctores</a>
+            <span class="navbar-dynamic">
+                <i>{{ page.title }}</i>
+        </div>
+    </div>
+    </div>
+    <div style="height: 3em"></div>
+
+    <div class="main-content">
+        <h1>{{ page.title }}</h1>
+        <h2>Index Colloquiorum:</h2>
+
+        <ul>
+            {% assign files_list = site.html_pages | where_exp: "page", "page.path
+            contains 'files/'" %} {% assign author_pages = files_list | where_exp:
+            "page", "page.author == 'barlandus'" | sort: "sequence"%} {% for page in
+            author_pages %}
+            <li>
+                <a href="{{ page.url }}">{{ page.title }}</a>
+                <div class="subtitle">{{page.subtitle}}</div>
+            </li>
+            {% endfor %}
+        </ul>
+        <div>
+            Hadrianus Barlandus (1486-1542) was a Dutch priest, historian, and philosopher. He was close to Erasmus and
+            was among the first to popularize his works. While he was a famous lecturer, briefly at the Collegium
+            Trilingue and for a longer period at the University of Louvain, he left a substantial number of writings.
+            Given the description of Belgian cities at the end of this work, the history of his country was a clear
+            sustained interest throughout his career. We've presented here <a
+                href="https://play.google.com/books/reader?id=M0xOAAAAcAAJ&pg=GBS.PP4&hl=en">this edition</a>. See <a
+                href="https://fr.wikipedia.org/wiki/Adriaan_Van_Baerland">Wikipedia</a>.
+        </div>
+        <div>
+            DIALOGĪ XLII. PER HADRIĀNUM Barlandum, ad prōfligandam ē scholīs barbariem ūtilissimī.<br>
+            Ad priōrem ēditiōnem accessērunt tredecim dialogī.<br>
+            Eiusdem dialogī duo, post tredecim illōs iam recēns excūsī.<br>
+            Item Augustīnī Reymāriī Mechlīniēnsis dialogus ūnus dē lūdō chartārum.<br>
+            Barlandī opusculum dē īnsignibus oppidīs īnferiōris germāniae.<br>
+            Colōniae, apud Euchārium Cervicornum Annō M.D.XXX.
+        </div>
+        <div>
+            CLĀRĪS ORTŌ NĀTĀLIBUS IUVENĪ Carolō dē Croij, Altimontēnsis & Afflīgīnēnsis monasteriōrum administrātōrī
+            Hadriānus Barlandus salūtem dīcit plūrimam.
+        </div>
+        <div>
+            Quidem fuī semper in eā sententiā clārīs prōgnāte Carole, ut putārem nūllum genus hominum melius dē patriā,
+            dē
+            rep. mererī, quam quī optimīs pariter & mōribus & literīs iuventūtem ērudiunt, quō in studiō nunc mihi
+            cōnsūmpta
+            trānsāctaque est pars aetātis melior, & flōs ipse, neque tamen adhūc labōrem dētrectō, sī quā iuvāre possim,
+            &
+            aliquid opis adferre iam renāscentibus, & ērigentibus sēsē passim favōre superum bonīs literīs. Post
+            ēruditum
+            hominem Petrum Mosellānum, post Erasmum Rōterodāmum incomparābilī doctrīnā virum, nūper dialogōrum ceu
+            sylvulam
+            quandam in plūribus & maximīs docendī occupātiōnibus congesseram, vidēlicet ut tibi mē domī tuae quotīdiē
+            docentem audiēntī, prīvātim colloquiī literāriī vīce forent, quod vīdissem tē hōc studiī genere peculiārius
+            dēlectārī. Post eā vērō amīcīs quibusdam rogantibus, ut labōrem hunc vulgārem & scholīs ipsīs ac gymnasiīs,
+            in
+            quibus Rōmānae docentur literae, passus sum omnibus ex aequō commūnem fierī, iīsque potissimum quī gaudent
+            eā
+            reflōrēscere studia, quae plūrimum sint ad omnem doctrīnam hominibus collātūra prōfectum. Quāliacunque sunt
+            igitur haec colloquia quae dictāvī, nōn scrīpsī, optō ut prōsint iuventūtī ēloquentiae studiīs īnsūdantī,
+            tuō
+            autem nōminī īnscrībantur. Spēs est enim ita vel maximē scholīs & pueritiae probātum īrī, sīquidem tū eā
+            fronte
+            hilārī accēperīs, quī ūnus inter nōbilēs adolēscentēs pūrgātiōrum literārum studiōsissimus, doctōrum hominum
+            amantissimus es plānēque refers & mōribus, atque ingeniō nōbīs repraesentās fēlīcis memoriae frātrem tuum
+            Guilielmum Croijum, cardinālem, quī iuvenis quō tempore & ipse ā mē docērētur, & posteā semper studiō ac
+            favōre
+            in studiōsōs & ērudītōs hominēs superābat vincēbatque senēs ac maiōrēs nātū omnēs, nusquam passūrus
+            ēloquendī
+            virtūtem iacēre, sī longior vīta contigisset: quī in eō affectus hōc grātior esse dēbet, quō pauciōrēs sunt
+            eō
+            prōvectī honōris ac dignitātis, quī ēloquentiae studia mīrentur. Caeterī enim ōdērunt literās, ōdērunt
+            scholās,
+            ōdērunt dēnique Mūsārum nōmen, suntque in eōs quī literās colunt, animō īnfestō ac prope hostīlī. Bene valē
+            tibique līberālī lūsū animum remittentī, aut hīc noster, aut (quod mālim) Erasmī colloquiōrum libellus sit
+            in
+            manibus. Louāniī. M.D.XXIIII.
+        </div>
+
+        <div class="footer">
+            <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+        </div>
+</body>
+
+</html>

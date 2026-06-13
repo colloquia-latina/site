@@ -1,0 +1,138 @@
+---
+title: Dialogī XLII - Dialogus Quīnquāgēsimus Secundus
+subtitle: 
+type: Colloquium
+author: Barlandus
+collection: Dialogī XLII
+topic:
+- School
+difficulty: Moderate
+sequence: '052'
+character_count: 2
+permalink: /barlandus/dialogi-xlii-dialogus-quinquagesimus-secundus/
+---
+ 
+<!--Use this page as our master template-->
+<!doctype html>
+ 
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+ 
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+ 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+ 
+    <div class="characters">
+      Persōnae:<br />
+      Henricus, Andreas
+    </div>
+ 
+    <div class="line-container" id="Henricus.1">
+      <div class="line-character">Henricus</div>
+      Nē Dēmosthenēs quidem ōrātiōne expresserit, quantum gaudeat, laetētur, exultet tōta sodālitās, quod incolumis Lovānium ē Selandiā redieris. Quandō igitur appulistī Andrēa suāvissime?
+    </div>
+ 
+    <div class="line-container" id="Andreas.2">
+      <div class="line-character">Andreas</div>
+      Herī sub coenam.
+    </div>
+ 
+    <div class="line-container" id="Henricus.3">
+      <div class="line-character">Henricus</div>
+      Hospitem ne tuum convēnistī, ac praeceptōrem?
+    </div>
+ 
+    <div class="line-container" id="Andreas.4">
+      <div class="line-character">Andreas</div>
+      Convēnī utrunque.
+    </div>
+ 
+    <div class="line-container" id="Henricus.5">
+      <div class="line-character">Henricus</div>
+      Praeceptor quid ait? Succēnset ne tibi quod tam diū abfueris?
+    </div>
+ 
+    <div class="line-container" id="Andreas.6">
+      <div class="line-character">Andreas</div>
+      Quī posset, cum per mē nōn steterit?
+    </div>
+ 
+    <div class="line-container" id="Henricus.7">
+      <div class="line-character">Henricus</div>
+      Tū quidem nigrior nōbīs redīstī. Putō versātum tē ac pōtitāsse in Selandiae Salīnīs, cum mulieribus illīs nive candidiōribus, quae salem coquunt.
+    </div>
+ 
+    <div class="line-container" id="Andreas.8">
+      <div class="line-character">Andreas</div>
+      Nōvī tuum nāsum, sed aliās tāliōnem expectā. Nunc dē studiīs vestrīs nārrā quaesō mihi, quod absentibus nōbīs ēnārrāverit tibi praeceptor.
+    </div>
+ 
+    <div class="line-container" id="Henricus.9">
+      <div class="line-character">Henricus</div>
+      Theodōrī grammaticārum īnstitūtiōnum ēnārrātiō absolūta est, praelegiturque hōc tempore mihi ac aequālibus meīs Lūciānī dialogus lepidissimus, Suetōniāna quoque interpretātiō ad calcem perducta est.
+    </div>
+ 
+    <div class="line-container" id="Andreas.10">
+      <div class="line-character">Andreas</div>
+      Exercuistis ne interim stylum?
+    </div>
+ 
+    <div class="line-container" id="Henricus.11">
+      <div class="line-character">Henricus</div>
+      Maximē. Ego inter caetera composuī prōflīgātae pācis epitaphium.
+    </div>
+ 
+    <div class="line-container" id="Andreas.12">
+      <div class="line-character">Andreas</div>
+      Aptissimum temporī argūmentum, prīncipibus hodiē inter sē dē rēgnōrum fīnibus, sacerdōtibus vērō, dē iūre decimārum, ēnsibus, iaculīs, saxīs, omnīque armōrum vī (ut Moria dīxit) belligerantibus.
+    </div>
+ 
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+ 
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+ 
+    <!--Footer goes here-->
+  </div>
+ 
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>

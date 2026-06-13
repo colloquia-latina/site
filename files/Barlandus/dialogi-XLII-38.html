@@ -1,0 +1,108 @@
+---
+title: Dialogī XLII - Dialogus Duodēquadrāgēsimus
+subtitle: 
+type: Colloquium
+author: Barlandus
+collection: Dialogī XLII
+topic:
+- School
+difficulty: Moderate
+sequence: '038'
+character_count: 2
+permalink: /barlandus/dialogi-xlii-dialogus-duodequadragesimus/
+---
+ 
+<!--Use this page as our master template-->
+<!doctype html>
+ 
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+ 
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+ 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+ 
+    <div class="characters">
+      Persōnae:<br />
+      Sylvester, Dōnātus
+    </div>
+ 
+    <div class="line-container" id="Sylvester.1">
+      <div class="line-character">Sylvester</div>
+      Aleae lūdō pecūniam omnem perdidī.
+    </div>
+ 
+    <div class="line-container" id="Donatus.2">
+      <div class="line-character">Dōnātus</div>
+      Dīxīn tibi cum vincerēs, ut foenus id esse, nōn lucrum exīstimārēs?
+    </div>
+ 
+    <div class="line-container" id="Sylvester.3">
+      <div class="line-character">Sylvester</div>
+      Meminī.
+    </div>
+ 
+    <div class="line-container" id="Donatus.4">
+      <div class="line-character">Dōnātus</div>
+      Ita ferē solet in hōc lūdō ēvenīre, ut quī initiō vincit, posteā exhauriātur, ac plērunque vērum sit quod ā Marōne dictum est: Quisquis habet nummōs veniēns exībit inānis. At tibi iactūra haec melior fuerit, quàm successus: hīc enim ad lūdendī studium excitāre &amp; accendere potuisset, damnum vērō tē fortasse inde retrahet.
+    </div>
+ 
+    <div class="line-container" id="Sylvester.5">
+      <div class="line-character">Sylvester</div>
+      Nesciō. vidēmus enim, ut quī semel in hōc barathrum inciderit, nec pudōre nec damnō revocētur. Quam multōs nōvī, quōs īnsānābilis hīc morbus ad egestātis terminōs redēgerit, ac Īrō reddiderit pauperiōrēs Homēricō.
+    </div>
+ 
+    <div class="line-container" id="Donatus.6">
+      <div class="line-character">Dōnātus</div>
+      Fēlīx quem faciunt aliēna perīcula cautum. Scītum est (inquit Cōmicus) ex aliīs perīculum facere, tibi quod ex ūsū fīet.
+    </div>
+ 
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+ 
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+ 
+    <!--Footer goes here-->
+  </div>
+ 
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>

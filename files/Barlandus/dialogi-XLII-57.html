@@ -1,0 +1,141 @@
+---
+title: Dialogī XLII - Dialogus Quīnquāgēsimus Septimus
+subtitle: Aliud
+type: Colloquium
+author: Barlandus
+collection: Dialogī XLII
+topic:
+- School
+difficulty: Moderate
+sequence: '057'
+character_count: 2
+permalink: /barlandus/dialogi-xlii-dialogus-quinquagesimus-septimus/
+---
+ 
+<!--Use this page as our master template-->
+<!doctype html>
+ 
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+ 
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+ 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+ 
+    <div class="characters">
+      Persōnae:<br />
+      Pontiānus, Nicāsius
+    </div>
+ 
+    <div class="line-container" id="Pontianus.1">
+      <div class="line-character">Pontiānus</div>
+      Quam vellem praeteriisse fēstum diem assūmptae in caelum virginis.
+    </div>
+ 
+    <div class="line-container" id="Nicasius.2">
+      <div class="line-character">Nicāsius</div>
+      Quid ita?
+    </div>
+ 
+    <div class="line-container" id="Pontianus.3">
+      <div class="line-character">Pontiānus</div>
+      In diem enim proximē sequentem frātris meī sunt cōnstitūtae nūptiae, ad quās iam dudum per literās vocāvit mē pater, ibi tum diēs complūsculōs geniō indulgēbimus.
+    </div>
+ 
+    <div class="line-container" id="Nicasius.4">
+      <div class="line-character">Nicāsius</div>
+      Longē melius erat interim tē cum librīs tuīs colloquī in scolīs versārī, &amp; auditōriīs, praeceptōrem audīre quem habēs doctissimum.
+    </div>
+ 
+    <div class="line-container" id="Pontianus.5">
+      <div class="line-character">Pontiānus</div>
+      Utinam praeteriisset ille diēs.
+    </div>
+ 
+    <div class="line-container" id="Nicasius.6">
+      <div class="line-character">Nicāsius</div>
+      Nēscīs profectō quid optēs dēmēns: Tū nōn cōgitās omne id tibi peritūrum tempus, quod in patriā lūsibus ineptīs, &amp; commessātiōnibus impendētur. Quantō satius est tē id dare operam, quī ista ex animō āmoveās tuō, quam id loquī quō magis libīdō frūstrā incendātur tua.
+    </div>
+ 
+    <div class="line-container" id="Pontianus.7">
+      <div class="line-character">Pontiānus</div>
+      Surdō mihi narrās fābulam Nicāsī, valeant interim librī, valeat scola in mēnsēs duōs, sī bene quī coenat bene vīvit, cāmus quō dūcit gula, piscēmur, vēnēmur.
+    </div>
+ 
+    <div class="line-container" id="Nicasius.8">
+      <div class="line-character">Nicāsius</div>
+      Studēbis intereā, domī ē pōtandīs calicibus, nōn rārō fortasse ad tēmulentiam ūsque. Prīmum hāc rē nihil bonae valētūdinī magis inīmīcum est, deinde quam turpe plūs ingerere quam cupiās. Seneca scrīptor sānctissimus nihil aliud est (inquit) ēbrietās quam voluntāria īnsānia. Extende in plūrēs diēs illum ēbriī habitum, nunquid dē furōre dubitābis? Nunc quoque nōn est minor, sed brevior. Marōnis carmen est:
+      <div class="line-poetry">
+        Nec Veneris, nec tū vinī capiāris amōre.
+      </div>
+    </div>
+ 
+    <div class="line-container" id="Pontianus.9">
+      <div class="line-character">Pontiānus</div>
+      Vīnum cūrās discutit, spem vīrēsque redūcit mentibus anxiīs.
+    </div>
+ 
+    <div class="line-container" id="Nicasius.10">
+      <div class="line-character">Nicāsius</div>
+      Propertius vinō inquit fōrma perit, vinō corrumpitur aetās.
+    </div>
+ 
+    <div class="line-container" id="Pontianus.11">
+      <div class="line-character">Pontiānus</div>
+      Narrātur &amp; prīscī Catōnis saepe merō incaluisse virtūs.
+    </div>
+ 
+    <div class="line-container" id="Nicasius.12">
+      <div class="line-character">Nicāsius</div>
+      Quae tū adhūc adfers omnia moderātum laudant vinī ūsum, nōn tēmulentiam. Cognitū dignum est illud Ecclēsiasticī, Satis est hominī ēruditō vīnum exiguum, &amp; in dormiendō nōn labōrābis, neque sentiēs dolōrem.
+    </div>
+ 
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+ 
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+ 
+    <!--Footer goes here-->
+  </div>
+ 
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>

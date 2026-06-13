@@ -1,0 +1,113 @@
+---
+title: Dialogī XLII - Dialogus Vīcēsimus
+subtitle: Colloquium
+type: Colloquium
+author: Barlandus
+collection: Dialogī XLII
+topic:
+- School
+difficulty: Moderate
+sequence: '020'
+character_count: 2
+permalink: /barlandus/dialogi-xlii-dialogus-vicesimus/
+---
+ 
+<!--Use this page as our master template-->
+<!doctype html>
+ 
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+ 
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+ 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+ 
+    <div class="characters">
+      Persōnae:<br />
+      Discipulus, Praeceptor
+    </div>
+ 
+    <div class="line-container" id="Discipulus.1">
+      <div class="line-character">Discipulus</div>
+      Hūmānissime simul ac doctissime praeceptor, quandoquidem hūc amandāvit mē uterque parēns meus, ut ēloquentiae studeam, opus est mihi librīs, quōs ex cuius hominis cōnsiliō potius quam tuō mihi coemam? Tū igitur nōmināre dignāberis autōrēs, quī in prīmīs ad parandam verbōrum supellectilem ūtilēs habeantur.
+    </div>
+ 
+    <div class="line-container" id="Praeceptor.2">
+      <div class="line-character">Praeceptor</div>
+      Inter hōs fīlī chārissime prīmum semper locum Cicerōnī tribuimus, cuius epistolās omnium prīmum tibi mercāberis, quārum illabōrāta &amp; illa, (ut Fabius dīxit) quā nihil pulchrius auditū est, ōrātiō prae sē fert fēlīcissimam facilitātem, huic sī velīs adiungēs Plīniī Secundī epistolās, quī flōridus, brevis, succulentus, ut alter ille dulcis, candidus, copiōsus est: iīs accēdant Terentiī comoediae, quibus nihil cultius, nihil est ēlegantius. Erunt &amp; poētae legendī, sed praecipuē Virgilius &amp; Horātius, iī quoque verbōrum optimam tibi suppeditātūrī supellectilem, alter item trāditūrus optima &amp; sānctissima vīvendī praecepta.
+    </div>
+ 
+    <div class="line-container" id="Discipulus.3">
+      <div class="line-character">Discipulus</div>
+      Nūllōs ne suādēs emendōs neōtericōs?
+    </div>
+ 
+    <div class="line-container" id="Praeceptor.4">
+      <div class="line-character">Praeceptor</div>
+      Sunt in iīs, quī lectī prōdesse possint, maximē epistolārum scrīptōrēs, inter quōs optimī sunt &amp; ēlegantissimī trēs illī hērōēs, Angelus Politiānus, Antōnius Sabellicus, &amp; Erasmus Rōterodāmus: Cuius epistolārum prōstat ingēns volūmen.
+    </div>
+ 
+    <div class="line-container" id="Discipulus.5">
+      <div class="line-character">Discipulus</div>
+      Nunc in historiā praeceptor, quis tuō iūdiciō cāstissimus est?
+    </div>
+ 
+    <div class="line-container" id="Praeceptor.6">
+      <div class="line-character">Praeceptor</div>
+      Dē tantīs autōribus equidem nihil audeō meum tibi impartīre, Quīntiliānus Līvium Sallūstiō praefert, Erasmus noster prīmum tribuit Caesarī inter historicōs locum, &amp; certē est huius sermō inaffectātus &amp; facilis, utrunque igitur legitō, sed priōrēs habeant in lēctiōne partēs commentāriī Caesaris, quibus dīligenter perlēctīs aliquantō parātior ad Līviānam veniēs hubertātem.
+    </div>
+ 
+    <div class="line-container" id="Discipulus.7">
+      <div class="line-character">Discipulus</div>
+      Ita facere certum est ērudītissime praeceptor. Nunc igitur abeō, quōs nōmināstī autōrēs mihi comparātūrus, tū valē.
+    </div>
+ 
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+ 
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+ 
+    <!--Footer goes here-->
+  </div>
+ 
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>

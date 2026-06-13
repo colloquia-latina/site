@@ -1,0 +1,138 @@
+---
+title: Dialogī XLII - Dialogus Octāvus
+subtitle: Colloquium
+type: Colloquium
+author: Barlandus
+collection: Dialogī XLII
+topic:
+- School
+difficulty: Moderate
+sequence: '008'
+character_count: 2
+permalink: /barlandus/dialogi-xlii-dialogus-octavus/
+---
+ 
+<!--Use this page as our master template-->
+<!doctype html>
+ 
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+ 
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+ 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+ 
+    <div class="characters">
+      Persōnae:<br />
+      Canōnicus, Philosophus
+    </div>
+ 
+    <div class="line-container" id="Canonicus.1">
+      <div class="line-character">Canōnicus</div>
+      Canōnicus sum.
+    </div>
+ 
+    <div class="line-container" id="Philosophus.2">
+      <div class="line-character">Philosophus</div>
+      Bene habet, sī citrā sīmoniacam labem hūc pervēnistī. Aliquot enim sēculīs perpaucī ad honōrēs ecclēsiasticōs aliā viā grassātī sunt.
+    </div>
+ 
+    <div class="line-container" id="Canonicus.3">
+      <div class="line-character">Canōnicus</div>
+      Nactus sum praebendam.
+    </div>
+ 
+    <div class="line-container" id="Philosophus.4">
+      <div class="line-character">Philosophus</div>
+      Praedam vērius dīxeris: Multī enim ita versantur in hōc negōtiō, ut nihil aliud, quam praedārī videantur.
+    </div>
+ 
+    <div class="line-container" id="Canonicus.5">
+      <div class="line-character">Canōnicus</div>
+      Obtigit mihi Canōnicātus.
+    </div>
+ 
+    <div class="line-container" id="Philosophus.6">
+      <div class="line-character">Philosophus</div>
+      Vidē nē incontinentius vīvendī praestita sit materia. Permultōs glōriārī videās Canōnicī vocābulō, quī interim ab ipsā rē longius absunt, quam dīstat ortus ab occidente.
+    </div>
+ 
+    <div class="line-container" id="Canonicus.7">
+      <div class="line-character">Canōnicus</div>
+      Gaudeō mē Canōnicum esse factum.
+    </div>
+ 
+    <div class="line-container" id="Philosophus.8">
+      <div class="line-character">Philosophus</div>
+      Bona pars hominum gaudet sacerdōtiōrum accessiōne, quod inde spērent sibi quotannīs reditūrās aureōrum myriades aliquot: Nōn quod melius ac sānctius vīvendī oblāta sit occāsiō.
+    </div>
+ 
+    <div class="line-container" id="Canonicus.9">
+      <div class="line-character">Canōnicus</div>
+      Rōmānus pontifex mē Canōnicum fēcit.
+    </div>
+ 
+    <div class="line-container" id="Philosophus.10">
+      <div class="line-character">Philosophus</div>
+      Ex līberō servum fēcit. Et hīc videndum est tibi, nē eōs imitēris, quī māne siccī ac iēiūnī in templō psallunt, ā prandiō ūvidī ac sacrōrum immemōrēs, aut dormiunt, ut &amp; coenae sufficere possint, aut tālōs in pyrgum prōiiciendō trānsigunt hōrās.
+    </div>
+ 
+    <div class="line-container" id="Canonicus.11">
+      <div class="line-character">Canōnicus</div>
+      Mē fēlicem quī Canōnicus sim factus.
+    </div>
+ 
+    <div class="line-container" id="Philosophus.12">
+      <div class="line-character">Philosophus</div>
+      Isthuc dīcam, istum honōrem tibi grātulābor, sī ita versātus fuerīs in hōc mūnere, ut hominēs intelligant tē nōn sōlum nōmine, sed rē &amp; vītā Canōnicum esse. Meminerīs tē praebendae istīus, quam vocant tum cūrātōrem, tum dispēnsātōrem esse, ut cuiusvīs necessitātī commodēs, ut cuivīs dēs petentī, atque indigentī. Quemadmodum enim deus aliīs ēloquentiam, aliīs rērum agendārum cōnsilia, aliīs magnum dedit in perīculīs obeundīs animum, breviter aliīs alia dōnāvit, ita quibusdam dīvitiās quoque dedit, nōn ut suae quisque serviat libīdinī, sed perinde ut ēloquēns aliīs commodat linguā, prūdēns aliīs cōnsiliō commodat, ita dīvēs quoque aliīs pecūniā commodet.
+    </div>
+ 
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+ 
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+ 
+    <!--Footer goes here-->
+  </div>
+ 
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>

@@ -1,0 +1,118 @@
+---
+title: Dialogī XLII - Dialogus Trīcēsimus Secundus
+subtitle: Colloquium
+type: Colloquium
+author: Barlandus
+collection: Dialogī XLII
+topic:
+- School
+difficulty: Moderate
+sequence: '032'
+character_count: 2
+permalink: /barlandus/dialogi-xlii-dialogus-tricesimus-secundus/
+---
+ 
+<!--Use this page as our master template-->
+<!doctype html>
+ 
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+ 
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+ 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+ 
+    <div class="characters">
+      Persōnae:<br />
+      Stephanus, Remigius
+    </div>
+ 
+    <div class="line-container" id="Stephanus.1">
+      <div class="line-character">Stephanus</div>
+      Ō tē fēlīcem Remigī, ut quī sīs nātus hīs temporibus, quibus literae meliōrēs ubīque fēlīcissimē revīvīscunt. Nūllum ferē est oppidum eximium, quod nōn habeat ūnum aut alterum eximiē doctum iuventūtis moderātōrem.
+    </div>
+ 
+    <div class="line-container" id="Remigius.2">
+      <div class="line-character">Remigius</div>
+      Sīc habet Stephane hūmānissime. Sed nusquam dēsunt veteris īnscitiae prōpugnātōrēs, quōrum aliī in conciōnibus, aliī in forō, in convīviīs &amp; compotātiōnibus, aliī bonīs lateribus in bonārum literārum cultōrēs dēclāmitant.
+    </div>
+ 
+    <div class="line-container" id="Stephanus.3">
+      <div class="line-character">Stephanus</div>
+      Istiusmodī rānās &amp; habuit, &amp; semper habēbit orbis, ā quibus vituperārī, laudārī est. Nihil hōrum coāxātiōnēs bonīs literīs offēcerint, quās hōc tempore nōn modo vulgus, sed &amp; urbium prīmōrēs, aulicī, prōcerēs, praesidēs &amp; rēgēs amāre incipiunt. In Angliā favōre prīncipis rēgnant bonae literae. Terentium atque id genus scrīptōrēs comoediae linguae grātiā ita passim circumferunt illīc aulicī, ut Henrīcī VIII. quī nunc flōrentissimae praeest īnsulē, rēgia nihil aliud quam sēdēs et arx esse videātur optimōrum studiōrum. hīs ducibus, hīs praesidiīs frētī, nōnne fortiter contemnēmus pharisaeōs istōs et scrībās, quī sōlī ōdērunt, quibus sōlīs invīsae sunt bonae literae?
+    </div>
+ 
+    <div class="line-container" id="Remigius.4">
+      <div class="line-character">Remigius</div>
+      Vērē dīxistī pharisaeōs, haud enim pertinācioribus odiīs quondam pharisaeī in Chrīstum cōnspīrārunt, quàm istī in omnēs literārum professōrēs cōnspīrant.
+    </div>
+ 
+    <div class="line-container" id="Stephanus.5">
+      <div class="line-character">Stephanus</div>
+      Tantō maiōribus animīs nōbīs incumbendum est in studia latīnitātis &amp; ēlegantiae, sine quā caeca omnis doctrīna est &amp; illīberālis, bona spēs habet animum meum, propediem futūrum, ut quemadmodum Cicerō philosophiam latīnīs literīs illustrāvit, ita contingat caeterīs quoque disciplīnīs, &amp; iam theologiae quantum accessit ēloquentiae per Erasmī scrīpta?
+    </div>
+ 
+    <div class="line-container" id="Remigius.6">
+      <div class="line-character">Remigius</div>
+      Eximiī profectō virī, quīque nunquam moriātur dignissimī.
+    </div>
+ 
+    <div class="line-container" id="Stephanus.7">
+      <div class="line-character">Stephanus</div>
+      At multī nōn probant huius scrīpta in sacrīs literīs, nē paraphrasēs quidem, quibus meā sententiā nihil sānctius, nihil ad rēctē vīvendum est condūcibilius.
+    </div>
+ 
+    <div class="line-container" id="Remigius.8">
+      <div class="line-character">Remigius</div>
+      Haec mihi tēcum cōnveniunt. Tēcum sentiō dē paraphrasibus optimē Stephane. Caeterum quod ad scrīpta huius virī incomparābilis attinet, ea lātius in memoriā hominum &amp; sermōne versābuntur, postquam ab oculīs recesserit, postquam vītam cum morte commūtāverit, quanquam (ut dīxistī) modo dignissimus est, quī nunquam occidat.
+    </div>
+ 
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+ 
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+ 
+    <!--Footer goes here-->
+  </div>
+ 
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>

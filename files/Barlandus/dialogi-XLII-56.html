@@ -1,0 +1,148 @@
+---
+title: Dialogī XLII - Dialogus Quīnquāgēsimus Sextus
+subtitle: 
+type: Colloquium
+author: Barlandus
+collection: Dialogī XLII
+topic:
+- School
+difficulty: Moderate
+sequence: '056'
+character_count: 2
+permalink: /barlandus/dialogi-xlii-dialogus-quinquagesimus-sextus/
+---
+ 
+<!--Use this page as our master template-->
+<!doctype html>
+ 
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+ 
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+ 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+ 
+    <div class="characters">
+      Persōnae:<br />
+      Augustīnus, Gregōrius
+    </div>
+ 
+    <div class="line-container" id="Augustinus.1">
+      <div class="line-character">Augustīnus</div>
+      Audiō nūper apud Tīcīnum memorābilī praeliō victōs esse Gallōs.
+    </div>
+ 
+    <div class="line-container" id="Gregorius.2">
+      <div class="line-character">Gregōrius</div>
+      Factum.
+    </div>
+ 
+    <div class="line-container" id="Augustinus.3">
+      <div class="line-character">Augustīnus</div>
+      Et captum rēgem Gallōrum venisse in manūs hostium.
+    </div>
+ 
+    <div class="line-container" id="Gregorius.4">
+      <div class="line-character">Gregōrius</div>
+      Ita est ut dīcis.
+    </div>
+ 
+    <div class="line-container" id="Augustinus.5">
+      <div class="line-character">Augustīnus</div>
+      Ō fortūna, ut nunquam es perpetuō bona, hīc tē dēclārāstī cum in caeterīs rēbus tum in rē mīlitārī potentissimam esse.
+    </div>
+ 
+    <div class="line-container" id="Gregorius.6">
+      <div class="line-character">Gregōrius</div>
+      Temerē quidem ille mihi fēcisse vidētur, quī in terrā aliēnā et ubi totiēs ā maiōribus eius īnfēlīciter pugnātum est herē tam mīrābilī sē suāsque fortūnās omnēs commīserit.
+    </div>
+ 
+    <div class="line-container" id="Augustinus.7">
+      <div class="line-character">Augustīnus</div>
+      Magnanimī est virī prō patriā dīmicāre.
+    </div>
+ 
+    <div class="line-container" id="Gregorius.8">
+      <div class="line-character">Gregōrius</div>
+      At quī nēmō patriam illius oppugnābat. Vērum suīs fīnibus nōn contentus ipse fīnitimīs bellum intulit.
+    </div>
+ 
+    <div class="line-container" id="Augustinus.9">
+      <div class="line-character">Augustīnus</div>
+      Quid eum hūc pertrāxit?
+    </div>
+ 
+    <div class="line-container" id="Gregorius.10">
+      <div class="line-character">Gregōrius</div>
+      Dominandī libīdō.
+    </div>
+ 
+    <div class="line-container" id="Augustinus.11">
+      <div class="line-character">Augustīnus</div>
+      Quantō satius erat, imitārī eum antīquissimōs rēgēs illōs, quibus imperiī fīnēs tuērī magis quam prōferre mōs fuit. Nunc hōc dīcitō mihi, audīstīn' tantus rēx quō animō servitūtem ferat? Nam cum inter praecipua bona lībertās habeātur, mihi quidem vidētur hominī līberō nihil servitūte aut indīgnius aut gravius accidere posse.
+    </div>
+ 
+    <div class="line-container" id="Gregorius.12">
+      <div class="line-character">Gregōrius</div>
+      Quō ille animō ferat quod acciderit, equidem ignōrō. Ex variā lēctiōne sciō multōs virīliter magnōque animō captīvitātem tolerāsse. Captīvus Rōmam ductus Iugurtha ad hostium carceris etiam iocātus scrībitur, Alphōnsius rēx Neāpolitānus in captīvitāte mīrābilem praesē gessit firmitātem, Carolus Malatesta animum generōsum captīvus retinuit. Exemplōrum huius modī plēna est historia.
+    </div>
+ 
+    <div class="line-container" id="Augustinus.13">
+      <div class="line-character">Augustīnus</div>
+      At grave est servīre.
+    </div>
+ 
+    <div class="line-container" id="Gregorius.14">
+      <div class="line-character">Gregōrius</div>
+      Grave profectō, hūmānum tamen, quod tam multīs nōn rārō sed saepe contigit mortālibus. Nihil spectantius quam contrā fortūnam obdūruisse. Ut ignī aurum explōrātur, tempestās gubernātōrem ostendit, ita difficillimīs quibusdam, &amp; maximē calamitōsīs rēbus vir fortis probātur.
+    </div>
+ 
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+ 
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+ 
+    <!--Footer goes here-->
+  </div>
+ 
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>

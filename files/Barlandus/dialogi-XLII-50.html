@@ -1,0 +1,138 @@
+---
+title: Dialogī XLII - Dialogus Quīnquāgēsimus
+subtitle: Alius
+type: Colloquium
+author: Barlandus
+collection: Dialogī XLII
+topic:
+- School
+difficulty: Moderate
+sequence: '050'
+character_count: 2
+permalink: /barlandus/dialogi-xlii-dialogus-quinquagesimus/
+---
+ 
+<!--Use this page as our master template-->
+<!doctype html>
+ 
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+ 
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+ 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+ 
+    <div class="characters">
+      Persōnae:<br />
+      Claudius, Iulius
+    </div>
+ 
+    <div class="line-container" id="Claudius.1">
+      <div class="line-character">Claudius</div>
+      Quā valētūdine es?
+    </div>
+ 
+    <div class="line-container" id="Iulius.2">
+      <div class="line-character">Iulius</div>
+      Labōrō iam tōtum trīduum tussī molestissimā.
+    </div>
+ 
+    <div class="line-container" id="Claudius.3">
+      <div class="line-character">Claudius</div>
+      Hanc unde contrāxistī?
+    </div>
+ 
+    <div class="line-container" id="Iulius.4">
+      <div class="line-character">Iulius</div>
+      Opīnor ex itinere.
+    </div>
+ 
+    <div class="line-container" id="Claudius.5">
+      <div class="line-character">Claudius</div>
+      Quō itinere?
+    </div>
+ 
+    <div class="line-container" id="Iulius.6">
+      <div class="line-character">Iulius</div>
+      Iohannēs Ciriacinus &amp; ego profectī sumus Gandāvum proximā hebdomadā, ut praeceptōrem nostrum salūtārēmus, quī nunc octōgintā nātus annōs, vītae fābulam perāctūrus propediem vidētur.
+    </div>
+ 
+    <div class="line-container" id="Claudius.7">
+      <div class="line-character">Claudius</div>
+      Illīs diēbus ventī spīrābant longē pestilentissimī. Domī tunc manendum erat, atque in aliud tempus rēiīcienda profectiō, sī ratiōnem valētūdinis habēre voluissētis.
+    </div>
+ 
+    <div class="line-container" id="Iulius.8">
+      <div class="line-character">Iulius</div>
+      Rēctē admonēs, at cōnsilium hoc post perāctum iter nōbīs inūtile est. Convēnimus illīc ērudītum ac parī modestiā praeditum virum Eligium Haucārium.
+    </div>
+ 
+    <div class="line-container" id="Claudius.9">
+      <div class="line-character">Claudius</div>
+      Hōc nēmō vīvit nostrī amantior homō, nec cui magis ego sum dēvīnctus.
+    </div>
+ 
+    <div class="line-container" id="Iulius.10">
+      <div class="line-character">Iulius</div>
+      Quō nōmine?
+    </div>
+ 
+    <div class="line-container" id="Claudius.11">
+      <div class="line-character">Claudius</div>
+      Is in scholā suā duōs fīliōs nostrōs iam plūs biennium bonās literās docet.
+    </div>
+ 
+    <div class="line-container" id="Iulius.12">
+      <div class="line-character">Iulius</div>
+      Hunc praeceptōrem grātulor illīs. Nōn enim dubitō quīn studiō ac vigilantiā Eligiī ad patrium solum reditūrī sint bene literātī. Et sapis tū quidem vir optime, quī līberōs nōn commīseris plāgōsō cuipiam, et artium bonārum rudī magistellō, apud quem in eam īnfantiam ēvāderent, quae tē perpetuō torquēre potuisset.
+    </div>
+ 
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+ 
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+ 
+    <!--Footer goes here-->
+  </div>
+ 
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>

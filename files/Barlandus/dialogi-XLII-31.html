@@ -1,0 +1,138 @@
+---
+title: Dialogī XLII - Dialogus Trīcēsimus Prīmus
+subtitle: Colloquium
+type: Colloquium
+author: Barlandus
+collection: Dialogī XLII
+topic:
+- School
+difficulty: Moderate
+sequence: '031'
+character_count: 2
+permalink: /barlandus/dialogi-xlii-dialogus-tricesimus-primus/
+---
+ 
+<!--Use this page as our master template-->
+<!doctype html>
+ 
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+ 
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+ 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+ 
+    <div class="characters">
+      Persōnae:<br />
+      Frederīcus, Xenophōn
+    </div>
+ 
+    <div class="line-container" id="Fredericus.1">
+      <div class="line-character">Frederīcus</div>
+      Unde fit ut sacerdōtēs quō plūs habent, hōc plūra cupiant?
+    </div>
+ 
+    <div class="line-container" id="Xenophon.2">
+      <div class="line-character">Xenophōn</div>
+      Crēscit amor nummī, quantum ipsa pecūnia crēscit, unde vidēre est quōsdam esse deciēs canonicōs, ac totiēs pastōrēs, quōrum sacerdōtiōrum tam hūberēs, plērunque sunt prōventūs annuī, ut inde trīgintā possint alī sacerdōtēs.
+    </div>
+ 
+    <div class="line-container" id="Fredericus.3">
+      <div class="line-character">Frederīcus</div>
+      Quid istī dē sē futūrum putant?
+    </div>
+ 
+    <div class="line-container" id="Xenophon.4">
+      <div class="line-character">Xenophōn</div>
+      Ut postquam annōs aliquot suāviter vīxerint, rēctā in caelum dēmigrent, sī ex sacerdōtiīs quō iūre quāque iniūriā quaesītīs portiunculam aliquam relinquant pauperibus atque egēnīs, quibus nē teruntium quidem in vītā dederint.
+    </div>
+ 
+    <div class="line-container" id="Fredericus.5">
+      <div class="line-character">Frederīcus</div>
+      Sīc illī sē crēdunt satisfacere Chrīstō?
+    </div>
+ 
+    <div class="line-container" id="Xenophon.6">
+      <div class="line-character">Xenophōn</div>
+      Ita.
+    </div>
+ 
+    <div class="line-container" id="Fredericus.7">
+      <div class="line-character">Frederīcus</div>
+      Quantō sum ego fēlīcior, quī facultātibus mihi ā patre relictīs contentus vīvō, &amp; nihil tāle ambiō?
+    </div>
+ 
+    <div class="line-container" id="Xenophon.8">
+      <div class="line-character">Xenophōn</div>
+      Nōn potes tū quidem ambīre obstante domī uxōre.
+    </div>
+ 
+    <div class="line-container" id="Fredericus.9">
+      <div class="line-character">Frederīcus</div>
+      Quid ita? In Germāniā superiōre presbyterī salvīs praebendīs et canonicātibus etiam uxōrēs dūcunt.
+    </div>
+ 
+    <div class="line-container" id="Xenophon.10">
+      <div class="line-character">Xenophōn</div>
+      Absit ut illōrum facta nōbīs in exemplum vocēmus, faciunt hōc illī contrā sānctae Rōmānae ecclēsiae dēcrēta, quibus nōn pārēre est impium.
+    </div>
+ 
+    <div class="line-container" id="Fredericus.11">
+      <div class="line-character">Frederīcus</div>
+      Illī impium et inīquum exīstimant, sī quis pāreat.
+    </div>
+ 
+    <div class="line-container" id="Xenophon.12">
+      <div class="line-character">Xenophōn</div>
+      Suō perīculō exīstimant, ōlim impietātis ac rebelliōnis suae poenās luitūrī, cum summus ille et immortālis pontifex terram vēnerit iūdicātūrus. Haec erit mors aeterna, quae manet omnēs quī ab ecclēsiā Rōmānā dēscīscunt.
+    </div>
+ 
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+ 
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+ 
+    <!--Footer goes here-->
+  </div>
+ 
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>

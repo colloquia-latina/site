@@ -1,0 +1,116 @@
+---
+title: Dialogī XLII - Dialogus Quīntus
+subtitle: 
+type: Colloquium
+author: Barlandus
+collection: Dialogī XLII
+topic:
+- School
+difficulty: Moderate
+sequence: '005'
+character_count: 2
+permalink: /barlandus/dialogi-xlii-dialogus-quintus/
+---
+ 
+<!--Use this page as our master template-->
+<!doctype html>
+ 
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+ 
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+ 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+ 
+    <div class="characters">
+      Persōnae:<br />
+      Discipulus, Praeceptor
+    </div>
+ 
+    <div class="line-container" id="Discipulus.1">
+      <div class="line-character">Discipulus</div>
+      Accēpī hodiē praeceptor epistolam, quā vocor in patriam, nōn reditūrus opīnor ad scholam tuam. Scrībit enim pater sē congressum &amp; locūtum esse cum Antōniō Panormītā illō, quī Galliārum invictō rēgī est ā cōnsiliīs, hunc suāsisse ut mē in Germāniam ablēgāret, ad quōs populōs, ut imperium, ita &amp; literae suīs relictīs sēdibus commigrāsse videntur.
+    </div>
+ 
+    <div class="line-container" id="Praeceptor.2">
+      <div class="line-character">Praeceptor</div>
+      Fateor &amp; ego vigēre illīc studia, prōferre sē ingenia, sed ūnum mē terret, quod tam multōs eximiē doctōs virōs illīc īnficī videam contāgiōne Saxōnicā, unde tibi quoque nōnnihil metuō, sī eō tē contuleris. Nam ita serpit ac invalēscit in diēs hoc malum, ut nūllum oppidum, nūllus pāgus, nūllus sit vīcus ab hāc peste futūrus propediem immūnis.
+    </div>
+ 
+    <div class="line-container" id="Discipulus.3">
+      <div class="line-character">Discipulus</div>
+      Cavēbō praeceptor, ōrātūrus etiam patrem, ut apud Germānōs in eā mē scholā studēre ac literīs meliōribus incumbere patiātur, quae quam minimum sit hōc tēterrimō genere morbī īnfecta.
+    </div>
+ 
+    <div class="line-container" id="Praeceptor.4">
+      <div class="line-character">Praeceptor</div>
+      Nesciō an haec reperīrī possit in Germāniā, quam prōvinciam longē nōbilissimam doleō equidem versārī in tantīs errōribus ac caecitāte, &amp; hinc subnātum esse incendium, quō fortasse aliquandō cōnflagrātūrus sit ūniversus terrārum orbis. At tū mī alumne, quantum fierī possit, cavē nē huius malī contāgiō corripiāris, atque eōs librōs nē legītō, unde flūxit, unde mānāvit hīc ingēns morbus: &amp; sī Chrīstō servātōrī tuō chārus esse velīs, ab iīs quae vulgus tum facit, tum opīnātur, quam maximē dissentīās: atque meminēris pessimum esse mōrum autōrem populum. Nihil enim habet quod maximō etiam iūre nōn damnēs, nōn improbēs.
+    </div>
+ 
+    <div class="line-container" id="Discipulus.5">
+      <div class="line-character">Discipulus</div>
+      Faciam quod monēs praeceptor observande. Nunc tibi grātiās agō immortālēs, quod mē &amp; patriō quōdam affectū hōc biennium, quō vīxī in tuā familiā, sīs prosequūtus, &amp; summā dīligentiā īnstituerīs.
+    </div>
+ 
+    <div class="line-container" id="Praeceptor.6">
+      <div class="line-character">Praeceptor</div>
+      Nihil mē poenitet īnsūmptī in tē docendō labōris fīlī chārissime. Tū bene valēbis &amp; mē amābis.
+    </div>
+ 
+    <div class="line-container" id="Discipulus.7">
+      <div class="line-character">Discipulus</div>
+      Mē ab amōre hūmānissimī pariter ac doctissimī praeceptōris dēdūcet nūlla senectūs, sīve ego Tīthōnus sīve ego Nestōr erō.
+      <div class="line-poetry">
+        DIALOGVS recitātus in Ecyram Terentiī pūblicē exhibitam Louaniī, Annō restitūtae salūtis M.D.XXIIII.
+      </div>
+    </div>
+ 
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+ 
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+ 
+    <!--Footer goes here-->
+  </div>
+ 
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>

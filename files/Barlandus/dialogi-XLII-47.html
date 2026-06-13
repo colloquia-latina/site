@@ -1,0 +1,133 @@
+---
+title: Dialogī XLII - Dialogus Quadrāgēsimus Septimus
+subtitle: Aliud
+type: Colloquium
+author: Barlandus
+collection: Dialogī XLII
+topic:
+- School
+difficulty: Moderate
+sequence: '047'
+character_count: 2
+permalink: /barlandus/dialogi-xlii-dialogus-quadragesimus-septimus/
+---
+ 
+<!--Use this page as our master template-->
+<!doctype html>
+ 
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+ 
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+ 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+ 
+    <div class="characters">
+      Persōnae:<br />
+      Marcellus, Remaclus
+    </div>
+ 
+    <div class="line-container" id="Marcellus.1">
+      <div class="line-character">Marcellus</div>
+      Cuperem tē sānctissimō indulgēre coniugiō.
+    </div>
+ 
+    <div class="line-container" id="Remaclus.2">
+      <div class="line-character">Remaclus</div>
+      Metuō nē mōrōsa, nē impudīca contingat uxor, nē impiī prōveniant līberī.
+    </div>
+ 
+    <div class="line-container" id="Marcellus.3">
+      <div class="line-character">Marcellus</div>
+      An ignōrās hominum ista vitia esse, nōn coniugiī?
+    </div>
+ 
+    <div class="line-container" id="Remaclus.4">
+      <div class="line-character">Remaclus</div>
+      Ā coniugiō mē dēterrent in mentem venientēs tragoediae: Ab hāc adulterā secūrī percussus est marītus, ab hāc venēnō su[b]lātus, ab illā mōrum odiō ad mortem adāctus.
+    </div>
+ 
+    <div class="line-container" id="Marcellus.5">
+      <div class="line-character">Marcellus</div>
+      Quīn potius succurrunt optimae ac virōrum amantissimae foeminae Cornēlia Gracchōrum parēns Pompeia, Catōnis Portia, nōminis aeternitāte dignissima Arthomisia, &amp; complūrēs aliae.
+    </div>
+ 
+    <div class="line-container" id="Remaclus.6">
+      <div class="line-character">Remaclus</div>
+      Mīror tē dīcere complūrēs, cum rāra sit avis mulier proba.
+    </div>
+ 
+    <div class="line-container" id="Marcellus.7">
+      <div class="line-character">Marcellus</div>
+      Rārā uxōre fac tē dignum praebeās.
+    </div>
+ 
+    <div class="line-container" id="Remaclus.8">
+      <div class="line-character">Remaclus</div>
+      Lībertātis sum amantior.
+    </div>
+ 
+    <div class="line-container" id="Marcellus.9">
+      <div class="line-character">Marcellus</div>
+      Tantō magis ascīscere tibi sociam dēbēs, cum quā tantum hoc bonī commūne habeās.
+    </div>
+ 
+    <div class="line-container" id="Remaclus.10">
+      <div class="line-character">Remaclus</div>
+      Orbitātem timeō.
+    </div>
+ 
+    <div class="line-container" id="Marcellus.11">
+      <div class="line-character">Marcellus</div>
+      Ob hoc ipsum volō tē uxōrem dūcere, quae sōla hoc praestiterit nē sīs orbus.
+    </div>
+ 
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+ 
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+ 
+    <!--Footer goes here-->
+  </div>
+ 
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>

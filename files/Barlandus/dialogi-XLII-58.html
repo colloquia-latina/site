@@ -1,0 +1,113 @@
+---
+title: Dialogī XLII - Dialogus Duodēsexāgēsimus
+subtitle: LŪDVS CHARTĀRVM, PER AVGVSTĪNUM Reymārium Mechliniēnsem iuvenem doctissimum
+type: Colloquium
+author: Barlandus
+collection: Dialogī XLII
+topic:
+- School
+difficulty: Moderate
+sequence: '058'
+character_count: 4
+permalink: /barlandus/dialogi-xlii-dialogus-duodesexagesimus/
+---
+ 
+<!--Use this page as our master template-->
+<!doctype html>
+ 
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+ 
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+ 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+ 
+    <div class="characters">
+      Persōnae:<br />
+      Sociī, Cornēlius, Iohannēs, Albertus
+    </div>
+ 
+    <div class="line-container" id="Socii.1">
+      <div class="line-character">Sociī</div>
+      Etiam.
+    </div>
+ 
+    <div class="line-container" id="Cornelius.2">
+      <div class="line-character">Cornēlius</div>
+      Quod bonum fēlīx &amp; faustum sit nōbīs omnibus, nunc ōrdine dabō ūnicuīque ūnam chartulam &amp; quibus potiōrēs obtigerint hī lūdent priōrēs, Iohannēs &amp; Cornēlius certābunt. Regnābit hōc lūdō trifoliōrum familia, tū habēs dēnāriam trifoliōrum. Nē ego fēlīx homō sum, nihil habeō nisī līgōnēs &amp; corda trifoliōrum negrī quidem, Euax quantum habeō tegulārum &amp; rēgum &amp; trifoliōrum? quem lūdum vicerō sī hunc nōn vicerō? Nunquam invītā (quod sciam) nactus sum chartulās potiōrēs. Tū nunc Iohannēs quodlibet iaciās.
+    </div>
+ 
+    <div class="line-container" id="Iohannes.3">
+      <div class="line-character">Iohannēs</div>
+      Ēn tibi trifolia, hīc prīmus iactus est.
+    </div>
+ 
+    <div class="line-container" id="Albertus.4">
+      <div class="line-character">Albertus</div>
+      Suppetit ei profectō magna vīs trifoliōrum, quī iacit ea prīmō locō.
+    </div>
+ 
+    <div class="line-container" id="Iohannes.5">
+      <div class="line-character">Iohannēs</div>
+      Mihi posterius iaciendī iūs est. Aliquid spērō commodī sentiam, vīcī quīndecim numerōs.
+    </div>
+ 
+    <div class="line-container" id="Cornelius.6">
+      <div class="line-character">Cornēlius</div>
+      Et ego vīgintī. Formīdō tamen nihilōminus, nē tū potiāre victōriā.
+    </div>
+ 
+    <div class="line-container" id="Iohannes.7">
+      <div class="line-character">Iohannēs</div>
+      Nisī hāc chartā ad mē redeat, tam mihi hōc est in manū quam Herculī clāvam extorquēre, tot chartās habeō parum ūtilēs. Nunc vidē quid agās, hīc iactus lūdum fīniet.
+    </div>
+ 
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+ 
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+ 
+    <!--Footer goes here-->
+  </div>
+ 
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>

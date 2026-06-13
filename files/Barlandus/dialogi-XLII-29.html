@@ -1,0 +1,128 @@
+---
+title: Dialogī XLII - Dialogus Ūndētrīcēsimus
+subtitle: Colloquium
+type: Colloquium
+author: Barlandus
+collection: Dialogī XLII
+topic:
+- School
+difficulty: Moderate
+sequence: '029'
+character_count: 2
+permalink: /barlandus/dialogi-xlii-dialogus-undetricesimus/
+---
+ 
+<!--Use this page as our master template-->
+<!doctype html>
+ 
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+ 
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+ 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+ 
+    <div class="characters">
+      Persōnae:<br />
+      Rumoldus, Chrīstiānus
+    </div>
+ 
+    <div class="line-container" id="Rumoldus.1">
+      <div class="line-character">Rumoldus</div>
+      Quis cubiculī forēs pulsāvit?
+    </div>
+ 
+    <div class="line-container" id="Christianus.2">
+      <div class="line-character">Chrīstiānus</div>
+      Chrīstiānus vetus ille congerrō tuus.
+    </div>
+ 
+    <div class="line-container" id="Rumoldus.3">
+      <div class="line-character">Rumoldus</div>
+      Cuius tū reī grātiā tam profundā vesperā nōs adīs mī Chrīstiāne?
+    </div>
+ 
+    <div class="line-container" id="Christianus.4">
+      <div class="line-character">Chrīstiānus</div>
+      Praeceptor hūc mē mīsit, quī tē ad studium hortārer ēloquentiae, is multō fert aegerrimē, tē tam ignāvum esse, dē cuius ingeniō maxima quaeque sibi pollicēbātur, in tōtā scholā suā dīcit nōn esse alium aequē ā literīs aliēnum.
+    </div>
+ 
+    <div class="line-container" id="Rumoldus.5">
+      <div class="line-character">Rumoldus</div>
+      Studēre nōn possum, quandō ille mē tam frequenter obiūrgat.
+    </div>
+ 
+    <div class="line-container" id="Christianus.6">
+      <div class="line-character">Chrīstiānus</div>
+      Ō caecam pueritiam, nōn vidēs miser isthuc facere suōrum amantissimum praeceptōrem, ut tē excitet, ut accendat, ut ad meliōrem mentem redūcat? quid sī ille (quod faciunt plagōsī istī Orbiliī) quotidiē caederet, raperet, tunderet, verberibus ac minīs excarnificāret?
+    </div>
+ 
+    <div class="line-container" id="Rumoldus.7">
+      <div class="line-character">Rumoldus</div>
+      Cōnstat hāc viā nōn paucōs iuvenēs ōdisse citius quàm amāre studia coepisse.
+    </div>
+ 
+    <div class="line-container" id="Christianus.8">
+      <div class="line-character">Chrīstiānus</div>
+      Tū igitur chārissime Rumolde, praeceptōrem nactus tam ērudītum tamque hūmānum, fac resipīscās. Nunc dum viret aetās, dum flōrent annī, comparā tibi virtūtem, scientiam ac bonās artēs: hae sunt ille dīvitiae, quās nec tempestās adimere, nec ignis exūrere, nec ūlla vīs hominum ēripere possit. caetera omnia quae possidentur in terrīs, fluxa, fragilia, &amp; cadūca fortūnae bona sunt. Nōn sit grave, nōn sit molestum annōs aliquot labōrem hunc suscipere, quī sōlus Marōnem illustrāvit, Cicerōnī, Sallustiō, Plīniīs fāmam dedit, Lucānum, Ovidium, Persium, Iuvenālem, tot poētās clārōs fēcit, ut philosophōs taceam, quōrum tōta quamvīs longa vīta, nihil aliud quam clārus ac dēlectābilis labor est.
+    </div>
+ 
+    <div class="line-container" id="Rumoldus.9">
+      <div class="line-character">Rumoldus</div>
+      Tuus iste sermō Chrīstiāne suāvissime ita mē pungit, afficit, rapit, ūrit, inflammat, relīquit scintillās &amp; aculeōs quōsdam in animō meō. Quamobrem agō tibi immortālēs grātiās prō tam amīcā admonitiōne, deinceps ita studiīs fācundiae invigilātūrus, ut minimē frustrā nōs adiīsse videāris.
+    </div>
+ 
+    <div class="line-container" id="Christianus.10">
+      <div class="line-character">Chrīstiānus</div>
+      Sī ita in animum induxistī tuum, quaesō ut superīs bene fortunantibus absolvās quod aggrederis.
+    </div>
+ 
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+ 
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+ 
+    <!--Footer goes here-->
+  </div>
+ 
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>

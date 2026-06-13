@@ -1,0 +1,98 @@
+---
+title: Dialogī XLII - Dialogus Quārtus
+subtitle: 
+type: Colloquium
+author: Barlandus
+collection: Dialogī XLII
+topic:
+- School
+difficulty: Moderate
+sequence: '004'
+character_count: 2
+permalink: /barlandus/dialogi-xlii-dialogus-quartus/
+---
+ 
+<!--Use this page as our master template-->
+<!doctype html>
+ 
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+ 
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+ 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+ 
+    <div class="characters">
+      Persōnae:<br />
+      Laurentius, Damiānus
+    </div>
+ 
+    <div class="line-container" id="Laurentius.1">
+      <div class="line-character">Laurentius</div>
+      Nōs miserōs, quī in haec tempora inciderimus.
+    </div>
+ 
+    <div class="line-container" id="Damianus.2">
+      <div class="line-character">Damiānus</div>
+      Nullum nōn tempus bonum est, sed bonīs temporibus nōs ūtimur male. In hōc itīdem ut in aliīs culpās nostrās &amp; vitia rēbus adscribentēs. Nōs operam dēmus ut bonī sīmus, &amp; bona erunt tempora.
+    </div>
+ 
+    <div class="line-container" id="Laurentius.3">
+      <div class="line-character">Laurentius</div>
+      Ūnum mē sōlātur, quod haec quāliacunque diū stāre nōn possunt.
+    </div>
+ 
+    <div class="line-container" id="Damianus.4">
+      <div class="line-character">Damiānus</div>
+      Mihi nūllum tempus stāre vidētur, lābuntur &amp; praetereunt omnia, nec quae praeteriit hōra revertitur, ac sōlō bonārum artium studiō efficere possumus nōn quīn fugiat, avoletque, sed nē pereat nōbīs irreparābile tempus. Nūllīus reī quam bene collōcātī et impēnsī temporis memoria iūcundior, sed nōs pessimē ūtentēs rēbus omnibus, tempus innoxium accūsāmus, īnfantia ac pueritia lūsibus vanissimīs, adolēscentia in libīdine, reliquum aetātis in querēlīs ac lāmentīs cōnsūmitur. Haec nūlla est temporum culpa, sed nostra. Quod tū mī Laurentī tempora spērās laetiōra, hōc nōn est in temporibus, sed in tē ipsō est situm. Ūtere literīs, ūtere studiō philosophiae, virtūtem cole. Hōc sī fēcerīs, laeta erunt omnia tempora, trīste nihil.
+    </div>
+ 
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+ 
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+ 
+    <!--Footer goes here-->
+  </div>
+ 
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>

@@ -1,0 +1,108 @@
+---
+title: Dialogī XLII - Dialogus Nōnus
+subtitle: Colloquium
+type: Colloquium
+author: Barlandus
+collection: Dialogī XLII
+topic:
+- School
+difficulty: Moderate
+sequence: '009'
+character_count: 2
+permalink: /barlandus/dialogi-xlii-dialogus-nonus/
+---
+ 
+<!--Use this page as our master template-->
+<!doctype html>
+ 
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+ 
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+ 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+ 
+    <div class="characters">
+      Persōnae:<br />
+      Ghijsbertus, Hadriānus
+    </div>
+ 
+    <div class="line-container" id="Ghijsbertus.1">
+      <div class="line-character">Ghijsbertus</div>
+      Quī sīderum progressiōnēs observant, hōc annō vīgēsimōquartō dīxerant mortālibus timendum esse ā dīluviōne, terraemōtibus, urbium ēversiōnibus, ac aliīs plērīsque malīs &amp; maximē Februāriō mēnse, quī tamen fuit serēnior, &amp; sine ūllīs ferē tempestātibus.
+    </div>
+ 
+    <div class="line-container" id="Hadrianus.2">
+      <div class="line-character">Hadriānus</div>
+      Ita solent omnia ēvenīre secus atque illī scrīpserint.
+    </div>
+ 
+    <div class="line-container" id="Ghijsbertus.3">
+      <div class="line-character">Ghijsbertus</div>
+      Quid tū igitur dē illōrum scientiā iūdicās?
+    </div>
+ 
+    <div class="line-container" id="Hadrianus.4">
+      <div class="line-character">Hadriānus</div>
+      Prōnuntiāre dē tam occultīs ac remōtīs ā vulgī nōtitiā rēbus nōn est meum.
+    </div>
+ 
+    <div class="line-container" id="Ghijsbertus.5">
+      <div class="line-character">Ghijsbertus</div>
+      Mihi quidem illī dum tālia chartīs illīnunt, somnia scrībere videntur sua, unde ad sōlōs typographōs &amp; librōrum vēnditōrēs redeat frūctus. Quam multōs hōc annō īnsulārēs hominēs Astrologī istī sēdēs mūtāre, patriam fugere, ac dulcia arva linquere coēgērunt metū ac formīdine impendentis dīluviōnis.
+    </div>
+ 
+    <div class="line-container" id="Hadrianus.6">
+      <div class="line-character">Hadriānus</div>
+      Quī hōc fēcērunt, iī nisi fallor, suam nunc stultitiam agnōscunt, sēsēque accūsant, quod libellīs eiusmodī tantum tribuerint, quōs fortasse nōn Astrologī, sed nūgōnēs quidam ēvulgāverant. Tālēs, tamque improbōs hominēs pūnīrī ac suppliciīs admovērī interest reīpub.. Multum enim nocent, atque ipsī etiam quālī quālī scientiae iniūriī sunt.
+    </div>
+ 
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+ 
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+ 
+    <!--Footer goes here-->
+  </div>
+ 
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>

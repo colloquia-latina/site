@@ -1,0 +1,128 @@
+---
+title: Dialogī XLII - Dialogus Quīnquāgēsimus Quārtus
+subtitle: 
+type: Colloquium
+author: Barlandus
+collection: Dialogī XLII
+topic:
+- School
+difficulty: Moderate
+sequence: '054'
+character_count: 2
+permalink: /barlandus/dialogi-xlii-dialogus-quinquagesimus-quartus/
+---
+ 
+<!--Use this page as our master template-->
+<!doctype html>
+ 
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+ 
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+ 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+ 
+    <div class="characters">
+      Persōnae:<br />
+      Urbānus, Melchior
+    </div>
+ 
+    <div class="line-container" id="Urbanus.1">
+      <div class="line-character">Urbānus</div>
+      Īrāscor Mūsīs meīs, quae tōtum biennium fortiter ēsurientem, nec nunc quidem alere possunt, sīc revirēscentibus ubique literīs meliōribus, proinde multā hīs dictā salūte Rōmam abīre dēcrētum est mihi, atque ibi fricandīs sacerdōtum mūlīs, aut aliō mē pactō ab egestāte dēfendere.
+    </div>
+ 
+    <div class="line-container" id="Melchior.2">
+      <div class="line-character">Melchior</div>
+      Quis hīc loquitur? Ō mī chārissime Urbāne, quō nunc properās?
+    </div>
+ 
+    <div class="line-container" id="Urbanus.3">
+      <div class="line-character">Urbānus</div>
+      Rōmam.
+    </div>
+ 
+    <div class="line-container" id="Melchior.4">
+      <div class="line-character">Melchior</div>
+      Et quae tanta fuit Rōmam tibi causa videndī?
+    </div>
+ 
+    <div class="line-container" id="Urbanus.5">
+      <div class="line-character">Urbānus</div>
+      Ea inquam amīce quam nūper dīxī tibi.
+    </div>
+ 
+    <div class="line-container" id="Melchior.6">
+      <div class="line-character">Melchior</div>
+      Errās tū quidem meā sententiā, quī putēs fore ut melius illīc tibi arrideat fortūna, quàm hīc in terrā nātālī arrīserit hāctenus.
+    </div>
+ 
+    <div class="line-container" id="Urbanus.7">
+      <div class="line-character">Urbānus</div>
+      Experiēmur, sī nec tum quidem volet esse māter, quae noverca tam diū fuerit, in Asiam, aut aliō quopiam mīlitātum abībimus.
+    </div>
+ 
+    <div class="line-container" id="Melchior.8">
+      <div class="line-character">Melchior</div>
+      Hōc hominum genere quī stipendia faciunt nihil est miserius, nihil item scelerātius, ut quibus nunquam sit pecūnia nisi ē furtīs &amp; sacrilegiīs. Optārim igitur tē sī Rōmae nōn successerit, ad ōrdinem aliquem mendīcantium frātrum trānsīre, aut sacrīs initiātum in templīs ac sacrīs aedibus cantandō victum quaerere, ut multī hodiē faciunt.
+    </div>
+ 
+    <div class="line-container" id="Urbanus.9">
+      <div class="line-character">Urbānus</div>
+      Hoccine cōnsilium est tuum? Quasi vērō sānctius quàm mīlitēs vīvant istī, ex quōrum grege ac sodālitiō tam multōs nōvī, quī cum interdiū mulierēs audīssent peccāta cōnfitentēs, noctū graecābantur in ganēīs.
+    </div>
+ 
+    <div class="line-container" id="Melchior.10">
+      <div class="line-character">Melchior</div>
+      Improbē tū quidem sentīs, cum tam multīs mihi familiāritās intercēdit &amp; monachīs &amp; sacerdōtibus, quōs nōvī optimōs &amp; sānctissimōs esse virōs. Quamobrem tū sī magis Rōmānō cuipiam sacerdōtī, splendeat cui rutilō frōns invidiōsa galerō, quàm Chrīstō servīre cupiās, aut magis arrideat mīlitāris quàm monastica vīta, abī in fēlīcissimē, sēra enim poenitentia est tua.
+    </div>
+ 
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+ 
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+ 
+    <!--Footer goes here-->
+  </div>
+ 
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>

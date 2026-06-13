@@ -1,0 +1,148 @@
+---
+title: Dialogī XLII - Dialogus Quadrāgēsimus Sextus
+subtitle: 
+type: Colloquium
+author: Barlandus
+collection: Dialogī XLII
+topic:
+- School
+difficulty: Moderate
+sequence: '046'
+character_count: 2
+permalink: /barlandus/dialogi-xlii-dialogus-quadragesimus-sextus/
+---
+ 
+<!--Use this page as our master template-->
+<!doctype html>
+ 
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+ 
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+ 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+ 
+    <div class="characters">
+      Persōnae:<br />
+      Pater, Philosophus
+    </div>
+ 
+    <div class="line-container" id="Pater.1">
+      <div class="line-character">Pater</div>
+      Fīlium āmīsī.
+    </div>
+ 
+    <div class="line-container" id="Philosophus.2">
+      <div class="line-character">Philosophus</div>
+      Cum multīs āctum esset melius, sī nunquam līberōs suscēpissent. M. Antōnius, quem philosophum dīxit antīquitās, quàm graviter tulit in vītā Commodum fīlium. Augustus quoque fīliās cum mōrum improbitātem sustinēre nōn posset, nōnne ā cōnspectū remōtās relēgāvit? Optābat īdem coelebs vīvere ac sine līberīs morī. In prīvātīs alius āleā rem patriam dīlapidat. Alius noctēs diēsque pōtitat. Alius furtīs aut adulteriīs omnem parentis domum atque familiam dehonestat, ac nōn ūnō modō solicitam habet.
+    </div>
+ 
+    <div class="line-container" id="Pater.3">
+      <div class="line-character">Pater</div>
+      Dēcessit fīlius, in quem studiī tantum atque labōris contuleram, quem etiam senectūtis meae baculum mihi prōmīseram.
+    </div>
+ 
+    <div class="line-container" id="Philosophus.4">
+      <div class="line-character">Philosophus</div>
+      Nātūrāle est morī: ut diēī nox, ita mors vītae succēdit. Nōn quicquid flōrum vērnō tempore nitēscit in arborum rāmīs, ad frūctum pervenit. Ut flōrēs, sīc &amp; hominēs occidunt. Sērius aut citius mētam properāmus ad ūnam.
+    </div>
+ 
+    <div class="line-container" id="Pater.5">
+      <div class="line-character">Pater</div>
+      Diūtius vīvere potuit fīlius.
+    </div>
+ 
+    <div class="line-container" id="Philosophus.6">
+      <div class="line-character">Philosophus</div>
+      Nescīs an illī fuerit prōfutūra vīta longior. Multōs nōvī quō diūtius vīverent, hōc dēteriōrēs fierī.
+    </div>
+ 
+    <div class="line-container" id="Pater.7">
+      <div class="line-character">Pater</div>
+      Dēcessit iuvenis, quī potuit vītae fruī mūneribus.
+    </div>
+ 
+    <div class="line-container" id="Philosophus.8">
+      <div class="line-character">Philosophus</div>
+      Quae tū ista quaesō exīstimās vītae mūnera? an aegrōtāre, angī, solicitārī, nunquam quiēscere?
+    </div>
+ 
+    <div class="line-container" id="Pater.9">
+      <div class="line-character">Pater</div>
+      Ēreptus est mihi fīlius.
+    </div>
+ 
+    <div class="line-container" id="Philosophus.10">
+      <div class="line-character">Philosophus</div>
+      Tuus nōn erat, nātūrae erat. Repetit illa quod suum est. tū sī invītus dēpositum reddās, vidē nē iniūstus dīcāre.
+    </div>
+ 
+    <div class="line-container" id="Pater.11">
+      <div class="line-character">Pater</div>
+      Sōlitūdō mē excruciat.
+    </div>
+ 
+    <div class="line-container" id="Philosophus.12">
+      <div class="line-character">Philosophus</div>
+      Nōn potest in sōlitūdine vītam agere, quī virtūtēs familiārēs habet.
+    </div>
+ 
+    <div class="line-container" id="Pater.13">
+      <div class="line-character">Pater</div>
+      Sine haerēde dēcēdam ac moriar.
+    </div>
+ 
+    <div class="line-container" id="Philosophus.14">
+      <div class="line-character">Philosophus</div>
+      An quisquam dignior haerēs quàm deus immortālis? Pecūniam &amp; facultātēs tuās in egentium ūsūs diffunditō, et optimum īnstitueris haerēdem.
+    </div>
+ 
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+ 
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+ 
+    <!--Footer goes here-->
+  </div>
+ 
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>

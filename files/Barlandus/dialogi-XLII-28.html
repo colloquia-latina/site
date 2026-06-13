@@ -1,0 +1,143 @@
+---
+title: Dialogī XLII - Dialogus Duodētrīcēsimus
+subtitle: Colloquium
+type: Colloquium
+author: Barlandus
+collection: Dialogī XLII
+topic:
+- School
+difficulty: Moderate
+sequence: '028'
+character_count: 2
+permalink: /barlandus/dialogi-xlii-dialogus-duodetricesimus/
+---
+ 
+<!--Use this page as our master template-->
+<!doctype html>
+ 
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+    <link rel="stylesheet" href="/style-reading.css" />
+  
+<script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+  </head>
+ 
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"
+        ><b>Colloquia Latina</b></a
+      >
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+ 
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+ 
+    <div class="characters">
+      Persōnae:<br />
+      Ludovīcus, Hector
+    </div>
+ 
+    <div class="line-container" id="Ludovicus.1">
+      <div class="line-character">Ludovīcus</div>
+      Nihil iam diū audīstī dē Iohanne Barbiriō congerrōne nostrō mī Hector, ubi terrārum agat? quid rērum gerat?
+    </div>
+ 
+    <div class="line-container" id="Hector.2">
+      <div class="line-character">Hector</div>
+      Audīvī esse eum Lovāniī. &amp; in eā scholā convīvere eximiō illī theologō Martinō Dorpiō.
+    </div>
+ 
+    <div class="line-container" id="Ludovicus.3">
+      <div class="line-character">Ludovīcus</div>
+      Ō fēlīcem adolēscentem, quī quidem in eam vēnerit domum, ubi nihil nisi sānctum, nihil nisi ērudītum sit auditūrus.
+    </div>
+ 
+    <div class="line-container" id="Hector.4">
+      <div class="line-character">Hector</div>
+      Hesternō diē mīsit is mihi strēnulam ineuntis annī.
+    </div>
+ 
+    <div class="line-container" id="Ludovicus.5">
+      <div class="line-character">Ludovīcus</div>
+      Quidnam? dīc rogō.
+    </div>
+ 
+    <div class="line-container" id="Hector.6">
+      <div class="line-character">Hector</div>
+      Membrāna erat, in quā dēpinxerat quīdam trēs illās deās inter sē dē fōrmae praestantiā sēriō contendentēs.
+    </div>
+ 
+    <div class="line-container" id="Ludovicus.7">
+      <div class="line-character">Ludovīcus</div>
+      Huiusmodī strēnula magis conveniēbat dōnārī puellārum amātōrēs, quam scholasticum &amp; assiduē librīs affixum hominem.
+    </div>
+ 
+    <div class="line-container" id="Hector.8">
+      <div class="line-character">Hector</div>
+      Nōn id dīcās, sī sciās quō id cōnsiliō fēcerit.
+    </div>
+ 
+    <div class="line-container" id="Ludovicus.9">
+      <div class="line-character">Ludovīcus</div>
+      Audīre percupiō.
+    </div>
+ 
+    <div class="line-container" id="Hector.10">
+      <div class="line-character">Hector</div>
+      Ut Iūnōnī ac Venerī Minervam velut alter Paris praeferrem, quantō quae haec Trōiānō Paridī in certāmine prōmīsit, meliōra sunt ac praestantiōra dīvitiīs, quās Iūnō &amp; pulchrā coniuge, quam Venus prōmīsisse trāditur.
+    </div>
+ 
+    <div class="line-container" id="Ludovicus.11">
+      <div class="line-character">Ludovīcus</div>
+      Tū igitur quandoquidem beneficium beneficiō pēnsandum est, quid illī remīsistī?
+    </div>
+ 
+    <div class="line-container" id="Hector.12">
+      <div class="line-character">Hector</div>
+      Cōnātus sum equidem remūnerāre beneficium, nisi ille extrūsō in hōc ā sē puerō iniūnxisset nē quicquam reportāret, quod sī fēcisset, fore ut reversus, domō exturbārētur herīlī.
+    </div>
+ 
+    <div class="line-container" id="Ludovicus.13">
+      <div class="line-character">Ludovīcus</div>
+      Istud haud tibi displicuit, nī fallor, quī soleās accipere multō libentius quam dare.
+    </div>
+ 
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains
+    'files/'" %} {% assign neighbors = files | where: "type", "Colloquium" |
+    where: "author", page.author | where: "collection", page.collection | sort:
+    "sequence" %} {% assign prev_page = nil %} {% assign next_page = nil %} {%
+    assign found_current = false %} {% for p in neighbors %} {% if found_current
+    and next_page == nil %} {% assign next_page = p %} {% endif %} {% if p.url
+    == page.url %} {% assign found_current = true %} {% endif %} {% if
+    found_current == false %} {% assign prev_page = p %} {% endif %} {% endfor
+    %}
+ 
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+ 
+    <!--Footer goes here-->
+  </div>
+ 
+   <div class="footer">
+     <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+   </div>
+</body>
