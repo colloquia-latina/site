@@ -42,7 +42,7 @@ permalink: /schweider/latine-loquor-liber-quartus/
     <ul>
       {% assign files_list = site.html_pages | where_exp: "page", "page.path
       contains 'files/'" | where_exp: "page", "page.author == 'Schweider'" |
-      where_exp: "page", "page.collection == 'Liber Quartus'" | where_exp: "page", 
+      where_exp: "page", "page.collection == 'Latine Loquor Liber Quartus'" | where_exp: "page", 
       "page.type == 'Colloquium'" | sort: "sequence" %} {% for page in files_list %}
       <li>
         <a href="{{ page.url }}">{{ page.title }}</a>
