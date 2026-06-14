@@ -2,9 +2,9 @@
 title: Liber Tertius
 subtitle: Latine Loquor - Liber Tertius
 type: Collection
-author: Schweider
+author: Schwieder
 sequence: "003"
-permalink: /schweider/latine-loquor-liber-tertius/
+permalink: /schwieder/latine-loquor-liber-tertius/
 ---
 
 <!DOCTYPE html>
@@ -41,7 +41,7 @@ permalink: /schweider/latine-loquor-liber-tertius/
 
     <ul>
       {% assign files_list = site.html_pages | where_exp: "page", "page.path
-      contains 'files/'" | where_exp: "page", "page.author == 'Schweider'" |
+      contains 'files/'" | where_exp: "page", "page.author == 'Schwieder'" |
       where_exp: "page", "page.collection == 'Latine Loquor Liber Tertius'" | where_exp: "page", 
       "page.type == 'Colloquium'" | sort: "sequence" %} {% for page in files_list %}
       <li>

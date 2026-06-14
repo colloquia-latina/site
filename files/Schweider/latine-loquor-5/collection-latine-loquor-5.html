@@ -2,9 +2,9 @@
 title: Liber Quintus
 subtitle: Latine Loquor - Liber Quintus
 type: Collection
-author: Schweider
+author: Schwieder
 sequence: "005"
-permalink: /schweider/latine-loquor-liber-quintus/
+permalink: /schwieder/latine-loquor-liber-quintus/
 ---
 
 <!DOCTYPE html>
@@ -41,7 +41,7 @@ permalink: /schweider/latine-loquor-liber-quintus/
 
     <ul>
       {% assign files_list = site.html_pages | where_exp: "page", "page.path
-      contains 'files/'" | where_exp: "page", "page.author == 'Schweider'" |
+      contains 'files/'" | where_exp: "page", "page.author == 'Schwieder'" |
       where_exp: "page", "page.collection == 'Latine Loquor Liber Quintus'" | where_exp: "page", 
       "page.type == 'Colloquium'" | sort: "sequence" %} {% for page in files_list %}
       <li>
