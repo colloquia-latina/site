@@ -1,0 +1,169 @@
+---
+title: Latine Loquor - Liber Secundus - Colloquium Trīcēsimum Sextum
+subtitle: "Cultellus datur commodātō, sed aegrē."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Secundus
+topic:
+- Piety
+- Family & Home
+difficulty: Easy
+sequence: '036'
+character_count: 2
+permalink: /schwieder/latine-loquor-2-36/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Stephanus, Theodōrus.
+    </div>
+
+    <div class="line-container" id="Stephanus.1">
+      <div class="line-character">Stephanus</div>
+      Commoda mihi parumper cultellum tuum.
+    </div>
+
+    <div class="line-container" id="Theodorus.2">
+      <div class="line-character">Theodōrus</div>
+      Semper aliquid commodātō petis: accipe, quīn tū eme potius.
+    </div>
+
+    <div class="line-container" id="Stephanus.3">
+      <div class="line-character">Stephanus</div>
+      Nōn habeō pecūniam.
+    </div>
+
+    <div class="line-container" id="Theodorus.4">
+      <div class="line-character">Theodōrus</div>
+      Cūr nōn petis?
+    </div>
+
+    <div class="line-container" id="Stephanus.5">
+      <div class="line-character">Stephanus</div>
+      Unde petam?
+    </div>
+
+    <div class="line-container" id="Theodorus.6">
+      <div class="line-character">Theodōrus</div>
+      Ā patre.
+    </div>
+
+    <div class="line-container" id="Stephanus.7">
+      <div class="line-character">Stephanus</div>
+      Nōn est in hāc urbe.
+    </div>
+
+    <div class="line-container" id="Theodorus.8">
+      <div class="line-character">Theodōrus</div>
+      Ubi igitur?
+    </div>
+
+    <div class="line-container" id="Stephanus.9">
+      <div class="line-character">Stephanus</div>
+      Peregre profectus est.
+    </div>
+
+    <div class="line-container" id="Theodorus.10">
+      <div class="line-character">Theodōrus</div>
+      Quō?
+    </div>
+
+    <div class="line-container" id="Stephanus.11">
+      <div class="line-character">Stephanus</div>
+      Bernam.
+    </div>
+
+    <div class="line-container" id="Theodorus.12">
+      <div class="line-character">Theodōrus</div>
+      Quō diē?
+    </div>
+
+    <div class="line-container" id="Stephanus.13">
+      <div class="line-character">Stephanus</div>
+      Nūdius tertius.
+    </div>
+
+    <div class="line-container" id="Theodorus.14">
+      <div class="line-character">Theodōrus</div>
+      Quandō revertētur?
+    </div>
+
+    <div class="line-container" id="Stephanus.15">
+      <div class="line-character">Stephanus</div>
+      Crās, ut spērāmus: sīc enim dīxit proficīscēns.
+    </div>
+
+    <div class="line-container" id="Theodorus.16">
+      <div class="line-character">Theodōrus</div>
+      Bene vertat Deus.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Petere commodātō, rogāre commodātō, accipere commodātum.</li>
+        <li class="elocutio-entry">Dare mūtuō i.e. cum nōn eadem, sed alia eiusdem generis et pretiī redduntur.</li>
+        <li class="elocutio-entry">Argentum quaerit mūtuō; mūtuam quaerit pecūniam.</li>
+        <li class="elocutio-entry">Pater nōn est in urbe, sed profectus est rūs.</li>
+        <li class="elocutio-entry">Quō vīcīnus tuus profectus est? Bernam, Basilēam, Lutētiam Parīsiōrum, Venetiās, in Silēsiam, in Italiam.</li>
+        <li class="elocutio-entry">Quandō vitricus tuus revertit?</li>
+        <li class="elocutio-entry">Futūrō diē sōlis, lūnae, Mārtis, Mercuriī, Iovis, Veneris, Sāturnī.</li>
+        <li class="elocutio-entry">Deus bene vertat; Deus faveat tuīs cōnātibus, Deus hōc tibi fortūnet ...</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

@@ -1,0 +1,145 @@
+---
+title: Latine Loquor - Liber Quīntus - Colloquium Vīcēsimum
+subtitle: "Robertus Patriciō commodātum reddit cum grātiārum āctiōne. Beneficia ultrō citrōque oblāta. Exemplum aulicae cīvīlitātis propemodum simile."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Quintus
+topic:
+- Piety
+- Manners & Morals
+difficulty: Moderate
+sequence: '020'
+character_count: 2
+permalink: /schwieder/latine-loquor-5-20/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Robertus, Patricius.
+    </div>
+
+    <div class="line-container" id="Robertus.1">
+      <div class="line-character">Robertus</div>
+      Ecce, reddō tibi commodātum et grātiās agō māximās.
+    </div>
+
+    <div class="line-container" id="Patricius.2">
+      <div class="line-character">Patricius</div>
+      Nōn est, quod agās: sed tū satisne ūsus es?
+    </div>
+
+    <div class="line-container" id="Robertus.3">
+      <div class="line-character">Robertus</div>
+      Satis diū ūsum concessistī, quae tua est hūmānitās.
+    </div>
+
+    <div class="line-container" id="Patricius.4">
+      <div class="line-character">Patricius</div>
+      Quotiēs opus erit, quaesō nē pepercerīs rēbus meīs.
+    </div>
+
+    <div class="line-container" id="Robertus.5">
+      <div class="line-character">Robertus</div>
+      Nōn parcam, quandō ita iubēs.
+    </div>
+
+    <div class="line-container" id="Patricius.6">
+      <div class="line-character">Patricius</div>
+      Pergrātum mihi fēcerīs.
+    </div>
+
+    <div class="line-container" id="Robertus.7">
+      <div class="line-character">Robertus</div>
+      Grātiam habeō māximam: tū vērō nostrīs vicissim ūtere, sī quid opus fuerit.
+    </div>
+
+    <div class="line-container" id="Patricius.8">
+      <div class="line-character">Patricius</div>
+      Nōn, quod moneās; satis meā sponte sum impūdēns.
+    </div>
+
+    <div class="line-container" id="Robertus.9">
+      <div class="line-character">Robertus</div>
+      Immō verēcundus nimis.
+    </div>
+
+    <div class="line-container" id="Patricius.10">
+      <div class="line-character">Patricius</div>
+      Estō, aliquandō tamen sentiēs.
+    </div>
+
+    <div class="line-container" id="Robertus.11">
+      <div class="line-character">Robertus</div>
+      Ita velim: bene valē.
+    </div>
+
+    <div class="line-container" id="Patricius.12">
+      <div class="line-character">Patricius</div>
+      Tē servet Dominus Deus.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Concēdere alicuī ūsum alicuius reī.</li>
+        <li class="elocutio-entry">Sī tuā sponte id facis, nōn opus est, ut tē moneam.</li>
+        <li class="elocutio-entry">Dominus Deus servet tē.</li>
+        <li class="elocutio-entry">Facere pergrātum alicuī.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

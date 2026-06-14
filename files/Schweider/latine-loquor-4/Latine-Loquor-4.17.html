@@ -1,0 +1,144 @@
+---
+title: Latine Loquor - Liber Quārtus - Colloquium Septimum Decimum
+subtitle: "Admonitus lūdimagister dē classe doctōre vacuā statim prōvidet."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Quartus
+topic:
+- School
+difficulty: Moderate
+sequence: '017'
+character_count: 2
+permalink: /schwieder/latine-loquor-4-17/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Frīderīcus famulus, Praeceptor.
+    </div>
+
+    <div class="line-container" id="Fridericus.1">
+      <div class="line-character">Frīderīcus</div>
+      Praeceptor, nēmō est, quī doceat in sextā classe.
+    </div>
+
+    <div class="line-container" id="Praeceptor.2">
+      <div class="line-character">Praeceptor</div>
+      Quid hōc reī est? Ubi est magister Philippus?
+    </div>
+
+    <div class="line-container" id="Fridericus.3">
+      <div class="line-character">Frīderīcus</div>
+      Morbō dētinētur in lectō.
+    </div>
+
+    <div class="line-container" id="Praeceptor.4">
+      <div class="line-character">Praeceptor</div>
+      Quī scīs?
+    </div>
+
+    <div class="line-container" id="Fridericus.5">
+      <div class="line-character">Frīderīcus</div>
+      Nūntiāvit quīdam ex discipulīs eius domesticīs.
+    </div>
+
+    <div class="line-container" id="Praeceptor.6">
+      <div class="line-character">Praeceptor</div>
+      Dīc hypodidascalō meō.
+    </div>
+
+    <div class="line-container" id="Fridericus.7">
+      <div class="line-character">Frīderīcus</div>
+      Nōn est in mūseō suō.
+    </div>
+
+    <div class="line-container" id="Praeceptor.8">
+      <div class="line-character">Praeceptor</div>
+      Quī scīs?
+    </div>
+
+    <div class="line-container" id="Fridericus.9">
+      <div class="line-character">Frīderīcus</div>
+      Nam ego ter aut quater pulsāvī ostium.
+    </div>
+
+    <div class="line-container" id="Praeceptor.10">
+      <div class="line-character">Praeceptor</div>
+      Dīc prīmae classis doctōrī, ut mittat ē suīs aliquem.
+    </div>
+
+    <div class="line-container" id="Fridericus.11">
+      <div class="line-character">Frīderīcus</div>
+      Quid sī nōlit mittere?
+    </div>
+
+    <div class="line-container" id="Praeceptor.12">
+      <div class="line-character">Praeceptor</div>
+      Abī, ineptē: an putās eum esse tam imprūdentem, ut recūset? abī, properā.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Dētinērī morbō.</li>
+        <li class="elocutio-entry">Quīdam ex discipulīs sextae classis nūntiāvit mihi omnēs discipulōs huius Gymnasiī hōrīs postmerīdiānīs agere fēriās.</li>
+        <li class="elocutio-entry">Ter aut quater pulsāvī ostium mūseī praeceptōris.</li>
+        <li class="elocutio-entry">Ter pulsāre licet, sī nōn aperitur, abitō.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

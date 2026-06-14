@@ -1,0 +1,171 @@
+---
+title: Latine Loquor - Liber Tertius - Colloquium Vīcēsimum Quārtum
+subtitle: "Forestus ā Frīderīcō quīnque nummōs mūtuō petit: sōlum duōs accipit."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Tertius
+topic:
+- Errands & Money
+difficulty: Easy
+sequence: '024'
+character_count: 2
+permalink: /schwieder/latine-loquor-3-24/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Forestus, Frīderīcus.
+    </div>
+
+    <div class="line-container" id="Forestus.1">
+      <div class="line-character">Forestus</div>
+      Potesne mihi mūtuō dare aliquantum pecūniae?
+    </div>
+
+    <div class="line-container" id="Fridericus.2">
+      <div class="line-character">Frīderīcus</div>
+      Quantum petis?
+    </div>
+
+    <div class="line-container" id="Forestus.3">
+      <div class="line-character">Forestus</div>
+      Quīnque nummōs, sī tibi est commodum.
+    </div>
+
+    <div class="line-container" id="Fridericus.4">
+      <div class="line-character">Frīderīcus</div>
+      Nōn tot habeō.
+    </div>
+
+    <div class="line-container" id="Forestus.5">
+      <div class="line-character">Forestus</div>
+      Quot igitur?
+    </div>
+
+    <div class="line-container" id="Fridericus.6">
+      <div class="line-character">Frīderīcus</div>
+      Tantum quattuor.
+    </div>
+
+    <div class="line-container" id="Forestus.7">
+      <div class="line-character">Forestus</div>
+      Bene sānē, dā mihi istōs quattuor.
+    </div>
+
+    <div class="line-container" id="Fridericus.8">
+      <div class="line-character">Frīderīcus</div>
+      Dabō, sī vīs, dīmidium.
+    </div>
+
+    <div class="line-container" id="Forestus.9">
+      <div class="line-character">Forestus</div>
+      Cūr nōn tōtum?
+    </div>
+
+    <div class="line-container" id="Fridericus.10">
+      <div class="line-character">Frīderīcus</div>
+      Quia sunt mihi opus duo.
+    </div>
+
+    <div class="line-container" id="Forestus.11">
+      <div class="line-character">Forestus</div>
+      Dā igitur duōs, quaesō.
+    </div>
+
+    <div class="line-container" id="Fridericus.12">
+      <div class="line-character">Frīderīcus</div>
+      Sed tibi nōn sufficient.
+    </div>
+
+    <div class="line-container" id="Forestus.13">
+      <div class="line-character">Forestus</div>
+      Petam ab aliquō aliōs.
+    </div>
+
+    <div class="line-container" id="Fridericus.14">
+      <div class="line-character">Frīderīcus</div>
+      Accipe igitur hōs duōs: quandō reddēs?
+    </div>
+
+    <div class="line-container" id="Forestus.15">
+      <div class="line-character">Forestus</div>
+      Diē, ut spērō, Sāturnī, cum pater ad forum veniet.
+    </div>
+
+    <div class="line-container" id="Fridericus.16">
+      <div class="line-character">Frīderīcus</div>
+      Estō igitur memor.
+    </div>
+
+    <div class="line-container" id="Forestus.17">
+      <div class="line-character">Forestus</div>
+      Nē timuerīs.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Dabō tibi mūtuō dīmidiam partem.</li>
+        <li class="elocutio-entry">Duo aureī mihi opus sunt; opus est mihi duōbus aureīs; (opus habeō duōbus aureīs).</li>
+        <li class="elocutio-entry">Trēs imperiālēs sufficient mihi.</li>
+        <li class="elocutio-entry">Quandō reddēs mihi pecūniam mūtuam? Ad calendās Graecās.</li>
+        <li class="elocutio-entry">Pater diē Sāturnī veniet ad forum.</li>
+        <li class="elocutio-entry">Estō memor pecūniae mūtuō tibi ā mē datae. Nē timuerīs.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

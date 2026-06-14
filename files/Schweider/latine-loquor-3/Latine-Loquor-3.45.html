@@ -1,0 +1,158 @@
+---
+title: Latine Loquor - Liber Tertius - Colloquium Quadrāgēsimum Quīntum
+subtitle: "Iūlius dē patre rogātus ā Iacōbō, Antverpiām ait hunc ad mercātum abīsse, eiusque reditum in hōrās exspectārī: Deus ubīvīs locōrum suōs cōnservat."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Tertius
+topic:
+- Piety
+- Family & Home
+difficulty: Easy
+sequence: '045'
+character_count: 2
+permalink: /schwieder/latine-loquor-3-45/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Iacōbus, Iūlius.
+    </div>
+
+    <div class="line-container" id="Iacobus.1">
+      <div class="line-character">Iacōbus</div>
+      Ubi nunc est pater tuus?
+    </div>
+
+    <div class="line-container" id="Iulius.2">
+      <div class="line-character">Iūlius</div>
+      Putō eum esse Antverpiae.
+    </div>
+
+    <div class="line-container" id="Iacobus.3">
+      <div class="line-character">Iacōbus</div>
+      Quid illīc agit?
+    </div>
+
+    <div class="line-container" id="Iulius.4">
+      <div class="line-character">Iūlius</div>
+      Negōtiātur.
+    </div>
+
+    <div class="line-container" id="Iacobus.5">
+      <div class="line-character">Iacōbus</div>
+      Ex quō tempore?
+    </div>
+
+    <div class="line-container" id="Iulius.6">
+      <div class="line-character">Iūlius</div>
+      Ab ipsō initiō mercātūs.
+    </div>
+
+    <div class="line-container" id="Iacobus.7">
+      <div class="line-character">Iacōbus</div>
+      Valdē mīror, quī audeat illīc commorārī tot diēs, cum pītuīta tanta sit per tōtam urbem.
+    </div>
+
+    <div class="line-container" id="Iulius.8">
+      <div class="line-character">Iūlius</div>
+      Nōn est adeō mīrandum.
+    </div>
+
+    <div class="line-container" id="Iacobus.9">
+      <div class="line-character">Iacōbus</div>
+      Itane tibi vidētur?
+    </div>
+
+    <div class="line-container" id="Iulius.10">
+      <div class="line-character">Iūlius</div>
+      Ita profectō. Fuit enim aliās in māiōre perīculō, sed Dominus Deus semper eum custōdīvit.
+    </div>
+
+    <div class="line-container" id="Iacobus.11">
+      <div class="line-character">Iacōbus</div>
+      Crēdō equidem, et adhūc custōdiet. Sed quandō est reversūrus?
+    </div>
+
+    <div class="line-container" id="Iulius.12">
+      <div class="line-character">Iūlius</div>
+      Nesciō. In hōrās exspectāmus.
+    </div>
+
+    <div class="line-container" id="Iacobus.13">
+      <div class="line-character">Iacōbus</div>
+      Redūcat eum Deus!
+    </div>
+
+    <div class="line-container" id="Iulius.14">
+      <div class="line-character">Iūlius</div>
+      Ita precor.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Pater meus negōtiātur Antverpiae.</li>
+        <li class="elocutio-entry">Ex quō tempore?</li>
+        <li class="elocutio-entry">Mīror, quod pater tuus audeat illīc commorārī.</li>
+        <li class="elocutio-entry">Pītuīta est per tōtam urbem.</li>
+        <li class="elocutio-entry">Esse in perīculō ... in discrīmine versārī, cōnstitūtum esse, perīclitārī.</li>
+        <li class="elocutio-entry">Exspectāmus patrem in hōrās.</li>
+        <li class="elocutio-entry">Deus illum dūcat et redūcat.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

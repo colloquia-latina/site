@@ -1,0 +1,155 @@
+---
+title: Latine Loquor - Liber Secundus - Colloquium Vīcēsimum Tertium
+subtitle: "Quīdam, quod āfuerit, quaerit ex condiscipulō, quid āctum sit in auditōriō."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Secundus
+topic:
+- School
+difficulty: Easy
+sequence: '023'
+character_count: 2
+permalink: /schwieder/latine-loquor-2-23/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Dominicus, Ennius.
+    </div>
+
+    <div class="line-container" id="Dominicus.1">
+      <div class="line-character">Dominicus</div>
+      Quid āctum est in auditōriō hōrā tertiā?
+    </div>
+
+    <div class="line-container" id="Ennius.2">
+      <div class="line-character">Ennius</div>
+      Tractātae sunt ōrātiōnis partēs ex praelēctiōne.
+    </div>
+
+    <div class="line-container" id="Dominicus.3">
+      <div class="line-character">Dominicus</div>
+      Nihilne amplius?
+    </div>
+
+    <div class="line-container" id="Ennius.4">
+      <div class="line-character">Ennius</div>
+      Dīxissem, nisi mē interpellāssēs.
+    </div>
+
+    <div class="line-container" id="Dominicus.5">
+      <div class="line-character">Dominicus</div>
+      Errāvī: perge.
+    </div>
+
+    <div class="line-container" id="Ennius.6">
+      <div class="line-character">Ennius</div>
+      Posteā dictāvit praeceptor argūmentum vernāculum, hodiē vertendum.
+    </div>
+
+    <div class="line-container" id="Dominicus.7">
+      <div class="line-character">Dominicus</div>
+      Quandō reddendum?
+    </div>
+
+    <div class="line-container" id="Ennius.8">
+      <div class="line-character">Ennius</div>
+      Crās merīdiē.
+    </div>
+
+    <div class="line-container" id="Dominicus.9">
+      <div class="line-character">Dominicus</div>
+      Iamne vertistī?
+    </div>
+
+    <div class="line-container" id="Ennius.10">
+      <div class="line-character">Ennius</div>
+      Utcumque.
+    </div>
+
+    <div class="line-container" id="Dominicus.11">
+      <div class="line-character">Dominicus</div>
+      Dictā mihi, quaesō, vernāculum.
+    </div>
+
+    <div class="line-container" id="Ennius.12">
+      <div class="line-character">Ennius</div>
+      Excipe, festīnā; nam dēbeō scrībere aliquid.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Quid āctum est in scholā quīntā hōrā prīmā? Grammatica tractāta est ā praeceptōre.</li>
+        <li class="elocutio-entry">Interpellāre aliquem.</li>
+        <li class="elocutio-entry">Interpellāre, interturbāre loquentem, interrumpere sermōnem alicuius.</li>
+        <li class="elocutio-entry">Errāre, esse in errōre, versārī in errōre, hallūcinārī, exorbitāre.</li>
+        <li class="elocutio-entry">Errāre tōtō caelō, tōtā viā, aberrāre ā scōpō.</li>
+        <li class="elocutio-entry">Errāre hūmānum est. Quandōque bonus dormitat Homērus.</li>
+        <li class="elocutio-entry">Hem lapsus sum ... ;  dēpōnere errōrem.</li>
+        <li class="elocutio-entry">Dictāre argūmentum vernāculum.</li>
+        <li class="elocutio-entry">Vertere vernāculum in latīnum.</li>
+        <li class="elocutio-entry">Iam convertī argūmentum meum in latīnum ... mox reddam.</li>
+        <li class="elocutio-entry">Reddere sententiam sententiā, verbum verbō.</li>
+        <li class="elocutio-entry">Dictā mihi quaesō vernāculum.</li>
+        <li class="elocutio-entry">Excipere-scrībere; excipere ōsculō aliquem ... brāchiīs ... tē exceptō.</li>
+        <li class="elocutio-entry">Excipite exercitium.</li>
+        <li class="elocutio-entry">Festīnāre, properāre. Nōn possum assequī praeceptōrem dictantem.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

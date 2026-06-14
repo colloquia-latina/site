@@ -1,0 +1,140 @@
+---
+title: Latine Loquor - Liber Tertius - Colloquium Quīnquāgēsimum
+subtitle: "Albertus percontātur dē rēbus ad Geōrgium pertinentibus."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Tertius
+topic:
+- School
+- Letters & Writing
+difficulty: Moderate
+sequence: '050'
+character_count: 2
+permalink: /schwieder/latine-loquor-3-50/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Albertus, Geōrgius.
+    </div>
+
+    <div class="line-container" id="Albertus.1">
+      <div class="line-character">Albertus</div>
+      Quō in statū sunt rēs vestrae Lugdūnēnsēs?
+    </div>
+
+    <div class="line-container" id="Georgius.2">
+      <div class="line-character">Geōrgius</div>
+      Nesciō, iam prīdem nihil audīmus.
+    </div>
+
+    <div class="line-container" id="Albertus.3">
+      <div class="line-character">Albertus</div>
+      Nihilne scrīpsit frāter tuus?
+    </div>
+
+    <div class="line-container" id="Georgius.4">
+      <div class="line-character">Geōrgius</div>
+      Post mēnsēs duōs nihil litterārum mīsit, quod vīderit pater.
+    </div>
+
+    <div class="line-container" id="Albertus.5">
+      <div class="line-character">Albertus</div>
+      Fortasse aegrōtat.
+    </div>
+
+    <div class="line-container" id="Georgius.6">
+      <div class="line-character">Geōrgius</div>
+      Minimē vērō; nam tabellāriī saepe nōbīs salūtem nūntiant verbīs eius.
+    </div>
+
+    <div class="line-container" id="Albertus.7">
+      <div class="line-character">Albertus</div>
+      Libenter audiō illum rēctē valēre. Valdē eum dīligō, quī fuit mihi suāvissimus condiscipulus.
+    </div>
+
+    <div class="line-container" id="Georgius.8">
+      <div class="line-character">Geōrgius</div>
+      Ille, ut, opīnor, tē vicissim dīligit.
+    </div>
+
+    <div class="line-container" id="Albertus.9">
+      <div class="line-character">Albertus</div>
+      Id vērō mihi nōn est dubium. Sed nōs hōra vocat: eāmus in auditōrium.
+    </div>
+
+    <div class="line-container" id="Georgius.10">
+      <div class="line-character">Geōrgius</div>
+      Mātūrēmus. Iam recitātur catalogus.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Quō in statū sunt rēs vestrae? Resp. Fēlīcī, prosperō, adversō.</li>
+        <li class="elocutio-entry">Nihilne litterārum accēpistī ex patriā?</li>
+        <li class="elocutio-entry">Nihilne litterārum ad tē missum est?</li>
+        <li class="elocutio-entry">Nūntiā praeceptōrī tuō verbīs meīs salūtem ... meō nōmine.</li>
+        <li class="elocutio-entry">Libenter audiō, frātrem tuum rēctē valēre.</li>
+        <li class="elocutio-entry">Geōrgius est mihi suāvissimus condiscipulus.</li>
+        <li class="elocutio-entry">Id nōn est mihi dubium ... dē hāc rē nihil dubitō.</li>
+        <li class="elocutio-entry">Dubium mihi est ... haereō, ambigō, in dubiō sum; addubitō, in dubium veniō.</li>
+        <li class="elocutio-entry">Veniō in dubium dē tuā fidē ... tua fidēs venit mihi in dubium.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

@@ -1,0 +1,161 @@
+---
+title: Latine Loquor - Liber Quārtus - Colloquium Octāvum
+subtitle: "Dē quōdam discipulō rūs profectō cum patre."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Quartus
+topic:
+- School
+- Family & Home
+difficulty: Easy
+sequence: '008'
+character_count: 2
+permalink: /schwieder/latine-loquor-4-8/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Tūtor, Cornēlius discipulus.
+    </div>
+
+    <div class="line-container" id="Tutor.1">
+      <div class="line-character">Tūtor</div>
+      Ubi est Petrus?
+    </div>
+
+    <div class="line-container" id="Cornelius.2">
+      <div class="line-character">Cornēlius</div>
+      Iit forās.
+    </div>
+
+    <div class="line-container" id="Tutor.3">
+      <div class="line-character">Tūtor</div>
+      Quō?
+    </div>
+
+    <div class="line-container" id="Cornelius.4">
+      <div class="line-character">Cornēlius</div>
+      Abiit rūs.
+    </div>
+
+    <div class="line-container" id="Tutor.5">
+      <div class="line-character">Tūtor</div>
+      Quōcum?
+    </div>
+
+    <div class="line-container" id="Cornelius.6">
+      <div class="line-character">Cornēlius</div>
+      Cum patre.
+    </div>
+
+    <div class="line-container" id="Tutor.7">
+      <div class="line-character">Tūtor</div>
+      Quis vēnerat arcessītum?
+    </div>
+
+    <div class="line-container" id="Cornelius.8">
+      <div class="line-character">Cornēlius</div>
+      Patris famulus.
+    </div>
+
+    <div class="line-container" id="Tutor.9">
+      <div class="line-character">Tūtor</div>
+      Quandō in urbem redībit?
+    </div>
+
+    <div class="line-container" id="Cornelius.10">
+      <div class="line-character">Cornēlius</div>
+      Hinc, ut dīxit, ad octāvum diem.
+    </div>
+
+    <div class="line-container" id="Tutor.11">
+      <div class="line-character">Tūtor</div>
+      Ā quō petīvit abeundī veniam?
+    </div>
+
+    <div class="line-container" id="Cornelius.12">
+      <div class="line-character">Cornēlius</div>
+      Ab hypodidascalō.
+    </div>
+
+    <div class="line-container" id="Tutor.13">
+      <div class="line-character">Tūtor</div>
+      Cūr nōn potius ā lūdimagistrō?
+    </div>
+
+    <div class="line-container" id="Cornelius.14">
+      <div class="line-character">Cornēlius</div>
+      Ad negōtia prōdierat.
+    </div>
+
+    <div class="line-container" id="Tutor.15">
+      <div class="line-character">Tūtor</div>
+      Sat habeō.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Venīre arcessītum aliquem ... ad arcessendum aliquem.</li>
+        <li class="elocutio-entry">Hypodidascalus reditūrus est in urbem diē crāstinō.</li>
+        <li class="elocutio-entry">Hinc ad trēs hebdomadās.</li>
+        <li class="elocutio-entry">Petere veniam abeundī.</li>
+        <li class="elocutio-entry">Prōdīre ad negōtia.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

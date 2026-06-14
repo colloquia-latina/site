@@ -1,0 +1,160 @@
+---
+title: Latine Loquor - Liber Secundus - Colloquium Trīcēsimum Quārtum
+subtitle: "Cōnsilī mūtātiō propter spem lucrī. Cōnsilium bonum etiam inimīcīs dandum. Chrīstus magister optimus. Doctrīna Chrīstī studiōsē sequenda Spīritūs dīvīnī īnstīnctū."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Secundus
+topic:
+- Piety
+- School
+difficulty: Easy
+sequence: '034'
+character_count: 2
+permalink: /schwieder/latine-loquor-2-34/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Quīntus, Robertus.
+    </div>
+
+    <div class="line-container" id="Quintus.1">
+      <div class="line-character">Quīntus</div>
+      Ēmistine scalpellum, ut nūper voluistī?
+    </div>
+
+    <div class="line-container" id="Robertus.2">
+      <div class="line-character">Robertus</div>
+      Nōn ēmī.
+    </div>
+
+    <div class="line-container" id="Quintus.3">
+      <div class="line-character">Quīntus</div>
+      Quid obstitit? Dīxistī enim mihi emptūrum tē hodiē.
+    </div>
+
+    <div class="line-container" id="Robertus.4">
+      <div class="line-character">Robertus</div>
+      Dīxeram quidem: sed mihi posteā in mentem vēnit praestāre, ut exspectārem mercātum proximē futūrum in hāc ipsā urbe.
+    </div>
+
+    <div class="line-container" id="Quintus.5">
+      <div class="line-character">Quīntus</div>
+      Quid faciēs lucrī?
+    </div>
+
+    <div class="line-container" id="Robertus.6">
+      <div class="line-character">Robertus</div>
+      Et minōris emam, et meliōris nōtae, nempe ex Germāniae officīnīs ...
+    </div>
+
+    <div class="line-container" id="Quintus.7">
+      <div class="line-character">Quīntus</div>
+      Quis tibi istud cōnsilium dedit?
+    </div>
+
+    <div class="line-container" id="Robertus.8">
+      <div class="line-character">Robertus</div>
+      Geōrgius noster.
+    </div>
+
+    <div class="line-container" id="Quintus.9">
+      <div class="line-character">Quīntus</div>
+      Bene fēcit: Dēbēmus enim amīcīs bonum cōnsilium semper dare.
+    </div>
+
+    <div class="line-container" id="Robertus.10">
+      <div class="line-character">Robertus</div>
+      Tantumne igitur amīcīs?
+    </div>
+
+    <div class="line-container" id="Quintus.11">
+      <div class="line-character">Quīntus</div>
+      Immō et inimīcīs, fateor: quia sīc iubet Chrīstus, praeceptor noster optimus.
+    </div>
+
+    <div class="line-container" id="Robertus.12">
+      <div class="line-character">Robertus</div>
+      Utinam doctrīnam eius bene īnfīxam memoriae cōnservēmus, eamque perpetuō sequāmur!
+    </div>
+
+    <div class="line-container" id="Quintus.13">
+      <div class="line-character">Quīntus</div>
+      Spīritus ille bonus cuius ūnīus īnstīnctū animī nostrī ad bene agendum accenduntur, sit nōbīscum.
+    </div>
+
+    <div class="line-container" id="Robertus.14">
+      <div class="line-character">Robertus</div>
+      Bene precāris.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Emere aliquid: obolō aureō.</li>
+        <li class="elocutio-entry">Ēmī minōris, vel minōre pretiō quam tū.</li>
+        <li class="elocutio-entry">Quantī ēmistī fūscinulam? Quantō pretiō ēmistī?</li>
+        <li class="elocutio-entry">Proficīscī ad mercātum.</li>
+        <li class="elocutio-entry">Dare cōnsilium alicuī, cōnsulere alicuī.</li>
+        <li class="elocutio-entry">Īnfīgere memoriae.</li>
+        <li class="elocutio-entry">Sequī doctrīnam Chrīstī.</li>
+        <li class="elocutio-entry">Ex īnstīnctū patris hoc fēcit. Patre volente, iubente.</li>
+        <li class="elocutio-entry">Bene precārī alicuī.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

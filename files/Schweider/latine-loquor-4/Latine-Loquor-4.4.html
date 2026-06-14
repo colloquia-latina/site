@@ -1,0 +1,163 @@
+---
+title: Latine Loquor - Liber Quārtus - Colloquium Quārtum
+subtitle: "Quīdam discipulus studēre māvult quam lūdere. Exemplum in discipulīs rārissimum."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Quartus
+topic:
+- School
+- Games & Recreation
+difficulty: Moderate
+sequence: '004'
+character_count: 2
+permalink: /schwieder/latine-loquor-4-4/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Paedagōgus, Blāsius discipulus.
+    </div>
+
+    <div class="line-container" id="Paedagogus.1">
+      <div class="line-character">Paedagōgus</div>
+      Unde venīs?
+    </div>
+
+    <div class="line-container" id="Blasius.2">
+      <div class="line-character">Blāsius</div>
+      Veniō ex īnferiōre parte.
+    </div>
+
+    <div class="line-container" id="Paedagogus.3">
+      <div class="line-character">Paedagōgus</div>
+      Quod erat tibi negōtium īnfrā?
+    </div>
+
+    <div class="line-container" id="Blasius.4">
+      <div class="line-character">Blāsius</div>
+      Ieram deambulātum.
+    </div>
+
+    <div class="line-container" id="Paedagogus.5">
+      <div class="line-character">Paedagōgus</div>
+      Sīde nunc ad mēnsam et manē in cubiculō, dōnec redeam.
+    </div>
+
+    <div class="line-container" id="Blasius.6">
+      <div class="line-character">Blāsius</div>
+      Quid agam intereā?
+    </div>
+
+    <div class="line-container" id="Paedagogus.7">
+      <div class="line-character">Paedagōgus</div>
+      Ēdisce praelēctiōnem in diem crāstinum, ut eam mihi reddās ante cēnam.
+    </div>
+
+    <div class="line-container" id="Blasius.8">
+      <div class="line-character">Blāsius</div>
+      Iam ēdidicī, praeceptor.
+    </div>
+
+    <div class="line-container" id="Paedagogus.9">
+      <div class="line-character">Paedagōgus</div>
+      Lūde igitur.
+    </div>
+
+    <div class="line-container" id="Blasius.10">
+      <div class="line-character">Blāsius</div>
+      Sed nūllōs habeō collūsōrēs.
+    </div>
+
+    <div class="line-container" id="Paedagogus.11">
+      <div class="line-character">Paedagōgus</div>
+      Satis multōs inveniēs in hāc vīcīniā, ex tuīs etiam condiscipulīs.
+    </div>
+
+    <div class="line-container" id="Blasius.12">
+      <div class="line-character">Blāsius</div>
+      Nihil id cūrō; nunc mālim, sī tibi placet, ēdiscere dē catechēseōs librō in diem Dominicum.
+    </div>
+
+    <div class="line-container" id="Paedagogus.13">
+      <div class="line-character">Paedagōgus</div>
+      Ut libet.
+    </div>
+
+    <div class="line-container" id="Blasius.14">
+      <div class="line-character">Blāsius</div>
+      Sī quis tē quaeret, quid illī dīcam?
+    </div>
+
+    <div class="line-container" id="Paedagogus.15">
+      <div class="line-character">Paedagōgus</div>
+      Dīc, mē prōdīsse, sed mox reversūrum.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Venīre ex īnferiōre parte.</li>
+        <li class="elocutio-entry">Quod erat tibi negōtium?</li>
+        <li class="elocutio-entry">Reddere ūrīnam.</li>
+        <li class="elocutio-entry">Quaerere aliquem.</li>
+        <li class="elocutio-entry">Quaerere ex aliquō.</li>
+        <li class="elocutio-entry">Ēdiscam aliquid dē catechēseōs librō in diem Dominicum.</li>
+        <li class="elocutio-entry">Nūllī mihi sunt collūsōrēs ... quaerendus est mihi collūsor.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

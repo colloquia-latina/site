@@ -1,0 +1,134 @@
+---
+title: Latine Loquor - Liber Tertius - Colloquium Vīcēsimum Prīmum
+subtitle: "Amīcus amīcō pecūniam ultrō offert. Beneficium voluntārium. Hūmāna beneficia dīligentius quam dīvīna expendimus. Exemplum līberālitātis rārissimum."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Tertius
+topic:
+- Piety
+- Friendship
+difficulty: Moderate
+sequence: '021'
+character_count: 2
+permalink: /schwieder/latine-loquor-3-21/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Claudius, Clēmēns.
+    </div>
+
+    <div class="line-container" id="Claudius.1">
+      <div class="line-character">Claudius</div>
+      Hodiē pecūniam ā patre accēpī: sī tibi forte opus.
+    </div>
+
+    <div class="line-container" id="Clemens.2">
+      <div class="line-character">Clēmēns</div>
+      Nihil nunc opus est mihi: tamen grātiam habeō maximam, quod tuā līberālitāte ultrō mihi offers beneficium: quōtus enim quisque id faciat.
+    </div>
+
+    <div class="line-container" id="Claudius.3">
+      <div class="line-character">Claudius</div>
+      Crēdō esse paucissimōs: tū mē tamen nōn semel beneficiīs prōvocāstī.
+    </div>
+
+    <div class="line-container" id="Clemens.4">
+      <div class="line-character">Clēmēns</div>
+      Adeō parva illa fuērunt, ut nōn essent commemorātiōne digna.
+    </div>
+
+    <div class="line-container" id="Claudius.5">
+      <div class="line-character">Claudius</div>
+      Nōn est parvum beneficium, quod ab optimā voluntāte profectum sit.
+    </div>
+
+    <div class="line-container" id="Clemens.6">
+      <div class="line-character">Clēmēns</div>
+      Utinam Deī ergā nōs beneficia tam expenderēmus, quam solēmus hominum!
+    </div>
+
+    <div class="line-container" id="Claudius.7">
+      <div class="line-character">Claudius</div>
+      Faciat ille, ut in eā cōgitātiōne nōs exerceāmus et saepius et dīligentius.
+    </div>
+
+    <div class="line-container" id="Clemens.8">
+      <div class="line-character">Clēmēns</div>
+      Illud profectō necesse est, sī volumus eius bēnignitātem saepius experīrī.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Accipere pecūniam ab aliquō.</li>
+        <li class="elocutio-entry">Offerre alicui beneficium.</li>
+        <li class="elocutio-entry">Prōvocāre aliquem beneficiīs.</li>
+        <li class="elocutio-entry">Prōvocāre ad aliquem ... ad certāmen prōvocāre ... ad rēgem.</li>
+        <li class="elocutio-entry">Beneficium hōc ab optimā voluntāte profectum est.</li>
+        <li class="elocutio-entry">Proficīscī dē locō, ex locō.</li>
+        <li class="elocutio-entry">Utinam Deī ergā nōs beneficia tam expenderēmus, quam solēmus hominum.</li>
+        <li class="elocutio-entry">Expendere rem aliquam.</li>
+        <li class="elocutio-entry">Expendere pecūniam.</li>
+        <li class="elocutio-entry">Cōdex acceptī et expēnsī.</li>
+        <li class="elocutio-entry">Expendere aliquid sēcum.</li>
+        <li class="elocutio-entry">Exercēre sē aliquā rē ... in aliquā rē.</li>
+        <li class="elocutio-entry">Experīrī aliquid dē aliquō ... rē ipsā ... extrēma.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

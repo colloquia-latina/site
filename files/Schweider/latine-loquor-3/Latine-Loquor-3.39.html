@@ -1,0 +1,127 @@
+---
+title: Latine Loquor - Liber Tertius - Colloquium Ūndēquadrāgēsimum
+subtitle: "Vestis māne induenda, nōn interdiū mūtanda."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Tertius
+topic:
+- Daily Routine
+difficulty: Easy
+sequence: '039'
+character_count: 2
+permalink: /schwieder/latine-loquor-3-39/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Carolus, Custōs.
+    </div>
+
+    <div class="line-container" id="Carolus.1">
+      <div class="line-character">Carolus</div>
+      Unde affers istam tūniculam?
+    </div>
+
+    <div class="line-container" id="Custos.2">
+      <div class="line-character">Custōs</div>
+      Domō.
+    </div>
+
+    <div class="line-container" id="Carolus.3">
+      <div class="line-character">Carolus</div>
+      Quid vīs facere?
+    </div>
+
+    <div class="line-container" id="Custos.4">
+      <div class="line-character">Custōs</div>
+      Volō induere.
+    </div>
+
+    <div class="line-container" id="Carolus.5">
+      <div class="line-character">Carolus</div>
+      Nunc nōn est mūtandī tempus.
+    </div>
+
+    <div class="line-container" id="Custos.6">
+      <div class="line-character">Custōs</div>
+      Quandō igitur?
+    </div>
+
+    <div class="line-container" id="Carolus.7">
+      <div class="line-character">Carolus</div>
+      Crās māne, cum surgēs ē lectō.
+    </div>
+
+    <div class="line-container" id="Custos.8">
+      <div class="line-character">Custōs</div>
+      Bene monēs, exspectābō.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Afferre aliquid domō.</li>
+        <li class="elocutio-entry">Induere thōrācem ... pallium.</li>
+        <li class="elocutio-entry">Paulus nōn fuit indūtus palliō.</li>
+        <li class="elocutio-entry">Mūtāre vestēs.</li>
+        <li class="elocutio-entry">Surgere ē lectō, vel, lectō.</li>
+        <li class="elocutio-entry">Surgere multō ante lūcem ... in altitūdinem.</li>
+        <li class="elocutio-entry">Surgere cubitū, sellā.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

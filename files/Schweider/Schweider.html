@@ -1,0 +1,126 @@
+---
+title: Schweider
+type: Author
+permalink: /schweider/
+---
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ page.title }}</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/style-list.css" />
+    <link rel="stylesheet" href="/style-common.css" />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/scripts/headroom.min.js"></script>
+    <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+    <div class="navbar headroom">
+        <div class="navbar-inner">
+            <a href="/" class="navbar-item btn">
+                <b>Colloquia Latina</b>
+            </a>
+            <span class="navbar-dynamic">
+                <i>{{ page.title }}</i>
+        </div>
+    </div>
+    </div>
+    <div style="height: 3em"></div>
+
+    <div class="main-content">
+        <a href="/all-authors-list/">
+            <<< Auctores</a>
+
+                <h1>{{ page.title }}</h1>
+                <h2>Index Colloquiorum:</h2>
+
+                <ul>
+                    {% assign files_list = site.html_pages | where_exp: "page", "page.path
+                    contains 'files/'" %} {% assign author_pages = files_list | where_exp:
+                    "page", "page.author == 'Schweider'" | where_exp: "page", "page.type ==
+                    'Colloquium'" | sort: "sequence" %} {% for page in author_pages %}
+                    <li>
+                        <a href="{{ page.url }}">{{ page.title }}</a>
+                        <div class="subtitle">{{page.subtitle}}</div>
+                    </li>
+                    {% endfor %}
+                </ul>
+
+                <div class="note">
+                    <p>G. SCHWIEDER</p>
+                    <p class="tp-title">LATINE LOQUOR</p>
+                    <p>EDITIO ALTERA</p>
+                    <p>HERDER</p>
+                    <p>ROMAE - FRIBURGI BRISG. - BARCINONE</p>
+                    <p>1963</p>
+                    <p>© 1963, Casa Editrice Herder Roma</p>
+                </div>
+                <div class="note">
+                    <div class="line-poetry">
+                        Hoc quicumque cupis carmen cognōscere lēctor,<br />
+                        Cum praecepta ferat: quae sunt grātissima vītae,<br />
+                        Īnstrue praeceptīs animum: nec dīscere cessa;<br />
+                        Nam sine doctrīnā, vīta est quasi mortis imāgō;<br />
+                        Commoda multa ferēs: sīn autem sprēveris illud,<br />
+                        Nōn mē scrīptōrem, sed tē nēglēxeris ipse.<br />
+                        Cum rēctē vīvās, nē cūrēs verba malōrum:<br />
+                        Arbitriī nostrī nōn est, quid quisque loquātur.
+                    </div>
+                </div>
+                <div class="note">
+                    PROOEMIUM<br>
+                    Opusculum qualecumque hoc eō tantum spectat, ut legentem latīnē colloquī ēdoceat,
+                    grammaticē quidem sed et latīnē animī sēnsa ad vītae nostrī temporis ūsūs facile ac perspicuē
+                    prōmere.
+                    <br><br>Nēmō igitur numerōsam ab eō expetat Tulliī facundiam, nēmō Tacitī cōnstrīctam et
+                    contrāctam ēlocūtiōnem; nōn enim litterārum ēlegantias opella haec anquīrit, sed ea studet nostrae
+                    aetātis
+                    lēctōribus adiumenta suppeditāre, quibus facile quisque ad commūnia vel ad ea, quae haec tulērunt
+                    tempora,
+                    exprimenda parātus, prōmptē valeat latīnē ubīque terrārum colloquī.
+                    <br><br>Quae ideō in cotīdiānīs vītae commerciīs hodiē passim occurrunt, ab adulēscente aetāte
+                    ad extrēmam usque senectam, facile tibi, amīce lēctor, hīsce in pāginīs inveniēs, ut: quā ratiōne
+                    māne
+                    surgendum; quā scholae praeparandae; quā salūtandī familiārēs et amīcōs; quā ad scholam festīnandum;
+                    quid in
+                    scholā quidve in viā vel domī agendum; quid per urbem cum amīcīs vel cum extrāneīs cavendum; quid in
+                    deambulāndō, in colloquendō, in disputandō, in lūdendō aliīsque in id genus sescentīs negōtiīs
+                    expedīendīs.
+                    <br><br>Nihilōminus lātīnitās hīc facilis quidem sed semper ēmendāta, perspicua, prōfluēns; haud
+                    rārō Tulliāna prōrsus, aureae dīxeris aetātis; saepius ex īnferiōribus hausta scrīptōribus; interdum
+                    ex novō
+                    plānē excūsa idque nec sine causā nec sine arte.
+                    <br><br>Lēgēns igitur cātus ac sēdulus ita sēnsim amīcā velutī manū dūcitur ut expedītē tandem
+                    latīnum, eumque quasi patrium sermōnem adhibeat.
+                    <br><br>Amīcō igitur vultū fīdentique animō excipiat opusculum hoc cuiusque gentis lēctor, quō
+                    citius plēniusque in sēipsō studium experiātur dēlectābile īdemque perūtile huius linguae, quam nōn
+                    immeritō
+                    sapientiōrēs vīventem vīvificamque praedicant, pācis vērae vēraeque ūnitātis nōbilissimum pignus et
+                    sīgnum.
+                    <br><br>Abī igitur, opusculum meum, fīdenter abī quōquōversus certum tē esse animōrum amīcē
+                    colloquentium adiūmentum; perge longē lātēque per orbem et omnium, cumprīmis iuvenum, animōs
+                    flagrante incende
+                    et alē virtūtum ārdōre. Nil enim pretiōsius, nil iūcundius, nōbilius nihil sibi exspectat Auctor.
+                    <br><br>DATUM ROMAE, VII KAL. AUGUSTĀS Ā. MCMLIII.
+                    <br><br>AD EDITIONEM ALTERAM
+                    <br>Iterātim ab Ēditōre rogātus et ab amīcīs impulsus, interveniente etiam Apostolicā
+                    Cōnstitūtiōne « Veterum Sapientia » dē latīnitātis studiō prōvehendō, tandem animum indūxī ad
+                    alteram huius
+                    operis ēditiōnem parandam.
+                    <br>Haud pauca ēmendāvī et indicem rāriōrum vocābulōrum adiēcī.
+                    <br>Utinam haec ēditiō eandem benevolentiam ac illa prior nancīscātur.
+                    <br>DATUM ROMAE, Ā. D. II ĪD. DĒC. MCMLXII.
+                </div>
+    </div>
+
+    <div class="footer">
+        <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+---
+title: Latine Loquor - Liber Prīmus - Colloquium Prīmum
+subtitle: "Duo discipulī ad praelēctiōnem repetendam sē parant. Quae quis in scholā didicerit, saepe repetenda."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Primus
+topic:
+- School
+difficulty: Easy
+sequence: '001'
+character_count: 2
+permalink: /schwieder/latine-loquor-1-1/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Marcus, Nicolāus.
+    </div>
+
+    <div class="line-container" id="Marcus.1">
+      <div class="line-character">Marcus</div>
+      Eāmus ūnā repetītum.
+    </div>
+
+    <div class="line-container" id="Nicolaus.2">
+      <div class="line-character">Nicolāus</div>
+      Quid ego repetam? Nōnne satis est, quod sōlus repetīverim?
+    </div>
+
+    <div class="line-container" id="Marcus.3">
+      <div class="line-character">Marcus</div>
+      Sī tantum semel aut bis repetieris, id parum est ad ēdīscendum.
+    </div>
+
+    <div class="line-container" id="Nicolaus.4">
+      <div class="line-character">Nicolāus</div>
+      Immō circiter decies repetīvī.
+    </div>
+
+    <div class="line-container" id="Marcus.5">
+      <div class="line-character">Marcus</div>
+      Sī vīs certissimē, quae didicistī, reddere cōram praeceptōre, opus est cum aliquō repetīvisse.
+    </div>
+
+    <div class="line-container" id="Nicolaus.6">
+      <div class="line-character">Nicolāus</div>
+      Istud ego nesciēbam: sed tibi libenter assentior.
+    </div>
+
+    <div class="line-container" id="Marcus.7">
+      <div class="line-character">Marcus</div>
+      Faciāmus ergō, quod ego tē monuī.
+    </div>
+
+    <div class="line-container" id="Nicolaus.8">
+      <div class="line-character">Nicolāus</div>
+      Equidem nōn recūsō: incipe.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Īre repetītum.</li>
+        <li class="elocutio-entry">Repetere ēdīscenda.</li>
+        <li class="elocutio-entry">Nōn satis est, quod sōlus repetīveris, opus est, ut cum aliquō repetās.</li>
+        <li class="elocutio-entry">Lēctiō lēcta placet, deciēs repetīta placēbit.</li>
+        <li class="elocutio-entry">Quid vīs amplius?</li>
+        <li class="elocutio-entry">Reddere, quae quis didicit, cōram praeceptōre.</li>
+        <li class="elocutio-entry">Nōn opus est, ut repetam cum Petrō.</li>
+        <li class="elocutio-entry">Assentīrī alicui.</li>
+        <li class="elocutio-entry">Faciendum est, quod praeceptor monuit.</li>
+        <li class="elocutio-entry">Recūsāre aliquid.</li>
+        <li class="elocutio-entry">Nōn recūsō.</li>
+        <li class="elocutio-entry">Nōn recūsō quō minus hoc fīat.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

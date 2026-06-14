@@ -1,0 +1,155 @@
+---
+title: Latine Loquor - Liber Prīmus - Colloquium Septimum Decimum
+subtitle: "Andreās cuiusdam ōrātiōnis partēs et adīūncta audit ex Beātō."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Primus
+topic:
+- School
+difficulty: Easy
+sequence: '017'
+character_count: 2
+permalink: /schwieder/latine-loquor-1-17/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Andreās, Beātus.
+    </div>
+
+    <div class="line-container" id="Andreas.1">
+      <div class="line-character">Andreās</div>
+      Dīc latīnē: Lasst uns unsere Lektion wiederholen.
+    </div>
+
+    <div class="line-container" id="Beatus.2">
+      <div class="line-character">Beātus</div>
+      Repetāmus ūnā praelēctiōnem.
+    </div>
+
+    <div class="line-container" id="Andreas.3">
+      <div class="line-character">Andreās</div>
+      Haec ōrātiō quot habet partēs?
+    </div>
+
+    <div class="line-container" id="Beatus.4">
+      <div class="line-character">Beātus</div>
+      Trēs.
+    </div>
+
+    <div class="line-container" id="Andreas.5">
+      <div class="line-character">Andreās</div>
+      Discerne singulās nōminātim.
+    </div>
+
+    <div class="line-container" id="Beatus.6">
+      <div class="line-character">Beātus</div>
+      Repetāmus, est verbum: ūnā, adverbium, praelēctiōnem, nōmen.
+    </div>
+
+    <div class="line-container" id="Andreas.7">
+      <div class="line-character">Andreās</div>
+      Dēclārā paulō plānius.
+    </div>
+
+    <div class="line-container" id="Beatus.8">
+      <div class="line-character">Beātus</div>
+      Tū igitur praeītō mihi, ut solet praeceptor.
+    </div>
+
+    <div class="line-container" id="Andreas.9">
+      <div class="line-character">Andreās</div>
+      Repetāmus.
+    </div>
+
+    <div class="line-container" id="Beatus.10">
+      <div class="line-character">Beātus</div>
+      Repetō, repetis, repetere, coniugātiōnis tertiae, sīcut legō, legis, legere. Praeteritum, repetīvī. Supīnum: repetītum. Participia: repetēns, repetītūrus.
+    </div>
+
+    <div class="line-container" id="Andreas.11">
+      <div class="line-character">Andreās</div>
+      Ūnā.
+    </div>
+
+    <div class="line-container" id="Beatus.12">
+      <div class="line-character">Beātus</div>
+      Nōn dēclīnātur, quia est adverbium hōc locō.
+    </div>
+
+    <div class="line-container" id="Andreas.13">
+      <div class="line-character">Andreās</div>
+      Praelēctiōnem.
+    </div>
+
+    <div class="line-container" id="Beatus.14">
+      <div class="line-character">Beātus</div>
+      Praelēctiō, praelēctiōnis, g.f. eine Lektion.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Dēclārāre rem aliquam.</li>
+        <li class="elocutio-entry">Praeīre alicui et aliquem ... praeīre alicui vōce.</li>
+        <li class="elocutio-entry">Verba praeīre.</li>
+        <li class="elocutio-entry">Discernere aliquid.</li>
+        <li class="elocutio-entry">Alba et ātra discernere nōvit.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

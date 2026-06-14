@@ -1,0 +1,143 @@
+---
+title: Latine Loquor - Liber Quīntus - Colloquium Secundum
+subtitle: "Agitur dē Ēvangeliō dīligenter audiendō, ut Deum secundum illud colāmus, et iūstē sobriēque vīvāmus. Vōcēs iūstē et sobriē quid significent."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Quintus
+topic:
+- Piety
+difficulty: Moderate
+sequence: '002'
+character_count: 2
+permalink: /schwieder/latine-loquor-5-2/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Augustīnus, Bonifācius.
+    </div>
+
+    <div class="line-container" id="Augustinus.1">
+      <div class="line-character">Augustīnus</div>
+      Cūr dīligenter audīre dēbēmus Ēvangelium?
+    </div>
+
+    <div class="line-container" id="Bonifacius.2">
+      <div class="line-character">Bonifācius</div>
+      Ut discāmus Deum colere ex voluntāte eius.
+    </div>
+
+    <div class="line-container" id="Augustinus.3">
+      <div class="line-character">Augustīnus</div>
+      Nihil aliud respondēs?
+    </div>
+
+    <div class="line-container" id="Bonifacius.4">
+      <div class="line-character">Bonifācius</div>
+      Quid respondeam? Nihil enim sciō praetereā.
+    </div>
+
+    <div class="line-container" id="Augustinus.5">
+      <div class="line-character">Augustīnus</div>
+      Nōnne etiam ut sobriē et iūstē vīvāmus?
+    </div>
+
+    <div class="line-container" id="Bonifacius.6">
+      <div class="line-character">Bonifācius</div>
+      Dēclārā mihi illa duo adverbia, quaesō.
+    </div>
+
+    <div class="line-container" id="Augustinus.7">
+      <div class="line-character">Augustīnus</div>
+      Sobriē, id est continenter: Iūstē, id est, in iūstitiā, nempē ut suum cuique tribuāmus. Ita fit, ut sobriē ad vītam cuiusque prīvātam pertineat: Iūstē autem ad cāritātem, quam proximō dēbēmus.
+    </div>
+
+    <div class="line-container" id="Bonifacius.8">
+      <div class="line-character">Bonifācius</div>
+      Sed audī, mī Augustīne. Nōnne cultus Deī omnia illa complectitur?
+    </div>
+
+    <div class="line-container" id="Augustinus.9">
+      <div class="line-character">Augustīnus</div>
+      Probē sentīs, Bonifācī: sed voluī experīrī, an respōnsiōnem tuam rēctē intellegerēs.
+    </div>
+
+    <div class="line-container" id="Bonifacius.10">
+      <div class="line-character">Bonifācius</div>
+      Bene fēcistī. Nam dē sincērō verbī dīvīnī intellectū nihil nimis dīcī potest. Et dē hāc rē quidem tēcum plūribus verbīs libenter agerem: sed nōs hōra ipsa admonet, ut discēdāmus.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Colere Deum ex voluntāte eius ... secundum Ēvangelium.</li>
+        <li class="elocutio-entry">Sobriē et iūstē vīvendum Chrīstiānīs.</li>
+        <li class="elocutio-entry">Suum cuique tribuere.</li>
+        <li class="elocutio-entry">Cāritātem dēbēmus proximō nostrō, immō et inimīcīs.</li>
+        <li class="elocutio-entry">Probē sentīs ... iūdicium tuum cum ratiōne congruit ... bene iūdicās.</li>
+        <li class="elocutio-entry">Ā certō et vērō sēnsū iūdicās.</li>
+        <li class="elocutio-entry">Intellegere aliquid ex aliquō, dē gestibus.</li>
+        <li class="elocutio-entry">Nihil dē istā rē nimis dīcī potest.</li>
+        <li class="elocutio-entry">Plūribus verbīs cum aliquō dē rē quādam agere.</li>
+        <li class="elocutio-entry">Multum cum illō hāc dē rē locūtus sum.</li>
+        <li class="elocutio-entry">Hōra nōs admonet, ut discēdāmus ... est tempus discēdendī.</li>
+        <li class="elocutio-entry">Abīre, discēdere, recēdere, abscēdere.</li>
+        <li class="elocutio-entry">Numquam discēdit ā latere illīus.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

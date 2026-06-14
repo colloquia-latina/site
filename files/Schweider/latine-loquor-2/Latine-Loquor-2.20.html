@@ -1,0 +1,153 @@
+---
+title: Latine Loquor - Liber Secundus - Colloquium Vīcēsimum
+subtitle: "Excūsātur cuiusdam in līgnīs struendīs occupātiō, quod ad scholam nōn veniat."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Secundus
+topic:
+- School
+difficulty: Easy
+sequence: '020'
+character_count: 2
+permalink: /schwieder/latine-loquor-2-20/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Albertus, Bernardus.
+    </div>
+
+    <div class="line-container" id="Albertus.1">
+      <div class="line-character">Albertus</div>
+      Cūr nōn vēnit Petrus in scholam?
+    </div>
+
+    <div class="line-container" id="Bernardus.2">
+      <div class="line-character">Bernardus</div>
+      Est occupātus.
+    </div>
+
+    <div class="line-container" id="Albertus.3">
+      <div class="line-character">Albertus</div>
+      In quō negōtiō?
+    </div>
+
+    <div class="line-container" id="Bernardus.4">
+      <div class="line-character">Bernardus</div>
+      In līgnō struendō.
+    </div>
+
+    <div class="line-container" id="Albertus.5">
+      <div class="line-character">Albertus</div>
+      Quī scīs?
+    </div>
+
+    <div class="line-container" id="Bernardus.6">
+      <div class="line-character">Bernardus</div>
+      Dictum est mihi.
+    </div>
+
+    <div class="line-container" id="Albertus.7">
+      <div class="line-character">Albertus</div>
+      Ā quō?
+    </div>
+
+    <div class="line-container" id="Bernardus.8">
+      <div class="line-character">Bernardus</div>
+      Ā patre eius.
+    </div>
+
+    <div class="line-container" id="Albertus.9">
+      <div class="line-character">Albertus</div>
+      Ubi eum vīdistī?
+    </div>
+
+    <div class="line-container" id="Bernardus.10">
+      <div class="line-character">Bernardus</div>
+      Fuit mihi obvius, cum venīrem.
+    </div>
+
+    <div class="line-container" id="Albertus.11">
+      <div class="line-character">Albertus</div>
+      Vidē, nē mentiāris: nam ex illō quaeram, sī forte occurrat mihi per vīcōs.
+    </div>
+
+    <div class="line-container" id="Bernardus.12">
+      <div class="line-character">Bernardus</div>
+      Reperiēs sīc ut dīcō.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Petrus propter negōtia domestica (quia occupātus est) nōn potest venīre in scholam.</li>
+        <li class="elocutio-entry">Occupātus est dispōnendō ligna vel in līgnīs dispōnendīs.</li>
+        <li class="elocutio-entry">Struere ligna.</li>
+        <li class="elocutio-entry">Dictum est mihi ā patre tuō ... audīvī ex patre tuō.</li>
+        <li class="elocutio-entry">Paedagōgus tuus fuit mihi obvius ... vēnit mihi obviam.</li>
+        <li class="elocutio-entry">Venīre mediā nocte, sub vesperam, appetente nocte, summō māne, merīdiē, ā prandiō.</li>
+        <li class="elocutio-entry">Vidē nē mentiāris ... haec omnia mentīta et falsa sunt.</li>
+        <li class="elocutio-entry">Mentīrī nōn est meum.</li>
+        <li class="elocutio-entry">Certāre mentiendō ... certātim mentīrī ... mentīrī in aliquem.</li>
+        <li class="elocutio-entry">Pāscere aliquem mendāciīs ... mentīrī alicuī.</li>
+        <li class="elocutio-entry">Quaerere aliquid ex aliquō ... quaerere aliquem.</li>
+        <li class="elocutio-entry">Occurrere alicuī per vīcōs.</li>
+        <li class="elocutio-entry">Reperī, ut dīxistī.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

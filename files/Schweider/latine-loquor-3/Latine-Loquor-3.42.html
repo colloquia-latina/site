@@ -1,0 +1,154 @@
+---
+title: Latine Loquor - Liber Tertius - Colloquium Quadrāgēsimum Secundum
+subtitle: "Dē frīgoris acerbitāte et hypocaustī incommōdō."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Tertius
+topic:
+- School
+- Piety
+difficulty: Moderate
+sequence: '042'
+character_count: 2
+permalink: /schwieder/latine-loquor-3-42/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Fabiānus, Fortūnātus.
+    </div>
+
+    <div class="line-container" id="Fabianus.1">
+      <div class="line-character">Fabiānus</div>
+      Quō nunc īs?
+    </div>
+
+    <div class="line-container" id="Fortunatus.2">
+      <div class="line-character">Fortūnātus</div>
+      In hypocaustum.
+    </div>
+
+    <div class="line-container" id="Fabianus.3">
+      <div class="line-character">Fabiānus</div>
+      Quid eō?
+    </div>
+
+    <div class="line-container" id="Fortunatus.4">
+      <div class="line-character">Fortūnātus</div>
+      Hoccine rogandum est? nōnne frīgus sentīs?
+    </div>
+
+    <div class="line-container" id="Fabianus.5">
+      <div class="line-character">Fabiānus</div>
+      Quōtusquisque nunc nōn sentit, cum adeō sit acerbum? sed ego mālim mē in culīnā calefacere.
+    </div>
+
+    <div class="line-container" id="Fortunatus.6">
+      <div class="line-character">Fortūnātus</div>
+      Atquī praeceptor vetuit.
+    </div>
+
+    <div class="line-container" id="Fabianus.7">
+      <div class="line-character">Fabiānus</div>
+      Nōn ignōrō: sed rogābō veniam.
+    </div>
+
+    <div class="line-container" id="Fortunatus.8">
+      <div class="line-character">Fortūnātus</div>
+      Cūr nōn vīs in hypocaustō calefierī?
+    </div>
+
+    <div class="line-container" id="Fabianus.9">
+      <div class="line-character">Fabiānus</div>
+      Vapōrēs tentant mihi caput, quod alioquī īnfīrmum satis habeō: unde fit, ut facile ex capite labōrem.
+    </div>
+
+    <div class="line-container" id="Fortunatus.10">
+      <div class="line-character">Fortūnātus</div>
+      Ego quoque sīc aliquandō fuī: sed paulātim assuēfēcī mē ad ferenda hypocaustī incommoda.
+    </div>
+
+    <div class="line-container" id="Fabianus.11">
+      <div class="line-character">Fabiānus</div>
+      Et ego, ut spērō, mē assuēfaciam: vērum praestat id fierī hōrīs postmerīdiānīs, ubi tantus ille aestus dēferbuerit.
+    </div>
+
+    <div class="line-container" id="Fortunatus.12">
+      <div class="line-character">Fortūnātus</div>
+      Sed nunc tempus nōn est hīc philosophandī diūtius, iam mihi dentēs frīgore crepitant.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Frīgeō, frīgore premor.</li>
+        <li class="elocutio-entry">Frīgus acerbum ... vehemēns, horridum.</li>
+        <li class="elocutio-entry">Frīgus tolerābile, temperātum.</li>
+        <li class="elocutio-entry">Praeceptor vetuit nōs calefacere nōs in culīnā.</li>
+        <li class="elocutio-entry">Vetitī sumus calefacere nōs in culīnā.</li>
+        <li class="elocutio-entry">Vapōrēs tentant mihi caput.</li>
+        <li class="elocutio-entry">Habeō caput īnfīrmum.</li>
+        <li class="elocutio-entry">Assuēfēcī mē ad ferenda hypocaustī incommoda.</li>
+        <li class="elocutio-entry">Assuēfacere sē alicui reī, vel, ad aliquam rem.</li>
+        <li class="elocutio-entry">Aestus dēferbuit.</li>
+        <li class="elocutio-entry">Dēferbuit adulēscentia.</li>
+        <li class="elocutio-entry">Īra dēfervēscit.</li>
+        <li class="elocutio-entry">Dentēs mihi frīgore crepitant.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

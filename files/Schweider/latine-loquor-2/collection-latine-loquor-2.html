@@ -1,0 +1,60 @@
+---
+title: Liber Secundus
+subtitle: Latine Loquor - Liber Secundus
+type: Collection
+author: Schweider
+sequence: "002"
+permalink: /schweider/latine-loquor-liber-secundus/
+---
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{ page.title }}</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-list.css" />
+  <link rel="stylesheet" href="/style-common.css" />
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/" class="navbar-item btn">{{
+        page.author }}</a>
+      <span class="navbar-dynamic">
+        <i>{{ page.title }}</i>
+    </div>
+  </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{ page.title }}</h1>
+    <h2>Ecce, haec sunt colloquia quae {{ page.title }} continet:</h2>
+
+    <ul>
+      {% assign files_list = site.html_pages | where_exp: "page", "page.path
+      contains 'files/'" | where_exp: "page", "page.author == 'Schweider'" |
+      where_exp: "page", "page.collection == 'Liber Secundus'" | where_exp: "page", 
+      "page.type == 'Colloquium'" | sort: "sequence" %} {% for page in files_list %}
+      <li>
+        <a href="{{ page.url }}">{{ page.title }}</a>
+        <div class="subtitle">{{page.subtitle}}</div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>
+
+</html>

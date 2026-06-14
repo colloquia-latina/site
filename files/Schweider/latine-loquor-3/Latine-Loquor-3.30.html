@@ -1,0 +1,129 @@
+---
+title: Latine Loquor - Liber Tertius - Colloquium Trīcēsimum
+subtitle: "Alter alterum quantī vīvat, percontātur."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Tertius
+topic:
+- Meals & Food
+difficulty: Easy
+sequence: '030'
+character_count: 2
+permalink: /schwieder/latine-loquor-3-30/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Robertus, Olīvērius.
+    </div>
+
+    <div class="line-container" id="Robertus.1">
+      <div class="line-character">Robertus</div>
+      Ubi hodiē cibum cēpistī?
+    </div>
+
+    <div class="line-container" id="Oliverius.2">
+      <div class="line-character">Olīvērius</div>
+      Apud hospitem meum.
+    </div>
+
+    <div class="line-container" id="Robertus.3">
+      <div class="line-character">Robertus</div>
+      Quantī prāndistī?
+    </div>
+
+    <div class="line-container" id="Oliverius.4">
+      <div class="line-character">Olīvērius</div>
+      Sex nummīs.
+    </div>
+
+    <div class="line-container" id="Robertus.5">
+      <div class="line-character">Robertus</div>
+      Cēna autem quantī cōnstitit?
+    </div>
+
+    <div class="line-container" id="Oliverius.6">
+      <div class="line-character">Olīvērius</div>
+      Tantidem. Tū vērō quantī aleris cotīdiē?
+    </div>
+
+    <div class="line-container" id="Robertus.7">
+      <div class="line-character">Robertus</div>
+      Plūris quam tū.
+    </div>
+
+    <div class="line-container" id="Oliverius.8">
+      <div class="line-character">Olīvērius</div>
+      Quantī igitur?
+    </div>
+
+    <div class="line-container" id="Robertus.9">
+      <div class="line-character">Robertus</div>
+      Sēdecim nummīs.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Tempus est capiendī cibī vel capiendī cibum.</li>
+        <li class="elocutio-entry">Hodiē cēpī cibum apud hospitem ... edere, comedere, sūmere cibum, capere cibum.</li>
+        <li class="elocutio-entry">Quantī prāndistī? Sex nummīs, dīmidiō imperiālī.</li>
+        <li class="elocutio-entry">Quantī aleris cotīdiē? Dīmidiō aureō, tribus nummīs.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

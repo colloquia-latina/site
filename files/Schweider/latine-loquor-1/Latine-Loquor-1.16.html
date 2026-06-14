@@ -1,0 +1,185 @@
+---
+title: Latine Loquor - Liber Prīmus - Colloquium Sextum Decimum
+subtitle: "Verbī quārtae coniugātiōnis repetītiō. Ūtilitās pūblica omnibus modīs prōcūranda."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Primus
+topic:
+- School
+- Family & Home
+difficulty: Easy
+sequence: '016'
+character_count: 5
+permalink: /schwieder/latine-loquor-1-16/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Philippus, Rudolphus, Stēphanus, Thōmās, Valērius.
+    </div>
+
+    <div class="line-container" id="Philippus.1">
+      <div class="line-character">Philippus</div>
+      Heus iuvenēs, nōs hīc sumus quīnque; repetāmus hodiērnum verbum, ut solēmus cōram praeceptōre.
+    </div>
+
+    <div class="line-container" id="Rudolphus.2">
+      <div class="line-character">Rudolphus</div>
+      Nēmō ut opīnor contrādīcet.
+    </div>
+
+    <div class="line-container" id="Stephanus.3">
+      <div class="line-character">Stēphanus</div>
+      Incipe igitur, Philippe, quī prīmus sedēs.
+    </div>
+
+    <div class="line-container" id="Philippus.4">
+      <div class="line-character">Philippus</div>
+      Optātīvī et subiūnctīvī modī praesēns tempus:
+    </div>
+
+    <div class="line-container" id="Stephanus.5">
+      <div class="line-character">Stēphanus</div>
+      Audiam.
+    </div>
+
+    <div class="line-container" id="Rudolphus.6">
+      <div class="line-character">Rudolphus</div>
+      audiās.
+    </div>
+
+    <div class="line-container" id="Stephanus.7">
+      <div class="line-character">Stēphanus</div>
+      audiat.
+    </div>
+
+    <div class="line-container" id="Thomas.8">
+      <div class="line-character">Thōmās</div>
+      audiāmus.
+    </div>
+
+    <div class="line-container" id="Valerius.9">
+      <div class="line-character">Valērius</div>
+      audiātis.
+    </div>
+
+    <div class="line-container" id="Philippus.10">
+      <div class="line-character">Philippus</div>
+      audiant.
+    </div>
+
+    <div class="line-container" id="Rudolphus.11">
+      <div class="line-character">Rudolphus</div>
+      Praeteritum imperfectum.
+    </div>
+
+    <div class="line-container" id="Stephanus.12">
+      <div class="line-character">Stēphanus</div>
+      audīrem.
+    </div>
+
+    <div class="line-container" id="Rudolphus.13">
+      <div class="line-character">Rudolphus</div>
+      audīrēs.
+    </div>
+
+    <div class="line-container" id="Thomas.14">
+      <div class="line-character">Thōmās</div>
+      audīret.
+    </div>
+
+    <div class="line-container" id="Valerius.15">
+      <div class="line-character">Valērius</div>
+      audīrēmus.
+    </div>
+
+    <div class="line-container" id="Philippus.16">
+      <div class="line-character">Philippus</div>
+      audīrētis.
+    </div>
+
+    <div class="line-container" id="Rudolphus.17">
+      <div class="line-character">Rudolphus</div>
+      audīrent.
+    </div>
+
+    <div class="line-container" id="Stephanus.18">
+      <div class="line-character">Stēphanus</div>
+      Praeteritum perfectum.
+    </div>
+
+    <div class="line-container" id="Stephanus.19">
+      <div class="line-character">Stēphanus</div>
+      Singulāre: audīverim.
+    </div>
+
+    <div class="line-container" id="Thomas.20">
+      <div class="line-character">Thōmās</div>
+      usque ad fīnem verbī hoc pergant ōrdine.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Prīmus sedet.</li>
+        <li class="elocutio-entry">Sedent tacitī.</li>
+        <li class="elocutio-entry">Sedet secundus, tertius ...</li>
+        <li class="elocutio-entry">Recitāre cōram praeceptōre ... cōram patre, praesente patre, mātre, familiā tōtā.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

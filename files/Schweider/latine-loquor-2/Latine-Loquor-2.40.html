@@ -1,0 +1,153 @@
+---
+title: Latine Loquor - Liber Secundus - Colloquium Quadrāgēsimum
+subtitle: "Dē lapide et pennā."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Secundus
+topic:
+- Letters & Writing
+- Meals & Food
+difficulty: Easy
+sequence: '040'
+character_count: 2
+permalink: /schwieder/latine-loquor-2-40/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Bonifācius, Celsus.
+    </div>
+
+    <div class="line-container" id="Bonifacius.1">
+      <div class="line-character">Bonifācius</div>
+      Acuistīne lapidem meum?
+    </div>
+
+    <div class="line-container" id="Celsus.2">
+      <div class="line-character">Celsus</div>
+      Iam dūdum.
+    </div>
+
+    <div class="line-container" id="Bonifacius.3">
+      <div class="line-character">Bonifācius</div>
+      Cui fōrmae scrīptūrae?
+    </div>
+
+    <div class="line-container" id="Celsus.4">
+      <div class="line-character">Celsus</div>
+      Mediōcrī.
+    </div>
+
+    <div class="line-container" id="Bonifacius.5">
+      <div class="line-character">Bonifācius</div>
+      Maluissem ad minūtās litterās.
+    </div>
+
+    <div class="line-container" id="Celsus.6">
+      <div class="line-character">Celsus</div>
+      Dēbuistī praedīcere.
+    </div>
+
+    <div class="line-container" id="Bonifacius.7">
+      <div class="line-character">Bonifācius</div>
+      Oblītus eram.
+    </div>
+
+    <div class="line-container" id="Celsus.8">
+      <div class="line-character">Celsus</div>
+      Paulum refert, mūcrōnem facile mūtābō: ī petītum.
+    </div>
+
+    <div class="line-container" id="Bonifacius.9">
+      <div class="line-character">Bonifācius</div>
+      Sed ubi relīquistī?
+    </div>
+
+    <div class="line-container" id="Celsus.10">
+      <div class="line-character">Celsus</div>
+      Super mēnsam hypocaustī.
+    </div>
+
+    <div class="line-container" id="Bonifacius.11">
+      <div class="line-character">Bonifācius</div>
+      In quā parte?
+    </div>
+
+    <div class="line-container" id="Celsus.12">
+      <div class="line-character">Celsus</div>
+      Ubi studēre soleō.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Acuere lapidem.</li>
+        <li class="elocutio-entry">Prōferre pennam ex calāmāriō.</li>
+        <li class="elocutio-entry">Repōnere pennam in calāmāriō.</li>
+        <li class="elocutio-entry">Penna respergit chartam ātrāmentō.</li>
+        <li class="elocutio-entry">Cui fōrmae scrīptūrae vīs lapidem aptum?</li>
+        <li class="elocutio-entry">Ad litterās minūtās ... ad litterās maiusculās.</li>
+        <li class="elocutio-entry">Mūtāre mūcrōnem.</li>
+        <li class="elocutio-entry">Relīquī gossypium super mēnsam hypocaustī.</li>
+        <li class="elocutio-entry">In quā parte?</li>
+        <li class="elocutio-entry">Studēre in mūseō.</li>
+        <li class="elocutio-entry">Studēre honestātī.</li>
+        <li class="elocutio-entry">Studēre philosophiae, theōlogiae.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

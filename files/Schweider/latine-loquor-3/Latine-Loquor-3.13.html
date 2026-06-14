@@ -1,0 +1,129 @@
+---
+title: Latine Loquor - Liber Tertius - Colloquium Tertium Decimum
+subtitle: "Officium prōmittitur amīcī absentis nōmine."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Tertius
+topic:
+- Piety
+- Friendship
+difficulty: Easy
+sequence: '013'
+character_count: 2
+permalink: /schwieder/latine-loquor-3-13/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Norbertus, Lūdovīcus.
+    </div>
+
+    <div class="line-container" id="Norbertus.1">
+      <div class="line-character">Norbertus</div>
+      Quandō reditūrus est Basilius?
+    </div>
+
+    <div class="line-container" id="Ludovicus.2">
+      <div class="line-character">Lūdovīcus</div>
+      Nōn certō sciō, fortasse diē crāstinō: sed cūr hōc quaeris?
+    </div>
+
+    <div class="line-container" id="Norbertus.3">
+      <div class="line-character">Norbertus</div>
+      Quia sēcum abstulit catalogum: et praeceptor īrāscitur, sī nēmō est, quī recitet.
+    </div>
+
+    <div class="line-container" id="Ludovicus.4">
+      <div class="line-character">Lūdovīcus</div>
+      Relinque mihi istam cūram: habeō catalogī exemplum.
+    </div>
+
+    <div class="line-container" id="Norbertus.5">
+      <div class="line-character">Norbertus</div>
+      Recitābis igitur?
+    </div>
+
+    <div class="line-container" id="Ludovicus.6">
+      <div class="line-character">Lūdovīcus</div>
+      Recitābō.
+    </div>
+
+    <div class="line-container" id="Norbertus.7">
+      <div class="line-character">Norbertus</div>
+      Bene faciēs: et noster Basilius refert grātiam, sī quā sē offerat occāsiō.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Quandō reditūrus est Philippus? ... diē crāstinō, perendiē; grātiā Deī clēmenter aspīrante, Deō dante, Chrīstō favente, sī Deō placet.</li>
+        <li class="elocutio-entry">Cūr quaeris hōc? ... rogāre prō salūte alicuius.</li>
+        <li class="elocutio-entry">Auferre aliquid sēcum ... auferre inter manūs ... ē cōnspectū.</li>
+        <li class="elocutio-entry">Aufer tē domum.</li>
+        <li class="elocutio-entry">Quod differtur, nōn aufertur.</li>
+        <li class="elocutio-entry">Īrāscī alicui ... nihil commīsī, cūr mihi īrāscāris?</li>
+        <li class="elocutio-entry">Īrāscī, indignārī, suscēnsēre, īrā commovērī, incendī.</li>
+        <li class="elocutio-entry">Est, quod tibi īrāscar, suscēnseam.</li>
+        <li class="elocutio-entry">Recitāre catalogum.</li>
+        <li class="elocutio-entry">Hanc cūram relinquam patrī meō.</li>
+        <li class="elocutio-entry">Recitāre praelēctiōnem, citrā festīnātiōnem, clārā et dīstinctā vōce.</li>
+        <li class="elocutio-entry">Referre grātiam alicui.</li>
+        <li class="elocutio-entry">Sī quā occāsiō offeret sē, dabit, dābitur; sī fortūna fert, occāsiōnem attulerit, praebuerit.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

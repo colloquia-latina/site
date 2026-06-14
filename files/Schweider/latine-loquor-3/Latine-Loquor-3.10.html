@@ -1,0 +1,120 @@
+---
+title: Latine Loquor - Liber Tertius - Colloquium Decimum
+subtitle: "Lambertus cum Leōnārdō mictum īre cupiēns cōnfābulātiōnis ergō ab eō reprehenditur."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Tertius
+topic:
+- School
+- Games & Recreation
+difficulty: Easy
+sequence: '010'
+character_count: 2
+permalink: /schwieder/latine-loquor-3-10/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Lambertus, Leōnārdus.
+    </div>
+
+    <div class="line-container" id="Lambertus.1">
+      <div class="line-character">Lambertus</div>
+      Vīs venīre mictum?
+    </div>
+
+    <div class="line-container" id="Leonardus.2">
+      <div class="line-character">Leōnārdus</div>
+      Satis ōtiōsē mīnxī.
+    </div>
+
+    <div class="line-container" id="Lambertus.3">
+      <div class="line-character">Lambertus</div>
+      Eāmus ūnā, quaesō, ut paulisper fābulēmur.
+    </div>
+
+    <div class="line-container" id="Leonardus.4">
+      <div class="line-character">Leōnārdus</div>
+      Tacē, ineptē, nisi vīs accūsārī: nōn est fābulandi tempus. Nōnne dēbuistī meiere cum ientārētur?
+    </div>
+
+    <div class="line-container" id="Lambertus.5">
+      <div class="line-character">Lambertus</div>
+      Dēbuī, sed oblītus sum.
+    </div>
+
+    <div class="line-container" id="Leonardus.6">
+      <div class="line-character">Leōnārdus</div>
+      Itō igitur sōlus, cum bonā veniā praeceptōris: nec sīs posthāc tam oblīviōsus.
+    </div>
+
+    <div class="line-container" id="Lambertus.7">
+      <div class="line-character">Lambertus</div>
+      Pārēbō tibi, et recordābor.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Īre ūnā mictum.</li>
+        <li class="elocutio-entry">Oblītus sum mingere, reddere ūrīnam.</li>
+        <li class="elocutio-entry">Admodum oblīviōsus est.</li>
+        <li class="elocutio-entry">Pārēre alicui ... temporī ... cupiditātibus suīs.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

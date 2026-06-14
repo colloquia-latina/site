@@ -1,0 +1,170 @@
+---
+title: Latine Loquor - Liber Quārtus - Colloquium Trīcēsimum Secundum
+subtitle: "Mīchael ad forum ītūrus paucīs interrogātur ā praeceptōre."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Quartus
+topic:
+- Errands & Money
+difficulty: Moderate
+sequence: '032'
+character_count: 2
+permalink: /schwieder/latine-loquor-4-32/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Mīchael, Praeceptor.
+    </div>
+
+    <div class="line-container" id="Michael.1">
+      <div class="line-character">Mīchael</div>
+      Praeceptor, licetne mihi prōdīre?
+    </div>
+
+    <div class="line-container" id="Praeceptor.2">
+      <div class="line-character">Praeceptor</div>
+      Quae tibi est prōdeundī causa?
+    </div>
+
+    <div class="line-container" id="Michael.3">
+      <div class="line-character">Mīchael</div>
+      Est mihi eundum ad forum.
+    </div>
+
+    <div class="line-container" id="Praeceptor.4">
+      <div class="line-character">Praeceptor</div>
+      Quid eō?
+    </div>
+
+    <div class="line-container" id="Michael.5">
+      <div class="line-character">Mīchael</div>
+      Ut emam corium.
+    </div>
+
+    <div class="line-container" id="Praeceptor.6">
+      <div class="line-character">Praeceptor</div>
+      In quem ūsum?
+    </div>
+
+    <div class="line-container" id="Michael.7">
+      <div class="line-character">Mīchael</div>
+      Ad calceōrum soleās.
+    </div>
+
+    <div class="line-container" id="Praeceptor.8">
+      <div class="line-character">Praeceptor</div>
+      Quis tē adiuvābit in emptiōne?
+    </div>
+
+    <div class="line-container" id="Michael.9">
+      <div class="line-character">Mīchael</div>
+      Quīdam oppidānus, cui hōc mandāvit pater meus.
+    </div>
+
+    <div class="line-container" id="Praeceptor.10">
+      <div class="line-character">Praeceptor</div>
+      Dēbuistī adīre mē cum cēterīs, quī ad forum prōdiērunt.
+    </div>
+
+    <div class="line-container" id="Michael.11">
+      <div class="line-character">Mīchael</div>
+      Occupātus eram.
+    </div>
+
+    <div class="line-container" id="Praeceptor.12">
+      <div class="line-character">Praeceptor</div>
+      Quā in rē?
+    </div>
+
+    <div class="line-container" id="Michael.13">
+      <div class="line-character">Mīchael</div>
+      In scrībendīs ad patrem litterīs.
+    </div>
+
+    <div class="line-container" id="Praeceptor.14">
+      <div class="line-character">Praeceptor</div>
+      Quandō eās dabis?
+    </div>
+
+    <div class="line-container" id="Michael.15">
+      <div class="line-character">Mīchael</div>
+      Hodiē, sī quem in forō nostrātem offenderō.
+    </div>
+
+    <div class="line-container" id="Praeceptor.16">
+      <div class="line-character">Praeceptor</div>
+      Abī, et mementō ad hōram sōlitam adesse.
+    </div>
+
+    <div class="line-container" id="Michael.17">
+      <div class="line-character">Mīchael</div>
+      Faciam.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Eundum est mihi in forum ... oportet mē īre in forum.</li>
+        <li class="elocutio-entry">Emere corium ad soleās calceōrum.</li>
+        <li class="elocutio-entry">Iuvā mē in emptiōne coriī.</li>
+        <li class="elocutio-entry">Offendere aliquem.</li>
+        <li class="elocutio-entry">Adesse ad hōram sōlitam.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

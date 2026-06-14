@@ -1,0 +1,146 @@
+---
+title: Latine Loquor - Liber Quārtus - Colloquium Trīcēsimum Prīmum
+subtitle: "Itūrus ad forum. Prōverbium dē pāne."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Quartus
+topic:
+- Errands & Money
+- Meals & Food
+difficulty: Moderate
+sequence: '031'
+character_count: 2
+permalink: /schwieder/latine-loquor-4-31/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Martīnus, Praeceptor.
+    </div>
+
+    <div class="line-container" id="Martinus.1">
+      <div class="line-character">Martīnus</div>
+      Licetne exīre, praeceptor?
+    </div>
+
+    <div class="line-container" id="Praeceptor.2">
+      <div class="line-character">Praeceptor</div>
+      Quae tibi est exeundī causa?
+    </div>
+
+    <div class="line-container" id="Martinus.3">
+      <div class="line-character">Martīnus</div>
+      Ut quaeram in forō aliquem ex nostrātibus.
+    </div>
+
+    <div class="line-container" id="Praeceptor.4">
+      <div class="line-character">Praeceptor</div>
+      Quid hōc opus est?
+    </div>
+
+    <div class="line-container" id="Martinus.5">
+      <div class="line-character">Martīnus</div>
+      Mandāre illī volō, ut meōs admoneant dē pāne mihi aut afferendō, aut mittendō.
+    </div>
+
+    <div class="line-container" id="Praeceptor.6">
+      <div class="line-character">Praeceptor</div>
+      Ubi pānis dēficit, omnia sunt illīc vēnālia.
+    </div>
+
+    <div class="line-container" id="Martinus.7">
+      <div class="line-character">Martīnus</div>
+      Istud vulgātum est apud nōs prōverbium.
+    </div>
+
+    <div class="line-container" id="Praeceptor.8">
+      <div class="line-character">Praeceptor</div>
+      Immō ubīque pervulgātum: adeō pānis mortālium vītae est necessārius. Sed ad rem: tū nunc prōdīre vīs?
+    </div>
+
+    <div class="line-container" id="Martinus.9">
+      <div class="line-character">Martīnus</div>
+      Sī tibi placet, praeceptor: nē meī negōtiī occāsiōnem āmittam.
+    </div>
+
+    <div class="line-container" id="Praeceptor.10">
+      <div class="line-character">Praeceptor</div>
+      Abī, et festīnā ante prandium redīre.
+    </div>
+
+    <div class="line-container" id="Martinus.11">
+      <div class="line-character">Martīnus</div>
+      Dabō equidem operam.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Quae tibi est exeundī causa?</li>
+        <li class="elocutio-entry">Quid causae est, quod exīre velīs?</li>
+        <li class="elocutio-entry">Ībō in forum quaesītum aliquem ex nostrātibus.</li>
+        <li class="elocutio-entry">Admonē meōs dē mittendō mihi pāne ... ut mittant mihi pānem.</li>
+        <li class="elocutio-entry">Ubi pānis dēficit, omnia sunt illīc vēnālia.</li>
+        <li class="elocutio-entry">Prōverbium hōc ubīque pervulgātum est.</li>
+        <li class="elocutio-entry">Sermō vulgāris.</li>
+        <li class="elocutio-entry">Āmittere occāsiōnem negōtiī suī.</li>
+        <li class="elocutio-entry">Festīnā redīre ante prandium.</li>
+        <li class="elocutio-entry">Festīnāre ad locum, in locum.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

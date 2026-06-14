@@ -1,0 +1,127 @@
+---
+title: Latine Loquor - Liber Tertius - Colloquium Trīcēsimum Tertium
+subtitle: "Invītat Silvium ad ientandum Stephanus. Exemplum convictūs, oboedientiae et studiī."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Tertius
+topic:
+- School
+- Daily Routine
+difficulty: Easy
+sequence: '033'
+character_count: 2
+permalink: /schwieder/latine-loquor-3-33/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Stephanus, Silvius.
+    </div>
+
+    <div class="line-container" id="Stephanus.1">
+      <div class="line-character">Stephanus</div>
+      Vīs ientāre mēcum?
+    </div>
+
+    <div class="line-container" id="Silvius.2">
+      <div class="line-character">Silvius</div>
+      Nōn habeō ientāculum.
+    </div>
+
+    <div class="line-container" id="Stephanus.3">
+      <div class="line-character">Stephanus</div>
+      Quid nōn attulisti?
+    </div>
+
+    <div class="line-container" id="Silvius.4">
+      <div class="line-character">Silvius</div>
+      Ego domī ientāveram.
+    </div>
+
+    <div class="line-container" id="Stephanus.5">
+      <div class="line-character">Stephanus</div>
+      Itane semper facis?
+    </div>
+
+    <div class="line-container" id="Silvius.6">
+      <div class="line-character">Silvius</div>
+      Minimē; sed quia bene māne surrēxeram, sīc mātrī placuit mē tractāre.
+    </div>
+
+    <div class="line-container" id="Stephanus.7">
+      <div class="line-character">Stephanus</div>
+      Prōsit tibi: ego igitur sōlus ientābō.
+    </div>
+
+    <div class="line-container" id="Silvius.8">
+      <div class="line-character">Silvius</div>
+      Et ego interim studēbō.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Ientāre cum aliquō.</li>
+        <li class="elocutio-entry">Surgite, iam vendit puerīs ientācula pīstor.</li>
+        <li class="elocutio-entry">Bene māne surgere.</li>
+        <li class="elocutio-entry">Hōc mihi nōn placet, quod scrībis.</li>
+        <li class="elocutio-entry">Prōsit tibi; bene sit tibi.</li>
+        <li class="elocutio-entry">Studēre medicīnae ... dare operam medicīnae, theōlogiae, iūrisprūdentiae, philosophiae.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

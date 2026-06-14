@@ -1,0 +1,131 @@
+---
+title: Latine Loquor - Liber Prīmus - Colloquium Quārtum
+subtitle: "Exōrdium est colloquendī. Quī bene agit, nōn timet, nē reprehendātur. Prūdenter igitur facit, quī praeceptum illud ūsurpat: Sīc age, nē timeās."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Primus
+topic:
+- School
+difficulty: Easy
+sequence: '004'
+character_count: 2
+permalink: /schwieder/latine-loquor-1-4/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Gabriēl, Hierōnymus.
+    </div>
+
+    <div class="line-container" id="Gabriel.1">
+      <div class="line-character">Gabriēl</div>
+      Iamne tenēs, quae reddenda sunt hōrā tertiā?
+    </div>
+
+    <div class="line-container" id="Hieronymus.2">
+      <div class="line-character">Hierōnymus</div>
+      Teneō.
+    </div>
+
+    <div class="line-container" id="Gabriel.3">
+      <div class="line-character">Gabriēl</div>
+      Ego quoque.
+    </div>
+
+    <div class="line-container" id="Hieronymus.4">
+      <div class="line-character">Hierōnymus</div>
+      Ergō cōnfabulēmur paulisper.
+    </div>
+
+    <div class="line-container" id="Gabriel.5">
+      <div class="line-character">Gabriēl</div>
+      Sed sī intervēnerit observātor, putābit nōs garrīre.
+    </div>
+
+    <div class="line-container" id="Hieronymus.6">
+      <div class="line-character">Hierōnymus</div>
+      Quid timēs, ubī nihil timendum est? Sī vēnerit, nōn dēprehendet nōs in ōtiō aut in rē malā: audiat, sī velit, nostrum colloquium.
+    </div>
+
+    <div class="line-container" id="Gabriel.7">
+      <div class="line-character">Gabriēl</div>
+      Optimē loqueris: sēcēdāmus aliquō in angulum, nē quis nōs impediat.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Teneō, quae reddenda sunt hōrā tertiā.</li>
+        <li class="elocutio-entry">Quid hodiē nōbīs reddendum est?</li>
+        <li class="elocutio-entry">Cōnfābulārī cum amīcīs.</li>
+        <li class="elocutio-entry">Observātor intervēniet.</li>
+        <li class="elocutio-entry">Observātor sī intervēnerit, notābit tē.</li>
+        <li class="elocutio-entry">Praeceptor audīvit nōs garrīre.</li>
+        <li class="elocutio-entry">Nōn timeō observātōrem.</li>
+        <li class="elocutio-entry">Quid timēs, ubī nihil timendum est?</li>
+        <li class="elocutio-entry">Timēre aliquem ... Deum, magistrum.</li>
+        <li class="elocutio-entry">Dēprehēnsus est in ōtiō ... in fūrtō.</li>
+        <li class="elocutio-entry">Dēprehendere aliquem ... fūrēs dēprehēnsī sunt ... suspēnsī sunt.</li>
+        <li class="elocutio-entry">Audiat, sī velit, nostrum colloquium.</li>
+        <li class="elocutio-entry">Loqueris bene, melius, optimē, male, peius, pessimē.</li>
+        <li class="elocutio-entry">Sēcēdere in locum aliquem.</li>
+        <li class="elocutio-entry">Impedīre aliquem.</li>
+        <li class="elocutio-entry">Impedīrī in aliquā rē ... impedīrī morbō, aetāte.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

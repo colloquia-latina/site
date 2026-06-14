@@ -1,0 +1,161 @@
+---
+title: Latine Loquor - Liber Quārtus - Colloquium Quīnquāgēsimum Prīmum
+subtitle: "Praeceptor ā puerō patris nōmine salūtātus: et ubi parentēs sint, quīque valeant, percontātus, vicissim patrī salūtem nūntiat."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Quartus
+topic:
+- Family & Home
+difficulty: Easy
+sequence: '051'
+character_count: 2
+permalink: /schwieder/latine-loquor-4-51/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Vincentius, Praeceptor.
+    </div>
+
+    <div class="line-container" id="Vincentius.1">
+      <div class="line-character">Vincentius</div>
+      Pater meus tibi salūtem plūrimam dīcit.
+    </div>
+
+    <div class="line-container" id="Praeceptor.2">
+      <div class="line-character">Praeceptor</div>
+      Ain' tū, quandō rūre rediit?
+    </div>
+
+    <div class="line-container" id="Vincentius.3">
+      <div class="line-character">Vincentius</div>
+      Herī tantum.
+    </div>
+
+    <div class="line-container" id="Praeceptor.4">
+      <div class="line-character">Praeceptor</div>
+      Ut valet?
+    </div>
+
+    <div class="line-container" id="Vincentius.5">
+      <div class="line-character">Vincentius</div>
+      Optimē.
+    </div>
+
+    <div class="line-container" id="Praeceptor.6">
+      <div class="line-character">Praeceptor</div>
+      Māter vērō ubi est?
+    </div>
+
+    <div class="line-container" id="Vincentius.7">
+      <div class="line-character">Vincentius</div>
+      Adhūc est in Galliā.
+    </div>
+
+    <div class="line-container" id="Praeceptor.8">
+      <div class="line-character">Praeceptor</div>
+      Ubi in Galliā?
+    </div>
+
+    <div class="line-container" id="Vincentius.9">
+      <div class="line-character">Vincentius</div>
+      Aurēliāe.
+    </div>
+
+    <div class="line-container" id="Praeceptor.10">
+      <div class="line-character">Praeceptor</div>
+      Dē illā quid audītis?
+    </div>
+
+    <div class="line-container" id="Vincentius.11">
+      <div class="line-character">Vincentius</div>
+      Esse bonā valētūdine praeditam, Deī beneficiō.
+    </div>
+
+    <div class="line-container" id="Praeceptor.12">
+      <div class="line-character">Praeceptor</div>
+      Dominus Deus cōnservet eam.
+    </div>
+
+    <div class="line-container" id="Vincentius.13">
+      <div class="line-character">Vincentius</div>
+      Ita precor.
+    </div>
+
+    <div class="line-container" id="Praeceptor.14">
+      <div class="line-character">Praeceptor</div>
+      Dīc vicissim patrī salūtem plūrimam verbīs meīs.
+    </div>
+
+    <div class="line-container" id="Vincentius.15">
+      <div class="line-character">Vincentius</div>
+      Faciam sēdulō.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Dīcere alicui salūtem plūrimam.</li>
+        <li class="elocutio-entry">Redīre rūre ... habitāre rūrī ... īre rūs.</li>
+        <li class="elocutio-entry">Esse bonā valētūdine praeditum.</li>
+        <li class="elocutio-entry">Praeditus bonō ingeniō ... auctōritāte ... altā mente.</li>
+        <li class="elocutio-entry">Dīc vicissim patrī salūtem plūrimam verbīs meīs.</li>
+        <li class="elocutio-entry">Nūntiā vicissim patrī salūtem.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

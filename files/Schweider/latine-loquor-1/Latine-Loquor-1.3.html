@@ -1,0 +1,152 @@
+---
+title: Latine Loquor - Liber Prīmus - Colloquium Tertium
+subtitle: "Īdem cum proximō superiōre."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Primus
+topic:
+- School
+- Meals & Food
+difficulty: Easy
+sequence: '003'
+character_count: 2
+permalink: /schwieder/latine-loquor-1-3/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Eduārdus, Franciscus.
+    </div>
+
+    <div class="line-container" id="Eduardus.1">
+      <div class="line-character">Eduārdus</div>
+      Vīsne mēcum repetere praelēctiōnem?
+    </div>
+
+    <div class="line-container" id="Franciscus.2">
+      <div class="line-character">Franciscus</div>
+      Volō.
+    </div>
+
+    <div class="line-container" id="Eduardus.3">
+      <div class="line-character">Eduārdus</div>
+      Tenēsne?
+    </div>
+
+    <div class="line-container" id="Franciscus.4">
+      <div class="line-character">Franciscus</div>
+      Nōn satis rēctē fortasse.
+    </div>
+
+    <div class="line-container" id="Eduardus.5">
+      <div class="line-character">Eduārdus</div>
+      Age, faciāmus perīculum.
+    </div>
+
+    <div class="line-container" id="Franciscus.6">
+      <div class="line-character">Franciscus</div>
+      Quid igitur expectāmus?
+    </div>
+
+    <div class="line-container" id="Eduardus.7">
+      <div class="line-character">Eduārdus</div>
+      Ubī vīs. Incipe.
+    </div>
+
+    <div class="line-container" id="Franciscus.8">
+      <div class="line-character">Franciscus</div>
+      Atquī tuum est potius incipere.
+    </div>
+
+    <div class="line-container" id="Eduardus.9">
+      <div class="line-character">Eduārdus</div>
+      Quid ita?
+    </div>
+
+    <div class="line-container" id="Franciscus.10">
+      <div class="line-character">Franciscus</div>
+      Quia invītāstī mē.
+    </div>
+
+    <div class="line-container" id="Eduardus.11">
+      <div class="line-character">Eduārdus</div>
+      Aequum dīcis, attende igitur.
+    </div>
+
+    <div class="line-container" id="Franciscus.12">
+      <div class="line-character">Franciscus</div>
+      Istīc sum.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Nōn satis rēctē teneō praelēctiōnem.</li>
+        <li class="elocutio-entry">Facere perīculum.</li>
+        <li class="elocutio-entry">Exspectāre aliquem ... patrem, frātrem, mātrem.</li>
+        <li class="elocutio-entry">Incipe ubī vīs.</li>
+        <li class="elocutio-entry">Tuum est incipere.</li>
+        <li class="elocutio-entry">Tuum est, ad tē spectat, tuī est officiī.</li>
+        <li class="elocutio-entry">Invītāre aliquem: ad nūptiās, ad prandium, ad cēnam.</li>
+        <li class="elocutio-entry">Aequum dīcere.</li>
+        <li class="elocutio-entry">Attende quid dictūrus sim.</li>
+        <li class="elocutio-entry">Attentus in aliquā rē.</li>
+        <li class="elocutio-entry">Attendere ad aliquid.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

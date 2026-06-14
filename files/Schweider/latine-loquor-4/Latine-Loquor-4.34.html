@@ -1,0 +1,157 @@
+---
+title: Latine Loquor - Liber Quārtus - Colloquium Trīcēsimum Quārtum
+subtitle: "Emptūrus cultrōs admonētur, ut sibi impōnī caveat."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Quartus
+topic:
+- Piety
+- Meals & Food
+difficulty: Easy
+sequence: '034'
+character_count: 2
+permalink: /schwieder/latine-loquor-4-34/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Robertus, Praeceptor.
+    </div>
+
+    <div class="line-container" id="Robertus.1">
+      <div class="line-character">Robertus</div>
+      Praeceptor, licetne prōdīre?
+    </div>
+
+    <div class="line-container" id="Praeceptor.2">
+      <div class="line-character">Praeceptor</div>
+      Quam ob rem?
+    </div>
+
+    <div class="line-container" id="Robertus.3">
+      <div class="line-character">Robertus</div>
+      Ut emam cultrōs cēnātōriōs.
+    </div>
+
+    <div class="line-container" id="Praeceptor.4">
+      <div class="line-character">Praeceptor</div>
+      Ubi sunt quōs habēbās?
+    </div>
+
+    <div class="line-container" id="Robertus.5">
+      <div class="line-character">Robertus</div>
+      Relīquī domī.
+    </div>
+
+    <div class="line-container" id="Praeceptor.6">
+      <div class="line-character">Praeceptor</div>
+      Quid ita?
+    </div>
+
+    <div class="line-container" id="Robertus.7">
+      <div class="line-character">Robertus</div>
+      Quia iam obtūsī erant et inūtilēs.
+    </div>
+
+    <div class="line-container" id="Praeceptor.8">
+      <div class="line-character">Praeceptor</div>
+      Habēsne pecūniam ad emendōs aliōs?
+    </div>
+
+    <div class="line-container" id="Robertus.9">
+      <div class="line-character">Robertus</div>
+      Māter dedit mihi.
+    </div>
+
+    <div class="line-container" id="Praeceptor.10">
+      <div class="line-character">Praeceptor</div>
+      Quis erit adiūtor in emendō?
+    </div>
+
+    <div class="line-container" id="Robertus.11">
+      <div class="line-character">Robertus</div>
+      Gerārdus.
+    </div>
+
+    <div class="line-container" id="Praeceptor.12">
+      <div class="line-character">Praeceptor</div>
+      Īte sānē: et cavēte, nē vōbīs impōnātur.
+    </div>
+
+    <div class="line-container" id="Robertus.13">
+      <div class="line-character">Robertus</div>
+      Cavēbimus, Deō iuvante.
+    </div>
+
+    <div class="line-container" id="Praeceptor.14">
+      <div class="line-character">Praeceptor</div>
+      Omnēs quidem iuvat, sed eōs potissimum, quī ad Eius honōrem omnia referunt.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Ēmī cultrōs cēnātōriōs dīmidiō aureō.</li>
+        <li class="elocutio-entry">Ēmistī māgnī, plūris, plūrimī.</li>
+        <li class="elocutio-entry">Culter meus obtūsus est et inūtilis.</li>
+        <li class="elocutio-entry">Estō mihi, Gerārde, adiūtor in emendīs cultrīs.</li>
+        <li class="elocutio-entry">Impōnere alicui ... cavēte, nē impōnātur vōbīs ... impōnere alicui nōmen.</li>
+        <li class="elocutio-entry">Referre omnia ad honōrem Deī.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

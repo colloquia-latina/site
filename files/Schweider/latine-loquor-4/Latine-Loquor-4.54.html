@@ -1,0 +1,137 @@
+---
+title: Latine Loquor - Liber Quārtus - Colloquium Quīnquāgēsimum Quārtum
+subtitle: "Praeceptor docēns revocātur ex auditōriō."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Quartus
+topic:
+- School
+difficulty: Easy
+sequence: '054'
+character_count: 3
+permalink: /schwieder/latine-loquor-4-54/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Arnoldus, Praeceptor, Discipulī.
+    </div>
+
+    <div class="line-container" id="Arnoldus.1">
+      <div class="line-character">Arnoldus</div>
+      Praeceptor!
+    </div>
+
+    <div class="line-container" id="Praeceptor.2">
+      <div class="line-character">Praeceptor</div>
+      Hem, quid est?
+    </div>
+
+    <div class="line-container" id="Arnoldus.3">
+      <div class="line-character">Arnoldus</div>
+      Sunt quīdam, quī tē conventum volunt.
+    </div>
+
+    <div class="line-container" id="Praeceptor.4">
+      <div class="line-character">Praeceptor</div>
+      Ubi sunt?
+    </div>
+
+    <div class="line-container" id="Arnoldus.5">
+      <div class="line-character">Arnoldus</div>
+      Tē exspectant in vīcō.
+    </div>
+
+    <div class="line-container" id="Praeceptor.6">
+      <div class="line-character">Praeceptor</div>
+      Nunc adībō.
+    </div>
+
+    <div class="line-container" id="Arnoldus.7">
+      <div class="line-character">Arnoldus</div>
+      Atquī urgent.
+    </div>
+
+    <div class="line-container" id="Praeceptor.8">
+      <div class="line-character">Praeceptor</div>
+      Praecurre tū, et eōs intrōmitte in āream: ego tē sequar. Vōs interim exspectāte cum silentiō, mox ego aderō, ut vōs ad cēnam dīmittam.
+    </div>
+
+    <div class="line-container" id="Discipuli.9">
+      <div class="line-character">Discipulī</div>
+      Ō quam bonum verbum!
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Quīdam tē conventum vult.</li>
+        <li class="elocutio-entry">Convenīre alicui reī.</li>
+        <li class="elocutio-entry">Convenīre aliquem.</li>
+        <li class="elocutio-entry">Praecurrere alicui, vel, aliquem ... aetāte aliquem ... adventum alicuius.</li>
+        <li class="elocutio-entry">Lingua mentem praecurrit.</li>
+        <li class="elocutio-entry">Intrōmittere aliquem in aedēs.</li>
+        <li class="elocutio-entry">Exspectāte mē cum silentiō.</li>
+        <li class="elocutio-entry">Dīmittere aliquem cum bonā pāce ... uxōrem ē mātrimōniō ... ōsculō aliquem.</li>
+        <li class="elocutio-entry">Dīmitte mē, fac mē missum.</li>
+        <li class="elocutio-entry">Mīlitēs dīmittere.</li>
+      </ul>
+    </div>
+
+    <div class="finis">FĪNIS LIBRĪ QUĀRTĪ</div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

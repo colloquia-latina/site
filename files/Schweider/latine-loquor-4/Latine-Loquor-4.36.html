@@ -1,0 +1,171 @@
+---
+title: Latine Loquor - Liber Quārtus - Colloquium Trīcēsimum Sextum
+subtitle: "Ītūrus ad vestificem."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Quartus
+topic:
+- School
+difficulty: Easy
+sequence: '036'
+character_count: 2
+permalink: /schwieder/latine-loquor-4-36/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Orestēs, Praeceptor.
+    </div>
+
+    <div class="line-container" id="Orestes.1">
+      <div class="line-character">Orestēs</div>
+      Praeceptor, licetne prōdīre?
+    </div>
+
+    <div class="line-container" id="Praeceptor.2">
+      <div class="line-character">Praeceptor</div>
+      Quō prōdīre cupis?
+    </div>
+
+    <div class="line-container" id="Orestes.3">
+      <div class="line-character">Orestēs</div>
+      Ad vestificem.
+    </div>
+
+    <div class="line-container" id="Praeceptor.4">
+      <div class="line-character">Praeceptor</div>
+      Quid eō?
+    </div>
+
+    <div class="line-container" id="Orestes.5">
+      <div class="line-character">Orestēs</div>
+      Petītum femorālia.
+    </div>
+
+    <div class="line-container" id="Praeceptor.6">
+      <div class="line-character">Praeceptor</div>
+      Iamne facta sunt?
+    </div>
+
+    <div class="line-container" id="Orestes.7">
+      <div class="line-character">Orestēs</div>
+      Sunt, opīnor.
+    </div>
+
+    <div class="line-container" id="Praeceptor.8">
+      <div class="line-character">Praeceptor</div>
+      Rēctē, opīnor, dīcis: quia rēs incerta est.
+    </div>
+
+    <div class="line-container" id="Orestes.9">
+      <div class="line-character">Orestēs</div>
+      Atquī prōmīserat mihi in hunc diem.
+    </div>
+
+    <div class="line-container" id="Praeceptor.10">
+      <div class="line-character">Praeceptor</div>
+      Quid sī fallat?
+    </div>
+
+    <div class="line-container" id="Orestes.11">
+      <div class="line-character">Orestēs</div>
+      Nihil minūtī erit.
+    </div>
+
+    <div class="line-container" id="Praeceptor.12">
+      <div class="line-character">Praeceptor</div>
+      Nunc quoque vērē locūtus es: nam rārō ad prōmissum tempus fidem praestant artificēs.
+    </div>
+
+    <div class="line-container" id="Orestes.13">
+      <div class="line-character">Orestēs</div>
+      Vīsō tamen, praeceptor, sī mihi permittis.
+    </div>
+
+    <div class="line-container" id="Praeceptor.14">
+      <div class="line-character">Praeceptor</div>
+      Nihil impediō.
+    </div>
+
+    <div class="line-container" id="Orestes.15">
+      <div class="line-character">Orestēs</div>
+      Quid vīs, praeceptor?
+    </div>
+
+    <div class="line-container" id="Praeceptor.16">
+      <div class="line-character">Praeceptor</div>
+      Immō, ut properēs, nē dēsīs praelēctiōnī.
+    </div>
+
+    <div class="line-container" id="Orestes.17">
+      <div class="line-character">Orestēs</div>
+      Bene monēs: abeō.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Prōdībō ad vestificem petītum femorālia.</li>
+        <li class="elocutio-entry">Prōmīsit mihi vestifex sē hodiē cōnfectūrum esse mihi femorālia.</li>
+        <li class="elocutio-entry">Vērum nōn stetit prōmissīs.</li>
+        <li class="elocutio-entry">Rārō ad prōmissum tempus fidem praestant artificēs.</li>
+        <li class="elocutio-entry">Praestāre fidem.</li>
+        <li class="elocutio-entry">Dēesse praelēctiōnī.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

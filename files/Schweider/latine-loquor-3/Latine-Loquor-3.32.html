@@ -1,0 +1,182 @@
+---
+title: Latine Loquor - Liber Tertius - Colloquium Trīcēsimum Secundum
+subtitle: "Pānis mūtuō dandus appenditur."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Tertius
+topic:
+- Meals & Food
+difficulty: Easy
+sequence: '032'
+character_count: 2
+permalink: /schwieder/latine-loquor-3-32/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Robertus, Alphōnsus.
+    </div>
+
+    <div class="line-container" id="Robertus.1">
+      <div class="line-character">Robertus</div>
+      Restatne tibi multum pānis?
+    </div>
+
+    <div class="line-container" id="Alphonsus.2">
+      <div class="line-character">Alphōnsus</div>
+      Satis, grātiā Deī.
+    </div>
+
+    <div class="line-container" id="Robertus.3">
+      <div class="line-character">Robertus</div>
+      Vīsne mihi dare mūtuō?
+    </div>
+
+    <div class="line-container" id="Alphonsus.4">
+      <div class="line-character">Alphōnsus</div>
+      Libenter.
+    </div>
+
+    <div class="line-container" id="Robertus.5">
+      <div class="line-character">Robertus</div>
+      Sed fortasse tibi nōn sufficiet.
+    </div>
+
+    <div class="line-container" id="Alphonsus.6">
+      <div class="line-character">Alphōnsus</div>
+      Sufficiet, ut spērō.
+    </div>
+
+    <div class="line-container" id="Robertus.7">
+      <div class="line-character">Robertus</div>
+      Ad quod usque tempus?
+    </div>
+
+    <div class="line-container" id="Alphonsus.8">
+      <div class="line-character">Alphōnsus</div>
+      Ad diem Veneris.
+    </div>
+
+    <div class="line-container" id="Robertus.9">
+      <div class="line-character">Robertus</div>
+      Unde habēbis posteā?
+    </div>
+
+    <div class="line-container" id="Alphonsus.10">
+      <div class="line-character">Alphōnsus</div>
+      Domō.
+    </div>
+
+    <div class="line-container" id="Robertus.11">
+      <div class="line-character">Robertus</div>
+      Quis afferet?
+    </div>
+
+    <div class="line-container" id="Alphonsus.12">
+      <div class="line-character">Alphōnsus</div>
+      Egomet ībō petītum.
+    </div>
+
+    <div class="line-container" id="Robertus.13">
+      <div class="line-character">Robertus</div>
+      Quandō?
+    </div>
+
+    <div class="line-container" id="Alphonsus.14">
+      <div class="line-character">Alphōnsus</div>
+      Ipsō diē Veneris.
+    </div>
+
+    <div class="line-container" id="Robertus.15">
+      <div class="line-character">Robertus</div>
+      Dā mihi mūtuō sēsquilībram.
+    </div>
+
+    <div class="line-container" id="Alphonsus.16">
+      <div class="line-character">Alphōnsus</div>
+      Quis appendet?
+    </div>
+
+    <div class="line-container" id="Robertus.17">
+      <div class="line-character">Robertus</div>
+      Uxor praeceptōris, aut ancilla.
+    </div>
+
+    <div class="line-container" id="Alphonsus.18">
+      <div class="line-character">Alphōnsus</div>
+      Eāmus petītum ex arcā meā.
+    </div>
+
+    <div class="line-container" id="Robertus.19">
+      <div class="line-character">Robertus</div>
+      Quīn itō sōlus, ego tē in culīnā exspectābō.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Nōn restat mātrī meae multum pānis.</li>
+        <li class="elocutio-entry">Sufficere alicui.</li>
+        <li class="elocutio-entry">Sufficit mōns alimentīs hominum.</li>
+        <li class="elocutio-entry">Ad quod usque tempus? Ad diem Veneris.</li>
+        <li class="elocutio-entry">Īre petītum aliquid ex arcā.</li>
+        <li class="elocutio-entry">Exspectāre aliquem.</li>
+        <li class="elocutio-entry">Quem hīc exspectās? Exspectō tabellārium hīc integram hōram.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

@@ -1,0 +1,175 @@
+---
+title: Latine Loquor - Liber Tertius - Colloquium Duodēquīnquāgēsimum
+subtitle: "Dē reditū ex vīllā."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Tertius
+topic:
+- Travel
+- Letters & Writing
+difficulty: Easy
+sequence: '048'
+character_count: 2
+permalink: /schwieder/latine-loquor-3-48/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Norbertus, Maximiliānus.
+    </div>
+
+    <div class="line-container" id="Norbertus.1">
+      <div class="line-character">Norbertus</div>
+      Ubi fuistī hīs diēbus?
+    </div>
+
+    <div class="line-container" id="Maximilianus.2">
+      <div class="line-character">Maximiliānus</div>
+      Rūrī.
+    </div>
+
+    <div class="line-container" id="Norbertus.3">
+      <div class="line-character">Norbertus</div>
+      Quō in locō?
+    </div>
+
+    <div class="line-container" id="Maximilianus.4">
+      <div class="line-character">Maximiliānus</div>
+      In vīllā nostrā.
+    </div>
+
+    <div class="line-container" id="Norbertus.5">
+      <div class="line-character">Norbertus</div>
+      Quid agēbās illīc?
+    </div>
+
+    <div class="line-container" id="Maximilianus.6">
+      <div class="line-character">Maximiliānus</div>
+      Ministrābam patrī.
+    </div>
+
+    <div class="line-container" id="Norbertus.7">
+      <div class="line-character">Norbertus</div>
+      Quid vērō ille?
+    </div>
+
+    <div class="line-container" id="Maximilianus.8">
+      <div class="line-character">Maximiliānus</div>
+      Pastīnābat vītēs nostrās.
+    </div>
+
+    <div class="line-container" id="Norbertus.9">
+      <div class="line-character">Norbertus</div>
+      Quandō illinc rediistī?
+    </div>
+
+    <div class="line-container" id="Maximilianus.10">
+      <div class="line-character">Maximiliānus</div>
+      Herī tantum.
+    </div>
+
+    <div class="line-container" id="Norbertus.11">
+      <div class="line-character">Norbertus</div>
+      Quid pater?
+    </div>
+
+    <div class="line-container" id="Maximilianus.12">
+      <div class="line-character">Maximiliānus</div>
+      Ūnā mēcum revertit.
+    </div>
+
+    <div class="line-container" id="Norbertus.13">
+      <div class="line-character">Norbertus</div>
+      Bene factum: sed quō nunc īs?
+    </div>
+
+    <div class="line-container" id="Maximilianus.14">
+      <div class="line-character">Maximiliānus</div>
+      Rēctā domum.
+    </div>
+
+    <div class="line-container" id="Norbertus.15">
+      <div class="line-character">Norbertus</div>
+      Quandō repetēs lūdum litterārum?
+    </div>
+
+    <div class="line-container" id="Maximilianus.16">
+      <div class="line-character">Maximiliānus</div>
+      Crās, iuvante Deō aut summum perendiē.
+    </div>
+
+    <div class="line-container" id="Norbertus.17">
+      <div class="line-character">Norbertus</div>
+      Ergō interim valē.
+    </div>
+
+    <div class="line-container" id="Maximilianus.18">
+      <div class="line-character">Maximiliānus</div>
+      Et tū valē, mī Norberte.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Fuī rūrī ... veniō rūre ... ībō rūs.</li>
+        <li class="elocutio-entry">Pastīnāre vītēs.</li>
+        <li class="elocutio-entry">Rēctā domum īre.</li>
+        <li class="elocutio-entry">Repetere lūdum litterārum.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

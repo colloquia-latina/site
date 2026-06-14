@@ -1,0 +1,148 @@
+---
+title: Latine Loquor - Liber Prīmus - Colloquium Tertium Decimum
+subtitle: "Nōminum tertiae et quārtae dēclīnātiōnis repetītiō. Repetītiōnēs saepius iterandae."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Primus
+topic:
+- School
+difficulty: Easy
+sequence: '013'
+character_count: 2
+permalink: /schwieder/latine-loquor-1-13/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Gerārdus, Henrīcus.
+    </div>
+
+    <div class="line-container" id="Gerardus.1">
+      <div class="line-character">Gerārdus</div>
+      Mox aderit praeceptor, repetāmus.
+    </div>
+
+    <div class="line-container" id="Henricus.2">
+      <div class="line-character">Henrīcus</div>
+      Quid opus est mihi repetītiōne? sōlus repetīvī satis: omnia teneō memoriā.
+    </div>
+
+    <div class="line-container" id="Gerardus.3">
+      <div class="line-character">Gerārdus</div>
+      Quid tum? quantō saepius repetīveris, tantō melius tenēbis.
+    </div>
+
+    <div class="line-container" id="Henricus.4">
+      <div class="line-character">Henrīcus</div>
+      Bene monēs: habeō tibi grātiam.
+    </div>
+
+    <div class="line-container" id="Gerardus.5">
+      <div class="line-character">Gerārdus</div>
+      Incipe: tempus abit.
+    </div>
+
+    <div class="line-container" id="Henricus.6">
+      <div class="line-character">Henrīcus</div>
+      Quārtae dēclīnātiōnis.
+    </div>
+
+    <div class="line-container" id="Gerardus.7">
+      <div class="line-character">Gerārdus</div>
+      Errās, Henrīce. Incipiendum est ab exemplō hesternō.
+    </div>
+
+    <div class="line-container" id="Henricus.8">
+      <div class="line-character">Henrīcus</div>
+      Errāvī, fateor.
+    </div>
+
+    <div class="line-container" id="Gerardus.9">
+      <div class="line-character">Gerārdus</div>
+      Dīc igitur nunc rēctē.
+    </div>
+
+    <div class="line-container" id="Henricus.10">
+      <div class="line-character">Henrīcus</div>
+      Nom. sing. hoc sedīle. Gen. huius sedīlis, etc. ad fīnem usque. Quārtae dēclīnātiōnis nōmina hōc exemplō dēclīnantur: Nom. sing. hic sēnsus. Gen. huius sēnsūs. Dat. huic sēnsuī.
+    </div>
+
+    <div class="line-container" id="Gerardus.11">
+      <div class="line-character">Gerārdus</div>
+      Hāctenus: audiō praeceptōrem.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Praeceptor aderit opīniōne celerius.</li>
+        <li class="elocutio-entry">Nōn opus est mihi repetītiōne.</li>
+        <li class="elocutio-entry">Opus est mihi calceīs.</li>
+        <li class="elocutio-entry">Opus est vōbīs librīs.</li>
+        <li class="elocutio-entry">Opus est cīvibus nummīs.</li>
+        <li class="elocutio-entry">Nummī sunt cīvibus opus.</li>
+        <li class="elocutio-entry">Ībō repetītum sōlus.</li>
+        <li class="elocutio-entry">Quantō (quō) saepius repetīveris, tantō (eō) melius tenēbis.</li>
+        <li class="elocutio-entry">Habēre grātiam.</li>
+        <li class="elocutio-entry">Tempus abit ... praeterit ... dēfluit ... lābitur.</li>
+        <li class="elocutio-entry">Incipe ab hesternā praelēctiōne.</li>
+        <li class="elocutio-entry">Dīc rēctē ... dīstīnctē ... clārā vōce.</li>
+        <li class="elocutio-entry">Errāvī, fateor ... fateor mē errāsse.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

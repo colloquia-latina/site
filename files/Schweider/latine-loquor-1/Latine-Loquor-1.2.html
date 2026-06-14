@@ -1,0 +1,141 @@
+---
+title: Latine Loquor - Liber Prīmus - Colloquium Secundum
+subtitle: "Exōrdium est repetendae praelēctiōnis."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Primus
+topic:
+- School
+difficulty: Easy
+sequence: '002'
+character_count: 2
+permalink: /schwieder/latine-loquor-1-2/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Conrādus, Dominicus.
+    </div>
+
+    <div class="line-container" id="Conradus.1">
+      <div class="line-character">Conrādus</div>
+      Quid agis?
+    </div>
+
+    <div class="line-container" id="Dominicus.2">
+      <div class="line-character">Dominicus</div>
+      Repetō mēcum.
+    </div>
+
+    <div class="line-container" id="Conradus.3">
+      <div class="line-character">Conrādus</div>
+      Quid repetis?
+    </div>
+
+    <div class="line-container" id="Dominicus.4">
+      <div class="line-character">Dominicus</div>
+      Praescrīptum hodiērnum praeceptōris.
+    </div>
+
+    <div class="line-container" id="Conradus.5">
+      <div class="line-character">Conrādus</div>
+      Tenēsne memoriā?
+    </div>
+
+    <div class="line-container" id="Dominicus.6">
+      <div class="line-character">Dominicus</div>
+      Sīc opīnor.
+    </div>
+
+    <div class="line-container" id="Conradus.7">
+      <div class="line-character">Conrādus</div>
+      Repetāmus ūnā: sīc uterque nostrum rēctius prōnūntiābit cōram praeceptōre.
+    </div>
+
+    <div class="line-container" id="Dominicus.8">
+      <div class="line-character">Dominicus</div>
+      Tū igitur incipe, quī mē prōvocāstī.
+    </div>
+
+    <div class="line-container" id="Conradus.9">
+      <div class="line-character">Conrādus</div>
+      Age, attentus estō: nē mē sīveris aberrāre.
+    </div>
+
+    <div class="line-container" id="Dominicus.10">
+      <div class="line-character">Dominicus</div>
+      Sum prōmptior ad audiendum, quam tū ad prōnūntiandum.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Repetere scholam philosophicam.</li>
+        <li class="elocutio-entry">Repetendum est mihi praescrīptum hodiērnum.</li>
+        <li class="elocutio-entry">Teneō, quae in scholā didicī, memoriā.</li>
+        <li class="elocutio-entry">Uterque tenuit.</li>
+        <li class="elocutio-entry">Neuter illōrum rēctē prōnūntiāvit.</li>
+        <li class="elocutio-entry">Recitāre cōram praeceptōre ... cōram patre.</li>
+        <li class="elocutio-entry">Discipulī nōn sunt attentī.</li>
+        <li class="elocutio-entry">Aberrāstī, Petre.</li>
+        <li class="elocutio-entry">Prōmptior sum ad audiendum quam tū ad prōnūntiandum.</li>
+        <li class="elocutio-entry">Prōmptior sum manū meā dextrā quam tū sinistrā.</li>
+        <li class="elocutio-entry">Frāter tuus prōmptior est ad garriendum quam ad dīscendum.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

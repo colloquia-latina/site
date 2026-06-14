@@ -1,0 +1,138 @@
+---
+title: Latine Loquor - Liber Secundus - Colloquium Octāvum
+subtitle: "Quaeritur liber per oblīviōnem relictus. Arguitur neglegentiae, quī relīquit."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Secundus
+topic:
+- School
+difficulty: Easy
+sequence: '008'
+character_count: 2
+permalink: /schwieder/latine-loquor-2-8/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Herāldus, Iōsēphus.
+    </div>
+
+    <div class="line-container" id="Heraldus.1">
+      <div class="line-character">Herāldus</div>
+      Vīdistine librum meum?
+    </div>
+
+    <div class="line-container" id="Iosephus.2">
+      <div class="line-character">Iōsēphus</div>
+      Quem librum quaeris?
+    </div>
+
+    <div class="line-container" id="Heraldus.3">
+      <div class="line-character">Herāldus</div>
+      Cicerōnis epistulās.
+    </div>
+
+    <div class="line-container" id="Iosephus.4">
+      <div class="line-character">Iōsēphus</div>
+      Ubi relīquistī?
+    </div>
+
+    <div class="line-container" id="Heraldus.5">
+      <div class="line-character">Herāldus</div>
+      Oblītus eram in auditōriō.
+    </div>
+
+    <div class="line-container" id="Iosephus.6">
+      <div class="line-character">Iōsēphus</div>
+      Tua fuit neglegentia.
+    </div>
+
+    <div class="line-container" id="Heraldus.7">
+      <div class="line-character">Herāldus</div>
+      Fateor: sed interim indicā, sī quem sciās accēpisse.
+    </div>
+
+    <div class="line-container" id="Iosephus.8">
+      <div class="line-character">Iōsēphus</div>
+      Cūr nōn adīs praeceptōrem? Solet enim, ut scīs, quae ā nōbīs relicta sunt, aut ferre in mūsēum, aut alicuī dare, quī reddat.
+    </div>
+
+    <div class="line-container" id="Heraldus.9">
+      <div class="line-character">Herāldus</div>
+      Bene monēs. Ō mē oblīviōsum, cuī istud in mentem nōn vēnit.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Librum tuum, quem quaeris, nōn vīdī.</li>
+        <li class="elocutio-entry">Hīs oculīs vīdī tē.</li>
+        <li class="elocutio-entry">Relinquere aliquem ... cōnsuētūdinem.</li>
+        <li class="elocutio-entry">Brevī mē praesentem vidēbis.</li>
+        <li class="elocutio-entry">Febris eum relīquit.</li>
+        <li class="elocutio-entry">Oblīvīscī alicuius reī ... aliquam rem.</li>
+        <li class="elocutio-entry">Oblītus sum librum meum in lūdō ... in aedibus.</li>
+        <li class="elocutio-entry">Tua fuit neglegentia.</li>
+        <li class="elocutio-entry">Indicā, sī quem sciās accēpisse librum meum.</li>
+        <li class="elocutio-entry">Adīre aliquem ... adībō praeceptōrem hāc dē rē.</li>
+        <li class="elocutio-entry">Numquam adeō praeceptōrem, quīn ab ipsō abeam doctior.</li>
+        <li class="elocutio-entry">Ego dedī ā tē relicta in scholā Petrō, ut redderet tibi.</li>
+        <li class="elocutio-entry">Mihi oblīviōsō hoc nōn vēnit in mentem.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>

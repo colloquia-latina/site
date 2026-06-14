@@ -1,0 +1,153 @@
+---
+title: Latine Loquor - Liber Tertius - Colloquium Duodecimum
+subtitle: "Ab amīcō petitur aliquid operae: prōmittitur per opportūnitātem. Exemplum amīcī officiōsī."
+type: Colloquium
+author: Schwieder
+collection: Latine Loquor Liber Tertius
+topic:
+- Letters & Writing
+difficulty: Moderate
+sequence: '012'
+character_count: 2
+permalink: /schwieder/latine-loquor-3-12/
+---
+
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a
+        href="{{ site.baseurl }}/{{ page.author | downcase | replace: ' ', '-' }}/"
+        class="navbar-item btn"
+        >{{ page.author }}</a
+      >
+      <span class="navbar-dynamic">{{ page.title }}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Nicolāus, Robertus.
+    </div>
+
+    <div class="line-container" id="Nicolaus.1">
+      <div class="line-character">Nicolāus</div>
+      Cūr nōn scrībis?
+    </div>
+
+    <div class="line-container" id="Robertus.2">
+      <div class="line-character">Robertus</div>
+      Quia nōn libet.
+    </div>
+
+    <div class="line-container" id="Nicolaus.3">
+      <div class="line-character">Nicolāus</div>
+      Atquī praeceptor iusserat.
+    </div>
+
+    <div class="line-container" id="Robertus.4">
+      <div class="line-character">Robertus</div>
+      Sciō: sed est mihi aliquid legendum prius, praetereā nihil habeō, quod nunc scrībam.
+    </div>
+
+    <div class="line-container" id="Nicolaus.5">
+      <div class="line-character">Nicolāus</div>
+      Ō sī vellēs mihi scrībere!
+    </div>
+
+    <div class="line-container" id="Robertus.6">
+      <div class="line-character">Robertus</div>
+      Quidnam?
+    </div>
+
+    <div class="line-container" id="Nicolaus.7">
+      <div class="line-character">Nicolāus</div>
+      Sunt mihi dēscrībenda dictāta praeceptōris.
+    </div>
+
+    <div class="line-container" id="Robertus.8">
+      <div class="line-character">Robertus</div>
+      Quae dictāta?
+    </div>
+
+    <div class="line-container" id="Nicolaus.9">
+      <div class="line-character">Nicolāus</div>
+      In Cicerōnis epistulās.
+    </div>
+
+    <div class="line-container" id="Robertus.10">
+      <div class="line-character">Robertus</div>
+      Libenter dēscrībam tibi: sed exspectā fēriārum diem proximum.
+    </div>
+
+    <div class="line-container" id="Nicolaus.11">
+      <div class="line-character">Nicolāus</div>
+      Exspectābō igitur: sed nōlī mē fallere, quaesō.
+    </div>
+
+    <div class="line-container" id="Robertus.12">
+      <div class="line-character">Robertus</div>
+      Nec sciēns, nec volēns fallam.
+    </div>
+
+    <h2>Ēlocūtiō</h2>
+    <div class="elocutio">
+      <ul>
+        <li class="elocutio-entry">Nōn libet mihi nunc scrībere.</li>
+        <li class="elocutio-entry">Nōn licet mihi.</li>
+        <li class="elocutio-entry">Praeceptor iussit nōs omnēs scrībere ... quidquid praeceptor iussit, faciendum.</li>
+        <li class="elocutio-entry">Nōn habeō nunc quod scrībam.</li>
+        <li class="elocutio-entry">Est mihi aliquid legendum, scrībendum.</li>
+        <li class="elocutio-entry">Scrībere, cōnscrībere, scrīptīs mandāre, litterīs prōdere, litterārum monumentīs mandāre, litterīs cōnsecrāre, scrīptum relinquere.</li>
+        <li class="elocutio-entry">Scrībere aliquid carmine, metrīs, versibus.</li>
+        <li class="elocutio-entry">Scrībere solūtā ōrātiōne, prōsā.</li>
+        <li class="elocutio-entry">Dēscrībere dictāta praeceptōris in Cicerōnis epistulās.</li>
+        <li class="elocutio-entry">Hōc scrīpsit Cicerō ... hōc Cicerō scrīptum relīquit, in scrīptīs relīquit.</li>
+        <li class="elocutio-entry">Exspectāre diem fēriārum; fēriae Nātālis Dominī; diēs fēriātus.</li>
+        <li class="elocutio-entry">Nōlī mē fallere quaesō.</li>
+        <li class="elocutio-entry">Nec sciēns nec volēns, fallam tē.</li>
+      </ul>
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %} {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright © 2025 Jacob Terneus</p>
+  </div>
+</body>
