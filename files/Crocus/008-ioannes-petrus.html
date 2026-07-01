@@ -1,0 +1,159 @@
+---
+title: "Colloquiōrum Puerīlium Fōrmulae — Iōannēs et Petrus"
+subtitle: "Docerī rogāns"
+type: Colloquium
+author: Crocus
+collection: "Colloquiōrum Puerīlium Fōrmulae"
+topic:
+- School
+- Boys
+- Netherlands
+difficulty: Moderate
+sequence: '008'
+character_count: 2
+permalink: /crocus/ioannes-petrus/
+source_pages: p31–p32
+---
+
+<!doctype html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a href="{{ site.baseurl }}/crocus/" class="navbar-item btn">Crocus</a>
+      <span class="navbar-dynamic">{{page.title}}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Iōannēs, Petrus
+    </div>
+
+    <div class="line-header"><b>IŌANNĒS ET PETRUS.</b></div>
+    <div class="line-container" id="petrus.1">
+      <div class="line-character">Petrus</div>
+      Ioannes quaesō ut doceās mē lēctiōnem.
+    </div>
+    <div class="line-container" id="ioannes.2">
+      <div class="line-character">Iōannēs</div>
+      Nōn est nunc commodum, in praesentiā nōn vacat mihi, nam ipse meam nondum teneō.
+    </div>
+    <div class="line-container" id="petrus.3">
+      <div class="line-character">Petrus</div>
+      Obsecrō tē, vel semel.
+    </div>
+    <div class="line-container" id="ioannes.4">
+      <div class="line-character">Iōannēs</div>
+      Quīn omitte mē.
+    </div>
+    <div class="line-container" id="petrus.5">
+      <div class="line-character">Petrus</div>
+      Ō mi lepidissime Ioannes.
+    </div>
+    <div class="line-container" id="ioannes.6">
+      <div class="line-character">Iōannēs</div>
+      Frustrā canis, surdō loqueris.
+    </div>
+    <div class="line-container" id="petrus.7">
+      <div class="line-character">Petrus</div>
+      Adeōne tē praefractum esse atque inexōrābilem?
+    </div>
+    <div class="line-container" id="ioannes.8">
+      <div class="line-character">Iōannēs</div>
+      Adeōne molestum atque impudentem esse?
+    </div>
+    <div class="line-container" id="petrus.9">
+      <div class="line-character">Petrus</div>
+      Nequeō tē exōrāre unum hoc modō?
+    </div>
+    <div class="line-container" id="ioannes.10">
+      <div class="line-character">Iōannēs</div>
+      Obtundis.
+    </div>
+    <div class="line-container" id="petrus.11">
+      <div class="line-character">Petrus</div>
+      Amābō tē haud grave est, facilis est tantillī temporis iactūra, aut potius nūlla.
+    </div>
+    <div class="line-container" id="ioannes.12">
+      <div class="line-character">Iōannēs</div>
+      Age accēde huc ad mē, quae tua est lēctiō? quam lēctiōnem redditūrus es?
+    </div>
+    <div class="line-container" id="petrus.13">
+      <div class="line-character">Petrus</div>
+      Hanc.
+    </div>
+    <div class="line-container" id="ioannes.14">
+      <div class="line-character">Iōannēs</div>
+      Attentus estō, intende oculōs.
+    </div>
+    <div class="line-container" id="petrus.15">
+      <div class="line-character">Petrus</div>
+      Istīc sum.
+    </div>
+    <div class="line-container" id="ioannes.16">
+      <div class="line-character">Iōannēs</div>
+      Satis tibi est? nunc satis tenēs?
+    </div>
+    <div class="line-container" id="petrus.17">
+      <div class="line-character">Petrus</div>
+      Haud sciō.
+    </div>
+    <div class="line-container" id="ioannes.18">
+      <div class="line-character">Iōannēs</div>
+      Fac perīculum, recitātō semel. Peccās, isthuc perperam reddis, ad hunc habet modum, iam scīs?
+    </div>
+    <div class="line-container" id="petrus.19">
+      <div class="line-character">Petrus</div>
+      Propemodum.
+    </div>
+    <div class="line-container" id="ioannes.20">
+      <div class="line-character">Iōannēs</div>
+      Redde nunc dē integrō, probē, isthuc rectē, bene habet, praeceptor tē accersit.
+    </div>
+    <div class="line-container" id="petrus.21">
+      <div class="line-character">Petrus</div>
+      Eō.
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %}
+      {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright &copy; 2025 Jacob Terneus</p>
+  </div>
+</body>

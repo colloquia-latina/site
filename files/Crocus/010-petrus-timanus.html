@@ -1,0 +1,147 @@
+---
+title: "Colloquiōrum Puerīlium Fōrmulae — Petrus et Timanus"
+subtitle: "Euntēs in hortum"
+type: Colloquium
+author: Crocus
+collection: "Colloquiōrum Puerīlium Fōrmulae"
+topic:
+- School
+- Boys
+- Netherlands
+difficulty: Moderate
+sequence: '010'
+character_count: 2
+permalink: /crocus/petrus-timanus/
+source_pages: p34–p35
+---
+
+<!doctype html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a href="{{ site.baseurl }}/crocus/" class="navbar-item btn">Crocus</a>
+      <span class="navbar-dynamic">{{page.title}}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Petrus, Timanus
+    </div>
+
+    <div class="line-header"><b>PETRUS ET TIMANUS.</b></div>
+    <div class="line-container" id="timanus.1">
+      <div class="line-character">Timanus</div>
+      Salvē Petre.
+    </div>
+    <div class="line-container" id="petrus.2">
+      <div class="line-character">Petrus</div>
+      Quō is?
+    </div>
+    <div class="line-container" id="timanus.3">
+      <div class="line-character">Timanus</div>
+      Nōn ego sum salūte dignus?
+    </div>
+    <div class="line-container" id="petrus.4">
+      <div class="line-character">Petrus</div>
+      Salvē, sed quō is?
+    </div>
+    <div class="line-container" id="timanus.5">
+      <div class="line-character">Timanus</div>
+      Eō ut vīsam sī pater meus in templō est, eum māter iubet accersī domum, nam quīdam eum conventum expetit. Sed quid tū hic agis?
+    </div>
+    <div class="line-container" id="petrus.6">
+      <div class="line-character">Petrus</div>
+      Opperior Ioannem sodālem meum.
+    </div>
+    <div class="line-container" id="timanus.7">
+      <div class="line-character">Timanus</div>
+      Ubi is est?
+    </div>
+    <div class="line-container" id="petrus.8">
+      <div class="line-character">Petrus</div>
+      Domum abiit nūntiātum mātrī sē ūnā mēcum itūrum.
+    </div>
+    <div class="line-container" id="timanus.9">
+      <div class="line-character">Timanus</div>
+      Quōnam?
+    </div>
+    <div class="line-container" id="petrus.10">
+      <div class="line-character">Petrus</div>
+      Extrā portam Harlemēam.
+    </div>
+    <div class="line-container" id="timanus.11">
+      <div class="line-character">Timanus</div>
+      Quid eō?
+    </div>
+    <div class="line-container" id="petrus.12">
+      <div class="line-character">Petrus</div>
+      Ībimus in hortum nostrum, est illīc nōbīs ārea mittendīs globīs per anulum ferreum commodissima.
+    </div>
+    <div class="line-container" id="timanus.13">
+      <div class="line-character">Timanus</div>
+      Quaesō mi Petre liceat mē vōbīs comitem adiungere.
+    </div>
+    <div class="line-container" id="petrus.14">
+      <div class="line-character">Petrus</div>
+      Liceat, hāc lēge ut aliās vicissim liceat mihi in vestrum īre hortum.
+    </div>
+    <div class="line-container" id="timanus.15">
+      <div class="line-character">Timanus</div>
+      Fīet, sed amābō expectā mē tantisper dum redeam.
+    </div>
+    <div class="line-container" id="petrus.16">
+      <div class="line-character">Petrus</div>
+      Mox reditūrus?
+    </div>
+    <div class="line-container" id="timanus.17">
+      <div class="line-character">Timanus</div>
+      Mox.
+    </div>
+    <div class="line-container" id="petrus.18">
+      <div class="line-character">Petrus</div>
+      Vola.
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %}
+      {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright &copy; 2025 Jacob Terneus</p>
+  </div>
+</body>

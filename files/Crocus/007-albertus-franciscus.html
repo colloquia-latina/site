@@ -1,0 +1,143 @@
+---
+title: "Colloquiōrum Puerīlium Fōrmulae — Albertus et Franciscus"
+subtitle: "Dīgressus"
+type: Colloquium
+author: Crocus
+collection: "Colloquiōrum Puerīlium Fōrmulae"
+topic:
+- School
+- Boys
+- Netherlands
+difficulty: Moderate
+sequence: '007'
+character_count: 2
+permalink: /crocus/albertus-franciscus/
+source_pages: p30–p31
+---
+
+<!doctype html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/style-common.css" />
+  <link rel="stylesheet" href="/style-reading.css" />
+  <script src="/scripts/headroom.min.js"></script>
+  <script src="/scripts/common.js"></script>
+</head>
+
+<body>
+  <div class="navbar headroom">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-item btn"><b>Colloquia Latina</b></a>
+      <a href="{{ site.baseurl }}/crocus/" class="navbar-item btn">Crocus</a>
+      <span class="navbar-dynamic">{{page.title}}</span>
+    </div>
+  </div>
+  <div style="height: 3em"></div>
+
+  <div class="main-content">
+    <h1>{{page.title}}</h1>
+    <h3>{{page.subtitle}}</h3>
+
+    <div class="characters">
+      Persōnae:<br />
+      Albertus, Franciscus
+    </div>
+
+    <div class="line-header"><b>ALBERTUS ET FRANCISCUS.</b></div>
+    <div class="line-container" id="albertus.1">
+      <div class="line-character">Albertus</div>
+      Quō nunc abis?
+    </div>
+    <div class="line-container" id="franciscus.2">
+      <div class="line-character">Franciscus</div>
+      Eundum est mihi domum, pāce quod fīat vestrā, quid mē retinēs? Est domī quod agam.
+    </div>
+    <div class="line-container" id="albertus.3">
+      <div class="line-character">Albertus</div>
+      Fac in alium differās diem, nunc abīre nōn sinam.
+    </div>
+    <div class="line-container" id="franciscus.4">
+      <div class="line-character">Franciscus</div>
+      Mitte quaesō.
+    </div>
+    <div class="line-container" id="albertus.5">
+      <div class="line-character">Albertus</div>
+      Nihil agis, contendis frustrā, hic manendum est tibi.
+    </div>
+    <div class="line-container" id="franciscus.6">
+      <div class="line-character">Franciscus</div>
+      Omitte inquam, multa hic verba facis.
+    </div>
+    <div class="line-container" id="albertus.7">
+      <div class="line-character">Albertus</div>
+      Haud quāquam omittam, quīn tū hic manēs.
+    </div>
+    <div class="line-container" id="franciscus.8">
+      <div class="line-character">Franciscus</div>
+      Vīs est haec quidem.
+    </div>
+    <div class="line-container" id="albertus.9">
+      <div class="line-character">Albertus</div>
+      Dēnique cēterī omnēs volunt.
+    </div>
+    <div class="line-container" id="franciscus.10">
+      <div class="line-character">Franciscus</div>
+      Diūtius mihi abesse domō nōn licet, māter mē expectat, iussit ad hōram tertiam adessem.
+    </div>
+    <div class="line-container" id="albertus.11">
+      <div class="line-character">Albertus</div>
+      Quur igitur huc accessistī? an ideō tantum vēnistī, ut abīrēs?
+    </div>
+    <div class="line-container" id="franciscus.12">
+      <div class="line-character">Franciscus</div>
+      Mox huc redierō.
+    </div>
+    <div class="line-container" id="albertus.13">
+      <div class="line-character">Albertus</div>
+      Bonā fidē?
+    </div>
+    <div class="line-container" id="franciscus.14">
+      <div class="line-character">Franciscus</div>
+      Optimā.
+    </div>
+    <div class="line-container" id="albertus.15">
+      <div class="line-character">Albertus</div>
+      Quis erit fideiussor isthuc futūrum?
+    </div>
+    <div class="line-container" id="franciscus.16">
+      <div class="line-character">Franciscus</div>
+      Vel hunc librum relinquō pignorī.
+    </div>
+    <div class="line-container" id="albertus.17">
+      <div class="line-character">Albertus</div>
+      Accipimus.
+    </div>
+
+    {% assign files = site.html_pages | where_exp: "p", "p.path contains 'files/'" %}
+    {% assign neighbors = files | where: "type", "Colloquium" | where: "author", page.author | where: "collection", page.collection | sort: "sequence" %}
+    {% assign prev_page = nil %}
+    {% assign next_page = nil %}
+    {% assign found_current = false %}
+    {% for p in neighbors %}
+      {% if found_current and next_page == nil %}{% assign next_page = p %}{% endif %}
+      {% if p.url == page.url %}{% assign found_current = true %}{% endif %}
+      {% if found_current == false %}{% assign prev_page = p %}{% endif %}
+    {% endfor %}
+
+    <div class="nav-buttons">
+      {% if prev_page %}
+      <a href="{{ prev_page.url }}" class="nav-button nav-back">⟵ Previous</a>
+      {% endif %}
+      {% if next_page %}
+      <a href="{{ next_page.url }}" class="nav-button nav-next">Next ⟶</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>ColloquiaLatina.org - Copyright &copy; 2025 Jacob Terneus</p>
+  </div>
+</body>
